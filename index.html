@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="dark">
+
+<head>
+  <script>
+    if (window.performance && window.performance.mark) {
+      window.performance.mark('launcher:start');
+    }
+    try {
+      var localState = localStorage.getItem('wealth-aggregator-logic');
+      var isDark = true;
+      if (localState) {
+        var parsed = JSON.parse(localState);
+        if (parsed && parsed.state && typeof parsed.state.isDarkMode === 'boolean') {
+          isDark = parsed.state.isDarkMode;
+        }
+      }
+      var rootEl = document.documentElement;
+      if (isDark) {
+        rootEl.classList.add('dark');
+        rootEl.setAttribute('data-theme', 'dark');
+        rootEl.style.colorScheme = 'dark';
+      } else {
+        rootEl.classList.remove('dark');
+        rootEl.setAttribute('data-theme', 'light');
+        rootEl.style.colorScheme = 'light';
+      }
+    } catch (e) {
+      document.documentElement.classList.add('dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Wealth Aggregator - AI-Powered Portfolio Management</title>
+  
+  <!-- SECURITY FIX: Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://apis.google.com https://www.gstatic.com https://telegram.org; frame-src 'self' https://wealthaggregator-b6ba5.firebaseapp.com https://*.firebaseapp.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' ws: wss: http: https:; img-src 'self' data: https:; manifest-src 'self';" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Security: referrer policy (the only header safe to set via meta) -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Permissions Policy -->
+  <meta http-equiv="Permissions-Policy" content="
+      camera=(),
+      microphone=(self),
+      geolocation=(),
+      payment=(),
+      usb=(),
+      interest-cohort=()
+    " />
+
+  <!-- PWA Meta Tags -->
+  <meta name="description"
+    content="Premium AI-powered wealth management, trade journaling, and portfolio tracking platform" />
+  <meta name="theme-color" content="#08090C" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="WealthAgg" />
+  <meta name="mobile-web-app-capable" content="yes" />
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="googlebot" content="noindex, nofollow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wealth Aggregator - AI-Powered Portfolio Management" />
+  <meta property="og:description" content="Premium AI-powered wealth management, trade journaling, and portfolio tracking platform." />
+  <meta property="og:url" content="https://wealth-aggregator.local" />
+  <meta property="og:image" content="/icons/icon-512.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Wealth Aggregator - AI-Powered Portfolio Management" />
+  <meta property="twitter:description" content="Premium AI-powered wealth management, trade journaling, and portfolio tracking platform." />
+  <meta property="twitter:image" content="/icons/icon-512.png" />
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- Tailwind is built at compile-time via PostCSS (see postcss.config.js + tailwind.config.js) -->
+  <!-- Theme tokens (mirror tailwind.config.js) injected as CSS custom properties so first paint is correctly themed before stylesheet loads. -->
+  <style>
+    :root {
+      color-scheme: dark;
+      --color-gain: #10b981;
+      --color-loss: #f43f5e;
+      --color-accent: #6366f1;
+      --color-warn: #f59e0b;
+      --color-gold: #f59e0b;
+      --bg-surface: #161b27;
+      --wa-canvas: #090a0f;
+      --wa-surface: #0b0d14;
+      --wa-card: #0d0f17;
+      --wa-border: rgba(255, 255, 255, 0.08);
+    }
+    html { background: #090a0f; }
+
+    /* WealthOS Zero-Flash Boot Skeleton */
+    .wa-boot-shell {
+      min-height: 100vh;
+      background-color: #090a0f;
+      color: #94a3b8;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .wa-boot-header {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background-color: #0b0d14;
+    }
+    .wa-boot-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .wa-boot-gem {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      opacity: 0.9;
+    }
+    .wa-boot-brand {
+      width: 85px;
+      height: 14px;
+      border-radius: 4px;
+    }
+    .wa-boot-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .wa-boot-pill {
+      height: 28px;
+      width: 64px;
+      border-radius: 14px;
+    }
+    .wa-boot-body {
+      flex: 1;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .wa-boot-hero {
+      background: #0d0f17;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .wa-boot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .wa-boot-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .wa-boot-body {
+        padding: 24px;
+      }
+      .wa-boot-hero {
+        border-radius: 24px;
+        padding: 28px;
+      }
+    }
+    .wa-boot-card {
+      background: #0d0f17;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 20px;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .wa-shimmer {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.09) 50%, rgba(255, 255, 255, 0.03) 100%);
+      background-size: 200% 100%;
+      animation: wa-shimmer 1.8s infinite ease-in-out;
+      border-radius: 6px;
+    }
+    @keyframes wa-shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+  </style>
+
+  <script>
+    // Tailwind config is build-time only (tailwind.config.js + postcss.config.js).
+    // Runtime config injection is no longer needed because the runtime CDN script
+    // was removed (P0#1 stability audit 2026-06-18) — Tailwind classes are now
+    // compiled into the shipped CSS bundle.
+  </script>
+  <script>
+      // Check local storage or system preference on load
+      (function () {
+        try {
+          var localState = localStorage.getItem('wealth-aggregator-logic');
+          var isDark = true; // Default
+
+          if (localState) {
+            var state = JSON.parse(localState);
+            if (state && state.state && typeof state.state.isDarkMode === 'boolean') {
+              isDark = state.state.isDarkMode;
+            }
+          }
+
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark'); // Safe default
+        }
+      })();
+
+    // Security: Disable right-click in production (optional)
+    // document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+    // Security: Warn if DevTools open (development aid)
+    (function () {
+      var devtools = { open: false };
+      var threshold = 160;
+
+      setInterval(function () {
+        if (window.outerHeight - window.innerHeight > threshold ||
+          window.outerWidth - window.innerWidth > threshold) {
+          if (!devtools.open) {
+            devtools.open = true;
+            console.log('%c⚠️ Security Notice', 'color: red; font-size: 20px; font-weight: bold;');
+            console.log('%cThis is a development tool. Be careful with any code you paste here.', 'color: orange; font-size: 14px;');
+          }
+        } else {
+          devtools.open = false;
+        }
+      }, 500);
+    })();
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- CC49: JetBrains Mono registered for code blocks, JSON dumps, and tabular numerics -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Custom Scrollbar for Webkit */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background: #475569;
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    /* Glassmorphism Utilities */
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Loading spinner animation */
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    /* Prevent text selection on UI elements */
+    .no-select {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
+
+  <script defer src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body class="bg-[#090a0f] text-slate-50 transition-colors duration-300">
+  <div id="root">
+    <div class="wa-boot-shell">
+      <div class="wa-boot-header">
+        <div class="wa-boot-logo">
+          <div class="wa-boot-gem"></div>
+          <div class="wa-boot-brand wa-shimmer"></div>
+        </div>
+        <div class="wa-boot-controls">
+          <div class="wa-boot-pill wa-shimmer"></div>
+          <div class="wa-boot-pill wa-shimmer" style="width: 30px; border-radius: 50%;"></div>
+        </div>
+      </div>
+      <div class="wa-boot-body">
+        <div class="wa-boot-hero">
+          <div class="wa-shimmer" style="height: 12px; width: 110px;"></div>
+          <div class="wa-shimmer" style="height: 36px; width: 220px; margin: 4px 0;"></div>
+          <div style="display: flex; gap: 8px;">
+            <div class="wa-shimmer" style="height: 20px; width: 80px; border-radius: 10px;"></div>
+            <div class="wa-shimmer" style="height: 20px; width: 95px; border-radius: 10px;"></div>
+          </div>
+        </div>
+        <div class="wa-boot-grid">
+          <div class="wa-boot-card">
+            <div class="wa-shimmer" style="height: 14px; width: 90px;"></div>
+            <div class="wa-shimmer" style="height: 28px; width: 140px;"></div>
+            <div class="wa-shimmer" style="height: 12px; width: 70px;"></div>
+          </div>
+          <div class="wa-boot-card">
+            <div class="wa-shimmer" style="height: 14px; width: 100px;"></div>
+            <div class="wa-shimmer" style="height: 28px; width: 130px;"></div>
+            <div class="wa-shimmer" style="height: 12px; width: 80px;"></div>
+          </div>
+          <div class="wa-boot-card">
+            <div class="wa-shimmer" style="height: 14px; width: 85px;"></div>
+            <div class="wa-shimmer" style="height: 28px; width: 150px;"></div>
+            <div class="wa-shimmer" style="height: 12px; width: 65px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fallback for JavaScript disabled -->
+  <noscript>
+    <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+      <h1>JavaScript Required</h1>
+      <p>Wealth Aggregator requires JavaScript to run. Please enable JavaScript in your browser settings.</p>
+    </div>
+  </noscript>
+
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

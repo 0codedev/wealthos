@@ -1,0 +1,56 @@
+# Dependencies & Package Managers
+node_modules/
+dist/
+dist-ssr/
+build/
+*.local
+
+# Secrets Shield
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Database & Archives
+*.db
+*.sqlite
+*.sqlite3
+*.gz
+*.tar
+*.zip
+*.parquet
+cache.db
+cache*
+gcp-credentials.json
+*token*.txt
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+venv/
+.venv/
+
+# Scratch & Logs
+/logs/
+/scratch/
+/dumps/
+*.log
+audit_shots/
+backups/
+Extras/
+graphify-out/
+reconciliation/
+remotion-video/
+restore/
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Private & Internal Documentation (Never committed to public repo)
+docs/
+private_docs/
+
