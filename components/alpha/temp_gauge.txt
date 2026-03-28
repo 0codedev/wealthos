@@ -1,0 +1,4 @@
+                                                                <div
+                                                                    className={`h-full rounded-full bg-gradient-to-r ${theme.progress}`}
+                                                                    style={{ width: `${scorePercent}%` }}
+                                                                />
