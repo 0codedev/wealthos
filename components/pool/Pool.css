@@ -1,0 +1,463 @@
+/* CC39 — Momentum Pool styling matching dark indigo theme */
+
+.pool-page {
+  position: relative;
+  padding: 0;
+  min-height: 100%;
+  color: #e2e8f0;
+}
+
+.pool-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem 2.5rem;
+}
+
+.pool-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.pool-hero h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pool-hero p.lead {
+  margin-top: 0.35rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.pool-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.pool-stat {
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pool-stat .label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.pool-stat .value {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-top: 0.25rem;
+}
+
+.pool-stat.cyan .value { color: #818cf8; }
+.pool-stat.green .value { color: #34d399; }
+.pool-stat.amber .value { color: #fbbf24; }
+.pool-stat.violet .value { color: #c4b5fd; }
+
+.pool-search-row {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.pool-search-input {
+  flex: 1;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  border-radius: 0.65rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.85rem;
+}
+
+.pool-search-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.pool-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #4f46e5;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.65rem 1rem;
+  border-radius: 0.65rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+  transition: all 0.15s ease;
+}
+.pool-add-btn:hover { background: #4338ca; transform: translateY(-1px); }
+.pool-add-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.pool-import-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(30, 41, 59, 0.6);
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.55rem 0.85rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.pool-import-btn:hover { color: #f1f5f9; border-color: rgba(255, 255, 255, 0.18); }
+
+.pool-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 0.9rem;
+  padding: 1rem 1.15rem;
+  transition: all 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pool-card:hover {
+  border-color: #334155;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pool-card .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.pool-card .ticker {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  letter-spacing: 0.02em;
+}
+
+.pool-card .name {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.pool-card .price {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f8fafc;
+  padding: 0.1rem 0.45rem;
+  border-radius: 0.4rem;
+  transition: background 0.6s ease;
+}
+.pool-card .price.flash-up {
+  background: rgba(74, 222, 128, 0.22);
+  color: #4ade80;
+}
+.pool-card .price.flash-down {
+  background: rgba(248, 113, 113, 0.22);
+  color: #f87171;
+}
+
+.pool-card .verdict-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+
+.pool-card .verdict-chip.STRONG_BUY { background: rgba(74, 222, 128, 0.15); color: #4ade80; }
+.pool-card .verdict-chip.BUY { background: rgba(132, 204, 22, 0.15); color: #a3e635; }
+.pool-card .verdict-chip.NEUTRAL { background: rgba(148, 163, 184, 0.15); color: #cbd5e1; }
+.pool-card .verdict-chip.SELL { background: rgba(251, 146, 60, 0.15); color: #fb923c; }
+.pool-card .verdict-chip.STRONG_SELL { background: rgba(248, 113, 113, 0.18); color: #f87171; }
+.pool-card .verdict-chip.AVOID { background: rgba(244, 63, 94, 0.15); color: #fb7185; }
+
+.pool-card .meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.65rem;
+  color: #94a3b8;
+  margin-top: 0.4rem;
+}
+
+.pool-card .actions {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.6rem;
+}
+
+.pool-card .actions button {
+  font-size: 0.65rem;
+  padding: 0.3rem 0.5rem;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.pool-card .actions button:hover { color: #818cf8; border-color: rgba(99, 102, 241, 0.4); }
+
+.pool-watch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.pool-feed-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 110px;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 0.85rem;
+  margin-bottom: 0.55rem;
+  align-items: center;
+}
+
+.pool-feed-row .time { font-size: 0.7rem; color: #94a3b8; font-family: monospace; }
+.pool-feed-row .summary { font-size: 0.85rem; color: #f1f5f9; }
+.pool-feed-row .reasoning { font-size: 0.7rem; color: #94a3b8; margin-top: 0.2rem; }
+
+.pool-source-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0.9rem;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+.pool-source-row .handle { font-weight: 700; color: #f1f5f9; }
+.pool-source-row .meta { font-size: 0.65rem; color: #94a3b8; }
+
+.pool-market-closed {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.9rem;
+  background: rgba(251, 191, 36, 0.06);
+  border: 1px solid rgba(251, 191, 36, 0.18);
+  border-radius: 0.75rem;
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.pool-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #94a3b8;
+}
+
+.pool-empty h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.3rem;
+}
+
+.pool-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 15, 29, 0.80);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.pool-modal {
+  width: 100%;
+  max-width: 480px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.pool-power-modal {
+  width: 95vw;
+  max-width: 1320px;
+  max-height: 92vh;
+  background: #0f172a;
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  border-radius: 1.5rem;
+  box-shadow: 0 30px 80px -15px rgba(0, 0, 0, 0.85), 0 0 60px rgba(99, 102, 241, 0.16);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e2e8f0;
+}
+
+.pool-power-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.pool-power-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+
+.pool-modal h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.4rem;
+}
+
+.pool-modal label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0.6rem 0 0.3rem;
+}
+
+.pool-modal input,
+.pool-modal select {
+  width: 100%;
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #f1f5f9;
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+.pool-modal input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.pool-modal .checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.pool-modal .checklist label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(30, 41, 59, 0.5);
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.7rem;
+  color: #cbd5e1;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.pool-modal .actions-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.pool-subtab-row {
+  display: flex;
+  gap: 0.4rem;
+  border-bottom: 1px solid #1e293b;
+  margin-bottom: 1rem;
+}
+
+.pool-subtab {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.pool-subtab.active { color: #818cf8; border-bottom-color: #6366f1; }
+
+.pool-push-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.3rem 0.5rem;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: #818cf8;
+  border-radius: 0.45rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.pool-push-btn:hover { background: rgba(99, 102, 241, 0.2); }
+
+@media (max-width: 768px) {
+  .pool-hero { grid-template-columns: 1fr; }
+  .pool-watch-grid { grid-template-columns: 1fr; }
+}
