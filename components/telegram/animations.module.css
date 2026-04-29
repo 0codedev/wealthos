@@ -1,0 +1,180 @@
+/**
+ * CC42 — Reusable keyframes + utility animation classes for the Telegram
+ * Intel Hub. Imported once by the slim shell.
+ *
+ * Every animation here is GPU-friendly (transform + opacity only) and
+ * respects the `prefers-reduced-motion` user preference (the tokens
+ * module collapses durations to 0ms in that case, which kills these
+ * automatically).
+ */
+
+/* ===== Spinners ====================================================== */
+@keyframes tlh-spin {
+    to { transform: rotate(360deg); }
+}
+.spin { animation: tlh-spin 1.4s linear infinite; }
+
+@keyframes tlh-spin-slow {
+    to { transform: rotate(360deg); }
+}
+.spinSlow { animation: tlh-spin-slow 6s linear infinite; }
+
+@keyframes tlh-spin-reverse {
+    to { transform: rotate(-360deg); }
+}
+.spinReverse { animation: tlh-spin-reverse 8s linear infinite; }
+
+/* ===== Pulse / breathe ============================================== */
+@keyframes tlh-pulse-opacity {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+.pulse { animation: tlh-pulse-opacity 1.6s ease-in-out infinite; }
+
+@keyframes tlh-pulse-scale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+.pulseScale { animation: tlh-pulse-scale 2s ease-in-out infinite; }
+
+/* ===== Connection status (LIVE dot, "breathing") ==================== */
+@keyframes tlh-live-breathe {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55); }
+    50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+}
+.liveBreathe {
+    position: relative;
+}
+.liveBreathe::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    animation: tlh-live-breathe 1.8s ease-out infinite;
+    pointer-events: none;
+}
+
+/* ===== Shimmer (for skeletons) ====================================== */
+@keyframes tlh-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+.shimmer {
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.02) 0%,
+        rgba(255, 255, 255, 0.08) 50%,
+        rgba(255, 255, 255, 0.02) 100%);
+    background-size: 200% 100%;
+    animation: tlh-shimmer 1.6s ease-in-out infinite;
+}
+
+/* ===== Glow sweep (dropzone dashed border) ========================== */
+@keyframes tlh-dash-rotate {
+    to { stroke-dashoffset: -200; }
+}
+
+/* ===== Top progress bar (reconnect) ================================= */
+@keyframes tlh-progress-sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+.progressSweep {
+    position: relative;
+    overflow: hidden;
+}
+.progressSweep::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, var(--tlh-violet-2), transparent);
+    animation: tlh-progress-sweep 1.6s ease-in-out infinite;
+}
+
+/* ===== Marquee (rollup banner) ====================================== */
+@keyframes tlh-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+.marquee {
+    display: inline-flex;
+    animation: tlh-marquee 28s linear infinite;
+}
+
+/* ===== Floating Y (hover lift) ====================================== */
+@keyframes tlh-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+.float { animation: tlh-float 3s ease-in-out infinite; }
+
+/* ===== Fade + slide entrance (reusable) ============================= */
+@keyframes tlh-fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fadeUp { animation: tlh-fade-up 320ms var(--tlh-ease-out) both; }
+
+@keyframes tlh-fade-down {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fadeDown { animation: tlh-fade-down 240ms var(--tlh-ease-out) both; }
+
+@keyframes tlh-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fadeIn { animation: tlh-fade-in 240ms var(--tlh-ease-out) both; }
+
+/* ===== Aurora (slow rotating gradient blob) ========================= */
+@keyframes tlh-aurora-drift-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(40px, -20px) scale(1.05); }
+    66% { transform: translate(-20px, 30px) scale(0.95); }
+}
+@keyframes tlh-aurora-drift-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-30px, 25px) scale(1.08); }
+    66% { transform: translate(20px, -30px) scale(0.95); }
+}
+@keyframes tlh-aurora-drift-3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(15px, -15px) scale(1.1); }
+}
+.aurora1 { animation: tlh-aurora-drift-1 22s ease-in-out infinite; }
+.aurora2 { animation: tlh-aurora-drift-2 28s ease-in-out infinite; }
+.aurora3 { animation: tlh-aurora-drift-3 18s ease-in-out infinite; }
+
+/* ===== Star pop (button feedback) =================================== */
+@keyframes tlh-star-pop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.45) rotate(15deg); }
+    100% { transform: scale(1) rotate(0); }
+}
+.starPop { animation: tlh-star-pop 360ms var(--tlh-ease-spring) both; }
+
+/* ===== Ticker glow (signal arrival) ================================= */
+@keyframes tlh-arrival-glow {
+    0% { box-shadow: 0 0 0 0 var(--tlh-border-glow); }
+    100% { box-shadow: 0 0 0 14px transparent; }
+}
+.arrivalGlow { animation: tlh-arrival-glow 1.2s var(--tlh-ease-out) both; }
+
+/* ===== Number flash (metric value updated) ========================= */
+@keyframes tlh-flash {
+    0% { color: var(--tlh-text); }
+    50% { color: var(--tlh-violet); }
+    100% { color: var(--tlh-text); }
+}
+.flash { animation: tlh-flash 600ms var(--tlh-ease-out) both; }
+
+/* ===== Conic gradient progress (OCR ring) =========================== */
+@keyframes tlh-conic-spin {
+    to { --angle: 360deg; }
+}
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}

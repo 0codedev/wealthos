@@ -1,0 +1,225 @@
+/* CC42 — ConnectionBanner */
+
+.strip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 20px;
+    background: var(--tlh-bg-glass);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border-bottom: 1px solid var(--tlh-border);
+    color: var(--tlh-text);
+    font-family: var(--tlh-font-sans);
+    overflow: hidden;
+    isolation: isolate;
+    z-index: 5;
+}
+
+.strip::before {
+    /* Subtle inner aurora — left-aligned gradient that always reads
+       "this is the data pipe", color shifts with the status. */
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.5;
+    transition: opacity var(--tlh-dur-slow) var(--tlh-ease-out),
+                background var(--tlh-dur-slow) var(--tlh-ease-out);
+}
+.strip.live::before {
+    background:
+        radial-gradient(ellipse 50% 100% at 0% 50%, rgba(16, 185, 129, 0.20), transparent 70%),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.04), transparent 30%);
+    opacity: 1;
+}
+.strip.warn::before {
+    background:
+        radial-gradient(ellipse 50% 100% at 0% 50%, rgba(245, 158, 11, 0.20), transparent 70%);
+    opacity: 1;
+}
+.strip.down::before {
+    background:
+        radial-gradient(ellipse 50% 100% at 0% 50%, rgba(239, 68, 68, 0.16), transparent 70%);
+    opacity: 1;
+}
+
+.glowEdge {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        var(--tlh-violet-2) 30%,
+        var(--tlh-cyan-2) 70%,
+        transparent 100%);
+    opacity: 0.5;
+    pointer-events: none;
+}
+.strip.live .glowEdge { opacity: 0.7; }
+.strip.warn .glowEdge { opacity: 0.4; }
+.strip.down .glowEdge { opacity: 0.3; }
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    flex: 1;
+}
+
+.statusBlock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: 0 0 0 0 currentColor;
+}
+.dot.live { background: var(--tlh-status-live); color: var(--tlh-status-live); }
+.dot.warn { background: var(--tlh-status-warn); color: var(--tlh-status-warn); }
+.dot.down { background: var(--tlh-status-down); color: var(--tlh-status-down); }
+
+.statusText {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--tlh-text);
+}
+.strip.live .statusText { color: var(--tlh-emerald); }
+.strip.warn .statusText { color: var(--tlh-amber); }
+.strip.down .statusText { color: var(--tlh-rose); }
+
+.metrics {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.metric {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: var(--tlh-text-mute);
+    font-family: var(--tlh-font-mono);
+}
+
+.metricIcon {
+    opacity: 0.7;
+    color: var(--tlh-text-dim);
+}
+
+.metricValue {
+    color: var(--tlh-text);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.metricLabel {
+    color: var(--tlh-text-faint);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 2px;
+}
+
+.signalAccent {
+    color: var(--tlh-violet);
+    text-shadow: 0 0 8px rgba(168, 85, 247, 0.5);
+}
+
+.divider {
+    width: 1px;
+    height: 12px;
+    background: var(--tlh-border-strong);
+    flex-shrink: 0;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-radius: var(--tlh-r-2);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all var(--tlh-dur-base) var(--tlh-ease-out);
+    font-family: var(--tlh-font-sans);
+    background: transparent;
+    color: var(--tlh-text-mute);
+    user-select: none;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btnGhost {
+    background: rgba(34, 211, 238, 0.06);
+    color: var(--tlh-cyan);
+    border-color: rgba(34, 211, 238, 0.25);
+}
+.btnGhost:hover:not(:disabled) {
+    background: rgba(34, 211, 238, 0.14);
+    border-color: rgba(34, 211, 238, 0.45);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(34, 211, 238, 0.20);
+}
+
+.btnAmber {
+    background: rgba(245, 158, 11, 0.10);
+    color: var(--tlh-amber);
+    border-color: rgba(245, 158, 11, 0.30);
+}
+.btnAmber:hover:not(:disabled) {
+    background: rgba(245, 158, 11, 0.20);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+}
+
+.btnRose {
+    background: rgba(239, 68, 68, 0.10);
+    color: var(--tlh-rose);
+    border-color: rgba(239, 68, 68, 0.30);
+}
+.btnRose:hover:not(:disabled) {
+    background: rgba(239, 68, 68, 0.20);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(239, 68, 68, 0.25);
+}
+
+@media (max-width: 1100px) {
+    .metrics { display: none; }
+}
+
+@media (max-width: 720px) {
+    .strip { flex-direction: column; align-items: flex-start; padding: 10px 14px; }
+    .actions { width: 100%; flex-wrap: wrap; }
+    .btn span { display: none; }
+    .btn { padding: 7px 9px; }
+}
