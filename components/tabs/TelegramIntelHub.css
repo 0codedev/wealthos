@@ -1,0 +1,736 @@
+/* CC42 — Telegram Intel Hub shell styles.
+   Per-component visuals live in components/telegram/*.module.css.
+   Tokens + reusable animations live in components/telegram/tokens.module.css
+   and animations.module.css. This file holds the layout glue + dock + dock
+   shortcuts modal + the aurora backdrop. */
+
+:root {
+    /* fallbacks for tokens so the shell works even if a per-component
+       module hasn't loaded its variables yet */
+    --tlh-bg-0: #07090f;
+    --tlh-bg-1: #0c0f18;
+    --tlh-bg-2: #11141f;
+    --tlh-bg-3: #161a26;
+    --tlh-bg-glass: rgba(15, 18, 28, 0.55);
+    --tlh-bg-glass-strong: rgba(15, 18, 28, 0.78);
+    --tlh-border: rgba(255, 255, 255, 0.06);
+    --tlh-border-strong: rgba(255, 255, 255, 0.10);
+    --tlh-text: #e6e9f2;
+    --tlh-text-mute: #9aa3b8;
+    --tlh-text-dim: #6b7390;
+    --tlh-text-faint: #4b526a;
+    --tlh-violet: #818cf8;
+    --tlh-violet-2: #6366f1;
+    --tlh-cyan: #a5b4fc;
+    --tlh-cyan-2: #4f46e5;
+    --tlh-emerald: #34d399;
+    --tlh-rose: #fb7185;
+    --tlh-amber: #fbbf24;
+    --tlh-font-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --tlh-font-mono: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace;
+    --tlh-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --tlh-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --tlh-ease-apple: cubic-bezier(0.32, 0.72, 0, 1);
+    --tlh-dur-fast: 120ms;
+    --tlh-dur-base: 200ms;
+    --tlh-dur-slow: 360ms;
+    --tlh-r-2: 6px;
+    --tlh-r-3: 10px;
+    --tlh-r-4: 14px;
+    --tlh-r-pill: 999px;
+    --tlh-grad-primary: linear-gradient(135deg, #8b5cf6 0%, #4f46e5 100%);
+}
+
+/* Root wrapper */
+.telegram-intel-hub {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: var(--tlh-text);
+    background: transparent;
+    font-family: var(--tlh-font-sans);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* ===== Aurora backdrop ============================================ */
+.tih-aurora {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0.65;
+}
+.tih-aurora-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    will-change: transform;
+}
+.tih-aurora-1 {
+    top: -10%;
+    left: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(ellipse, rgba(99, 102, 241, 0.08), transparent 70%);
+    animation: tlh-aurora-drift-1 22s ease-in-out infinite;
+}
+.tih-aurora-2 {
+    bottom: -10%;
+    right: -10%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(ellipse, rgba(99, 102, 241, 0.05), transparent 70%);
+    animation: tlh-aurora-drift-2 28s ease-in-out infinite;
+}
+.tih-aurora-3 {
+    top: 40%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(ellipse, rgba(99, 102, 241, 0.03), transparent 70%);
+    transform: translate(-50%, -50%);
+    animation: tlh-aurora-drift-3 18s ease-in-out infinite;
+}
+
+/* ===== 3-panel layout ============================================= */
+.intel-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* Phones: the 250px EarSidebar column crushes the feed to a sliver.
+   It's replaced by the compact horizontal ear-selector strip in TSX. */
+@media (max-width: 767px) {
+    .ear-sidebar-col {
+        display: none !important;
+    }
+}
+
+.feed-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px 0 16px;
+    overflow: hidden;
+    min-width: 0;
+    position: relative;
+}
+
+.feed-panel > *:not(.messages-scroll-box) {
+    flex-shrink: 0;
+}
+
+.summary-panel {
+    width: 290px;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px 0 16px;
+    border-left: 1px solid var(--tlh-border);
+    background: var(--tlh-bg-glass);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    position: relative;
+    overflow: hidden;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.summary-panel.collapsed {
+    width: 60px;
+    padding: 12px 0 0 0;
+    align-items: center;
+}
+
+.summary-panel .panel-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--tlh-violet);
+    padding: 0 4px;
+    margin-bottom: 12px;
+    height: 18px;
+}
+
+.summary-panel .panel-title h2 {
+    font-size: 10px;
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.30);
+    color: var(--tlh-violet);
+}
+
+/* ===== Sticky filter bar (slides up/down on scroll) ============== */
+.feed-controls-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    padding: 6px 0 8px 0;
+    background: transparent !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    max-height: 120px;
+    transition: max-height var(--tlh-dur-base) var(--tlh-ease-apple),
+                margin-bottom var(--tlh-dur-base) var(--tlh-ease-apple),
+                opacity var(--tlh-dur-base) var(--tlh-ease-out);
+    margin-bottom: 4px;
+    overflow: visible;
+}
+.feed-controls-sticky.is-hidden {
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* ===== Feed controls (search + chips) ============================ */
+.feed-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: transparent !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid var(--tlh-border) !important;
+    border-radius: var(--tlh-r-2) !important;
+    padding: 7px 10px !important;
+    gap: 8px !important;
+    transition: border-color var(--tlh-dur-base) var(--tlh-ease-out) !important;
+    box-shadow: none !important;
+}
+.search-wrapper.is-focused {
+    border-color: rgba(168, 85, 247, 0.45) !important;
+    box-shadow: none !important;
+}
+.search-wrapper .search-icon {
+    color: var(--tlh-text-faint) !important;
+    transition: color var(--tlh-dur-base) var(--tlh-ease-out), transform var(--tlh-dur-base) var(--tlh-ease-spring) !important;
+    flex-shrink: 0 !important;
+}
+.search-wrapper .search-icon.rot { color: var(--tlh-violet) !important; transform: rotate(15deg) scale(1.1) !important; }
+ 
+.search-wrapper input {
+    background: transparent !important;
+    border: none !important;
+    color: var(--tlh-text) !important;
+    font-size: 12.5px !important;
+    flex: 1 !important;
+    outline: none !important;
+    font-family: var(--tlh-font-sans) !important;
+    min-width: 0 !important;
+    box-shadow: none !important;
+}
+.search-wrapper input::placeholder { color: var(--tlh-text-faint) !important; }
+
+.clear-search {
+    background: transparent;
+    border: none;
+    color: var(--tlh-text-faint);
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    transition: color var(--tlh-dur-fast) var(--tlh-ease-out), background var(--tlh-dur-fast) var(--tlh-ease-out);
+}
+.clear-search:hover { color: var(--tlh-text); background: rgba(255, 255, 255, 0.05); }
+
+.filter-chips {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.filter-prefix {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--tlh-text-faint);
+    letter-spacing: 1px;
+    margin-right: 2px;
+    padding-left: 2px;
+}
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--tlh-bg-2);
+    border: 1px solid var(--tlh-border);
+    color: var(--tlh-text-mute);
+    padding: 4px 10px;
+    border-radius: var(--tlh-r-pill);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--tlh-dur-base) var(--tlh-ease-out);
+    font-family: var(--tlh-font-sans);
+}
+.chip:hover {
+    background: var(--tlh-bg-3);
+    color: var(--tlh-text);
+    transform: translateY(-1px);
+    border-color: var(--tlh-border-strong);
+}
+.chip.active {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.20));
+    border-color: var(--tlh-violet-2);
+    color: #fff;
+}
+.chip-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 5px;
+    font-size: 9px;
+    font-weight: 800;
+    font-family: var(--tlh-font-mono);
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: var(--tlh-r-pill);
+    color: var(--tlh-text);
+}
+.chip.active .chip-count {
+    background: rgba(255, 255, 255, 0.20);
+    color: #fff;
+}
+
+/* ===== Messages scroll box ======================================= */
+.messages-scroll-box {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 4px 6px 12px 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.10) transparent;
+    min-height: 0;
+}
+.messages-scroll-box::-webkit-scrollbar { width: 6px; }
+.messages-scroll-box::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.10); border-radius: 3px; }
+.messages-scroll-box::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.18); }
+
+/* ===== Empty state (rich, animated) ============================= */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--tlh-text-mute);
+    gap: 12px;
+    flex: 1;
+    min-height: 300px;
+    animation: tlh-fade-up 480ms var(--tlh-ease-out) both;
+}
+
+.empty-art {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tlh-text-dim);
+    box-shadow: none;
+    transition: all var(--tlh-dur-base) var(--tlh-ease-out);
+}
+
+.empty-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--tlh-text);
+    margin: 0;
+}
+
+.empty-desc {
+    font-size: 12px;
+    color: var(--tlh-text-dim);
+    max-width: 340px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.empty-action {
+    background: var(--tlh-bg-2);
+    border: 1px solid var(--tlh-border);
+    color: var(--tlh-text);
+    padding: 7px 16px;
+    border-radius: var(--tlh-r-pill);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--tlh-dur-base) var(--tlh-ease-out);
+    margin-top: 4px;
+    font-family: var(--tlh-font-sans);
+}
+.empty-action:hover {
+    background: var(--tlh-bg-3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Modal chrome (shared by PositionSizerModal + EarConfigModal) */
+.settings-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: tlh-fade-in 200ms var(--tlh-ease-out) both;
+}
+
+.settings-modal {
+    background: var(--tlh-bg-glass-strong);
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    border: 1px solid var(--tlh-border-strong);
+    box-shadow: var(--tlh-shadow-3), 0 0 60px rgba(168, 85, 247, 0.20);
+    border-radius: var(--tlh-r-4);
+    width: 500px;
+    max-width: 90%;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: tlh-modal-enter 280ms var(--tlh-ease-spring) both;
+}
+
+@keyframes tlh-modal-enter {
+    from { opacity: 0; transform: scale(0.94) translateY(8px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--tlh-border);
+    background: linear-gradient(180deg, rgba(168, 85, 247, 0.05), transparent);
+}
+.modal-header h3 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--tlh-text);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.close-btn {
+    background: transparent;
+    border: none;
+    color: var(--tlh-text-faint);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: var(--tlh-r-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--tlh-dur-fast) var(--tlh-ease-out);
+}
+.close-btn:hover { color: var(--tlh-text); background: rgba(255, 255, 255, 0.06); }
+
+.modal-body {
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 12px 16px;
+    border-top: 1px solid var(--tlh-border);
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.cancel-btn {
+    background: var(--tlh-bg-2);
+    border: 1px solid var(--tlh-border);
+    color: var(--tlh-text-mute);
+    padding: 7px 14px;
+    border-radius: var(--tlh-r-2);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--tlh-dur-base) var(--tlh-ease-out);
+    font-family: var(--tlh-font-sans);
+}
+.cancel-btn:hover { background: var(--tlh-bg-3); color: var(--tlh-text); border-color: var(--tlh-border-strong); }
+
+.save-btn {
+    background: linear-gradient(135deg, var(--tlh-violet-2), #4f46e5);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    color: #fff;
+    padding: 7px 16px;
+    border-radius: var(--tlh-r-2);
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--tlh-dur-base) var(--tlh-ease-out);
+    font-family: var(--tlh-font-sans);
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.30);
+    letter-spacing: 0.2px;
+}
+.save-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+}
+.save-btn:active { transform: translateY(0); }
+
+/* ===== Bottom dock =============================================== */
+.tih-dock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 6px 16px;
+    background: var(--tlh-bg-glass);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border-top: 1px solid var(--tlh-border);
+    font-size: 10px;
+    color: var(--tlh-text-faint);
+    position: relative;
+    z-index: 3;
+    flex-shrink: 0;
+}
+
+/* Narrow phones (OnePlus 13 ~411px): dock groups wrap instead of squeezing */
+@media (max-width: 480px) {
+    .tih-dock {
+        flex-wrap: wrap;
+        row-gap: 4px;
+        padding: 6px 12px;
+    }
+    .tih-dock-left,
+    .tih-dock-right {
+        flex-wrap: wrap;
+        gap: 5px;
+        min-width: 0;
+    }
+}
+
+.tih-dock-left,
+.tih-dock-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tih-dock-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--tlh-bg-2);
+    border: 1px solid var(--tlh-border);
+    padding: 3px 8px;
+    border-radius: var(--tlh-r-pill);
+    font-family: var(--tlh-font-mono);
+    color: var(--tlh-text-mute);
+}
+.tih-dock-pill svg { color: var(--tlh-violet); }
+.tih-dock-label {
+    color: var(--tlh-text-faint);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.tih-dock-value {
+    color: var(--tlh-text);
+    font-weight: 700;
+}
+
+.tih-dock-help {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    color: var(--tlh-text-faint);
+    cursor: pointer;
+    font-family: var(--tlh-font-sans);
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: var(--tlh-r-pill);
+    transition: color var(--tlh-dur-fast) var(--tlh-ease-out);
+}
+.tih-dock-help:hover { color: var(--tlh-violet); }
+.tih-dock-help kbd {
+    background: var(--tlh-bg-2);
+    border: 1px solid var(--tlh-border);
+    border-radius: 3px;
+    padding: 0 4px;
+    font-family: var(--tlh-font-mono);
+    font-size: 9px;
+    color: var(--tlh-text);
+}
+
+/* ===== Keyboard shortcuts modal ================================== */
+.tih-shortcuts-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: tlh-fade-in 180ms var(--tlh-ease-out) both;
+}
+
+.tih-shortcuts-modal {
+    background: var(--tlh-bg-glass-strong);
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    border: 1px solid var(--tlh-border-strong);
+    border-radius: var(--tlh-r-4);
+    padding: 24px;
+    width: 380px;
+    max-width: 90%;
+    box-shadow: var(--tlh-shadow-3);
+    animation: tlh-modal-enter 280ms var(--tlh-ease-spring) both;
+}
+.tih-shortcuts-modal h3 {
+    margin: 0 0 16px 0;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--tlh-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.tih-shortcuts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tih-shortcut {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11.5px;
+    color: var(--tlh-text-mute);
+}
+.tih-shortcut span { flex: 1; }
+.tih-shortcut kbd {
+    background: var(--tlh-bg-2);
+    border: 1px solid var(--tlh-border);
+    border-bottom-width: 2px;
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-family: var(--tlh-font-mono);
+    font-size: 10px;
+    color: var(--tlh-text);
+    min-width: 18px;
+    text-align: center;
+}
+
+.tih-shortcuts-close {
+    width: 100%;
+    background: var(--tlh-bg-2);
+    border: 1px solid var(--tlh-border);
+    color: var(--tlh-text);
+    padding: 8px;
+    border-radius: var(--tlh-r-2);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--tlh-dur-base) var(--tlh-ease-out);
+    font-family: var(--tlh-font-sans);
+}
+.tih-shortcuts-close:hover {
+    background: var(--tlh-bg-3);
+    border-color: var(--tlh-border-strong);
+}
+
+/* ===== Focus normalization ====================================== */
+.telegram-intel-hub input:focus,
+.telegram-intel-hub textarea:focus,
+.telegram-intel-hub select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* ===== Light mode (matches rest of app) ========================= */
+:root:not(.dark) .telegram-intel-hub {
+    --tlh-bg-0: #f6f7fb;
+    --tlh-bg-1: #ffffff;
+    --tlh-bg-2: #f8fafc;
+    --tlh-bg-3: #eef0f6;
+    --tlh-bg-glass: rgba(255, 255, 255, 0.78);
+    --tlh-bg-glass-strong: rgba(255, 255, 255, 0.94);
+    --tlh-border: rgba(15, 23, 42, 0.08);
+    --tlh-border-strong: rgba(15, 23, 42, 0.14);
+    --tlh-text: #0f172a;
+    --tlh-text-mute: #475569;
+    --tlh-text-dim: #64748b;
+    --tlh-text-faint: #94a3b8;
+}
+
+:root:not(.dark) .feed-controls-sticky {
+    background: transparent !important;
+}
+
+:root:not(.dark) .tih-aurora-1 { background: radial-gradient(ellipse, rgba(99, 102, 241, 0.05), transparent 70%); }
+:root:not(.dark) .tih-aurora-2 { background: radial-gradient(ellipse, rgba(99, 102, 241, 0.03), transparent 70%); }
+:root:not(.dark) .tih-aurora-3 { background: radial-gradient(ellipse, rgba(99, 102, 241, 0.02), transparent 70%); }
+
+:root:not(.dark) .messages-scroll-box::-webkit-scrollbar-thumb { background: rgba(15, 23, 42, 0.10); }
+:root:not(.dark) .messages-scroll-box::-webkit-scrollbar-thumb:hover { background: rgba(15, 23, 42, 0.18); }
+:root:not(.dark) .messages-scroll-box { scrollbar-color: rgba(15, 23, 42, 0.10) transparent; }
+
+:root:not(.dark) .settings-modal { background: #ffffff; border-color: #e2e8f0; }
+:root:not(.dark) .modal-header { background: linear-gradient(180deg, rgba(99, 102, 241, 0.02), transparent); }
+:root:not(.dark) .modal-header h3 { color: #1e293b; }
+:root:not(.dark) .settings-modal-overlay { background: rgba(15, 23, 42, 0.4); }
+:root:not(.dark) .cancel-btn { background: #ffffff; border-color: #e2e8f0; color: #475569; }
+:root:not(.dark) .modal-footer { background: #f8fafc; }
+:root:not(.dark) .empty-art { background: rgba(15, 23, 42, 0.03); border-color: rgba(15, 23, 42, 0.08); color: #64748b; }
+:root:not(.dark) .empty-title { color: #1e293b; }
+:root:not(.dark) .empty-action { background: #ffffff; border-color: #e2e8f0; color: #1e293b; }
+:root:not(.dark) .tih-shortcuts-modal { background: var(--tlh-bg-glass-strong); backdrop-filter: blur(24px) saturate(1.4); -webkit-backdrop-filter: blur(24px) saturate(1.4); border-color: #e2e8f0; }
+:root:not(.dark) .tih-shortcuts-modal h3 { color: #1e293b; }
+:root:not(.dark) .tih-shortcut kbd { background: #f1f5f9; border-color: #e2e8f0; color: #1e293b; }
+:root:not(.dark) .tih-shortcuts-close { background: var(--tlh-bg-glass); border-color: #e2e8f0; color: #1e293b; }
+:root:not(.dark) .tih-dock { background: var(--tlh-bg-glass); }
+:root:not(.dark) .tih-dock-pill { background: #f1f5f9; border-color: #e2e8f0; }
+:root:not(.dark) .tih-dock-help kbd { background: #f1f5f9; border-color: #e2e8f0; }
+:root:not(.dark) .search-wrapper { background: transparent; border-color: #e2e8f0; box-shadow: none !important; }
+:root:not(.dark) .search-wrapper input { color: #0f172a; }
+:root:not(.dark) .search-wrapper input::placeholder { color: #94a3b8; }
+:root:not(.dark) .chip { background: var(--tlh-bg-glass); border-color: #e2e8f0; color: #475569; }
+:root:not(.dark) .chip:hover { background: rgba(0, 0, 0, 0.02); color: #1e293b; }
