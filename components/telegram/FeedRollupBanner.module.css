@@ -1,0 +1,140 @@
+/* CC42 — FeedRollupBanner */
+
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: linear-gradient(120deg,
+        rgba(34, 211, 238, 0.10) 0%,
+        rgba(168, 85, 247, 0.10) 50%,
+        rgba(34, 211, 238, 0.06) 100%);
+    border: 1px solid rgba(34, 211, 238, 0.25);
+    border-radius: var(--tlh-r-3);
+    margin-bottom: 12px;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 14px rgba(34, 211, 238, 0.06);
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    animation: tlh-shimmer 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.labelIcon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--tlh-cyan-2), var(--tlh-violet-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+    flex-shrink: 0;
+}
+
+.labelText {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.labelTitle {
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--tlh-cyan);
+    letter-spacing: 0.5px;
+}
+
+.labelSub {
+    font-size: 8px;
+    color: var(--tlh-text-faint);
+    font-family: var(--tlh-font-mono);
+}
+
+.divider {
+    width: 1px;
+    height: 22px;
+    background: linear-gradient(180deg, transparent, var(--tlh-border-strong), transparent);
+    flex-shrink: 0;
+}
+
+.tickers {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.tickersInner {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.tickers:hover .tickersInner {
+    animation-play-state: paused;
+}
+
+.tickerChip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--tlh-r-pill);
+    padding: 3px 4px 3px 8px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--tlh-text);
+    font-family: var(--tlh-font-mono);
+    transition: all var(--tlh-dur-base) var(--tlh-ease-out);
+    flex-shrink: 0;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.tickerChip:hover {
+    background: rgba(0, 0, 0, 0.40);
+    border-color: rgba(34, 211, 238, 0.35);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tickerIcon {
+    color: var(--tlh-emerald);
+}
+
+.tickerSym {
+    letter-spacing: 0.2px;
+}
+
+.tickerArrow {
+    color: var(--tlh-text-faint);
+    margin-left: -2px;
+    margin-right: 2px;
+}
