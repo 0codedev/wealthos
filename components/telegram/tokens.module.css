@@ -1,0 +1,140 @@
+/**
+ * CC42 — Telegram Intel Hub design tokens.
+ * Single source of truth for color, spacing, motion, glass surfaces, and
+ * elevation. Imported by the slim shell + every per-component module CSS.
+ *
+ * Color philosophy: semantic only. Components reference --tlh-*, never
+ * hex literals — that way light/dark theming flips with one CSS variable
+ * override and there's zero risk of a forgotten color hardcode.
+ *
+ * Aesthetic direction: deep slate base + violet/cyan accent gradient,
+ * saturated enough to read as "Bloomberg × Linear × glassmorphism" but
+ * restrained enough to fade into the rest of the app's indigo palette.
+ */
+
+:root {
+    /* ===== Core surface (glass + solids) ============================== */
+    --tlh-bg-0: var(--bg-surface);             /* deepest void behind the aurora */
+    --tlh-bg-1: var(--bg-surface-2);             /* card / panel base */
+    --tlh-bg-2: var(--bg-surface-3);             /* raised surface */
+    --tlh-bg-3: var(--bg-surface-3);             /* hover surface */
+    --tlh-bg-glass: var(--bg-surface);
+    --tlh-bg-glass-strong: var(--bg-surface-2);
+    --tlh-border: var(--border);
+    --tlh-border-strong: var(--border);
+    --tlh-border-glow: var(--tlh-violet-2);
+
+    /* ===== Text ======================================================= */
+    --tlh-text: var(--text-primary);
+    --tlh-text-mute: var(--text-secondary);
+    --tlh-text-dim: var(--text-secondary);
+    --tlh-text-faint: var(--text-secondary);
+
+    /* ===== Accents (semantic) ========================================= */
+    --tlh-violet: #818cf8;
+    --tlh-violet-2: #6366f1;
+    --tlh-violet-3: #4f46e5;
+    --tlh-cyan: #67e8f9;
+    --tlh-cyan-2: #22d3ee;
+    --tlh-blue: #60a5fa;
+    --tlh-emerald: #34d399;
+    --tlh-emerald-2: #10b981;
+    --tlh-rose: #fb7185;
+    --tlh-rose-2: #f43f5e;
+    --tlh-amber: #fbbf24;
+    --tlh-orange: #fb923c;
+    --tlh-slate: #94a3b8;
+
+    /* ===== Status (connection banner) ================================= */
+    --tlh-status-live: #10b981;
+    --tlh-status-warn: #f59e0b;
+    --tlh-status-down: #ef4444;
+    --tlh-status-info: #22d3ee;
+
+    /* ===== Signal side colors ========================================= */
+    --tlh-buy: #10b981;
+    --tlh-sell: #ef4444;
+    --tlh-hold: #94a3b8;
+
+    /* ===== Gradients (reusable) ======================================= */
+    --tlh-grad-primary: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    --tlh-grad-primary-soft: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(79, 70, 229, 0.15));
+    --tlh-grad-aurora-1: radial-gradient(ellipse 60% 50% at 20% 0%, rgba(99, 102, 241, 0.08), transparent 70%);
+    --tlh-grad-aurora-2: radial-gradient(ellipse 50% 40% at 80% 100%, rgba(99, 102, 241, 0.05), transparent 70%);
+    --tlh-grad-aurora-3: radial-gradient(ellipse 40% 30% at 50% 50%, rgba(99, 102, 241, 0.03), transparent 70%);
+    --tlh-grad-buy: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.03));
+    --tlh-grad-sell: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.03));
+    --tlh-grad-stroke: linear-gradient(135deg, rgba(99, 102, 241, 0.4), rgba(34, 211, 238, 0.4));
+
+    /* ===== Elevation ================================================== */
+    --tlh-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.20);
+    --tlh-shadow-2: 0 4px 12px rgba(0, 0, 0, 0.20);
+    --tlh-shadow-3: 0 10px 30px rgba(0, 0, 0, 0.30);
+    --tlh-shadow-glow-violet: 0 0 20px rgba(99, 102, 241, 0.15);
+    --tlh-shadow-glow-cyan: 0 0 20px rgba(34, 211, 238, 0.12);
+    --tlh-shadow-glow-emerald: 0 0 20px rgba(16, 185, 129, 0.12);
+    --tlh-shadow-glow-rose: 0 0 20px rgba(244, 63, 94, 0.12);
+
+    /* ===== Motion ===================================================== */
+    --tlh-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --tlh-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --tlh-ease-apple: cubic-bezier(0.32, 0.72, 0, 1);
+    --tlh-dur-fast: 120ms;
+    --tlh-dur-base: 200ms;
+    --tlh-dur-slow: 360ms;
+    --tlh-dur-slower: 600ms;
+
+    /* ===== Radii ====================================================== */
+    --tlh-r-1: 4px;
+    --tlh-r-2: 6px;
+    --tlh-r-3: 10px;
+    --tlh-r-4: 14px;
+    --tlh-r-pill: 999px;
+
+    /* ===== Type ======================================================= */
+    --tlh-font-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --tlh-font-mono: var(--font-mono, '"JetBrains Mono"', ui-monospace, SFMono-Regular, monospace);
+    --tlh-fs-xs: 10px;
+    --tlh-fs-sm: 11px;
+    --tlh-fs-base: 12.5px;
+    --tlh-fs-md: 13px;
+    --tlh-fs-lg: 15px;
+    --tlh-fs-xl: 18px;
+    --tlh-fs-2xl: 22px;
+    --tlh-fs-3xl: 28px;
+}
+
+/* ===== Light mode (`:root:not(.dark)` matches the rest of the app) ==== */
+:global(html:not(.dark)) {
+    --tlh-bg-0: #f6f7fb;
+    --tlh-bg-1: #ffffff;
+    --tlh-bg-2: #f8fafc;
+    --tlh-bg-3: #eef0f6;
+    --tlh-bg-glass: rgba(255, 255, 255, 0.72);
+    --tlh-bg-glass-strong: rgba(255, 255, 255, 0.92);
+    --tlh-border: rgba(15, 23, 42, 0.08);
+    --tlh-border-strong: rgba(15, 23, 42, 0.14);
+
+    --tlh-text: #0f172a;
+    --tlh-text-mute: #475569;
+    --tlh-text-dim: #64748b;
+    --tlh-text-faint: #94a3b8;
+
+    --tlh-grad-aurora-1: radial-gradient(ellipse 60% 50% at 20% 0%, rgba(99, 102, 241, 0.05), transparent 70%);
+    --tlh-grad-aurora-2: radial-gradient(ellipse 50% 40% at 80% 100%, rgba(99, 102, 241, 0.03), transparent 70%);
+    --tlh-grad-aurora-3: radial-gradient(ellipse 40% 30% at 50% 50%, rgba(99, 102, 241, 0.02), transparent 70%);
+
+    --tlh-shadow-1: 0 1px 2px rgba(15, 23, 42, 0.06);
+    --tlh-shadow-2: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --tlh-shadow-3: 0 10px 30px rgba(15, 23, 42, 0.10);
+}
+
+/* ===== Reduced motion ================================================== */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --tlh-dur-fast: 0ms;
+        --tlh-dur-base: 0ms;
+        --tlh-dur-slow: 0ms;
+        --tlh-dur-slower: 0ms;
+    }
+}
