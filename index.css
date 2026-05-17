@@ -1,0 +1,3931 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   PRIVACY MODE — Activated via body.privacy-mode
+   ========================================================================== */
+
+/* CC49 — global tabular numerics for financial alignment.
+   Every digit in the document aligns vertically, even when rendered in
+   Outfit. `.font-mono` blocks keep the rule (and additionally render in
+   JetBrains Mono). */
+body {
+  font-variant-numeric: tabular-nums;
+}
+
+.font-mono {
+  font-family: var(--font-mono, '"JetBrains Mono"', ui-monospace, SFMono-Regular, monospace);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+body.privacy-mode .financial-value {
+  filter: blur(8px);
+  user-select: none;
+  transition: filter 0.3s ease;
+  pointer-events: auto;
+}
+
+body.privacy-mode .financial-value:hover {
+  filter: blur(0px);
+  /* Reveal on hover for quick peak */
+  cursor: pointer;
+}
+
+/* CC12 — auto-blur on tab-hide / window-blur (independent of the
+   manual privacy-mode toggle). Hides portfolio values from
+   screenshots, screen-sharing, and over-the-shoulder peeks. */
+body.tab-hidden .financial-value,
+body.tab-hidden .privacy-protected {
+  filter: blur(12px) saturate(0.6);
+  transition: filter 0.2s ease;
+}
+
+body.tab-hidden.privacy-mode .financial-value {
+  /* If both are active, use the deeper blur of the two. */
+  filter: blur(14px) saturate(0.4);
+}
+
+
+/* Utility: hide scrollbar for horizontal/vertical scroll containers */
+.no-scrollbar,
+.scrollbar-hide {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-hide::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Global scrollbar control & design system canvas */
+html,
+body {
+  overflow-x: hidden;
+  background-color: var(--canvas-bg, var(--bg-base, #0F172A));
+  color: var(--text-primary, #f8fafc);
+  font-family: var(--font-body, 'Outfit', sans-serif);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+:root {
+  --glass-surface: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-blur: 16px;
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  --wa-motion-fast: 140ms;
+  --wa-motion-base: 220ms;
+  --wa-motion-slow: 340ms;
+  --trust-live: #10b981;
+  --trust-cached: #6366f1;
+  --trust-stale: #f59e0b;
+  --trust-degraded: #ef4444;
+
+  /* ==========================================================================
+     Responsive Tokens (Contract Section 5.1)
+     Mobile defaults with tablet/desktop expansion
+     ========================================================================== */
+  --space-page: 12px;
+  --space-card: 12px;
+  --space-gap: 10px;
+  --radius-card: 12px;
+  --bottom-nav-clearance: calc(64px + env(safe-area-inset-bottom, 0px));
+  --header-clearance: 56px;
+  --sheet-safe-bottom: env(safe-area-inset-bottom, 16px);
+
+  /* ==========================================================================
+     AGENT CC4 — Premium Glassmorphic Design Tokens
+     ========================================================================== */
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-bg-dark: rgba(15, 20, 40, 0.55);
+  --glass-border: rgba(148, 163, 184, 0.12);
+  --glass-border-dark: rgba(51, 65, 85, 0.4);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --glass-shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --color-gain: #10b981;
+  --color-gain-muted: rgba(16, 185, 129, 0.12);
+  --color-loss: #f43f5e;
+  --color-loss-muted: rgba(244, 63, 94, 0.12);
+  --color-accent: #8b5cf6;
+  --color-accent-muted: rgba(139, 92, 246, 0.12);
+  --color-gold: #f59e0b;
+  --color-surface: var(--glass-bg);
+  --color-surface-dark: var(--glass-bg-dark);
+  --color-text-primary: #0f172a;
+  --color-text-primary-dark: #f8fafc;
+  --color-text-secondary: #94a3b8;
+
+  /* Default Colors (Classic Dark) */
+  --bg-base: #0d1117;
+  --bg-surface: #161b27;
+  --bg-surface-2: #1c2333;
+  --bg-surface-3: #232d42;
+  --border: rgba(255, 255, 255, 0.06);
+  --accent-blue: #06b6d4;
+  /* cyan */
+  --accent-teal: #10b981;
+  /* green */
+  --accent-red: #ef4444;
+  --accent-amber: #f59e0b;
+  --accent-violet: #6366f1;
+  /* indigo */
+  --text-primary: #f8fafc;
+  --text-muted: #64748b;
+  --text-dim: #475569;
+
+  /* ==========================================================================
+     WEALTHOS INSTITUTIONAL DESIGN TOKENS (SINGLE SOURCE OF TRUTH)
+     ========================================================================== */
+  --wa-canvas: #090a0f;
+  --wa-surface: #0b0d14;          /* Inner page shell / container */
+  --wa-card: #0d0f17;             /* Approved sweet spot (slightly darker than X, rich obsidian) */
+  --wa-card-elevated: #131624;    /* Modals, drawers, popovers, dropdowns */
+  --wa-border: rgba(255, 255, 255, 0.08); /* Unified translucent hairline border */
+  --wa-border-hover: rgba(99, 102, 241, 0.4);
+  --wa-bullish: #10b981;
+  --wa-bullish-subtle: rgba(16, 185, 129, 0.12);
+  --wa-bearish: #f43f5e;
+  --wa-bearish-subtle: rgba(244, 63, 94, 0.12);
+  --wa-accent: #6366f1;
+  --wa-accent-subtle: rgba(99, 102, 241, 0.12);
+  --wa-warning: #f59e0b;
+  --wa-warning-subtle: rgba(245, 158, 11, 0.12);
+  --wa-text-primary: #f8fafc;
+  --wa-text-secondary: #94a3b8;
+  --wa-text-muted: #64748b;
+  --radius-sm: 8px;               /* Badges, pill tags, tooltips */
+  --radius-md: 14px;              /* Controls, tables, inputs, tabs */
+  --radius-lg: 24px;              /* Approved curvature: main cards, feature widgets, modals */
+  --radius-full: 9999px;
+
+  /* Obsidian Surface & Backward-Compatible Design System Tokens */
+  --obsidian-canvas: var(--wa-canvas);
+  --obsidian-base: var(--wa-card);
+  --obsidian-elevated: var(--wa-card-elevated);
+  --obsidian-floating: #181C2A;
+  --obsidian-border: var(--wa-border);
+  --obsidian-highlight: rgba(255, 255, 255, 0.03);
+
+  /* TF Design Tokens (Single Source of Truth) */
+  --tf-bg-app: var(--wa-canvas);
+  --tf-bg-surface: var(--wa-surface);
+  --tf-bg-card: var(--wa-card);
+  --tf-bg-elevated: var(--wa-card-elevated);
+  --tf-border: var(--wa-border);
+  --tf-border-subtle: rgba(255, 255, 255, 0.04);
+  --tf-text-primary: var(--wa-text-primary);
+  --tf-text-secondary: var(--wa-text-secondary);
+  --tf-text-muted: var(--wa-text-muted);
+
+  /* Top-Down Typography Tokens (Default: WealthOS Classic) */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --weight-tab-title: 700;
+  --weight-card-title: 600;
+  --weight-subheading: 500;
+  --size-tab-title: 1.5rem;
+  --size-tab-subtitle: 0.8125rem;
+  --tracking-tab-title: -0.02em;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --space-page: 20px;
+    --space-card: 16px;
+    --space-gap: 16px;
+    --radius-card: 16px;
+  }
+}
+
+/* ==========================================================================
+   Tri-Vertical Design Preset Tokens (Classic, ReUI Nova, Meta Astryx)
+   ========================================================================== */
+:root {
+  /* Default: WealthOS Classic (Sacred Baseline - Exact Match to Screenshot) */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --weight-heading: 700;
+  --weight-card-title: 600;
+  --weight-btn: 600;
+  --tracking-title: -0.02em;
+
+  --canvas-bg: #0F172A;
+  --sidebar-bg: rgba(15, 23, 42, 0.8);
+  --sidebar-border: rgba(255, 255, 255, 0.06);
+  --header-bg: rgba(15, 23, 42, 0.6);
+  --header-border: rgba(255, 255, 255, 0.08);
+
+  --surface-card: rgba(15, 23, 42, 0.6);
+  --surface-card-hover: rgba(30, 41, 59, 0.7);
+  --surface-elevated: #181D33;
+  --border-card: rgba(51, 65, 85, 0.6);
+  --card-radius: 16px;
+  --card-shadow: 0 16px 45px -10px rgba(0, 0, 0, 0.5);
+
+  --hero-card-bg: linear-gradient(to bottom right, rgba(16, 185, 129, 0.1), rgba(15, 23, 42, 0.6), rgba(6, 182, 212, 0.1));
+  --hero-orbs: block;
+
+  --btn-radius: 8px;
+  --btn-primary-bg: #6366F1;
+  --btn-primary-text: #FFFFFF;
+  --btn-primary-hover: #4F46E5;
+  --btn-primary-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+
+  --btn-sec-bg: #181D33;
+  --btn-sec-text: #E2E8F0;
+  --btn-sec-border: rgba(255, 255, 255, 0.12);
+  --btn-sec-hover: #222946;
+
+  --badge-radius: 9999px;
+  --table-header-bg: #14182B;
+  --table-row-hover: rgba(99, 102, 241, 0.06);
+  --table-border: rgba(255, 255, 255, 0.06);
+
+  --active-nav-bg: rgba(99, 102, 241, 0.15);
+  --active-nav-text: #FFFFFF;
+  --active-nav-indicator: #6366F1;
+
+  --hero-glow-1: rgba(99, 102, 241, 0.16);
+  --hero-glow-2: rgba(16, 185, 129, 0.12);
+  --hero-border: rgba(51, 65, 85, 0.6);
+
+  --status-success: #10B981;
+  --status-warning: #F59E0B;
+  --status-error: #EF4444;
+  --status-accent: #6366F1;
+}
+
+[data-design-preset="wealthos-classic"] {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --weight-heading: 700;
+  --weight-card-title: 600;
+  --weight-btn: 600;
+  --tracking-title: -0.02em;
+
+  --canvas-bg: #0F172A;
+  --sidebar-bg: rgba(15, 23, 42, 0.8);
+  --sidebar-border: rgba(255, 255, 255, 0.06);
+  --header-bg: rgba(15, 23, 42, 0.6);
+  --header-border: rgba(255, 255, 255, 0.08);
+
+  --surface-card: rgba(15, 23, 42, 0.6);
+  --surface-card-hover: rgba(30, 41, 59, 0.7);
+  --surface-elevated: #181D33;
+  --border-card: rgba(51, 65, 85, 0.6);
+  --card-radius: 16px;
+  --card-shadow: 0 16px 45px -10px rgba(0, 0, 0, 0.5);
+
+  --hero-card-bg: linear-gradient(to bottom right, rgba(16, 185, 129, 0.1), rgba(15, 23, 42, 0.6), rgba(6, 182, 212, 0.1));
+  --hero-orbs: block;
+
+  --btn-radius: 8px;
+  --btn-primary-bg: #6366F1;
+  --btn-primary-text: #FFFFFF;
+  --btn-primary-hover: #4F46E5;
+  --btn-primary-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+
+  --btn-sec-bg: #181D33;
+  --btn-sec-text: #E2E8F0;
+  --btn-sec-border: rgba(255, 255, 255, 0.12);
+  --btn-sec-hover: #222946;
+
+  --badge-radius: 9999px;
+  --table-header-bg: #14182B;
+  --table-row-hover: rgba(99, 102, 241, 0.06);
+  --table-border: rgba(255, 255, 255, 0.06);
+
+  --active-nav-bg: rgba(99, 102, 241, 0.15);
+  --active-nav-text: #FFFFFF;
+  --active-nav-indicator: #6366F1;
+
+  --hero-glow-1: rgba(99, 102, 241, 0.16);
+  --hero-glow-2: rgba(16, 185, 129, 0.12);
+  --hero-border: rgba(51, 65, 85, 0.6);
+
+  --status-success: #10B981;
+  --status-warning: #F59E0B;
+  --status-error: #EF4444;
+  --status-accent: #6366F1;
+}
+
+[data-design-preset="reui-nova"] {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --weight-heading: 700;
+  --weight-card-title: 600;
+  --weight-btn: 600;
+  --tracking-title: -0.025em;
+
+  --canvas-bg: #08090C;
+  --sidebar-bg: #0B0C12;
+  --sidebar-border: rgba(255, 255, 255, 0.05);
+  --header-bg: rgba(11, 12, 18, 0.85);
+  --header-border: rgba(255, 255, 255, 0.06);
+
+  --surface-card: #0E101A;
+  --surface-card-hover: #131522;
+  --surface-elevated: #161828;
+  --border-card: rgba(255, 255, 255, 0.07);
+  --card-radius: 14px;
+  --card-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+
+  --hero-card-bg: #0E101A;
+  --hero-orbs: block;
+
+  --btn-radius: 8px;
+  --btn-primary-bg: #6366F1;
+  --btn-primary-text: #FFFFFF;
+  --btn-primary-hover: #4F46E5;
+  --btn-primary-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 4px 18px rgba(99, 102, 241, 0.45);
+
+  --btn-sec-bg: #121422;
+  --btn-sec-text: #F1F5F9;
+  --btn-sec-border: rgba(255, 255, 255, 0.10);
+  --btn-sec-hover: #191C30;
+
+  --badge-radius: 9999px;
+  --table-header-bg: #0D0E18;
+  --table-row-hover: rgba(139, 92, 246, 0.08);
+  --table-border: rgba(255, 255, 255, 0.05);
+
+  --active-nav-bg: rgba(139, 92, 246, 0.15);
+  --active-nav-text: #FFFFFF;
+  --active-nav-indicator: #8B5CF6;
+
+  --hero-glow-1: rgba(139, 92, 246, 0.18);
+  --hero-glow-2: rgba(6, 182, 212, 0.12);
+  --hero-border: rgba(255, 255, 255, 0.12);
+
+  --status-success: #10B981;
+  --status-warning: #F59E0B;
+  --status-error: #EF4444;
+  --status-accent: #8B5CF6;
+}
+
+[data-design-preset="astryx"] {
+  --font-heading: 'Figtree', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Figtree', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --weight-heading: 600;
+  --weight-card-title: 600;
+  --weight-btn: 600;
+  --tracking-title: -0.015em;
+
+  --canvas-bg: #1b1b1b;
+  --sidebar-bg: #1b1b1b;
+  --sidebar-border: rgba(255, 255, 255, 0.102);
+  --header-bg: #1b1b1b;
+  --header-border: rgba(255, 255, 255, 0.102);
+
+  --surface-card: #262626;
+  --surface-card-hover: #2d2d2d;
+  --surface-elevated: #333333;
+  --border-card: rgba(255, 255, 255, 0.102);
+  --card-radius: 10px;
+  --card-shadow: none;
+
+  --hero-card-bg: #262626;
+  --hero-orbs: none;
+
+  --btn-radius: 4px;
+  --btn-primary-bg: #FFFFFF;
+  --btn-primary-text: #111111;
+  --btn-primary-hover: #E2E8F0;
+  --btn-primary-shadow: none;
+
+  --btn-sec-bg: #262626;
+  --btn-sec-text: #FFFFFF;
+  --btn-sec-border: #525252;
+  --btn-sec-hover: #333333;
+
+  --badge-radius: 4px;
+  --table-header-bg: #202020;
+  --table-row-hover: rgba(255, 255, 255, 0.04);
+  --table-border: rgba(255, 255, 255, 0.102);
+
+  --active-nav-bg: #262626;
+  --active-nav-text: #FFFFFF;
+  --active-nav-indicator: #FFFFFF;
+
+  --hero-glow-1: transparent;
+  --hero-glow-2: transparent;
+  --hero-border: rgba(255, 255, 255, 0.14);
+
+  --status-success: #64af4c;
+  --status-warning: #e59c00;
+  --status-error: #e5484d;
+  --status-accent: #3e63dd;
+}
+
+/* ==========================================================================
+   GLOBAL SCOPED PRESET COMPONENT OVERRIDES (Layer 2 Transformation)
+   Enforces Geometry, Radii, Buttons, Sub-Nav, Tables, and Typography
+   across all 19 tabs while leaving WealthOS Classic 100% sacred and unaltered.
+   ========================================================================== */
+
+/* --- 1. ASTRYX COMPONENT OVERRIDES (Official @astryxdesign/core spec) --- */
+[data-design-preset="astryx"],
+[data-design-preset="astryx"] body,
+[data-design-preset="astryx"] button,
+[data-design-preset="astryx"] input,
+[data-design-preset="astryx"] select,
+[data-design-preset="astryx"] textarea {
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Astryx Cards & Containers: 10px / 12px radius, flat #262626, ruled 1px borders, zero blur/glow */
+[data-design-preset="astryx"] .luxury-card,
+[data-design-preset="astryx"] .wa-card,
+[data-design-preset="astryx"] .hero-net-worth-card,
+[data-design-preset="astryx"] [class*="rounded-2xl"],
+[data-design-preset="astryx"] [class*="rounded-3xl"] {
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.102) !important;
+  background-color: var(--surface-card, #262626) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+[data-design-preset="astryx"] .luxury-card:hover,
+[data-design-preset="astryx"] .wa-card:hover,
+[data-design-preset="astryx"] .hero-net-worth-card:hover,
+[data-design-preset="astryx"] .luxury-card-hover:hover {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background-color: #2b2b2b !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Astryx Inner Sub-Cards & Containers: 6px radius */
+[data-design-preset="astryx"] [class*="rounded-xl"]:not(button):not(div[class*="rounded-full"]) {
+  border-radius: 6px !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Astryx Official Buttons (from https://astryx.atmeta.com/components/Button):
+   Pill-shaped (rounded-full / 9999px) or smooth 10px, never sharp 4px! */
+[data-design-preset="astryx"] button.bg-indigo-600,
+[data-design-preset="astryx"] button.bg-indigo-500,
+[data-design-preset="astryx"] button.bg-blue-600,
+[data-design-preset="astryx"] button.bg-blue-500,
+[data-design-preset="astryx"] button.bg-emerald-600,
+[data-design-preset="astryx"] .wa-btn-primary {
+  background-color: #FFFFFF !important;
+  color: #111111 !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+}
+
+[data-design-preset="astryx"] button.bg-indigo-600:hover,
+[data-design-preset="astryx"] button.bg-indigo-500:hover,
+[data-design-preset="astryx"] button.bg-blue-600:hover,
+[data-design-preset="astryx"] button.bg-blue-500:hover,
+[data-design-preset="astryx"] .wa-btn-primary:hover {
+  background-color: #E2E8F0 !important;
+  color: #111111 !important;
+}
+
+/* Astryx Secondary & General Action Buttons: Pill-shaped #262626 with subtle border */
+[data-design-preset="astryx"] .wa-btn-sec {
+  background-color: #262626 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #525252 !important;
+  border-radius: 9999px !important;
+}
+
+[data-design-preset="astryx"] button:not(.wa-btn-primary):not([class*="rounded-full"]):not([class*="p-1"]):not([class*="p-0.5"]) {
+  border-radius: 9999px !important;
+}
+
+/* Astryx Sub-Navigation Bars & Segmented Controls (e.g. War Room | Syndicate, Gross | Net) */
+[data-design-preset="astryx"] .inline-flex.rounded-full,
+[data-design-preset="astryx"] [role="tablist"],
+[data-design-preset="astryx"] div[class*="rounded-full"][class*="border"] {
+  background-color: #1b1b1b !important;
+  border-color: rgba(255, 255, 255, 0.102) !important;
+}
+
+[data-design-preset="astryx"] .inline-flex.rounded-full button.bg-indigo-600,
+[data-design-preset="astryx"] .inline-flex.rounded-full button.bg-white\/20,
+[data-design-preset="astryx"] [role="tablist"] button[data-state="active"] {
+  background-color: #FFFFFF !important;
+  color: #111111 !important;
+  border-radius: 9999px !important;
+  box-shadow: none !important;
+}
+
+/* Astryx Tables */
+[data-design-preset="astryx"] table thead tr {
+  background-color: #202020 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.102) !important;
+}
+[data-design-preset="astryx"] table th {
+  color: #9e9e9e !important;
+  font-size: 11px !important;
+  letter-spacing: 0.05em !important;
+}
+[data-design-preset="astryx"] table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+[data-design-preset="astryx"] table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Astryx Form Controls */
+[data-design-preset="astryx"] input:not([type="checkbox"]):not([type="radio"]),
+[data-design-preset="astryx"] select {
+  background-color: #202020 !important;
+  border-color: rgba(255, 255, 255, 0.102) !important;
+  border-radius: 8px !important;
+  color: #FFFFFF !important;
+}
+
+
+/* --- 2. REUI NOVA & SHADCN COMPONENT OVERRIDES --- */
+[data-design-preset="reui-nova"],
+[data-design-preset="reui-nova"] body,
+[data-design-preset="reui-nova"] button,
+[data-design-preset="reui-nova"] input,
+[data-design-preset="reui-nova"] select,
+[data-design-preset="reui-nova"] textarea,
+[data-design-preset="shadcn"],
+[data-design-preset="shadcn"] body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* ReUI Cards: 14px radius, specular inset top hairline, deep surface */
+[data-design-preset="reui-nova"] .luxury-card,
+[data-design-preset="reui-nova"] .wa-card,
+[data-design-preset="reui-nova"] .hero-net-worth-card,
+[data-design-preset="reui-nova"] [class*="rounded-2xl"],
+[data-design-preset="reui-nova"] [class*="rounded-3xl"] {
+  border-radius: 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background-color: var(--surface-card, #0E101A) !important;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
+}
+
+[data-design-preset="reui-nova"] .luxury-card:hover,
+[data-design-preset="reui-nova"] .wa-card:hover,
+[data-design-preset="reui-nova"] .hero-net-worth-card:hover,
+[data-design-preset="reui-nova"] .luxury-card-hover:hover {
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ReUI Inner Sub-Cards & Containers */
+[data-design-preset="reui-nova"] [class*="rounded-xl"]:not(button):not(div[class*="rounded-full"]) {
+  border-radius: 8px !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ReUI Buttons: 8px radius with top hairline specular */
+[data-design-preset="reui-nova"] button:not([class*="rounded-full"]):not([class*="p-1"]):not([class*="p-0.5"]) {
+  border-radius: 8px !important;
+}
+
+[data-design-preset="reui-nova"] .wa-btn-primary {
+  background-color: #6366F1 !important;
+  color: #FFFFFF !important;
+  border-radius: 8px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 4px 18px rgba(99, 102, 241, 0.45) !important;
+}
+
+/* ReUI Sub-Navigation Bars & Segmented Controls */
+[data-design-preset="reui-nova"] .inline-flex.rounded-full,
+[data-design-preset="reui-nova"] [role="tablist"] {
+  background-color: #090A10 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+}
+
+[data-design-preset="reui-nova"] .inline-flex.rounded-full button.bg-indigo-600,
+[data-design-preset="reui-nova"] .inline-flex.rounded-full button.bg-white\/20,
+[data-design-preset="reui-nova"] [role="tablist"] button[data-state="active"] {
+  background-color: rgba(99, 102, 241, 0.25) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(99, 102, 241, 0.45) !important;
+  border-radius: 8px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+/* ReUI Tables */
+[data-design-preset="reui-nova"] table thead tr {
+  background-color: #0D0E18 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+[data-design-preset="reui-nova"] table th {
+  color: #94a3b8 !important;
+  font-size: 11px !important;
+}
+[data-design-preset="reui-nova"] table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+[data-design-preset="reui-nova"] table tbody tr:hover {
+  background-color: rgba(139, 92, 246, 0.06) !important;
+}
+
+/* ReUI Form Controls */
+[data-design-preset="reui-nova"] input:not([type="checkbox"]):not([type="radio"]),
+[data-design-preset="reui-nova"] select {
+  background-color: #0B0C12 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  color: #FFFFFF !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+
+/* Preset Core Utility Classes */
+.wa-card {
+  background-color: var(--surface-card, #101424);
+  border: 1px solid var(--border-card, rgba(255, 255, 255, 0.08));
+  border-radius: var(--card-radius, 16px);
+  box-shadow: var(--card-shadow, 0 10px 30px -5px rgba(0, 0, 0, 0.5));
+  transition: all 0.2s ease;
+}
+
+.wa-btn-primary {
+  background-color: var(--btn-primary-bg, #6366F1);
+  color: var(--btn-primary-text, #FFFFFF);
+  border-radius: var(--btn-radius, 8px);
+  font-weight: var(--weight-btn, 600);
+  box-shadow: var(--btn-primary-shadow, none);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+.wa-btn-primary:hover {
+  background-color: var(--btn-primary-hover, #4F46E5);
+}
+.wa-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.wa-btn-sec {
+  background-color: var(--btn-sec-bg, #181D33);
+  color: var(--btn-sec-text, #E2E8F0);
+  border: 1px solid var(--btn-sec-border, rgba(255, 255, 255, 0.12));
+  border-radius: var(--btn-radius, 8px);
+  font-weight: var(--weight-btn, 600);
+  transition: all 0.2s ease;
+}
+.wa-btn-sec:hover {
+  background-color: var(--btn-sec-hover, #222946);
+}
+.wa-btn-sec:active {
+  transform: scale(0.98);
+}
+
+.wa-badge {
+  border-radius: var(--badge-radius, 9999px);
+  transition: all 0.2s ease;
+}
+
+/* Top-Down Typography Utility Classes */
+.wa-tab-title {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-tab-title);
+  font-size: var(--size-tab-title);
+  letter-spacing: var(--tracking-tab-title);
+}
+
+.wa-tab-subtitle {
+  font-family: var(--font-body);
+  font-weight: var(--weight-subheading);
+  font-size: var(--size-tab-subtitle);
+}
+
+.wa-card-title {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-card-title);
+}
+
+/* Tier-1 FinTech Luxury Glassmorphic Card & Surface Utilities */
+.luxury-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+}
+
+.dark .luxury-card {
+  background: var(--surface-card, rgba(15, 23, 42, 0.65));
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-card, rgba(51, 65, 85, 0.6));
+  box-shadow: var(--card-shadow, 0 16px 40px -10px rgba(0, 0, 0, 0.5));
+  border-radius: var(--card-radius, 1rem);
+}
+
+.luxury-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card-hover:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.dark .luxury-card-hover:hover {
+  background: rgba(30, 41, 59, 0.75);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.6), inset 0 1px 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.luxury-glass-dock {
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Dynamic Themes (Scoped by Class) */
+.theme-default {
+  --bg-base: #0f172a;
+  --bg-surface: #0f172a;
+  --bg-surface-2: #1e293b;
+  --bg-surface-3: #334155;
+  --border: rgba(255, 255, 255, 0.06);
+  --accent: #6366f1;
+  --accent-muted: rgba(99, 102, 241, 0.12);
+  --accent-hover: #4f46e5;
+  --accent-glow: rgba(99, 102, 241, 0.35);
+  --accent-text: #818cf8;
+}
+
+.theme-classic-dark {
+  --bg-base: #0d1117;
+  --bg-surface: #161b27;
+  --bg-surface-2: #1c2333;
+  --bg-surface-3: #232d42;
+  --border: rgba(255, 255, 255, 0.06);
+  --accent: #6366f1;
+  --accent-muted: rgba(99, 102, 241, 0.12);
+  --accent-hover: #4f46e5;
+  --accent-glow: rgba(99, 102, 241, 0.35);
+  --accent-text: #818cf8;
+}
+
+.theme-omen-cyber {
+  --bg-base: #05080f;
+  --bg-surface: #0a1120;
+  --bg-surface-2: #0f1a30;
+  --bg-surface-3: #16243f;
+  --border: rgba(6, 182, 212, 0.15);
+  --accent: #06b6d4;
+  --accent-muted: rgba(6, 182, 212, 0.12);
+  --accent-hover: #0891b2;
+  --accent-glow: rgba(6, 182, 212, 0.35);
+  --accent-text: #22d3ee;
+}
+
+.theme-grey-dark {
+  --bg-base: #18181b;
+  --bg-surface: #27272a;
+  --bg-surface-2: #3f3f46;
+  --bg-surface-3: #52525b;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #f59e0b;
+  --accent-muted: rgba(245, 158, 11, 0.12);
+  --accent-hover: #d97706;
+  --accent-glow: rgba(245, 158, 11, 0.35);
+  --accent-text: #fbbf24;
+}
+
+.theme-aurora {
+  --bg-base: #07040e;
+  --bg-surface: #120924;
+  --bg-surface-2: #1b1035;
+  --bg-surface-3: #261649;
+  --border: rgba(168, 85, 247, 0.18);
+  --accent: #a855f7;
+  --accent-muted: rgba(168, 85, 247, 0.12);
+  --accent-hover: #9333ea;
+  --accent-glow: rgba(168, 85, 247, 0.35);
+  --accent-text: #c084fc;
+}
+
+.theme-default-glass {
+  --bg-base: #0b0f19;
+  --bg-surface: rgba(15, 23, 42, 0.45);
+  --bg-surface-2: rgba(30, 41, 59, 0.4);
+  --bg-surface-3: rgba(51, 65, 85, 0.55);
+  --border: rgba(99, 102, 241, 0.12);
+  --accent: #818cf8;
+  --accent-muted: rgba(129, 140, 248, 0.08);
+  --accent-hover: #6366f1;
+  --accent-glow: rgba(129, 140, 248, 0.2);
+  --accent-text: #a5b4fc;
+}
+
+.theme-nebula-violet {
+  --bg-base: #0a0914;
+  --bg-surface: rgba(15, 13, 26, 0.45);
+  --bg-surface-2: rgba(25, 22, 42, 0.4);
+  --bg-surface-3: rgba(36, 31, 58, 0.55);
+  --border: rgba(192, 132, 252, 0.12);
+  --accent: #c084fc;
+  --accent-muted: rgba(192, 132, 252, 0.08);
+  --accent-hover: #a78bfa;
+  --accent-glow: rgba(192, 132, 252, 0.2);
+  --accent-text: #d8b4fe;
+}
+
+.theme-cyber-emerald {
+  --bg-base: #060b08;
+  --bg-surface: rgba(8, 16, 12, 0.45);
+  --bg-surface-2: rgba(14, 28, 22, 0.4);
+  --bg-surface-3: rgba(22, 42, 33, 0.55);
+  --border: rgba(52, 211, 153, 0.12);
+  --accent: #34d399;
+  --accent-muted: rgba(52, 211, 153, 0.08);
+  --accent-hover: #10b981;
+  --accent-glow: rgba(52, 211, 153, 0.2);
+  --accent-text: #a7f3d0;
+}
+
+.theme-solar-amber {
+  --bg-base: #0a0805;
+  --bg-surface: rgba(18, 15, 12, 0.45);
+  --bg-surface-2: rgba(30, 24, 18, 0.4);
+  --bg-surface-3: rgba(45, 36, 28, 0.55);
+  --border: rgba(251, 191, 36, 0.12);
+  --accent: #fbbf24;
+  --accent-muted: rgba(251, 191, 36, 0.08);
+  --accent-hover: #f59e0b;
+  --accent-glow: rgba(251, 191, 36, 0.2);
+  --accent-text: #fde047;
+}
+
+.theme-obsidian {
+  --bg-base: #08090c;
+  --bg-surface: #0e101a;
+  --bg-surface-2: #141726;
+  --bg-surface-3: #181b2c;
+  --border: rgba(255, 255, 255, 0.07);
+  --accent: #8b5cf6;
+  --accent-muted: rgba(139, 92, 246, 0.12);
+  --accent-hover: #7c3aed;
+  --accent-glow: rgba(139, 92, 246, 0.35);
+  --accent-text: #c4b5fd;
+  --specular-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+/* Global Dynamic Theme Overrides for Tailwind Utility Classes */
+html[class*="theme-"].dark,
+html[class*="theme-"].dark body {
+  background-color: var(--bg-base) !important;
+}
+
+/* Background overrides: slate-950, slate-900, slate-800, white */
+html[class*="theme-"].dark .bg-slate-950,
+html[class*="theme-"].dark .dark\:bg-slate-950,
+html[class*="theme-"].dark .bg-gradient-to-r,
+html[class*="theme-"].dark .dark\:via-slate-950 {
+  background-color: var(--bg-base) !important;
+  background-image: none !important;
+}
+
+html[class*="theme-"].dark .bg-slate-950\/95,
+html[class*="theme-"].dark .dark\:bg-slate-950\/95 {
+  background-color: color-mix(in srgb, var(--bg-base) 95%, transparent) !important;
+  background-image: none !important;
+}
+
+html[class*="theme-"].dark .bg-slate-950\/80,
+html[class*="theme-"].dark .dark\:bg-slate-950\/80 {
+  background-color: color-mix(in srgb, var(--bg-base) 80%, transparent) !important;
+  background-image: none !important;
+}
+
+html[class*="theme-"].dark .dark\:from-indigo-950\/20,
+html[class*="theme-"].dark .dark\:to-sky-950\/20 {
+  background-color: color-mix(in srgb, var(--accent) 20%, transparent) !important;
+  background-image: none !important;
+}
+
+html[class*="theme-"].dark .bg-slate-900,
+html[class*="theme-"].dark .dark\:bg-slate-900,
+html[class*="theme-"].dark .bg-white {
+  background-color: var(--bg-surface) !important;
+}
+
+html[class*="theme-"].dark .bg-slate-900\/95,
+html[class*="theme-"].dark .dark\:bg-slate-900\/95 {
+  background-color: color-mix(in srgb, var(--bg-surface) 95%, transparent) !important;
+}
+
+html[class*="theme-"].dark .bg-slate-900\/80,
+html[class*="theme-"].dark .dark\:bg-slate-900\/80,
+html[class*="theme-"].dark .bg-white\/80 {
+  background-color: color-mix(in srgb, var(--bg-surface) 80%, transparent) !important;
+}
+
+html[class*="theme-"].dark .bg-slate-900\/70,
+html[class*="theme-"].dark .dark\:bg-slate-900\/70 {
+  background-color: color-mix(in srgb, var(--bg-surface) 70%, transparent) !important;
+}
+
+html[class*="theme-"].dark .bg-slate-900\/50,
+html[class*="theme-"].dark .dark\:bg-slate-900\/50 {
+  background-color: color-mix(in srgb, var(--bg-surface) 50%, transparent) !important;
+}
+
+html[class*="theme-"].dark .bg-slate-800,
+html[class*="theme-"].dark .dark\:bg-slate-800,
+html[class*="theme-"].dark .bg-slate-100,
+html[class*="theme-"].dark .bg-indigo-50 {
+  background-color: var(--bg-surface-2) !important;
+}
+
+html[class*="theme-"].dark .bg-slate-50,
+html[class*="theme-"].dark .bg-slate-50\/95 {
+  background-color: var(--bg-base) !important;
+}
+
+html[class*="theme-"].dark .bg-slate-50\/70,
+html[class*="theme-"].dark .bg-indigo-50\/70,
+html[class*="theme-"].dark .bg-emerald-50\/70 {
+  background-color: color-mix(in srgb, var(--bg-surface-2) 70%, transparent) !important;
+}
+
+html[class*="theme-"].dark .dark\:bg-slate-800\/50,
+html[class*="theme-"].dark .bg-indigo-50\/50 {
+  background-color: color-mix(in srgb, var(--bg-surface-2) 50%, transparent) !important;
+}
+
+html[class*="theme-"].dark .dark\:bg-indigo-950\/20,
+html[class*="theme-"].dark .dark\:bg-indigo-500\/10,
+html[class*="theme-"].dark .dark\:bg-indigo-500\/15 {
+  background-color: color-mix(in srgb, var(--accent) 15%, transparent) !important;
+}
+
+/* Border overrides */
+html[class*="theme-"].dark .border-slate-800,
+html[class*="theme-"].dark .border-slate-200,
+html[class*="theme-"].dark .border-slate-200\/70,
+html[class*="theme-"].dark .border-slate-200\/80,
+html[class*="theme-"].dark .border-slate-100,
+html[class*="theme-"].dark .dark\:border-slate-800,
+html[class*="theme-"].dark .border-white\/\[0\.05\],
+html[class*="theme-"].dark .border-white\/\[0\.03\],
+html[class*="theme-"].dark .dark\:border-slate-700,
+html[class*="theme-"].dark .border-indigo-100,
+html[class*="theme-"].dark .dark\:border-indigo-500\/20,
+html[class*="theme-"].dark .dark\:border-emerald-500\/20,
+html[class*="theme-"].dark .dark\:border-slate-800\/50 {
+  border-color: var(--border) !important;
+}
+
+/* Active and focus border/indicator overrides */
+html[class*="theme-"].dark .border-indigo-500,
+html[class*="theme-"].dark .border-indigo-600,
+html[class*="theme-"].dark .border-blue-500,
+html[class*="theme-"].dark .border-blue-600,
+html[class*="theme-"].dark .focus\:border-indigo-500:focus,
+html[class*="theme-"].dark .focus\:border-blue-500:focus,
+html[class*="theme-"].dark .focus-visible\:ring-indigo-500\/60:focus-visible,
+html[class*="theme-"].dark .focus\:ring-indigo-500:focus {
+  border-color: var(--accent) !important;
+  --tw-ring-color: var(--accent-glow) !important;
+}
+
+/* Text Accent Overrides */
+html[class*="theme-"].dark .text-indigo-500,
+html[class*="theme-"].dark .text-indigo-600,
+html[class*="theme-"].dark .text-indigo-400,
+html[class*="theme-"].dark .text-blue-500,
+html[class*="theme-"].dark .text-blue-600,
+html[class*="theme-"].dark .text-blue-400,
+html[class*="theme-"].dark .dark\:text-indigo-400,
+html[class*="theme-"].dark .dark\:text-indigo-300,
+html[class*="theme-"].dark .text-indigo-500\/10 {
+  color: var(--accent) !important;
+}
+
+/* Button & Pill Background Accent Overrides */
+html[class*="theme-"].dark .bg-indigo-500,
+html[class*="theme-"].dark .bg-indigo-600,
+html[class*="theme-"].dark .bg-blue-500,
+html[class*="theme-"].dark .bg-blue-600,
+html[class*="theme-"].dark .bg-indigo-500\/10,
+html[class*="theme-"].dark .bg-indigo-500\/15,
+html[class*="theme-"].dark .bg-indigo-500\/20,
+html[class*="theme-"].dark .bg-blue-500\/10,
+html[class*="theme-"].dark .bg-blue-500\/15,
+html[class*="theme-"].dark .bg-blue-500\/20,
+html[class*="theme-"].dark .dark\:bg-indigo-500\/10,
+html[class*="theme-"].dark .dark\:bg-indigo-500\/15,
+html[class*="theme-"].dark .dark\:bg-indigo-500\/20 {
+  background-color: var(--accent-muted) !important;
+  color: var(--accent) !important;
+}
+
+/* Solid Buttons / Highlights */
+html[class*="theme-"].dark button.bg-indigo-600,
+html[class*="theme-"].dark button.bg-indigo-500,
+html[class*="theme-"].dark button.bg-blue-600,
+html[class*="theme-"].dark button.bg-blue-500,
+html[class*="theme-"].dark .bg-indigo-600,
+html[class*="theme-"].dark .bg-indigo-500 {
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+html[class*="theme-"].dark button.bg-indigo-600:hover,
+html[class*="theme-"].dark button.bg-indigo-500:hover,
+html[class*="theme-"].dark button.bg-blue-600:hover,
+html[class*="theme-"].dark button.bg-blue-500:hover,
+html[class*="theme-"].dark .bg-indigo-600:hover,
+html[class*="theme-"].dark .bg-indigo-500:hover {
+  background-color: var(--accent-hover) !important;
+}
+
+/* Active trigger tabs / Sidebar overrides */
+html[class*="theme-"].dark nav button.bg-indigo-50,
+html[class*="theme-"].dark nav button.dark\:bg-slate-800\/80,
+html[class*="theme-"].dark nav button[data-state="active"],
+html[class*="theme-"].dark .sidebar-nav-active {
+  background-color: var(--accent-muted) !important;
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+html[class*="theme-"].dark nav button.bg-indigo-50 span,
+html[class*="theme-"].dark nav button.dark\:bg-slate-800\/80 span,
+html[class*="theme-"].dark nav button.bg-indigo-50 svg,
+html[class*="theme-"].dark nav button.dark\:bg-slate-800\/80 svg {
+  color: var(--accent) !important;
+}
+
+/* AnimatedTabs reset: Ensure tab buttons never have a static background so only the sliding motion pill renders (prevents ghost offset), and force active text/icons to pure white */
+[role="tablist"] [role="tab"] {
+  background-color: transparent !important;
+}
+[role="tablist"] [role="tab"][aria-selected="true"] {
+  background-color: transparent !important;
+}
+[role="tablist"] [role="tab"][aria-selected="true"] span,
+[role="tablist"] [role="tab"][aria-selected="true"] svg {
+  color: #ffffff !important;
+  fill: currentColor;
+}
+
+/* ==========================================================================
+   OMEN Cyber Navy Theme Specific Glassmorphic & Gradient Overrides
+   ========================================================================== */
+html.theme-omen-cyber.dark,
+html.theme-omen-cyber.dark body {
+  background-color: #05080f !important;
+  background-image: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.09) 0%, transparent 45%),
+                    radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.09) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 50%, rgba(8, 12, 20, 0.15) 0%, transparent 60%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Page wrapper transparentization */
+html.theme-omen-cyber.dark .bg-slate-950,
+html.theme-omen-cyber.dark .dark\:bg-slate-950,
+html.theme-omen-cyber.dark .bg-slate-50,
+html.theme-omen-cyber.dark .bg-slate-50\/95 {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Glassmorphism for primary cards */
+html.theme-omen-cyber.dark .bg-slate-900,
+html.theme-omen-cyber.dark .dark\:bg-slate-900,
+html.theme-omen-cyber.dark .bg-white {
+  background-color: rgba(10, 17, 32, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(6, 182, 212, 0.15) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35) !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+/* Card hover glow and micro-interaction */
+html.theme-omen-cyber.dark .bg-slate-900:hover,
+html.theme-omen-cyber.dark .dark\:bg-slate-900:hover {
+  border-color: rgba(6, 182, 212, 0.35) !important;
+  box-shadow: 0 12px 40px 0 rgba(6, 182, 212, 0.08), 0 0 16px 0 rgba(6, 182, 212, 0.05) !important;
+  transform: translateY(-1px);
+}
+
+/* Nested sub-panels and elements */
+html.theme-omen-cyber.dark .bg-slate-800,
+html.theme-omen-cyber.dark .dark\:bg-slate-800,
+html.theme-omen-cyber.dark .bg-slate-100 {
+  background-color: rgba(15, 26, 48, 0.45) !important;
+  border-color: rgba(6, 182, 212, 0.08) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Glassmorphic variables mapping */
+html.theme-omen-cyber.dark {
+  --glass-surface: rgba(10, 17, 32, 0.45);
+  --glass-border: rgba(6, 182, 212, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Transparent utilities for Omen */
+html.theme-omen-cyber.dark [class*="bg-slate-900/"] {
+  background-color: rgba(10, 17, 32, 0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+html.theme-omen-cyber.dark [class*="bg-slate-950/"] {
+  background-color: rgba(5, 8, 15, 0.3) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+/* Chart Tooltips for Omen */
+html.theme-omen-cyber.dark .recharts-default-tooltip,
+html.theme-omen-cyber.dark .recharts-tooltip-wrapper {
+  background-color: rgba(10, 17, 32, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(6, 182, 212, 0.3) !important;
+}
+
+/* ==========================================================================
+   AURORA Violet Theme Specific Glassmorphic & Gradient Overrides
+   ========================================================================== */
+html.theme-aurora.dark,
+html.theme-aurora.dark body {
+  background-color: #07040e !important;
+  background-image: radial-gradient(circle at 15% 15%, rgba(168, 85, 247, 0.12) 0%, transparent 45%),
+                    radial-gradient(circle at 85% 75%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 50%, rgba(12, 7, 20, 0.15) 0%, transparent 60%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Page wrapper transparentization */
+html.theme-aurora.dark .bg-slate-950,
+html.theme-aurora.dark .dark\:bg-slate-950,
+html.theme-aurora.dark .bg-slate-50,
+html.theme-aurora.dark .bg-slate-50\/95 {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Glassmorphism for primary cards */
+html.theme-aurora.dark .bg-slate-900,
+html.theme-aurora.dark .dark\:bg-slate-900,
+html.theme-aurora.dark .bg-white {
+  background-color: rgba(18, 9, 36, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(168, 85, 247, 0.18) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35) !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+/* Card hover glow and micro-interaction */
+html.theme-aurora.dark .bg-slate-900:hover,
+html.theme-aurora.dark .dark\:bg-slate-900:hover {
+  border-color: rgba(168, 85, 247, 0.4) !important;
+  box-shadow: 0 12px 40px 0 rgba(168, 85, 247, 0.1), 0 0 16px 0 rgba(168, 85, 247, 0.06) !important;
+  transform: translateY(-1px);
+}
+
+/* Nested sub-panels and elements */
+html.theme-aurora.dark .bg-slate-800,
+html.theme-aurora.dark .dark\:bg-slate-800,
+html.theme-aurora.dark .bg-slate-100 {
+  background-color: rgba(27, 16, 53, 0.45) !important;
+  border-color: rgba(168, 85, 247, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Glassmorphic variables mapping */
+html.theme-aurora.dark {
+  --glass-surface: rgba(18, 9, 36, 0.45);
+  --glass-border: rgba(168, 85, 247, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Transparent utilities for Aurora */
+html.theme-aurora.dark [class*="bg-slate-900/"] {
+  background-color: rgba(18, 9, 36, 0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+html.theme-aurora.dark [class*="bg-slate-950/"] {
+  background-color: rgba(7, 4, 14, 0.3) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+/* Chart Tooltips for Aurora */
+html.theme-aurora.dark .recharts-default-tooltip,
+html.theme-aurora.dark .recharts-tooltip-wrapper {
+  background-color: rgba(18, 9, 36, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+}
+
+/* ==========================================================================
+   DEFAULT-GLASS Theme Specific Glassmorphic & Gradient Overrides
+   ========================================================================== */
+html.theme-default-glass.dark,
+html.theme-default-glass.dark body {
+  background-color: #0b0f19 !important;
+  background-image: radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.08) 0%, transparent 45%),
+                    radial-gradient(circle at 85% 75%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.15) 0%, transparent 60%) !important;
+  background-attachment: fixed !important;
+}
+
+html.theme-default-glass.dark .bg-slate-950,
+html.theme-default-glass.dark .dark\:bg-slate-950,
+html.theme-default-glass.dark .bg-slate-50,
+html.theme-default-glass.dark .bg-slate-50\/95 {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+html.theme-default-glass.dark .bg-slate-900,
+html.theme-default-glass.dark .dark\:bg-slate-900,
+html.theme-default-glass.dark .bg-white {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(99, 102, 241, 0.15) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35) !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+html.theme-default-glass.dark .bg-slate-900:hover,
+html.theme-default-glass.dark .dark\:bg-slate-900:hover {
+  border-color: rgba(99, 102, 241, 0.35) !important;
+  box-shadow: 0 12px 40px 0 rgba(99, 102, 241, 0.1), 0 0 16px 0 rgba(99, 102, 241, 0.06) !important;
+  transform: translateY(-1px);
+}
+
+html.theme-default-glass.dark .bg-slate-800,
+html.theme-default-glass.dark .dark\:bg-slate-800,
+html.theme-default-glass.dark .bg-slate-100 {
+  background-color: rgba(30, 41, 59, 0.45) !important;
+  border-color: rgba(99, 102, 241, 0.08) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+html.theme-default-glass.dark {
+  --glass-surface: rgba(15, 23, 42, 0.45);
+  --glass-border: rgba(99, 102, 241, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+}
+
+html.theme-default-glass.dark [class*="bg-slate-900/"] {
+  background-color: rgba(15, 23, 42, 0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+html.theme-default-glass.dark [class*="bg-slate-950/"] {
+  background-color: rgba(5, 8, 15, 0.3) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+html.theme-default-glass.dark .recharts-default-tooltip,
+html.theme-default-glass.dark .recharts-tooltip-wrapper {
+  background-color: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(99, 102, 241, 0.3) !important;
+}
+
+/* ==========================================================================
+   NEBULA-VIOLET Theme Specific Glassmorphic & Gradient Overrides
+   ========================================================================== */
+html.theme-nebula-violet.dark,
+html.theme-nebula-violet.dark body {
+  background-color: #0a0914 !important;
+  background-image: radial-gradient(circle at 15% 15%, rgba(192, 132, 252, 0.05) 0%, transparent 45%),
+                    radial-gradient(circle at 85% 75%, rgba(244, 114, 182, 0.03) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 50%, rgba(15, 13, 26, 0.1) 0%, transparent 60%) !important;
+  background-attachment: fixed !important;
+}
+
+html.theme-nebula-violet.dark .bg-slate-950,
+html.theme-nebula-violet.dark .dark\:bg-slate-950,
+html.theme-nebula-violet.dark .bg-slate-50,
+html.theme-nebula-violet.dark .bg-slate-50\/95 {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Glassmorphism for primary cards */
+html.theme-nebula-violet.dark .bg-slate-900,
+html.theme-nebula-violet.dark .dark\:bg-slate-900,
+html.theme-nebula-violet.dark .bg-white {
+  background-color: rgba(15, 13, 26, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(192, 132, 252, 0.12) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35) !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+/* Card hover glow and micro-interaction */
+html.theme-nebula-violet.dark .bg-slate-900:hover,
+html.theme-nebula-violet.dark .dark\:bg-slate-900:hover {
+  border-color: rgba(192, 132, 252, 0.25) !important;
+  box-shadow: 0 12px 40px 0 rgba(192, 132, 252, 0.04), 0 0 16px 0 rgba(192, 132, 252, 0.02) !important;
+  transform: translateY(-1px);
+}
+
+/* Nested sub-panels and elements */
+html.theme-nebula-violet.dark .bg-slate-800,
+html.theme-nebula-violet.dark .dark\:bg-slate-800,
+html.theme-nebula-violet.dark .bg-slate-100 {
+  background-color: rgba(25, 22, 42, 0.45) !important;
+  border-color: rgba(192, 132, 252, 0.06) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Glassmorphic variables mapping */
+html.theme-nebula-violet.dark {
+  --glass-surface: rgba(15, 13, 26, 0.45);
+  --glass-border: rgba(192, 132, 252, 0.12);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Transparent utilities for Nebula */
+html.theme-nebula-violet.dark [class*="bg-slate-900/"] {
+  background-color: rgba(15, 13, 26, 0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+html.theme-nebula-violet.dark [class*="bg-slate-950/"] {
+  background-color: rgba(7, 4, 14, 0.3) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+/* Chart Tooltips for Nebula */
+html.theme-nebula-violet.dark .recharts-default-tooltip,
+html.theme-nebula-violet.dark .recharts-tooltip-wrapper {
+  background-color: rgba(15, 13, 26, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(192, 132, 252, 0.2) !important;
+}
+
+/* ==========================================================================
+   CYBER-EMERALD Theme Specific Glassmorphic & Gradient Overrides
+   ========================================================================== */
+html.theme-cyber-emerald.dark,
+html.theme-cyber-emerald.dark body {
+  background-color: #060b08 !important;
+  background-image: radial-gradient(circle at 15% 15%, rgba(52, 211, 153, 0.05) 0%, transparent 45%),
+                    radial-gradient(circle at 85% 75%, rgba(45, 212, 191, 0.03) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 50%, rgba(8, 16, 12, 0.1) 0%, transparent 60%) !important;
+  background-attachment: fixed !important;
+}
+
+html.theme-cyber-emerald.dark .bg-slate-950,
+html.theme-cyber-emerald.dark .dark\:bg-slate-950,
+html.theme-cyber-emerald.dark .bg-slate-50,
+html.theme-cyber-emerald.dark .bg-slate-50\/95 {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Glassmorphism for primary cards */
+html.theme-cyber-emerald.dark .bg-slate-900,
+html.theme-cyber-emerald.dark .dark\:bg-slate-900,
+html.theme-cyber-emerald.dark .bg-white {
+  background-color: rgba(8, 16, 12, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(52, 211, 153, 0.12) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35) !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+/* Card hover glow and micro-interaction */
+html.theme-cyber-emerald.dark .bg-slate-900:hover,
+html.theme-cyber-emerald.dark .dark\:bg-slate-900:hover {
+  border-color: rgba(52, 211, 153, 0.25) !important;
+  box-shadow: 0 12px 40px 0 rgba(52, 211, 153, 0.04), 0 0 16px 0 rgba(52, 211, 153, 0.02) !important;
+  transform: translateY(-1px);
+}
+
+/* Nested sub-panels and elements */
+html.theme-cyber-emerald.dark .bg-slate-800,
+html.theme-cyber-emerald.dark .dark\:bg-slate-800,
+html.theme-cyber-emerald.dark .bg-slate-100 {
+  background-color: rgba(14, 28, 22, 0.45) !important;
+  border-color: rgba(52, 211, 153, 0.06) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Glassmorphic variables mapping */
+html.theme-cyber-emerald.dark {
+  --glass-surface: rgba(8, 16, 12, 0.45);
+  --glass-border: rgba(52, 211, 153, 0.12);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Transparent utilities for Emerald */
+html.theme-cyber-emerald.dark [class*="bg-slate-900/"] {
+  background-color: rgba(8, 16, 12, 0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+html.theme-cyber-emerald.dark [class*="bg-slate-950/"] {
+  background-color: rgba(6, 12, 9, 0.3) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+/* Chart Tooltips for Emerald */
+html.theme-cyber-emerald.dark .recharts-default-tooltip,
+html.theme-cyber-emerald.dark .recharts-tooltip-wrapper {
+  background-color: rgba(8, 16, 12, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(52, 211, 153, 0.2) !important;
+}
+
+/* ==========================================================================
+   SOLAR-AMBER Theme Specific Glassmorphic & Gradient Overrides
+   ========================================================================== */
+html.theme-solar-amber.dark,
+html.theme-solar-amber.dark body {
+  background-color: #0a0805 !important;
+  background-image: radial-gradient(circle at 15% 15%, rgba(251, 191, 36, 0.05) 0%, transparent 45%),
+                    radial-gradient(circle at 85% 75%, rgba(251, 146, 60, 0.03) 0%, transparent 50%),
+                    radial-gradient(circle at 50% 50%, rgba(18, 15, 12, 0.1) 0%, transparent 60%) !important;
+  background-attachment: fixed !important;
+}
+
+html.theme-solar-amber.dark .bg-slate-950,
+html.theme-solar-amber.dark .dark\:bg-slate-950,
+html.theme-solar-amber.dark .bg-slate-50,
+html.theme-solar-amber.dark .bg-slate-50\/95 {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Glassmorphism for primary cards */
+html.theme-solar-amber.dark .bg-slate-900,
+html.theme-solar-amber.dark .dark\:bg-slate-900,
+html.theme-solar-amber.dark .bg-white {
+  background-color: rgba(18, 15, 12, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(251, 191, 36, 0.12) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35) !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease !important;
+}
+
+/* Card hover glow and micro-interaction */
+html.theme-solar-amber.dark .bg-slate-900:hover,
+html.theme-solar-amber.dark .dark\:bg-slate-900:hover {
+  border-color: rgba(251, 191, 36, 0.25) !important;
+  box-shadow: 0 12px 40px 0 rgba(251, 191, 36, 0.04), 0 0 16px 0 rgba(251, 191, 36, 0.02) !important;
+  transform: translateY(-1px);
+}
+
+/* Nested sub-panels and elements */
+html.theme-solar-amber.dark .bg-slate-800,
+html.theme-solar-amber.dark .dark\:bg-slate-800,
+html.theme-solar-amber.dark .bg-slate-100 {
+  background-color: rgba(30, 24, 18, 0.45) !important;
+  border-color: rgba(251, 191, 36, 0.06) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Glassmorphic variables mapping */
+html.theme-solar-amber.dark {
+  --glass-surface: rgba(18, 15, 12, 0.45);
+  --glass-border: rgba(251, 191, 36, 0.12);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Transparent utilities for Solar */
+html.theme-solar-amber.dark [class*="bg-slate-900/"] {
+  background-color: rgba(18, 15, 12, 0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+html.theme-solar-amber.dark [class*="bg-slate-950/"] {
+  background-color: rgba(10, 8, 6, 0.3) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+/* Chart Tooltips for Solar */
+html.theme-solar-amber.dark .recharts-default-tooltip,
+html.theme-solar-amber.dark .recharts-tooltip-wrapper {
+  background-color: rgba(18, 15, 12, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(251, 191, 36, 0.2) !important;
+}
+
+/* ==========================================================================
+   OBSIDIAN NOVA Theme Specific Glassmorphic & Specular Overrides
+   ========================================================================== */
+html.theme-obsidian.dark,
+html.theme-obsidian.dark body {
+  background-color: #08090c !important;
+  background-image: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.08) 0%, transparent 60%) !important;
+  background-attachment: fixed !important;
+}
+
+html.theme-obsidian.dark .bg-slate-950,
+html.theme-obsidian.dark .dark\:bg-slate-950,
+html.theme-obsidian.dark .bg-slate-50,
+html.theme-obsidian.dark .bg-slate-50\/95 {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Specular Hairline Highlight for primary cards */
+html.theme-obsidian.dark .bg-slate-900,
+html.theme-obsidian.dark .dark\:bg-slate-900,
+html.theme-obsidian.dark .bg-white {
+  background-color: #0e101a !important;
+  border-color: rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
+}
+
+/* Secondary cards / elevated surfaces */
+html.theme-obsidian.dark .bg-slate-800,
+html.theme-obsidian.dark .dark\:bg-slate-800,
+html.theme-obsidian.dark .bg-slate-100 {
+  background-color: #141726 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Glassmorphic variables mapping */
+html.theme-obsidian.dark {
+  --glass-surface: rgba(14, 16, 26, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+/* Transparent utilities for Obsidian */
+html.theme-obsidian.dark [class*="bg-slate-900/"] {
+  background-color: rgba(14, 16, 26, 0.6) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+html.theme-obsidian.dark [class*="bg-slate-950/"] {
+  background-color: rgba(8, 9, 12, 0.5) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+/* Chart Tooltips for Obsidian */
+html.theme-obsidian.dark .recharts-default-tooltip,
+html.theme-obsidian.dark .recharts-tooltip-wrapper {
+  background-color: rgba(14, 16, 26, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Unified transparent scrollbar track for all glass themes */
+html.theme-omen-cyber.dark ::-webkit-scrollbar-track,
+html.theme-aurora.dark ::-webkit-scrollbar-track,
+html.theme-default-glass.dark ::-webkit-scrollbar-track,
+html.theme-nebula-violet.dark ::-webkit-scrollbar-track,
+html.theme-cyber-emerald.dark ::-webkit-scrollbar-track,
+html.theme-solar-amber.dark ::-webkit-scrollbar-track,
+html.theme-obsidian.dark ::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+/* Scrollbar customization mapping */
+html[class*="theme-"].dark ::-webkit-scrollbar-thumb {
+  background-color: var(--accent-muted) !important;
+  border-radius: 8px;
+}
+
+html[class*="theme-"].dark ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent) !important;
+}
+
+/* Light Mode Specific Overrides for Glassmorphism */
+:root:not(.dark) {
+  --glass-surface: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(203, 213, 225, 0.5);
+  /* border-slate-300/50 */
+  --glass-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  --glass-surface: rgba(15, 23, 42, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --trust-live: #34d399;
+  --trust-cached: #818cf8;
+  --trust-stale: #fbbf24;
+  --trust-degraded: #f87171;
+}
+
+/* === Indian Locale Typography ===
+   Compact notation helpers: use class "inr-compact" to render large
+   numbers as "1.23L", "4.56Cr". Backed by CSS only, no JS. */
+.inr-compact-cr::after {
+  content: " Cr";
+}
+
+.inr-compact-l::after {
+  content: " L";
+}
+
+.inr-compact-k::after {
+  content: " k";
+}
+
+/* === UX Mode Tokens ===
+   Beginner = warm, larger spacing, more copy. Advanced = dense,
+   tighter, more numeric. Use these on widget wrappers. */
+:root {
+  --ux-beginner-card-pad: 1.5rem;
+  --ux-beginner-radius: 1.25rem;
+  --ux-beginner-font-scale: 1.05;
+  --ux-advanced-card-pad: 1rem;
+  --ux-advanced-radius: 0.75rem;
+  --ux-advanced-font-scale: 0.95;
+  --ux-disclaimer-bg: rgba(245, 158, 11, 0.06);
+  --ux-disclaimer-border: rgba(245, 158, 11, 0.18);
+  --ux-disclaimer-fg: rgba(252, 211, 77, 0.85);
+}
+
+.dark {
+  --ux-disclaimer-bg: rgba(245, 158, 11, 0.05);
+  --ux-disclaimer-border: rgba(245, 158, 11, 0.15);
+  --ux-disclaimer-fg: rgba(252, 211, 77, 0.8);
+}
+
+/* === Beginner / Advanced widget modes === */
+.ux-mode-beginner {
+  padding: var(--ux-beginner-card-pad);
+  border-radius: var(--ux-beginner-radius);
+  font-size: calc(1em * var(--ux-beginner-font-scale));
+}
+
+.ux-mode-advanced {
+  padding: var(--ux-advanced-card-pad);
+  border-radius: var(--ux-advanced-radius);
+  font-size: calc(1em * var(--ux-advanced-font-scale));
+}
+
+/* Hide advanced-only elements in beginner mode and vice-versa.
+   Apply data-ux-mode="beginner" | "advanced" on a parent to scope. */
+[data-ux-mode="beginner"] .advanced-only {
+  display: none !important;
+}
+
+[data-ux-mode="advanced"] .beginner-only {
+  display: none !important;
+}
+
+/* === Jargon tooltip pill (used by <JargonTooltip />) === */
+.jargon-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.95rem;
+  height: 0.95rem;
+  margin-left: 0.25rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  color: rgb(99 102 241);
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 9999px;
+  cursor: help;
+  transition: all var(--wa-motion-fast) ease;
+  vertical-align: super;
+}
+
+.jargon-pill:hover,
+.jargon-pill:focus-visible {
+  background: rgba(99, 102, 241, 0.2);
+  color: rgb(67 56 202);
+  transform: scale(1.1);
+}
+
+/* === SEBI / Legal disclaimer block === */
+.legal-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  background: var(--ux-disclaimer-bg);
+  border: 1px solid var(--ux-disclaimer-border);
+  border-left-width: 3px;
+  border-radius: 0.5rem;
+  color: var(--ux-disclaimer-fg);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.legal-disclaimer .legal-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  opacity: 0.85;
+}
+
+@layer base {
+
+  button,
+  [role="button"],
+  a,
+  input,
+  select,
+  textarea {
+    transition:
+      color var(--wa-motion-fast) ease,
+      background-color var(--wa-motion-fast) ease,
+      border-color var(--wa-motion-fast) ease,
+      box-shadow var(--wa-motion-fast) ease;
+  }
+
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid transparent;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.55);
+  }
+
+  button:disabled,
+  input:disabled,
+  select:disabled,
+  textarea:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: var(--glass-surface);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-panel:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .glass-button {
+    background: rgba(99, 102, 241, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  .glass-button:hover {
+    background: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+    border-color: rgba(99, 102, 241, 0.5);
+  }
+
+  .glass-input {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    transition: all 0.2s ease;
+  }
+
+  .dark .glass-input {
+    background: rgba(15, 23, 42, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-input:focus {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+  }
+
+  .dark .glass-input:focus {
+    background: rgba(15, 23, 42, 0.5);
+    border-color: rgba(99, 102, 241, 0.5);
+  }
+}
+
+/* Liquid Bleed Drip Animation (used by Loan widget) */
+@keyframes drip {
+  0% {
+    transform: translateY(-5px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+}
+
+.animate-drip {
+  animation: drip 2s infinite ease-in-out;
+}
+
+/* Premium KPI Card Lift (used by dashboard widgets) */
+.kpi-lift {
+  transition: transform var(--wa-motion-base) cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow var(--wa-motion-base) ease,
+    border-color var(--wa-motion-base) ease;
+}
+
+.kpi-lift:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 18px 40px -12px rgba(99, 102, 241, 0.25);
+}
+
+/* Stagger Entry Animation (for list children, desktop only) */
+@keyframes list-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.list-rise>* {
+  animation: list-rise 360ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.list-rise>*:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.list-rise>*:nth-child(2) {
+  animation-delay: 40ms;
+}
+
+.list-rise>*:nth-child(3) {
+  animation-delay: 80ms;
+}
+
+.list-rise>*:nth-child(4) {
+  animation-delay: 120ms;
+}
+
+.list-rise>*:nth-child(5) {
+  animation-delay: 160ms;
+}
+
+.list-rise>*:nth-child(6) {
+  animation-delay: 200ms;
+}
+
+.list-rise>*:nth-child(7) {
+  animation-delay: 240ms;
+}
+
+.list-rise>*:nth-child(8) {
+  animation-delay: 280ms;
+}
+
+/* Subtle Skeleton Shimmer (for loading states) */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -250px 0;
+  }
+
+  100% {
+    background-position: 250px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg,
+      rgba(148, 163, 184, 0.08) 0%,
+      rgba(148, 163, 184, 0.18) 50%,
+      rgba(148, 163, 184, 0.08) 100%);
+  background-size: 500px 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  border-radius: 0.5rem;
+}
+
+.dark .skeleton {
+  background: linear-gradient(90deg,
+      rgba(51, 65, 85, 0.4) 0%,
+      rgba(71, 85, 105, 0.6) 50%,
+      rgba(51, 65, 85, 0.4) 100%);
+  background-size: 500px 100%;
+}
+
+/* Market Ticker Marquee (promoted from AlphaTicker.tsx) */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 60s linear infinite;
+  will-change: transform;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+@keyframes tab-fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.998) translateY(2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.tab-fade-in {
+  animation: tab-fade-in 180ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Market Ticker Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   These styles ONLY apply on mobile devices
+   Desktop layout remains 100% unchanged
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* Make header sticky on mobile */
+  .mobile-sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+
+  /* Optional 44px touch target utility for mobile */
+  .touch-target-mobile {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Full width cards/widgets on mobile */
+  .md\:col-span-2,
+  .md\:col-span-3,
+  .md\:col-span-4,
+  .md\:col-span-6,
+  .lg\:col-span-2,
+  .lg\:col-span-3 {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* Widget grid: single column on mobile */
+  .dashboard-widget-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  /* Improve modal display on mobile */
+  .modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+
+  /* Make charts responsive */
+  .recharts-responsive-container {
+    min-height: 200px !important;
+  }
+
+  /* Scrollable tabs on mobile */
+  .tabs-list {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .tabs-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Input fields larger on mobile */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+    /* Prevents zoom on iOS */
+  }
+
+  /* Cards padding adjustment */
+  .card-padding-mobile {
+    padding: 1rem !important;
+  }
+
+  /* Hide elements marked as desktop-only */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* ===== NEW: Sidebar Fixes ===== */
+
+  /* Sidebar as slide-out drawer */
+  .sidebar-container {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 40;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+
+  .sidebar-container.sidebar-open {
+    transform: translateX(0);
+  }
+
+  /* Sidebar backdrop */
+  .sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 39;
+  }
+
+  /* ===== NEW: Form Improvements ===== */
+
+  /* Stack form fields on mobile */
+  .form-row {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .form-row>* {
+    width: 100% !important;
+  }
+
+  /* ===== NEW: Table Responsiveness ===== */
+
+  .responsive-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .responsive-table table {
+    min-width: 600px;
+  }
+
+  /* Card-based table view for mobile */
+  .table-as-cards tbody tr {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: rgb(255 255 255 / 0.8);
+    border-radius: 0.75rem;
+    border: 1px solid rgb(226 232 240 / 0.8);
+  }
+
+  .dark .table-as-cards tbody tr {
+    background: rgb(30 41 59 / 0.5);
+    border: 1px solid rgb(51 65 85 / 0.5);
+  }
+
+  .table-as-cards tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border: none !important;
+  }
+
+  .table-as-cards tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: rgb(148 163 184);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .table-as-cards thead {
+    display: none;
+  }
+
+  /* Scope global overrides to explicitly legacy elements to prevent Launchpad breakage */
+  .dashboard-widget-grid .gap-6 {
+    gap: 1rem !important;
+  }
+
+  .dashboard-widget-grid .gap-4 {
+    gap: 0.75rem !important;
+  }
+
+  .dashboard-widget-grid .p-6 {
+    padding: 1rem !important;
+  }
+
+  .dashboard-widget-grid .text-2xl {
+    font-size: 1.25rem !important;
+  }
+
+  .dashboard-widget-grid .text-3xl {
+    font-size: 1.5rem !important;
+  }
+
+  .dashboard-widget-grid .text-4xl {
+    font-size: 1.75rem !important;
+  }
+
+  /* GPU Optimization: Disable excessive glassmorphism on mobile */
+  .glass-panel,
+  .glass-button,
+  .glass-input,
+  .omen-glass-card,
+  .backdrop-blur-md,
+  .backdrop-blur-sm,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Increase opacity for better contrast without blur */
+  .glass-panel {
+    background: rgba(15, 23, 42, 0.9) !important;
+  }
+
+  .dark .glass-panel {
+    background: rgba(15, 23, 42, 0.9) !important;
+  }
+
+  .omen-glass-card {
+    background: rgba(15, 23, 42, 0.95) !important;
+  }
+}
+
+/* Mobile-specific Utility Classes for Native App Feel */
+/* (.pb-safe canonical definition lives with .pt-safe near the end of this file;
+   a previous duplicate here used a different env() fallback and never won the cascade) */
+
+@keyframes bounce-short {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25%);
+  }
+}
+
+.animate-bounce-short {
+  animation: bounce-short 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1 forwards;
+}
+
+/* ===== NEW: Safe Area Insets for iOS ===== */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* ===== NEW: Reduced Motion for Accessibility ===== */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-marquee {
+    animation: none !important;
+  }
+
+  .animate-ticker {
+    animation: none !important;
+  }
+}
+
+/* ============================================
+   HIGH CONTRAST MODE
+   ============================================ */
+html.high-contrast {
+  filter: contrast(130%) saturate(110%);
+}
+
+html.high-contrast img,
+html.high-contrast video,
+html.high-contrast .glass-panel {
+  filter: contrast(90%) saturate(90%);
+}
+
+html.high-contrast.dark body {
+  background-color: #000000 !important;
+}
+
+html.high-contrast:not(.dark) body {
+  background-color: #ffffff !important;
+}
+
+/* Enhancing text legibility */
+html.high-contrast * {
+  text-shadow: none !important;
+}
+
+/* === Part 4: Premium Enhancements === */
+
+/* 1. Premium Card Glow Effect */
+.card-glow {
+  transition: box-shadow 220ms ease;
+}
+
+.card-glow:hover {
+  box-shadow:
+    inset 0 0 0 1px rgba(99, 102, 241, 0.12),
+    0 0 24px -8px rgba(99, 102, 241, 0.25);
+}
+
+.dark .card-glow:hover {
+  box-shadow:
+    inset 0 0 0 1px rgba(99, 102, 241, 0.12),
+    0 0 24px -8px rgba(99, 102, 241, 0.35);
+}
+
+/* 2. Stat Number Shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.stat-shimmer {
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite;
+}
+
+/* 3. Premium Scrollbar */
+.premium-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(99, 102, 241, 0.3) transparent;
+}
+
+.premium-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.premium-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.premium-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 99px;
+}
+
+.premium-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+.dark .premium-scrollbar {
+  scrollbar-color: rgba(99, 102, 241, 0.45) transparent;
+}
+
+.dark .premium-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.45);
+}
+
+.dark .premium-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.75);
+}
+
+/* 4. Table Row Hover Accent */
+.table-row-hover {
+  border-left: 2px solid transparent;
+  transition: all 140ms ease;
+}
+
+.table-row-hover:hover {
+  background: rgba(99, 102, 241, 0.04);
+  border-left: 2px solid rgba(99, 102, 241, 0.4);
+}
+
+.dark .table-row-hover:hover {
+  background: rgba(99, 102, 241, 0.06);
+  border-left: 2px solid rgba(99, 102, 241, 0.5);
+}
+
+/* 5. Focus Ring Override */
+.focus-ring-indigo:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.55);
+}
+
+/* 6. Number Font Feature Settings */
+.font-tabular {
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Lite Mode Throttling */
+.lite-mode *:not(.lite-mode-exempt) {
+  animation-play-state: paused !important;
+  animation-duration: 0s !important;
+  transition-duration: 0.1s !important;
+}
+
+/* Recharts Focus Outline Override */
+.recharts-wrapper:focus,
+.recharts-surface:focus,
+.recharts-wrapper *:focus {
+  outline: none !important;
+}
+
+/* Premium micro-animations for interactive portfolio/screener elements */
+.portfolio-grid-item {
+  transition: transform 220ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.portfolio-grid-item:hover {
+  transform: translateY(-2px) scale(1.008);
+  box-shadow: 0 12px 24px -6px rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+/* Price number shimmer on data update */
+@keyframes price-flash {
+
+  0%,
+  100% {
+    color: inherit;
+  }
+
+  50% {
+    color: rgb(99, 102, 241);
+  }
+}
+
+.price-update-flash {
+  animation: price-flash 0.6s ease;
+}
+
+/* Premium table cell accent */
+.cell-accent-emerald {
+  border-left: 2px solid rgba(16, 185, 129, 0.5);
+}
+
+.cell-accent-rose {
+  border-left: 2px solid rgba(239, 68, 68, 0.5);
+}
+
+/* Glowing confidence badge */
+.badge-elite {
+  box-shadow: 0 0 12px -2px var(--badge-glow, rgba(16, 185, 129, 0.4));
+}
+
+/* Trust Status Utility Classes */
+.status-trust-live {
+  color: var(--trust-live);
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.dark .status-trust-live {
+  background-color: rgba(52, 211, 153, 0.15);
+  border-color: rgba(52, 211, 153, 0.2);
+}
+
+.status-trust-cached {
+  color: var(--trust-cached);
+  background-color: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.dark .status-trust-cached {
+  background-color: rgba(129, 140, 248, 0.15);
+  border-color: rgba(129, 140, 248, 0.2);
+}
+
+.status-trust-stale {
+  color: var(--trust-stale);
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.dark .status-trust-stale {
+  background-color: rgba(251, 191, 36, 0.15);
+  border-color: rgba(251, 191, 36, 0.2);
+}
+
+.status-trust-degraded {
+  color: var(--trust-degraded);
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.dark .status-trust-degraded {
+  background-color: rgba(248, 113, 113, 0.15);
+  border-color: rgba(248, 113, 113, 0.2);
+}
+
+/* Performance: Off-screen Content Visibility Gating for Large Lists */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* ===== PURE CSS COMPONENT TRANSITIONS & GLASSMORPHISM ===== */
+.premium-fade-in {
+  opacity: 0;
+  animation: pureFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: opacity, transform;
+}
+
+@keyframes pureFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glassmorphism custom components */
+.omen-glass-card {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 41, 59, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.omen-glass-card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 10px 40px 0 rgba(99, 102, 241, 0.08);
+  transform: translateY(-2px);
+}
+
+.dark .omen-glass-card {
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Smooth horizontal scrollbar hiding for horizontal tab bars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* ===== TRADEDIARY REPLICATION UI CLASSES ===== */
+
+@keyframes tabSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content {
+  animation: tabSlideIn 0.25s ease-out forwards;
+}
+
+.metric-card,
+.td-metric-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.metric-card:hover,
+.td-metric-card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-card,
+.td-section-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.section-card:hover,
+.td-section-card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.data-table,
+.td-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.data-table th,
+.td-data-table th {
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #475569;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+  padding: 10px 16px;
+  text-align: left;
+}
+
+.data-table td,
+.td-data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.data-table tbody tr,
+.td-data-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.data-table tbody tr:hover,
+.td-data-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ============================================================
+   AGENT CC1 — PREMIUM MICRO-INTERACTION LAYER (WOW Factor)
+   GPU-accelerated transforms, opacity-only transitions, zero CLS
+   ============================================================ */
+
+/* 1. Premium CTA button lift — applies to primary call-to-action elements */
+@layer components {
+  .cta-premium {
+    @apply transition-transform duration-200 ease-out;
+    will-change: transform;
+  }
+  .cta-premium:hover {
+    transform: scale(1.02);
+  }
+  .cta-premium:active {
+    transform: scale(0.98);
+  }
+
+  /* Tactile card lift — used by widget cards on the dashboard */
+  .card-premium-lift {
+    @apply transition-all duration-300 ease-out;
+    will-change: transform, box-shadow, border-color;
+  }
+  .card-premium-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.08), 0 8px 16px -4px rgba(0, 0, 0, 0.25);
+  }
+  .dark .card-premium-lift:hover {
+    box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.12), 0 8px 16px -4px rgba(0, 0, 0, 0.6);
+  }
+
+  /* 2. Premium shimmer sweep — used by Skeleton and any loading placeholder */
+  .animate-shimmer-premium {
+    background: linear-gradient(
+      90deg,
+      rgba(226, 232, 240, 0) 0%,
+      rgba(226, 232, 240, 0) 40%,
+      rgba(241, 245, 249, 0.7) 50%,
+      rgba(226, 232, 240, 0) 60%,
+      rgba(226, 232, 240, 0) 100%
+    );
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer-sweep 1.6s ease-in-out infinite;
+  }
+
+  .dark .animate-shimmer-premium {
+    background: linear-gradient(
+      90deg,
+      rgba(30, 41, 59, 0) 0%,
+      rgba(30, 41, 59, 0) 40%,
+      rgba(71, 85, 105, 0.6) 50%,
+      rgba(30, 41, 59, 0) 60%,
+      rgba(30, 41, 59, 0) 100%
+    );
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer-sweep 1.6s ease-in-out infinite;
+  }
+
+  /* 3. Breathing live status dot — used by tickers, LIVE badges, market indicators */
+  .animate-breathe-emerald {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55);
+    animation: breathe-emerald 2.2s ease-in-out infinite;
+  }
+
+  .animate-breathe-rose {
+    box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.55);
+    animation: breathe-rose 2.2s ease-in-out infinite;
+  }
+
+  .animate-breathe-amber {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.55);
+    animation: breathe-amber 2.2s ease-in-out infinite;
+  }
+
+  /* 4. Smooth price flash — gentle color wave on price ticks */
+  .price-flash-up {
+    animation: price-flash-up 0.9s ease-out;
+  }
+
+  .price-flash-down {
+    animation: price-flash-down 0.9s ease-out;
+  }
+}
+
+/* 5. Keyframes — all opacity + transform based, GPU accelerated */
+@keyframes shimmer-sweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes breathe-emerald {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+    transform: scale(1.15);
+  }
+}
+
+@keyframes breathe-rose {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.45);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(244, 63, 94, 0);
+    transform: scale(1.15);
+  }
+}
+
+@keyframes breathe-amber {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.45);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(245, 158, 11, 0);
+    transform: scale(1.15);
+  }
+}
+
+@keyframes price-flash-up {
+  0% {
+    background-color: rgba(16, 185, 129, 0);
+    color: inherit;
+  }
+  20% {
+    background-color: rgba(16, 185, 129, 0.18);
+    color: rgb(52, 211, 153);
+  }
+  100% {
+    background-color: rgba(16, 185, 129, 0);
+    color: inherit;
+  }
+}
+
+@keyframes price-flash-down {
+  0% {
+    background-color: rgba(244, 63, 94, 0);
+    color: inherit;
+  }
+  20% {
+    background-color: rgba(244, 63, 94, 0.18);
+    color: rgb(251, 113, 133);
+  }
+  100% {
+    background-color: rgba(244, 63, 94, 0);
+    color: inherit;
+  }
+}
+
+/* Respect user motion preferences (accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-premium,
+  .animate-breathe-emerald,
+  .animate-breathe-rose,
+  .animate-breathe-amber,
+  .price-flash-up,
+  .price-flash-down {
+    animation: none !important;
+  }
+  .cta-premium,
+  .card-premium-lift {
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+   AGENT CC4 — Supreme Visual Polish Layer
+   Bloomberg/Stripe fidelity: HSL-tuned tokens, premium keyframes,
+   glassmorphic scrollbars, modal entry, breathing indicators
+   ============================================================ */
+
+/* 1. Premium custom scrollbars (light + dark, GPU-friendly) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 999px;
+  transition: background 200ms ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.4);
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.7);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.25) transparent;
+}
+.dark * {
+  scrollbar-color: rgba(71, 85, 105, 0.4) transparent;
+}
+
+/* 2. Premium keyframe library (Agent CC4) */
+@keyframes shimmer-sweep-cc4 {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes breathe-green {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+  50% { opacity: 0.75; box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+}
+
+@keyframes breathe-red {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.5); }
+  50% { opacity: 0.75; box-shadow: 0 0 0 6px rgba(244, 63, 94, 0); }
+}
+
+@keyframes slide-up-fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes modal-pop {
+  0%   { opacity: 0; transform: scale(0.96) translateY(8px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* 3. Tailwind utility bindings (uses @layer utilities to mix with Tailwind) */
+@layer utilities {
+  .animate-shimmer-cc4 {
+    background: linear-gradient(90deg, transparent 25%, rgba(255, 255, 255, 0.08) 50%, transparent 75%);
+    background-size: 200% 100%;
+    animation: shimmer-sweep-cc4 2s infinite linear;
+  }
+  .dark .animate-shimmer-cc4 {
+    background: linear-gradient(90deg, transparent 25%, rgba(148, 163, 184, 0.06) 50%, transparent 75%);
+    background-size: 200% 100%;
+  }
+  .animate-breathe-green { animation: breathe-green 2.5s ease-in-out infinite; }
+  .animate-breathe-red   { animation: breathe-red   2.5s ease-in-out infinite; }
+  .animate-slide-up-fade { animation: slide-up-fade 0.35s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-count-in      { animation: count-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-modal-pop     { animation: modal-pop 0.3s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  /* Premium tabular numeric alignment (used by live-updating prices, P&L) */
+  .tabular-cc4 {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1, 'cv11' 1;
+  }
+}
+
+/* 4. Premium glass panel component (used by cards/panels) */
+@layer components {
+  .premium-glass-panel {
+    background: var(--color-surface);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .dark .premium-glass-panel {
+    background: var(--color-surface-dark);
+    border-color: var(--glass-border-dark);
+    box-shadow: var(--glass-shadow-dark);
+  }
+  .premium-glass-panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px 0 rgba(99, 102, 241, 0.08);
+    border-color: rgba(99, 102, 241, 0.3);
+  }
+
+  /* Premium CTA button — composed with .btn-violet or .btn-ghost modifiers */
+  .btn-violet {
+    @apply transition-all duration-200 ease-out;
+    will-change: transform, box-shadow;
+  }
+  .btn-violet:hover {
+    box-shadow: 0 8px 24px -6px rgba(139, 92, 246, 0.45);
+  }
+  .btn-violet:active { transform: scale(0.96); }
+
+  .btn-ghost {
+    @apply transition-colors duration-200 ease-out;
+  }
+
+  /* Modal entry helper */
+  .premium-modal-entry {
+    @apply animate-modal-pop;
+  }
+}
+
+/* 5. Accessibility — respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer-cc4,
+  .animate-breathe-green,
+  .animate-breathe-red,
+  .animate-slide-up-fade,
+  .animate-count-in,
+  .animate-modal-pop {
+    animation: none !important;
+  }
+  .premium-glass-panel,
+  .btn-violet,
+  .btn-ghost {
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+   AGENT CC5 — Cursor-Reactive Glassmorphism & Magnetic CTAs
+   The "alpha" layer: live CSS-variable driven specular highlight,
+   ambient gradient border, magnetic-spring button affordance.
+   All driven by --cx, --cy, --cp from the useCursorLight hook.
+   ============================================================ */
+
+@layer components {
+  /* 1. Cursor-reactive glassmorphic card.
+     The overlay uses a single radial gradient positioned by the cursor
+     coordinates (--cx, --cy) and faded in by --cp (presence 0..1). */
+  .alpha-cursor-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  .alpha-cursor-card::before,
+  .alpha-cursor-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    opacity: var(--cp, 0);
+    transition: opacity 200ms ease-out;
+    z-index: 1;
+  }
+  /* Specular highlight: follows the cursor, masked by the card radius. */
+  .alpha-cursor-card::before {
+    background: radial-gradient(
+      280px circle at calc((0.5 + var(--cx, 0)) * 100%) calc((0.5 + var(--cy, 0)) * 100%),
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0.04) 40%,
+      transparent 70%
+    );
+    mix-blend-mode: screen;
+  }
+  /* Complementary ambient shadow on the opposite edge. */
+  .alpha-cursor-card::after {
+    background: radial-gradient(
+      600px circle at calc((0.5 - var(--cx, 0)) * 100%) calc((0.5 - var(--cy, 0)) * 100%),
+      rgba(99, 102, 241, 0.18),
+      rgba(139, 92, 246, 0.08) 40%,
+      transparent 75%
+    );
+    mix-blend-mode: screen;
+  }
+  /* Dark mode: cooler highlight, deeper violet ambient. */
+  .dark .alpha-cursor-card::before {
+    background: radial-gradient(
+      300px circle at calc((0.5 + var(--cx, 0)) * 100%) calc((0.5 + var(--cy, 0)) * 100%),
+      rgba(165, 180, 252, 0.22),
+      rgba(99, 102, 241, 0.05) 40%,
+      transparent 70%
+    );
+  }
+  .dark .alpha-cursor-card::after {
+    background: radial-gradient(
+      600px circle at calc((0.5 - var(--cx, 0)) * 100%) calc((0.5 - var(--cy, 0)) * 100%),
+      rgba(139, 92, 246, 0.25),
+      rgba(99, 102, 241, 0.08) 40%,
+      transparent 75%
+    );
+  }
+  /* Make sure card content sits above the overlays. */
+  .alpha-cursor-card > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* 2. Conic ambient border — rotates slowly when "active". */
+  .alpha-conic-border {
+    position: relative;
+    isolation: isolate;
+  }
+  .alpha-conic-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+      from calc(var(--cb-angle, 0) * 1deg),
+      rgba(99, 102, 241, 0) 0deg,
+      rgba(99, 102, 241, 0.6) 90deg,
+      rgba(139, 92, 246, 0.6) 180deg,
+      rgba(236, 72, 153, 0.4) 270deg,
+      rgba(99, 102, 241, 0) 360deg
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: var(--cb-opacity, 0);
+    transition: opacity 400ms ease-out;
+    animation: conic-rotate 6s linear infinite;
+    z-index: 1;
+  }
+  .alpha-conic-border.is-active::before {
+    --cb-opacity: 1;
+  }
+
+  /* 3. Magnetic spring button — used by primary CTAs. */
+  .alpha-magnetic {
+    transform: translate3d(0, 0, 0);
+    transition: transform 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+  }
+  .alpha-magnetic:active {
+    transform: scale(0.96) !important;
+    transition: transform 120ms ease-out !important;
+  }
+}
+
+@keyframes conic-rotate {
+  to { --cb-angle: 360; }
+}
+
+@property --cb-angle {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+/* 4. Tab pill underline — the "active" tab gets a slow moving sheen. */
+.alpha-tab-sheen {
+  position: relative;
+  overflow: hidden;
+}
+.alpha-tab-sheen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 65%,
+    transparent 100%
+  );
+  background-size: 250% 100%;
+  background-position: 100% 0;
+  animation: tab-sheen 4s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes tab-sheen {
+  0%, 100% { background-position: 100% 0; }
+  50%      { background-position: -50% 0; }
+}
+
+/* 5. Accessibility — disable the alpha layer when the user prefers reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .alpha-cursor-card::before,
+  .alpha-cursor-card::after,
+  .alpha-conic-border::before,
+  .alpha-tab-sheen::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  .alpha-magnetic {
+    transition: none !important;
+  }
+}
+
+/* ==========================================================================
+   AGENT CC7 — VISUAL POLISH SWEEP
+   1. Global theme-transition curve (organic light/dark toggle)
+   2. Unified typography scale (.h1 .. .micro)
+   3. Triple-layer shimmer skeleton (premium progressive load)
+   4. Elastic toast spring keyframes (CSS fallback for Framer)
+   5. prefers-reduced-motion guards for all of the above
+   ========================================================================== */
+
+/* --- 1. Theme transition tokens (CSS custom properties) --- */
+:root {
+  --cc7-theme-duration: 320ms;
+  --cc7-theme-ease: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --cc7-theme-properties: background-color, color, border-color, fill, stroke,
+    box-shadow, text-shadow, filter, backdrop-filter;
+}
+
+/* Apply the curve to *every* theme-affected property on the document root.
+   This makes toggling `dark` class feel organic — surfaces, text, borders,
+   SVG fills/strokes, and shadows all transition together. The `<html>`
+   selector is used so we don't fight with explicit transitions on
+   individual elements. */
+html {
+  transition: var(--cc7-theme-properties) var(--cc7-theme-duration) var(--cc7-theme-ease);
+}
+
+/* --- 2. Unified typography scale ---
+   A clean hierarchy mapped to headers, labels, and data grids.
+   Uses `Inter` (assumed default) with calibrated weights and letter-spacings. */
+.cc7-display    { font-size: 2.25rem; line-height: 1.1;  letter-spacing: -0.025em; font-weight: 800; }
+.cc7-h1         { font-size: 1.75rem; line-height: 1.2;  letter-spacing: -0.02em;  font-weight: 700; }
+.cc7-h2         { font-size: 1.375rem; line-height: 1.25; letter-spacing: -0.015em; font-weight: 700; }
+.cc7-h3         { font-size: 1.125rem; line-height: 1.3;  letter-spacing: -0.01em;  font-weight: 600; }
+.cc7-h4         { font-size: 0.95rem;  line-height: 1.35; letter-spacing: 0;        font-weight: 600; }
+.cc7-body       { font-size: 0.875rem; line-height: 1.5;  letter-spacing: 0;        font-weight: 400; }
+.cc7-body-bold  { font-size: 0.875rem; line-height: 1.5;  letter-spacing: 0;        font-weight: 600; }
+.cc7-caption    { font-size: 0.75rem;  line-height: 1.4;  letter-spacing: 0.01em;   font-weight: 500; }
+.cc7-eyebrow    { font-size: 0.6875rem; line-height: 1.3; letter-spacing: 0.08em;  font-weight: 700; text-transform: uppercase; }
+.cc7-mono       { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+.cc7-micro      { font-size: 0.6875rem; line-height: 1.3;  letter-spacing: 0.04em;  font-weight: 600; }
+
+/* --- 3. Triple-layer shimmer ---
+   A multi-stage, multi-layer skeleton that uses an optimized linear gradient
+   sweep to simulate progressive content loading. The 3 layers are:
+     - base:     solid neutral fill (so the shape is visible even before the
+                 sweep starts)
+     - mid:      60%-opacity highlight band (the "wave")
+     - top:      25%-opacity secondary band offset by 0.5s (the "echo")
+   All three animate `background-position` only — no layout shift, GPU-friendly. */
+@keyframes cc7-shimmer-sweep {
+  0%   { background-position: -120% 0,    120% 0,    0 0; }
+  100% { background-position:  220% 0,   -120% 0,    0 0; }
+}
+
+.cc7-shimmer {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(226 232 240 / 0.6); /* slate-200/60 (light) */
+  background-image:
+    linear-gradient(90deg,
+      transparent 0%,
+      rgba(255,255,255,0.55) 35%,
+      rgba(255,255,255,0.85) 50%,
+      rgba(255,255,255,0.55) 65%,
+      transparent 100%),
+    linear-gradient(90deg,
+      transparent 0%,
+      rgba(99,102,241,0.10)  35%,
+      rgba(99,102,241,0.18)  50%,
+      rgba(99,102,241,0.10)  65%,
+      transparent 100%),
+    linear-gradient(90deg, transparent, transparent);
+  background-size: 200% 100%, 200% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: -120% 0, 120% 0, 0 0;
+  animation: cc7-shimmer-sweep 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: background-position;
+}
+.dark .cc7-shimmer {
+  background-color: rgb(30 41 59 / 0.6); /* slate-800/60 (dark) */
+  background-image:
+    linear-gradient(90deg,
+      transparent 0%,
+      rgba(148,163,184,0.18) 35%,
+      rgba(148,163,184,0.32) 50%,
+      rgba(148,163,184,0.18) 65%,
+      transparent 100%),
+    linear-gradient(90deg,
+      transparent 0%,
+      rgba(99,102,241,0.10)   35%,
+      rgba(139,92,246,0.18)   50%,
+      rgba(99,102,241,0.10)   65%,
+      transparent 100%),
+    linear-gradient(90deg, transparent, transparent);
+}
+
+/* --- 4. Elastic toast spring (CSS fallback / micro-sass) --- */
+@keyframes cc7-toast-in {
+  0%   { opacity: 0; transform: translate3d(0, -16px, 0) scale(0.92); }
+  60%  { opacity: 1; transform: translate3d(0,  2px, 0) scale(1.02); }
+  80%  {                 transform: translate3d(0, -1px, 0) scale(0.995); }
+  100% { opacity: 1; transform: translate3d(0,  0,    0) scale(1); }
+}
+@keyframes cc7-toast-out {
+  0%   { opacity: 1; transform: translate3d(0, 0,    0) scale(1); }
+  100% { opacity: 0; transform: translate3d(0, 8px, 0) scale(0.95); }
+}
+.cc7-toast-enter { animation: cc7-toast-in 480ms cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.cc7-toast-exit  { animation: cc7-toast-out 240ms cubic-bezier(0.4, 0, 1, 1)     both; }
+
+/* --- 5. Accessibility — disable CC7 polish when the user prefers reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  .cc7-shimmer,
+  .cc7-toast-enter,
+  .cc7-toast-exit {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==========================================================================
+   AGENT CC2 — PREMIUM GLASSMORPHISM & THEME HARMONIZER
+   Goal: surface-by-surface parity between dark/light mode. The brief calls
+   for a "Bloomberg-grade" feel — uniform glassmorphic panels, custom
+   scrollbars, consistent modal overlays, and harmonized typography.
+
+   1. .glass-card    — Panel/card surface (light + dark parity)
+   2. .glass-modal   — Modal panel surface (slightly heavier blur)
+   3. .glass-overlay — Modal backdrop
+   4. .scrollbar-fx  — Custom WebKit + Firefox scrollbar
+   5. .font-display  — Calibrated Outfit for numbers/headings
+   6. .font-ui       — Inter for body/UI copy
+   7. Body font stack — fall back to the design system fonts
+   ========================================================================== */
+
+/* Body font stack — Inter for UI, Outfit for data/headings, system fallback. */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.font-display { font-family: 'Outfit', 'Inter', system-ui, sans-serif; letter-spacing: -0.01em; }
+.font-ui      { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+
+/* --- 1. Glass card surface ---
+   Light:  bg-white/60,  border-slate-200/50,  shadow-slate-200/30
+   Dark:   bg-slate-950/40, border-slate-800/60, shadow-black/20
+   Backdrop-blur-xl in both. */
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.60);
+  border: 1px solid rgba(226, 232, 240, 0.50);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-radius: 1rem;
+  transition: background-color 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+}
+.dark .glass-card,
+.dark .glass-card {
+  background-color: rgba(2, 6, 23, 0.40);
+  border-color: rgba(30, 41, 59, 0.60);
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.20);
+}
+
+/* --- 2. Glass modal surface --- (heavier blur than the card) */
+.glass-modal {
+  background-color: rgba(255, 255, 255, 0.80);
+  border: 1px solid rgba(226, 232, 240, 0.50);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+  border-radius: 1.5rem;
+}
+.dark .glass-modal {
+  background-color: rgba(2, 6, 23, 0.80);
+  border-color: rgba(30, 41, 59, 0.40);
+}
+
+/* --- 3. Modal overlay --- */
+.glass-overlay {
+  background-color: rgba(2, 6, 23, 0.40);
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+}
+
+/* --- 4. Premium scrollbars --- */
+.scrollbar-fx {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(203, 213, 225, 0.40) transparent;
+}
+.scrollbar-fx::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.scrollbar-fx::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-fx::-webkit-scrollbar-thumb {
+  background-color: rgba(203, 213, 225, 0.40);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.scrollbar-fx::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(148, 163, 184, 0.60);
+}
+.dark .scrollbar-fx {
+  scrollbar-color: rgba(51, 65, 85, 0.40) transparent;
+}
+.dark .scrollbar-fx::-webkit-scrollbar-thumb {
+  background-color: rgba(51, 65, 85, 0.40);
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.dark .scrollbar-fx::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(71, 85, 105, 0.60);
+}
+
+/* --- CC18B: Performance and animation stabilization ------------------------------------ */
+/*
+ * 1) .fill-mode-both — the LazyRender inner wrapper used to attach this class
+ *    without ever defining the rule. We give it a minimal transition so the
+ *    mount-in of deferred widgets (chronobiology, what-if, mood matrix, etc.)
+ *    doesn't pop. duration-300 matches the framer-motion spring on toggles.
+ */
+.fill-mode-both {
+  animation: cc18b-fade-in 240ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  will-change: opacity, transform;
+}
+
+@keyframes cc18b-fade-in {
+  0%   { opacity: 0; transform: translateY(4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/*
+ * 2) GPU layer hint for every analytics card and chart container. The
+ *    trade-journal analytics view is the most-likely-to-jitter place in the
+ *    app: 20+ Recharts cards competing for layout. Promoting each to its own
+ *    layer with `transform: translateZ(0)` stops the compositor from having to
+ *    repaint the parent on each chart resize.
+ */
+.bg-white\/5.backdrop-blur-xl,
+.bg-slate-950.border,
+.bg-slate-900.border,
+.bg-slate-900\/40 {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/*
+ * 3) Animation jitter guard: any element that animates opacity or transform
+ *    on hover (hover:scale-*, group-hover:opacity-*, group-hover:scale-*)
+ *    benefits from a stable compositor layer.
+ */
+[class*="hover:scale-"],
+[class*="group-hover:scale-"],
+[class*="hover:shadow-"] {
+  will-change: transform, opacity;
+}
+
+/*
+ * 4) Respects the user's reduced-motion preference so we never trigger
+ *    frame drops on accessibility devices.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .fill-mode-both {
+    animation: none;
+  }
+  [class*="hover:scale-"],
+  [class*="group-hover:scale-"] {
+    transform: none !important;
+  }
+}
+
+/* --- 5. WCAG-friendly focus ring for keyboard users --- */
+.glass-card:focus-visible,
+.glass-modal:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.60);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   AGENT CC46 — Premium Polish Pillar 1
+   Global .btn system: variants, active press acknowledgement,
+   universal focus-visible ring for keyboard users.
+   ============================================================ */
+
+@layer components {
+  /* 1. .btn base — composes with .btn-{primary|secondary|ghost|danger}. */
+  .btn {
+    @apply relative inline-flex items-center justify-center font-medium
+           transition-colors duration-150 ease-out select-none
+           disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  /* 2. Variants */
+  .btn-primary {
+    @apply bg-indigo-600 text-white shadow-sm
+           hover:bg-indigo-500 active:bg-indigo-700
+           disabled:bg-indigo-400/60;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-200 text-slate-900
+           hover:bg-slate-300 active:bg-slate-400
+           disabled:bg-slate-200/60
+           dark:bg-slate-800 dark:text-slate-100
+           dark:hover:bg-slate-700 dark:active:bg-slate-900;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-slate-700
+           hover:bg-slate-100 active:bg-slate-200
+           dark:text-slate-200
+           dark:hover:bg-slate-800 dark:active:bg-slate-900;
+  }
+
+  .btn-danger {
+    @apply bg-rose-600 text-white shadow-sm
+           hover:bg-rose-500 active:bg-rose-700
+           disabled:bg-rose-400/60;
+  }
+
+  /* 3. Sizes (optional, applied via additional class) */
+  .btn-sm { @apply h-8 px-3 text-xs gap-1.5 rounded-md; }
+  .btn-md { @apply h-10 px-4 text-sm gap-2 rounded-lg; }
+  .btn-lg { @apply h-12 px-5 text-base gap-2.5 rounded-xl; }
+
+  /* 4. Press acknowledgement — the "click reply" */
+  .btn:active:not(:disabled) {
+    transform: scale(0.97);
+    transition: transform 90ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* 5. Honor reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .btn:active:not(:disabled) {
+      transform: none;
+      transition: none;
+    }
+  }
+}
+
+/* 6. Universal focus-visible ring (buttons, links, role=button).
+   Uses --accent for theming. Falls back to indigo if not set. */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--accent, rgba(99, 102, 241, 0.85));
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* 7. Reduced motion — soften focus ring (no animation, no pulse) */
+@media (prefers-reduced-motion: reduce) {
+  button:focus-visible,
+  a:focus-visible,
+  [role="button"]:focus-visible {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   AGENT CC50 — Global Focus-Visible Ring
+   Standardises a high-contrast indigo focus ring on every
+   interactive element so keyboard navigation is consistently
+   visible across themes. Tab order is unchanged — only the
+   visual ring is added. The :focus-visible pseudo-class ensures
+   mouse clicks don't trigger the ring (keyboard-only).
+   ============================================================ */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent, #6366f1);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   AGENT CC59 — Focus Glow (Premium "halo" refinement)
+   A3 — upgrade the focus ring to a 4px halo so keyboard
+   navigation has a Linear-tier feel. Composed with the ring
+   above (outline 2px). Glow only shows on :focus-visible, not
+   on mouse click. Falls back to indigo-500 in dark mode.
+   ============================================================ */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible,
+.glass-input:focus-visible,
+.focus-glow:focus-visible {
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+  transition: box-shadow 120ms ease-out;
+}
+
+.dark button:focus-visible,
+.dark a:focus-visible,
+.dark [role="button"]:focus-visible,
+.dark [tabindex]:focus-visible,
+.dark .glass-input:focus-visible,
+.dark .focus-glow:focus-visible {
+  box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.22);
+}
+
+/* ============================================================
+   AGENT CC8 — Global motion intensity tokens
+   Opt-in modifiers that scale the standard transition duration
+   (CC7's --cc7-theme-duration = 320ms) for surfaces that need
+   a bit more or less presence.
+   ============================================================ */
+.motion-emphasized {
+  transition-duration: calc(var(--cc7-theme-duration, 320ms) * 1.2);
+}
+.motion-deemphasized {
+  transition-duration: calc(var(--cc7-theme-duration, 320ms) * 0.6);
+}
+
+/* ============================================================
+   PREMIUM MOBILE & RESPONSIVE LAYOUT TOKENS
+   ============================================================ */
+:root {
+  --space-page: 1rem;
+  --card-radius: 1rem;
+  --font-scale: 1;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --space-page: 1.5rem;
+    --card-radius: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --space-page: 2rem;
+    --card-radius: 1.5rem;
+  }
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* ==========================================================================
+   Mobile touch polish
+   - Kill the white/gray tap flash box Android/Chrome paints on every tap.
+   - Suppress focus outlines from TOUCH (keyboard focus-visible rings kept).
+   ========================================================================== */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  button:focus:not(:focus-visible),
+  a:focus:not(:focus-visible),
+  [role="button"]:focus:not(:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ==========================================================================
+   Type Lift - readability floor for dense terminal surfaces on phones.
+   Opt-in per surface via the `type-lift` wrapper class (ONE point of
+   control). Bumps sub-10px micro-type to a legible floor below md only;
+   desktop density is untouched.
+   ========================================================================== */
+@media (max-width: 767px) {
+  .type-lift .text-\[7px\],
+  .type-lift .text-\[7\.5px\],
+  .type-lift .text-\[8px\],
+  .type-lift .text-\[9px\] {
+    font-size: 10px !important;
+  }
+  .type-lift .text-\[9\.5px\] {
+    font-size: 10.5px !important;
+  }
+}
+
+/* ==========================================================================
+   Production mobile polish
+   - overscroll-behavior: kills the pull-to-refresh glow fighting the app
+     inside nested scrollers on Android Chrome.
+   - user-select: no accidental text-selection highlights when tapping
+     chrome (nav, tabs, buttons). Content areas stay selectable.
+   ========================================================================== */
+@media (max-width: 768px) {
+  main,
+  .overflow-y-auto,
+  .overflow-auto {
+    overscroll-behavior: contain;
+  }
+  nav button,
+  nav a,
+  header button,
+  [role="tab"],
+  [role="button"],
+  label:has(input[type="checkbox"]) {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+/* ==========================================================================
+   AMOLED true-black layer (OnePlus 13 LTPO panel).
+   Activated by `.dark.amoled` on <html>. Pure black canvas, near-black
+   elevated surfaces, hairline borders - gain/loss hues pop at full contrast.
+   ========================================================================== */
+html.dark.amoled {
+  --bg-app: #000000;
+  --bg-surface: #0a0a0c;
+  --bg-elevated: #101014;
+  --border: rgba(255, 255, 255, 0.07);
+}
+html.dark.amoled body,
+html.dark.amoled .bg-slate-950,
+html.dark.amoled .dark\:bg-slate-950 {
+  background-color: #000000;
+}
+html.dark.amoled .dark\:bg-slate-900\/95,
+html.dark.amoled .dark\:bg-slate-900\/90,
+html.dark.amoled .dark\:bg-slate-900\/80,
+html.dark.amoled .dark\:bg-slate-900\/60,
+html.dark.amoled .dark\:bg-slate-900\/50,
+html.dark.amoled .dark\:bg-slate-900\/40,
+html.dark.amoled .dark\:bg-slate-900\/30 {
+  background-color: rgba(10, 10, 12, var(--amoled-alpha, 0.92));
+}
+
+/* ==========================================================================
+   M0 Mobile Safety Net (docs/MOBILE_HARDENING_PLAN.md Part 4)
+   Shared layout conventions so overflow/off-center bugs cannot ship.
+   Apply mechanically per the M1 checklist — no bespoke per-screen layouts.
+   ========================================================================== */
+
+/* Centered page gutter for hub/tab roots.
+   Mobile (<768px) maintains a 12px safe gutter when rendered outside MainLayout.
+   Desktop (>=768px) lets MainLayout provide the master outer gutter (p-3 sm:p-5 md:p-6)
+   and max-width (max-w-[1800px]), eliminating double-padding and the restrictive 88rem cap. */
+.page-shell {
+  width: 100%;
+  margin-inline: auto;
+}
+@media (max-width: 767px) {
+  .page-shell {
+    padding-inline: 0.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .page-shell {
+    padding-inline: 0;
+    max-width: 100%;
+  }
+}
+
+/* Wrapping toolbar for filter/action rows */
+.toolbar-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+.toolbar-wrap > * {
+  min-width: 0;
+}
+
+/* Horizontal containment for tables without a card mode */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* iOS & Mobile Safe Area helpers */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Manipulation touch target optimize */
+@media (max-width: 768px) {
+  button, 
+  a, 
+  select, 
+  input {
+    touch-action: manipulation;
+  }
+}
+
+/* Hide scrollbars globally on mobile viewports to prevent layout shifts and scroll gutters */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  * {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  body, html {
+    overflow-x: clip; /* Prevent horizontal overflow bleed */
+  }
+}
+
+/* Premium TradingView Shortcut Button for LiveTickerBar */
+.tv-shortcut-btn {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  color: #94a3b8 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.15s ease-in-out !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.tv-shortcut-btn:hover {
+  background-color: #ff9800 !important;
+  color: #ffffff !important;
+  border-color: #ff9800 !important;
+}
+
+/* ==========================================================================
+   DESIGN SYSTEM PRESETS - Pure CSS Polymorphic Injection
+   Supports [data-design-preset="astryx" | "reui-nova" | "shadcn" | "wealthos-classic"]
+   ========================================================================== */
+
+/* 1. Universal Card (.preset-card) */
+.preset-card {
+  transition: all 0.2s ease;
+}
+
+[data-design-preset="astryx"] .preset-card {
+  border-radius: 12px;
+  background-color: #262626;
+  border: 1px solid rgba(255, 255, 255, 0.102);
+  color: #ffffff;
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-shadow: none;
+}
+
+[data-design-preset="reui-nova"] .preset-card,
+[data-design-preset="shadcn"] .preset-card {
+  border-radius: 14px;
+  background-color: hsl(var(--card, 240 10% 3.9%));
+  border: 1px solid hsl(var(--border, 240 3.7% 15.9%));
+  color: hsl(var(--card-foreground, 0 0% 98%));
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+[data-design-preset="wealthos-classic"] .preset-card,
+:root:not([data-design-preset]) .preset-card {
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 41, 59, 0.8);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  font-family: 'Outfit', sans-serif;
+}
+
+/* 2. Universal Subcard / Chip (.preset-subcard) */
+.preset-subcard {
+  transition: all 0.15s ease;
+}
+
+[data-design-preset="astryx"] .preset-subcard {
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-family: 'Figtree', sans-serif;
+}
+
+[data-design-preset="reui-nova"] .preset-subcard,
+[data-design-preset="shadcn"] .preset-subcard {
+  border-radius: 8px;
+  background-color: hsl(var(--muted, 240 3.7% 15.9%) / 0.5);
+  border: 1px solid hsl(var(--border, 240 3.7% 15.9%) / 0.8);
+  font-family: 'Inter', sans-serif;
+}
+
+[data-design-preset="wealthos-classic"] .preset-subcard,
+:root:not([data-design-preset]) .preset-subcard {
+  border-radius: 12px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  font-family: 'Outfit', sans-serif;
+}
+
+/* 3. Universal Button (.preset-button) */
+.preset-button {
+  transition: all 0.15s ease-in-out;
+}
+
+[data-design-preset="astryx"] .preset-button {
+  border-radius: 10px;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 500;
+}
+
+[data-design-preset="reui-nova"] .preset-button,
+[data-design-preset="shadcn"] .preset-button {
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+[data-design-preset="wealthos-classic"] .preset-button,
+:root:not([data-design-preset]) .preset-button {
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+}
