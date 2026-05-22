@@ -1,0 +1,14 @@
+{
+  "running": false,
+  "dry_run": false,
+  "loop_count": 1,
+  "last_scan_ist": "2026-09-29 19:16:21 IST",
+  "cadence_seconds": 60,
+  "has_traded_today": false,
+  "last_error": "401: {'error': 'auth_required', 'message': 'Upstox Access Token is invalid or expired. Re-authentication required.', 'auth_url': 'https://api.upstox.com/v2/login/authorization/dialog?response_type=code&client_id=0075ec8c-90a7-4c48-88ee-973f57975c5d&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fupstox%2Fcallback'}",
+  "updated_at": "2026-09-29T19:16:29.014811+05:30",
+  "stocks_scanned": 210,
+  "dominant_sector": "IT",
+  "top_candidate": "KPITTECH",
+  "executed_trade": null
+}
