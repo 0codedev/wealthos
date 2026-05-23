@@ -1,0 +1,7 @@
+{
+    "enabled": true,
+    "expiry_rollover": false,
+    "active_trade": null,
+    "bot_token": "your_telegram_bot_token_here",
+    "chat_id": "-1004326362283#8"
+}

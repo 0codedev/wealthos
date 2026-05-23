@@ -1,0 +1,20 @@
+{
+    "sandbox_mode": true,
+    "nifty_macro_enabled": true,
+    "nifty_long_threshold": 0.35,
+    "nifty_short_threshold": -0.35,
+    "neutral_divergence_override": 2.0,
+    "dual_polarity_enabled": true,
+    "force_long_only": false,
+    "time_gate_enabled": false,
+    "entry_window_start_mins": 560,
+    "entry_window_end_mins": 915,
+    "min_composite_score": 60.0,
+    "hard_sl_pct": 18.0,
+    "trail_trigger_pct": 25.0,
+    "daily_loss_limit_enabled": false,
+    "max_daily_loss_inr": 1000000.0,
+    "max_trades_per_day": 50,
+    "volume_veto_enabled": true,
+    "allow_moderate_rotation": true
+}
