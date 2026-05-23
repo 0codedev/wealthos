@@ -1,0 +1,3962 @@
+[
+  {
+    "symbol": "IDEA",
+    "instrument_key": "NSE_EQ|INE669E01016",
+    "sector": "SERVICES",
+    "adv_20d": 380813739.15
+  },
+  {
+    "symbol": "VISL",
+    "instrument_key": "NSE_EQ|INE1CLE01013",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 93463399.91
+  },
+  {
+    "symbol": "HFCL",
+    "instrument_key": "NSE_EQ|INE548A01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 81140594.2
+  },
+  {
+    "symbol": "VOGL",
+    "instrument_key": "NSE_EQ|INE704J01044",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 68945232.55
+  },
+  {
+    "symbol": "SUZLON",
+    "instrument_key": "NSE_EQ|INE040H01021",
+    "sector": "OIL & GAS",
+    "adv_20d": 66436323.6
+  },
+  {
+    "symbol": "VEDPOWER",
+    "instrument_key": "NSE_EQ|INE694L01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 57046390.91
+  },
+  {
+    "symbol": "FCL",
+    "instrument_key": "NSE_EQ|INE045J01034",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 47531260.0
+  },
+  {
+    "symbol": "BHARATCOAL",
+    "instrument_key": "NSE_EQ|INE05XR01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 45177856.25
+  },
+  {
+    "symbol": "YESBANK",
+    "instrument_key": "NSE_EQ|INE528G01035",
+    "sector": "PVT BANK",
+    "adv_20d": 45112843.3
+  },
+  {
+    "symbol": "EASEMYTRIP",
+    "instrument_key": "NSE_EQ|INE07O001026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 43301222.2
+  },
+  {
+    "symbol": "PCJEWELLER",
+    "instrument_key": "NSE_EQ|INE785M01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 40975105.2
+  },
+  {
+    "symbol": "RPOWER",
+    "instrument_key": "NSE_EQ|INE614G01033",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 36075087.55
+  },
+  {
+    "symbol": "SEPC",
+    "instrument_key": "NSE_EQ|INE964H01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 31998240.95
+  },
+  {
+    "symbol": "APOLLO",
+    "instrument_key": "NSE_EQ|INE713T01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 31156777.0
+  },
+  {
+    "symbol": "MEESHO",
+    "instrument_key": "NSE_EQ|INE0VDM01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 28963524.65
+  },
+  {
+    "symbol": "ETERNAL",
+    "instrument_key": "NSE_EQ|INE758T01015",
+    "sector": "NIFTY 50",
+    "adv_20d": 27830622.65
+  },
+  {
+    "symbol": "HDFCBANK",
+    "instrument_key": "NSE_EQ|INE040A01034",
+    "sector": "SENSEX",
+    "adv_20d": 25886645.65
+  },
+  {
+    "symbol": "ITBEES",
+    "instrument_key": "NSE_EQ|INF204KB15V2",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 23554136.65
+  },
+  {
+    "symbol": "TATASTEEL",
+    "instrument_key": "NSE_EQ|INE081A01020",
+    "sector": "SENSEX",
+    "adv_20d": 22559717.45
+  },
+  {
+    "symbol": "SWIGGY",
+    "instrument_key": "NSE_EQ|INE00H001014",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 21740306.2
+  },
+  {
+    "symbol": "LLOYDSENGG",
+    "instrument_key": "NSE_EQ|INE093R01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 21218084.3
+  },
+  {
+    "symbol": "CCAVENUE",
+    "instrument_key": "NSE_EQ|INE483S01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 20773373.55
+  },
+  {
+    "symbol": "ASHOKLEY",
+    "instrument_key": "NSE_EQ|INE208A01029",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 20063922.3
+  },
+  {
+    "symbol": "SAIL",
+    "instrument_key": "NSE_EQ|INE114A01011",
+    "sector": "METAL",
+    "adv_20d": 19416805.25
+  },
+  {
+    "symbol": "IDBI",
+    "instrument_key": "NSE_EQ|INE008A01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 19399396.95
+  },
+  {
+    "symbol": "NMDC",
+    "instrument_key": "NSE_EQ|INE584A01023",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 19350364.25
+  },
+  {
+    "symbol": "LICI",
+    "instrument_key": "NSE_EQ|INE0J1Y01017",
+    "sector": "FIN SERVICE",
+    "adv_20d": 19156812.75
+  },
+  {
+    "symbol": "JIOFIN",
+    "instrument_key": "NSE_EQ|INE758E01017",
+    "sector": "NIFTY 50",
+    "adv_20d": 18617370.05
+  },
+  {
+    "symbol": "KALYANKJIL",
+    "instrument_key": "NSE_EQ|INE303R01014",
+    "sector": "CONSUMER DURABLES",
+    "adv_20d": 18151778.0
+  },
+  {
+    "symbol": "KWIL",
+    "instrument_key": "NSE_EQ|INE2KCE01013",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 17854239.4
+  },
+  {
+    "symbol": "VMM",
+    "instrument_key": "NSE_EQ|INE01EA01019",
+    "sector": "FMCG",
+    "adv_20d": 16069330.85
+  },
+  {
+    "symbol": "CANBK",
+    "instrument_key": "NSE_EQ|INE476A01022",
+    "sector": "PSU BANK",
+    "adv_20d": 15940090.45
+  },
+  {
+    "symbol": "SBC",
+    "instrument_key": "NSE_EQ|INE04AK01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 15939964.35
+  },
+  {
+    "symbol": "ITC",
+    "instrument_key": "NSE_EQ|INE154A01025",
+    "sector": "SENSEX",
+    "adv_20d": 14870527.2
+  },
+  {
+    "symbol": "IDFCFIRSTB",
+    "instrument_key": "NSE_EQ|INE092T01019",
+    "sector": "PVT BANK",
+    "adv_20d": 14224271.35
+  },
+  {
+    "symbol": "ADANIPOWER",
+    "instrument_key": "NSE_EQ|INE814H01029",
+    "sector": "OIL & GAS",
+    "adv_20d": 14132911.35
+  },
+  {
+    "symbol": "INOXWIND",
+    "instrument_key": "NSE_EQ|INE066P01011",
+    "sector": "CAP GOODS",
+    "adv_20d": 13906790.35
+  },
+  {
+    "symbol": "BEL",
+    "instrument_key": "NSE_EQ|INE263A01024",
+    "sector": "SENSEX",
+    "adv_20d": 13507608.15
+  },
+  {
+    "symbol": "PNB",
+    "instrument_key": "NSE_EQ|INE160A01022",
+    "sector": "PSU BANK",
+    "adv_20d": 12956545.85
+  },
+  {
+    "symbol": "ONGC",
+    "instrument_key": "NSE_EQ|INE213A01029",
+    "sector": "OIL & GAS",
+    "adv_20d": 12640381.25
+  },
+  {
+    "symbol": "WIPRO",
+    "instrument_key": "NSE_EQ|INE075A01022",
+    "sector": "SENSEX",
+    "adv_20d": 12484426.3
+  },
+  {
+    "symbol": "VEDL",
+    "instrument_key": "NSE_EQ|INE205A01025",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 12442165.1
+  },
+  {
+    "symbol": "SPARC",
+    "instrument_key": "NSE_EQ|INE232I01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 12404455.35
+  },
+  {
+    "symbol": "AURIGROW",
+    "instrument_key": "NSE_EQ|INE925Y01036",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 12280217.25
+  },
+  {
+    "symbol": "GAIL",
+    "instrument_key": "NSE_EQ|INE129A01019",
+    "sector": "OIL & GAS",
+    "adv_20d": 12088506.4
+  },
+  {
+    "symbol": "UTKARSHBNK",
+    "instrument_key": "NSE_EQ|INE735W01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 11473516.25
+  },
+  {
+    "symbol": "INFY",
+    "instrument_key": "NSE_EQ|INE009A01021",
+    "sector": "SENSEX",
+    "adv_20d": 11441694.5
+  },
+  {
+    "symbol": "UNIONBANK",
+    "instrument_key": "NSE_EQ|INE692A01016",
+    "sector": "PSU BANK",
+    "adv_20d": 11431672.0
+  },
+  {
+    "symbol": "PWL",
+    "instrument_key": "NSE_EQ|INE0LP301011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 10466988.15
+  },
+  {
+    "symbol": "RELIANCE",
+    "instrument_key": "NSE_EQ|INE002A01018",
+    "sector": "SENSEX",
+    "adv_20d": 10406409.25
+  },
+  {
+    "symbol": "HSCL",
+    "instrument_key": "NSE_EQ|INE019C01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 10253305.8
+  },
+  {
+    "symbol": "ICICIBANK",
+    "instrument_key": "NSE_EQ|INE090A01021",
+    "sector": "SENSEX",
+    "adv_20d": 10247855.15
+  },
+  {
+    "symbol": "SBIN",
+    "instrument_key": "NSE_EQ|INE062A01020",
+    "sector": "SENSEX",
+    "adv_20d": 10202267.55
+  },
+  {
+    "symbol": "PAISALO",
+    "instrument_key": "NSE_EQ|INE420C01059",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 10025917.9
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "instrument_key": "NSE_EQ|INE237A01036",
+    "sector": "SENSEX",
+    "adv_20d": 9769628.4
+  },
+  {
+    "symbol": "GMRAIRPORT",
+    "instrument_key": "NSE_EQ|INE776C01039",
+    "sector": "SERVICES",
+    "adv_20d": 9683539.95
+  },
+  {
+    "symbol": "TMPV",
+    "instrument_key": "NSE_EQ|INE155A01022",
+    "sector": "NIFTY 50",
+    "adv_20d": 9588205.7
+  },
+  {
+    "symbol": "CMRGREEN",
+    "instrument_key": "NSE_EQ|INE00WV01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 9257905.38
+  },
+  {
+    "symbol": "POWERGRID",
+    "instrument_key": "NSE_EQ|INE752E01010",
+    "sector": "SENSEX",
+    "adv_20d": 9003274.15
+  },
+  {
+    "symbol": "NHPC",
+    "instrument_key": "NSE_EQ|INE848E01016",
+    "sector": "OIL & GAS",
+    "adv_20d": 8971295.85
+  },
+  {
+    "symbol": "NATIONALUM",
+    "instrument_key": "NSE_EQ|INE139A01034",
+    "sector": "METAL",
+    "adv_20d": 8951113.65
+  },
+  {
+    "symbol": "JYOTISTRUC",
+    "instrument_key": "NSE_EQ|INE197A01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 8879232.75
+  },
+  {
+    "symbol": "NTPC",
+    "instrument_key": "NSE_EQ|INE733E01010",
+    "sector": "SENSEX",
+    "adv_20d": 8762773.0
+  },
+  {
+    "symbol": "PFC",
+    "instrument_key": "NSE_EQ|INE134E01011",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 8733260.95
+  },
+  {
+    "symbol": "DIACABS",
+    "instrument_key": "NSE_EQ|INE989C01038",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 8645197.2
+  },
+  {
+    "symbol": "BANDHANBNK",
+    "instrument_key": "NSE_EQ|INE545U01014",
+    "sector": "PVT BANK",
+    "adv_20d": 8571523.6
+  },
+  {
+    "symbol": "IOC",
+    "instrument_key": "NSE_EQ|INE242A01010",
+    "sector": "OIL & GAS",
+    "adv_20d": 8500261.15
+  },
+  {
+    "symbol": "SAMMAANCAP",
+    "instrument_key": "NSE_EQ|INE148I01020",
+    "sector": "FIN SERVICE",
+    "adv_20d": 8296281.55
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "instrument_key": "NSE_EQ|INE296A01032",
+    "sector": "SENSEX",
+    "adv_20d": 8123778.25
+  },
+  {
+    "symbol": "VIDYAWIRES",
+    "instrument_key": "NSE_EQ|INE14UN01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 8065927.7
+  },
+  {
+    "symbol": "BANKBARODA",
+    "instrument_key": "NSE_EQ|INE028A01039",
+    "sector": "PSU BANK",
+    "adv_20d": 8026397.7
+  },
+  {
+    "symbol": "MANAPPURAM",
+    "instrument_key": "NSE_EQ|INE522D01027",
+    "sector": "FIN SERVICE",
+    "adv_20d": 7833309.75
+  },
+  {
+    "symbol": "BHEL",
+    "instrument_key": "NSE_EQ|INE257A01026",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 7651767.5
+  },
+  {
+    "symbol": "IRFC",
+    "instrument_key": "NSE_EQ|INE053F01010",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 7645039.8
+  },
+  {
+    "symbol": "MOREPENLAB",
+    "instrument_key": "NSE_EQ|INE083A01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 7525258.6
+  },
+  {
+    "symbol": "COALINDIA",
+    "instrument_key": "NSE_EQ|INE522F01014",
+    "sector": "OIL & GAS",
+    "adv_20d": 7429710.5
+  },
+  {
+    "symbol": "PARACABLES",
+    "instrument_key": "NSE_EQ|INE074B01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 6922055.9
+  },
+  {
+    "symbol": "NYKAA",
+    "instrument_key": "NSE_EQ|INE388Y01029",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 6777269.55
+  },
+  {
+    "symbol": "SCI",
+    "instrument_key": "NSE_EQ|INE109A01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 6761764.4
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "instrument_key": "NSE_EQ|INE397D01024",
+    "sector": "SERVICES",
+    "adv_20d": 6568717.25
+  },
+  {
+    "symbol": "VBL",
+    "instrument_key": "NSE_EQ|INE200M01039",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 6311417.75
+  },
+  {
+    "symbol": "BANKINDIA",
+    "instrument_key": "NSE_EQ|INE084A01016",
+    "sector": "PSU BANK",
+    "adv_20d": 6158704.6
+  },
+  {
+    "symbol": "ATALREAL",
+    "instrument_key": "NSE_EQ|INE0ALR01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 5993681.9
+  },
+  {
+    "symbol": "RECLTD",
+    "instrument_key": "NSE_EQ|INE020B01018",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 5984916.45
+  },
+  {
+    "symbol": "HINDPETRO",
+    "instrument_key": "NSE_EQ|INE094A01015",
+    "sector": "OIL & GAS",
+    "adv_20d": 5914810.25
+  },
+  {
+    "symbol": "HINDZINC",
+    "instrument_key": "NSE_EQ|INE267A01025",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 5851897.35
+  },
+  {
+    "symbol": "NBCC",
+    "instrument_key": "NSE_EQ|INE095N01031",
+    "sector": "REALTY",
+    "adv_20d": 5814255.65
+  },
+  {
+    "symbol": "EXIDEIND",
+    "instrument_key": "NSE_EQ|INE302A01020",
+    "sector": "AUTO",
+    "adv_20d": 5658499.45
+  },
+  {
+    "symbol": "REDINGTON",
+    "instrument_key": "NSE_EQ|INE891D01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 5619813.4
+  },
+  {
+    "symbol": "MRPL",
+    "instrument_key": "NSE_EQ|INE103A01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 5601504.55
+  },
+  {
+    "symbol": "BCG",
+    "instrument_key": "NSE_EQ|INE425B01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 5493364.8
+  },
+  {
+    "symbol": "AXISBANK",
+    "instrument_key": "NSE_EQ|INE238A01034",
+    "sector": "SENSEX",
+    "adv_20d": 5457108.3
+  },
+  {
+    "symbol": "EXICOM",
+    "instrument_key": "NSE_EQ|INE777F01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 5396442.35
+  },
+  {
+    "symbol": "LTF",
+    "instrument_key": "NSE_EQ|INE498L01015",
+    "sector": "FIN SERVICE",
+    "adv_20d": 5211396.7
+  },
+  {
+    "symbol": "INDUSTOWER",
+    "instrument_key": "NSE_EQ|INE121J01017",
+    "sector": "SERVICES",
+    "adv_20d": 5046334.25
+  },
+  {
+    "symbol": "BPCL",
+    "instrument_key": "NSE_EQ|INE029A01011",
+    "sector": "OIL & GAS",
+    "adv_20d": 5004866.4
+  },
+  {
+    "symbol": "NETWORK18",
+    "instrument_key": "NSE_EQ|INE870H01013",
+    "sector": "MEDIA",
+    "adv_20d": 5001158.0
+  },
+  {
+    "symbol": "HINDALCO",
+    "instrument_key": "NSE_EQ|INE038A01020",
+    "sector": "NIFTY 50",
+    "adv_20d": 4920352.3
+  },
+  {
+    "symbol": "IREDA",
+    "instrument_key": "NSE_EQ|INE202E01016",
+    "sector": "FIN SERVICE",
+    "adv_20d": 4902058.1
+  },
+  {
+    "symbol": "PAYTM",
+    "instrument_key": "NSE_EQ|INE982J01020",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 4901105.85
+  },
+  {
+    "symbol": "JINDWORLD",
+    "instrument_key": "NSE_EQ|INE247D01039",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 4870388.6
+  },
+  {
+    "symbol": "IOB",
+    "instrument_key": "NSE_EQ|INE565A01014",
+    "sector": "PSU BANK",
+    "adv_20d": 4843039.35
+  },
+  {
+    "symbol": "ANGELONE",
+    "instrument_key": "NSE_EQ|INE732I01021",
+    "sector": "FIN SERVICE",
+    "adv_20d": 4705989.8
+  },
+  {
+    "symbol": "AEROFLEX",
+    "instrument_key": "NSE_EQ|INE024001021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 4691229.95
+  },
+  {
+    "symbol": "J&KBANK",
+    "instrument_key": "NSE_EQ|INE168A01041",
+    "sector": "PSU BANK",
+    "adv_20d": 4603590.35
+  },
+  {
+    "symbol": "PATANJALI",
+    "instrument_key": "NSE_EQ|INE619A01035",
+    "sector": "FMCG",
+    "adv_20d": 4579647.35
+  },
+  {
+    "symbol": "SHRIRAMFIN",
+    "instrument_key": "NSE_EQ|INE721A01047",
+    "sector": "NIFTY 50",
+    "adv_20d": 4445891.85
+  },
+  {
+    "symbol": "RVNL",
+    "instrument_key": "NSE_EQ|INE415G01027",
+    "sector": "CAP GOODS",
+    "adv_20d": 4406777.7
+  },
+  {
+    "symbol": "COFFEEDAY",
+    "instrument_key": "NSE_EQ|INE335K01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 4358995.0
+  },
+  {
+    "symbol": "IEX",
+    "instrument_key": "NSE_EQ|INE022Q01020",
+    "sector": "FIN SERVICE",
+    "adv_20d": 4350823.05
+  },
+  {
+    "symbol": "BSE",
+    "instrument_key": "NSE_EQ|INE118H01025",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 4336300.65
+  },
+  {
+    "symbol": "ATHERENERG",
+    "instrument_key": "NSE_EQ|INE0LEZ01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 4324832.3
+  },
+  {
+    "symbol": "KPITTECH",
+    "instrument_key": "NSE_EQ|INE04I401011",
+    "sector": "IT",
+    "adv_20d": 4313137.3
+  },
+  {
+    "symbol": "FEDERALBNK",
+    "instrument_key": "NSE_EQ|INE171A01029",
+    "sector": "PVT BANK",
+    "adv_20d": 4209162.6
+  },
+  {
+    "symbol": "MSPL",
+    "instrument_key": "NSE_EQ|INE752G01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 4177268.25
+  },
+  {
+    "symbol": "URBANCO",
+    "instrument_key": "NSE_EQ|INE0CAZ01013",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 4138303.35
+  },
+  {
+    "symbol": "QUICKHEAL",
+    "instrument_key": "NSE_EQ|INE306L01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 4051759.8
+  },
+  {
+    "symbol": "CROMPTON",
+    "instrument_key": "NSE_EQ|INE299U01018",
+    "sector": "CONSUMER DURABLES",
+    "adv_20d": 4020559.25
+  },
+  {
+    "symbol": "ABCAPITAL",
+    "instrument_key": "NSE_EQ|INE674K01013",
+    "sector": "FIN SERVICE",
+    "adv_20d": 3957858.7
+  },
+  {
+    "symbol": "RICOAUTO",
+    "instrument_key": "NSE_EQ|INE209B01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3949775.25
+  },
+  {
+    "symbol": "RTNINDIA",
+    "instrument_key": "NSE_EQ|INE834M01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3850240.5
+  },
+  {
+    "symbol": "JUBLFOOD",
+    "instrument_key": "NSE_EQ|INE797F01020",
+    "sector": "FMCG",
+    "adv_20d": 3844603.3
+  },
+  {
+    "symbol": "BLISSGVS",
+    "instrument_key": "NSE_EQ|INE416D01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3838835.8
+  },
+  {
+    "symbol": "TATAPOWER",
+    "instrument_key": "NSE_EQ|INE245A01021",
+    "sector": "OIL & GAS",
+    "adv_20d": 3802439.3
+  },
+  {
+    "symbol": "PARAS",
+    "instrument_key": "NSE_EQ|INE045601023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3727047.05
+  },
+  {
+    "symbol": "WEBELSOLAR",
+    "instrument_key": "NSE_EQ|INE855C01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3627031.3
+  },
+  {
+    "symbol": "DELHIVERY",
+    "instrument_key": "NSE_EQ|INE148O01028",
+    "sector": "SERVICES",
+    "adv_20d": 3625590.8
+  },
+  {
+    "symbol": "KISSHT",
+    "instrument_key": "NSE_EQ|INE12F801023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3551229.45
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "instrument_key": "NSE_EQ|INE795G01014",
+    "sector": "NIFTY 50",
+    "adv_20d": 3484090.3
+  },
+  {
+    "symbol": "BIOCON",
+    "instrument_key": "NSE_EQ|INE376G01013",
+    "sector": "PHARMA",
+    "adv_20d": 3480532.7
+  },
+  {
+    "symbol": "DLF",
+    "instrument_key": "NSE_EQ|INE271C01023",
+    "sector": "REALTY",
+    "adv_20d": 3470473.6
+  },
+  {
+    "symbol": "DELTACORP",
+    "instrument_key": "NSE_EQ|INE124G01033",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3466022.2
+  },
+  {
+    "symbol": "TCS",
+    "instrument_key": "NSE_EQ|INE467B01029",
+    "sector": "SENSEX",
+    "adv_20d": 3453024.3
+  },
+  {
+    "symbol": "VINCOFE",
+    "instrument_key": "NSE_EQ|INE498Q01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3434705.05
+  },
+  {
+    "symbol": "LEMONTREE",
+    "instrument_key": "NSE_EQ|INE970X01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3403447.1
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "instrument_key": "NSE_EQ|INE049B01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3351026.25
+  },
+  {
+    "symbol": "CONFIPET",
+    "instrument_key": "NSE_EQ|INE552D01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3335550.75
+  },
+  {
+    "symbol": "RBLBANK",
+    "instrument_key": "NSE_EQ|INE976G01028",
+    "sector": "PVT BANK",
+    "adv_20d": 3303744.9
+  },
+  {
+    "symbol": "WALCHANNAG",
+    "instrument_key": "NSE_EQ|INE711A01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3295750.05
+  },
+  {
+    "symbol": "TIMETECHNO",
+    "instrument_key": "NSE_EQ|INE508G01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3288119.2
+  },
+  {
+    "symbol": "COFORGE",
+    "instrument_key": "NSE_EQ|INE591G01025",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 3253931.45
+  },
+  {
+    "symbol": "SONATSOFTW",
+    "instrument_key": "NSE_EQ|INE269A01021",
+    "sector": "IT",
+    "adv_20d": 3208456.3
+  },
+  {
+    "symbol": "AMBUJACEM",
+    "instrument_key": "NSE_EQ|INE079A01024",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 3206438.5
+  },
+  {
+    "symbol": "PACEDIGITK",
+    "instrument_key": "NSE_EQ|INE0S3G01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3198354.4
+  },
+  {
+    "symbol": "OIL",
+    "instrument_key": "NSE_EQ|INE274J01014",
+    "sector": "OIL & GAS",
+    "adv_20d": 3090215.9
+  },
+  {
+    "symbol": "CGPOWER",
+    "instrument_key": "NSE_EQ|INE067A01029",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 3064749.95
+  },
+  {
+    "symbol": "AEQUS",
+    "instrument_key": "NSE_EQ|INE947N01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 3028542.25
+  },
+  {
+    "symbol": "VIYASH",
+    "instrument_key": "NSE_EQ|INE807F01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2961461.95
+  },
+  {
+    "symbol": "TECHM",
+    "instrument_key": "NSE_EQ|INE669C01036",
+    "sector": "SENSEX",
+    "adv_20d": 2924014.95
+  },
+  {
+    "symbol": "AVANTEL",
+    "instrument_key": "NSE_EQ|INE005B01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2894937.8
+  },
+  {
+    "symbol": "JTLIND",
+    "instrument_key": "NSE_EQ|INE391J01032",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2869218.9
+  },
+  {
+    "symbol": "FIRSTCRY",
+    "instrument_key": "NSE_EQ|INE02RE01045",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2860422.55
+  },
+  {
+    "symbol": "SWSOLAR",
+    "instrument_key": "NSE_EQ|INE00M201021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2828666.7
+  },
+  {
+    "symbol": "IOLCP",
+    "instrument_key": "NSE_EQ|INE485C01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2784125.45
+  },
+  {
+    "symbol": "KELLTONTEC",
+    "instrument_key": "NSE_EQ|INE164B01030",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2759438.1
+  },
+  {
+    "symbol": "MCX",
+    "instrument_key": "NSE_EQ|INE745G01043",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 2748825.25
+  },
+  {
+    "symbol": "NETWEB",
+    "instrument_key": "NSE_EQ|INE0NT901020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2742566.7
+  },
+  {
+    "symbol": "PPLPHARMA",
+    "instrument_key": "NSE_EQ|INE0DK501011",
+    "sector": "HEALTHCARE",
+    "adv_20d": 2707533.2
+  },
+  {
+    "symbol": "AGIIL",
+    "instrument_key": "NSE_EQ|INE976R01033",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2591161.15
+  },
+  {
+    "symbol": "GODREJCP",
+    "instrument_key": "NSE_EQ|INE102D01028",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 2540302.15
+  },
+  {
+    "symbol": "SONACOMS",
+    "instrument_key": "NSE_EQ|INE073K01018",
+    "sector": "AUTO",
+    "adv_20d": 2534244.0
+  },
+  {
+    "symbol": "REFEX",
+    "instrument_key": "NSE_EQ|INE056I01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2498808.45
+  },
+  {
+    "symbol": "MTARTECH",
+    "instrument_key": "NSE_EQ|INE864I01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2474258.7
+  },
+  {
+    "symbol": "WELSPUNLIV",
+    "instrument_key": "NSE_EQ|INE192B01031",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2398258.35
+  },
+  {
+    "symbol": "M&M",
+    "instrument_key": "NSE_EQ|INE101A01026",
+    "sector": "SENSEX",
+    "adv_20d": 2360030.95
+  },
+  {
+    "symbol": "JMFINANCIL",
+    "instrument_key": "NSE_EQ|INE780C01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2350011.1
+  },
+  {
+    "symbol": "TTML",
+    "instrument_key": "NSE_EQ|INE517B01013",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2336474.8
+  },
+  {
+    "symbol": "ONEPOINT",
+    "instrument_key": "NSE_EQ|INE840Y01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2330342.0
+  },
+  {
+    "symbol": "NESTLEIND",
+    "instrument_key": "NSE_EQ|INE239A01024",
+    "sector": "SENSEX",
+    "adv_20d": 2306716.8
+  },
+  {
+    "symbol": "HCLTECH",
+    "instrument_key": "NSE_EQ|INE860A01027",
+    "sector": "SENSEX",
+    "adv_20d": 2282252.3
+  },
+  {
+    "symbol": "PVP",
+    "instrument_key": "NSE_EQ|INE362A01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2221824.95
+  },
+  {
+    "symbol": "LODHA",
+    "instrument_key": "NSE_EQ|INE670K01029",
+    "sector": "REALTY",
+    "adv_20d": 2191789.4
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "instrument_key": "NSE_EQ|INE044A01036",
+    "sector": "SENSEX",
+    "adv_20d": 2188898.7
+  },
+  {
+    "symbol": "MARSONS",
+    "instrument_key": "NSE_EQ|INE415B01044",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2185152.95
+  },
+  {
+    "symbol": "PGEL",
+    "instrument_key": "NSE_EQ|INE457L01029",
+    "sector": "CONSUMER DURABLES",
+    "adv_20d": 2184090.75
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "instrument_key": "NSE_EQ|INE742F01042",
+    "sector": "SERVICES",
+    "adv_20d": 2177780.15
+  },
+  {
+    "symbol": "DECNGOLD",
+    "instrument_key": "NSE_EQ|INE945F01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2171654.7
+  },
+  {
+    "symbol": "JAYBARMARU",
+    "instrument_key": "NSE_EQ|INE571B01036",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2139110.05
+  },
+  {
+    "symbol": "ADANIENSOL",
+    "instrument_key": "NSE_EQ|INE931S01010",
+    "sector": "OIL & GAS",
+    "adv_20d": 2128470.5
+  },
+  {
+    "symbol": "NAUKRI",
+    "instrument_key": "NSE_EQ|INE663F01032",
+    "sector": "SERVICES",
+    "adv_20d": 2115035.15
+  },
+  {
+    "symbol": "DABUR",
+    "instrument_key": "NSE_EQ|INE016A01026",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 2114857.35
+  },
+  {
+    "symbol": "SHADOWFAX",
+    "instrument_key": "NSE_EQ|INE12UN01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2100625.25
+  },
+  {
+    "symbol": "HONASA",
+    "instrument_key": "NSE_EQ|INE0J5401028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2078183.65
+  },
+  {
+    "symbol": "PREMEXPLN",
+    "instrument_key": "NSE_EQ|INE863B01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2060934.6
+  },
+  {
+    "symbol": "ACMESOLAR",
+    "instrument_key": "NSE_EQ|INE622W01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2050026.35
+  },
+  {
+    "symbol": "AYE",
+    "instrument_key": "NSE_EQ|INE501X01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 2019196.75
+  },
+  {
+    "symbol": "HATHWAY",
+    "instrument_key": "NSE_EQ|INE982F01036",
+    "sector": "MEDIA",
+    "adv_20d": 1998184.8
+  },
+  {
+    "symbol": "UPL",
+    "instrument_key": "NSE_EQ|INE628A01036",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 1989702.25
+  },
+  {
+    "symbol": "EIEL",
+    "instrument_key": "NSE_EQ|INE0LLY01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1987413.0
+  },
+  {
+    "symbol": "MANINFRA",
+    "instrument_key": "NSE_EQ|INE949H01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1967000.35
+  },
+  {
+    "symbol": "LICHSGFIN",
+    "instrument_key": "NSE_EQ|INE115A01026",
+    "sector": "FIN SERVICE",
+    "adv_20d": 1964748.8
+  },
+  {
+    "symbol": "MAXHEALTH",
+    "instrument_key": "NSE_EQ|INE027H01010",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 1922751.15
+  },
+  {
+    "symbol": "PETRONET",
+    "instrument_key": "NSE_EQ|INE347G01014",
+    "sector": "OIL & GAS",
+    "adv_20d": 1915525.45
+  },
+  {
+    "symbol": "SKYGOLD",
+    "instrument_key": "NSE_EQ|INE01IU01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1910230.65
+  },
+  {
+    "symbol": "LAURUSLABS",
+    "instrument_key": "NSE_EQ|INE947Q01028",
+    "sector": "PHARMA",
+    "adv_20d": 1909875.1
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "instrument_key": "NSE_EQ|INE030A01027",
+    "sector": "SENSEX",
+    "adv_20d": 1875887.4
+  },
+  {
+    "symbol": "IXIGO",
+    "instrument_key": "NSE_EQ|INE0HV901016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1872455.95
+  },
+  {
+    "symbol": "SURYAROSNI",
+    "instrument_key": "NSE_EQ|INE335A01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1845932.55
+  },
+  {
+    "symbol": "THOMASCOOK",
+    "instrument_key": "NSE_EQ|INE332A01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1835665.55
+  },
+  {
+    "symbol": "TRITURBINE",
+    "instrument_key": "NSE_EQ|INE152M01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1831582.5
+  },
+  {
+    "symbol": "CONCOR",
+    "instrument_key": "NSE_EQ|INE111A01025",
+    "sector": "SERVICES",
+    "adv_20d": 1831579.95
+  },
+  {
+    "symbol": "ITIETF",
+    "instrument_key": "NSE_EQ|INF109KC16I6",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1820806.4
+  },
+  {
+    "symbol": "BDL",
+    "instrument_key": "NSE_EQ|INE171Z01026",
+    "sector": "DEFENSE",
+    "adv_20d": 1795843.15
+  },
+  {
+    "symbol": "DRREDDY",
+    "instrument_key": "NSE_EQ|INE089A01031",
+    "sector": "PHARMA",
+    "adv_20d": 1757639.6
+  },
+  {
+    "symbol": "SUVEN",
+    "instrument_key": "NSE_EQ|INE495B01038",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1750731.6
+  },
+  {
+    "symbol": "AARTIIND",
+    "instrument_key": "NSE_EQ|INE769A01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1749339.7
+  },
+  {
+    "symbol": "JBMA",
+    "instrument_key": "NSE_EQ|INE927D01051",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1748331.55
+  },
+  {
+    "symbol": "BBOX",
+    "instrument_key": "NSE_EQ|INE676A01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1719475.6
+  },
+  {
+    "symbol": "KNRCON",
+    "instrument_key": "NSE_EQ|INE634I01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1691863.85
+  },
+  {
+    "symbol": "RHIM",
+    "instrument_key": "NSE_EQ|INE743M01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1691474.95
+  },
+  {
+    "symbol": "SBICARD",
+    "instrument_key": "NSE_EQ|INE018E01016",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 1689736.65
+  },
+  {
+    "symbol": "V2RETAIL",
+    "instrument_key": "NSE_EQ|INE945H01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1679629.85
+  },
+  {
+    "symbol": "MARICO",
+    "instrument_key": "NSE_EQ|INE196A01026",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 1673518.4
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "instrument_key": "NSE_EQ|INE019A01038",
+    "sector": "SENSEX",
+    "adv_20d": 1672539.05
+  },
+  {
+    "symbol": "DEN",
+    "instrument_key": "NSE_EQ|INE947J01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1639578.45
+  },
+  {
+    "symbol": "ESAFSFB",
+    "instrument_key": "NSE_EQ|INE818W01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1635962.4
+  },
+  {
+    "symbol": "KAYNES",
+    "instrument_key": "NSE_EQ|INE918Z01012",
+    "sector": "IT",
+    "adv_20d": 1628643.15
+  },
+  {
+    "symbol": "WAKEFIT",
+    "instrument_key": "NSE_EQ|INE0E7301029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1607304.8
+  },
+  {
+    "symbol": "YATRA",
+    "instrument_key": "NSE_EQ|INE0JR601024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1604711.75
+  },
+  {
+    "symbol": "TICL",
+    "instrument_key": "NSE_EQ|INE388G01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1602995.75
+  },
+  {
+    "symbol": "BLUSPRING",
+    "instrument_key": "NSE_EQ|INE0U4101014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1594775.1
+  },
+  {
+    "symbol": "LT",
+    "instrument_key": "NSE_EQ|INE018A01030",
+    "sector": "SENSEX",
+    "adv_20d": 1594293.0
+  },
+  {
+    "symbol": "AUBANK",
+    "instrument_key": "NSE_EQ|INE949L01017",
+    "sector": "PVT BANK",
+    "adv_20d": 1589617.7
+  },
+  {
+    "symbol": "KAMDHENU",
+    "instrument_key": "NSE_EQ|INE390H01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1587859.4
+  },
+  {
+    "symbol": "GREAVESCOT",
+    "instrument_key": "NSE_EQ|INE224A01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1585130.05
+  },
+  {
+    "symbol": "GENESYS",
+    "instrument_key": "NSE_EQ|INE727B01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1575179.9
+  },
+  {
+    "symbol": "ZYDUSLIFE",
+    "instrument_key": "NSE_EQ|INE010B01027",
+    "sector": "PHARMA",
+    "adv_20d": 1556299.95
+  },
+  {
+    "symbol": "INDHOTEL",
+    "instrument_key": "NSE_EQ|INE053A01029",
+    "sector": "SERVICES",
+    "adv_20d": 1524301.35
+  },
+  {
+    "symbol": "FORTIS",
+    "instrument_key": "NSE_EQ|INE061F01013",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 1510456.85
+  },
+  {
+    "symbol": "PTC",
+    "instrument_key": "NSE_EQ|INE877F01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1508213.0
+  },
+  {
+    "symbol": "FIVESTAR",
+    "instrument_key": "NSE_EQ|INE128S01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1507391.2
+  },
+  {
+    "symbol": "EMSLIMITED",
+    "instrument_key": "NSE_EQ|INE0OV601013",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1506376.35
+  },
+  {
+    "symbol": "MUTHOOTFIN",
+    "instrument_key": "NSE_EQ|INE414G01012",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 1494363.85
+  },
+  {
+    "symbol": "JYOTICNC",
+    "instrument_key": "NSE_EQ|INE980O01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1493620.65
+  },
+  {
+    "symbol": "JSWENERGY",
+    "instrument_key": "NSE_EQ|INE121E01018",
+    "sector": "OIL & GAS",
+    "adv_20d": 1480760.7
+  },
+  {
+    "symbol": "INDSWFTLAB",
+    "instrument_key": "NSE_EQ|INE915B01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1480487.15
+  },
+  {
+    "symbol": "ADANIGREEN",
+    "instrument_key": "NSE_EQ|INE364U01010",
+    "sector": "OIL & GAS",
+    "adv_20d": 1462332.15
+  },
+  {
+    "symbol": "MIDHANI",
+    "instrument_key": "NSE_EQ|INE099Z01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1451029.3
+  },
+  {
+    "symbol": "FEDDERSHOL",
+    "instrument_key": "NSE_EQ|INE417D01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1450633.2
+  },
+  {
+    "symbol": "TATATECH",
+    "instrument_key": "NSE_EQ|INE142M01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1448361.25
+  },
+  {
+    "symbol": "INOXGREEN",
+    "instrument_key": "NSE_EQ|INE510W01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1434051.4
+  },
+  {
+    "symbol": "CHOLAFIN",
+    "instrument_key": "NSE_EQ|INE121A01024",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 1429153.5
+  },
+  {
+    "symbol": "ICICIPRULI",
+    "instrument_key": "NSE_EQ|INE726G01019",
+    "sector": "FIN SERVICE",
+    "adv_20d": 1427903.8
+  },
+  {
+    "symbol": "SHILPAMED",
+    "instrument_key": "NSE_EQ|INE790G01031",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1423381.15
+  },
+  {
+    "symbol": "TATACONSUM",
+    "instrument_key": "NSE_EQ|INE192A01025",
+    "sector": "NIFTY 50",
+    "adv_20d": 1379356.25
+  },
+  {
+    "symbol": "GRANULES",
+    "instrument_key": "NSE_EQ|INE101D01020",
+    "sector": "PHARMA",
+    "adv_20d": 1356329.75
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "instrument_key": "NSE_EQ|INE918I01026",
+    "sector": "SENSEX",
+    "adv_20d": 1347571.45
+  },
+  {
+    "symbol": "SYRMA",
+    "instrument_key": "NSE_EQ|INE0DYJ01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1346850.75
+  },
+  {
+    "symbol": "QUADFUTURE",
+    "instrument_key": "NSE_EQ|INE0LRY01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1321297.45
+  },
+  {
+    "symbol": "INDIANB",
+    "instrument_key": "NSE_EQ|INE562A01011",
+    "sector": "PSU BANK",
+    "adv_20d": 1303962.25
+  },
+  {
+    "symbol": "CAMS",
+    "instrument_key": "NSE_EQ|INE596I01020",
+    "sector": "IT",
+    "adv_20d": 1287021.3
+  },
+  {
+    "symbol": "SKMEGGPROD",
+    "instrument_key": "NSE_EQ|INE411D01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1285308.25
+  },
+  {
+    "symbol": "GOCOLORS",
+    "instrument_key": "NSE_EQ|INE0BJS01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1282894.7
+  },
+  {
+    "symbol": "BSOFT",
+    "instrument_key": "NSE_EQ|INE836A01035",
+    "sector": "IT",
+    "adv_20d": 1281744.7
+  },
+  {
+    "symbol": "KITEX",
+    "instrument_key": "NSE_EQ|INE602G01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1266547.8
+  },
+  {
+    "symbol": "BHARATFORG",
+    "instrument_key": "NSE_EQ|INE465A01025",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 1259674.0
+  },
+  {
+    "symbol": "INDOTHAI",
+    "instrument_key": "NSE_EQ|INE337M01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1238155.85
+  },
+  {
+    "symbol": "SANDHAR",
+    "instrument_key": "NSE_EQ|INE278H01035",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1230202.85
+  },
+  {
+    "symbol": "CDSL",
+    "instrument_key": "NSE_EQ|INE736A01011",
+    "sector": "FIN SERVICE",
+    "adv_20d": 1199265.25
+  },
+  {
+    "symbol": "NRBBEARING",
+    "instrument_key": "NSE_EQ|INE349A01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1182918.9
+  },
+  {
+    "symbol": "JKTYRE",
+    "instrument_key": "NSE_EQ|INE573A01042",
+    "sector": "AUTO",
+    "adv_20d": 1182168.4
+  },
+  {
+    "symbol": "NAVKARURB",
+    "instrument_key": "NSE_EQ|INE268H01044",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1179768.4
+  },
+  {
+    "symbol": "PNBHOUSING",
+    "instrument_key": "NSE_EQ|INE572E01012",
+    "sector": "FIN SERVICE",
+    "adv_20d": 1174112.6
+  },
+  {
+    "symbol": "MOTILALOFS",
+    "instrument_key": "NSE_EQ|INE338I01027",
+    "sector": "FIN SERVICE",
+    "adv_20d": 1173268.75
+  },
+  {
+    "symbol": "SAMHI",
+    "instrument_key": "NSE_EQ|INE08U801020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1167086.0
+  },
+  {
+    "symbol": "TVSMOTOR",
+    "instrument_key": "NSE_EQ|INE494B01023",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 1167037.5
+  },
+  {
+    "symbol": "POLICYBZR",
+    "instrument_key": "NSE_EQ|INE417T01026",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 1158715.85
+  },
+  {
+    "symbol": "HAL",
+    "instrument_key": "NSE_EQ|INE066F01020",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 1151943.55
+  },
+  {
+    "symbol": "AEGISVOPAK",
+    "instrument_key": "NSE_EQ|INE0INX01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1144603.15
+  },
+  {
+    "symbol": "MARINE",
+    "instrument_key": "NSE_EQ|INE01JE01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1140492.05
+  },
+  {
+    "symbol": "ASHAPURMIN",
+    "instrument_key": "NSE_EQ|INE348A01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1126714.1
+  },
+  {
+    "symbol": "LUPIN",
+    "instrument_key": "NSE_EQ|INE326A01037",
+    "sector": "PHARMA",
+    "adv_20d": 1126110.25
+  },
+  {
+    "symbol": "INDUSINDBK",
+    "instrument_key": "NSE_EQ|INE095A01012",
+    "sector": "SENSEX",
+    "adv_20d": 1125261.75
+  },
+  {
+    "symbol": "KFINTECH",
+    "instrument_key": "NSE_EQ|INE138Y01010",
+    "sector": "FIN SERVICE",
+    "adv_20d": 1111156.5
+  },
+  {
+    "symbol": "GICL",
+    "instrument_key": "NSE_EQ|INE947T01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1107183.95
+  },
+  {
+    "symbol": "APOLLOTYRE",
+    "instrument_key": "NSE_EQ|INE438A01022",
+    "sector": "AUTO",
+    "adv_20d": 1105207.35
+  },
+  {
+    "symbol": "CHENNPETRO",
+    "instrument_key": "NSE_EQ|INE178A01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1082799.15
+  },
+  {
+    "symbol": "SHAKTIPUMP",
+    "instrument_key": "NSE_EQ|INE908D01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1082188.8
+  },
+  {
+    "symbol": "HINDOILEXP",
+    "instrument_key": "NSE_EQ|INE345A01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1074135.9
+  },
+  {
+    "symbol": "PIDILITIND",
+    "instrument_key": "NSE_EQ|INE318A01026",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 1073444.05
+  },
+  {
+    "symbol": "COCHINSHIP",
+    "instrument_key": "NSE_EQ|INE704P01025",
+    "sector": "DEFENSE",
+    "adv_20d": 1068907.3
+  },
+  {
+    "symbol": "FISCHER",
+    "instrument_key": "NSE_EQ|INE771F01041",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1064796.65
+  },
+  {
+    "symbol": "NAM-INDIA",
+    "instrument_key": "NSE_EQ|INE298J01013",
+    "sector": "FIN SERVICE",
+    "adv_20d": 1058777.45
+  },
+  {
+    "symbol": "TBZ",
+    "instrument_key": "NSE_EQ|INE760L01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1057821.2
+  },
+  {
+    "symbol": "GVT&D",
+    "instrument_key": "NSE_EQ|INE200A01026",
+    "sector": "OTHERS",
+    "adv_20d": 1049604.2
+  },
+  {
+    "symbol": "TRENT",
+    "instrument_key": "NSE_EQ|INE849A01020",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 1048099.45
+  },
+  {
+    "symbol": "WABAG",
+    "instrument_key": "NSE_EQ|INE956G01038",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1038468.9
+  },
+  {
+    "symbol": "ADANIENT",
+    "instrument_key": "NSE_EQ|INE423A01024",
+    "sector": "NIFTY 50",
+    "adv_20d": 1017613.3
+  },
+  {
+    "symbol": "LXCHEM",
+    "instrument_key": "NSE_EQ|INE576O01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1009745.75
+  },
+  {
+    "symbol": "PRINCEPIPE",
+    "instrument_key": "NSE_EQ|INE689W01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 1008637.65
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "instrument_key": "NSE_EQ|INE406A01037",
+    "sector": "PHARMA",
+    "adv_20d": 1007509.0
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "instrument_key": "NSE_EQ|INE021A01026",
+    "sector": "NIFTY 50",
+    "adv_20d": 991875.7
+  },
+  {
+    "symbol": "GRASIM",
+    "instrument_key": "NSE_EQ|INE047A01021",
+    "sector": "NIFTY 50",
+    "adv_20d": 990664.0
+  },
+  {
+    "symbol": "GKENERGY",
+    "instrument_key": "NSE_EQ|INE1AG301022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 990497.8
+  },
+  {
+    "symbol": "BOMDYEING",
+    "instrument_key": "NSE_EQ|INE032A01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 978118.7
+  },
+  {
+    "symbol": "AVALON",
+    "instrument_key": "NSE_EQ|INE0LCL01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 975949.95
+  },
+  {
+    "symbol": "PREMIERENE",
+    "instrument_key": "NSE_EQ|INE0BS701011",
+    "sector": "CAP GOODS",
+    "adv_20d": 973839.95
+  },
+  {
+    "symbol": "MANINDS",
+    "instrument_key": "NSE_EQ|INE993A01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 973497.45
+  },
+  {
+    "symbol": "ASTRAL",
+    "instrument_key": "NSE_EQ|INE006I01046",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 961009.15
+  },
+  {
+    "symbol": "OLECTRA",
+    "instrument_key": "NSE_EQ|INE260D01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 960580.95
+  },
+  {
+    "symbol": "NATCOPHARM",
+    "instrument_key": "NSE_EQ|INE987B01026",
+    "sector": "PHARMA",
+    "adv_20d": 956169.7
+  },
+  {
+    "symbol": "RMDRIP",
+    "instrument_key": "NSE_EQ|INE219Y01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 955311.6
+  },
+  {
+    "symbol": "TIMEX",
+    "instrument_key": "NSE_EQ|INE064A01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 936866.45
+  },
+  {
+    "symbol": "TITAN",
+    "instrument_key": "NSE_EQ|INE280A01028",
+    "sector": "SENSEX",
+    "adv_20d": 936779.4
+  },
+  {
+    "symbol": "RITES",
+    "instrument_key": "NSE_EQ|INE320J01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 931989.35
+  },
+  {
+    "symbol": "MAZDOCK",
+    "instrument_key": "NSE_EQ|INE249Z01020",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 931972.65
+  },
+  {
+    "symbol": "360ONE",
+    "instrument_key": "NSE_EQ|INE466L01038",
+    "sector": "FIN SERVICE",
+    "adv_20d": 929116.1
+  },
+  {
+    "symbol": "VOLTAS",
+    "instrument_key": "NSE_EQ|INE226A01021",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 919992.55
+  },
+  {
+    "symbol": "CIPLA",
+    "instrument_key": "NSE_EQ|INE059A01026",
+    "sector": "PHARMA",
+    "adv_20d": 917766.15
+  },
+  {
+    "symbol": "THYROCARE",
+    "instrument_key": "NSE_EQ|INE594H01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 913771.3
+  },
+  {
+    "symbol": "TATACOMM",
+    "instrument_key": "NSE_EQ|INE151A01013",
+    "sector": "FMCG",
+    "adv_20d": 913248.35
+  },
+  {
+    "symbol": "PROTEAN",
+    "instrument_key": "NSE_EQ|INE004A01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 907777.7
+  },
+  {
+    "symbol": "HYUNDAI",
+    "instrument_key": "NSE_EQ|INE0V6F01027",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 896785.35
+  },
+  {
+    "symbol": "DREDGECORP",
+    "instrument_key": "NSE_EQ|INE506A01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 891779.8
+  },
+  {
+    "symbol": "AEGISLOG",
+    "instrument_key": "NSE_EQ|INE208C01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 880186.25
+  },
+  {
+    "symbol": "SAMBHV",
+    "instrument_key": "NSE_EQ|INE12NJ01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 866621.8
+  },
+  {
+    "symbol": "SBILIFE",
+    "instrument_key": "NSE_EQ|INE123W01016",
+    "sector": "NIFTY 50",
+    "adv_20d": 861842.65
+  },
+  {
+    "symbol": "NEWGEN",
+    "instrument_key": "NSE_EQ|INE619B01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 861682.25
+  },
+  {
+    "symbol": "UFBL",
+    "instrument_key": "NSE_EQ|INE382M01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 861020.95
+  },
+  {
+    "symbol": "JINDALSTEL",
+    "instrument_key": "NSE_EQ|INE749A01030",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 860541.75
+  },
+  {
+    "symbol": "HAVELLS",
+    "instrument_key": "NSE_EQ|INE176B01034",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 857469.6
+  },
+  {
+    "symbol": "PARKHOSPS",
+    "instrument_key": "NSE_EQ|INE119201023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 853484.05
+  },
+  {
+    "symbol": "SPCENET",
+    "instrument_key": "NSE_EQ|INE970N01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 852922.5
+  },
+  {
+    "symbol": "UNOMINDA",
+    "instrument_key": "NSE_EQ|INE405E01023",
+    "sector": "AUTO",
+    "adv_20d": 849926.4
+  },
+  {
+    "symbol": "MFSL",
+    "instrument_key": "NSE_EQ|INE180A01020",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 842976.6
+  },
+  {
+    "symbol": "NIACL",
+    "instrument_key": "NSE_EQ|INE470Y01017",
+    "sector": "FIN SERVICE",
+    "adv_20d": 837951.2
+  },
+  {
+    "symbol": "BAJAJCON",
+    "instrument_key": "NSE_EQ|INE933K01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 827698.75
+  },
+  {
+    "symbol": "MSTCLTD",
+    "instrument_key": "NSE_EQ|INE255X01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 820265.85
+  },
+  {
+    "symbol": "SANSTAR",
+    "instrument_key": "NSE_EQ|INE08NE01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 815079.55
+  },
+  {
+    "symbol": "CEMPRO",
+    "instrument_key": "NSE_EQ|INE686A01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 812738.95
+  },
+  {
+    "symbol": "BLACKBUCK",
+    "instrument_key": "NSE_EQ|INE0UIZ01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 798976.2
+  },
+  {
+    "symbol": "BLUEJET",
+    "instrument_key": "NSE_EQ|INE0KBH01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 795041.4
+  },
+  {
+    "symbol": "GANDHAR",
+    "instrument_key": "NSE_EQ|INE717W01049",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 791007.4
+  },
+  {
+    "symbol": "WAAREEENER",
+    "instrument_key": "NSE_EQ|INE377N01017",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 790106.45
+  },
+  {
+    "symbol": "ARVIND",
+    "instrument_key": "NSE_EQ|INE034A01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 767707.9
+  },
+  {
+    "symbol": "CHEMPLASTS",
+    "instrument_key": "NSE_EQ|INE488A01050",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 763785.55
+  },
+  {
+    "symbol": "IT",
+    "instrument_key": "NSE_EQ|INF174KA1GC5",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 763703.35
+  },
+  {
+    "symbol": "ITETF",
+    "instrument_key": "NSE_EQ|INF769K01KV5",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 757463.7
+  },
+  {
+    "symbol": "GOLDIAM",
+    "instrument_key": "NSE_EQ|INE025B01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 750792.05
+  },
+  {
+    "symbol": "ICICIGI",
+    "instrument_key": "NSE_EQ|INE765G01017",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 745202.3
+  },
+  {
+    "symbol": "BCLIND",
+    "instrument_key": "NSE_EQ|INE412G01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 741070.55
+  },
+  {
+    "symbol": "BALUFORGE",
+    "instrument_key": "NSE_EQ|INE011E01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 741006.9
+  },
+  {
+    "symbol": "RRKABEL",
+    "instrument_key": "NSE_EQ|INE777K01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 740048.6
+  },
+  {
+    "symbol": "COHANCE",
+    "instrument_key": "NSE_EQ|INE03QK01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 738950.15
+  },
+  {
+    "symbol": "HEROMOTOCO",
+    "instrument_key": "NSE_EQ|INE158A01026",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 724672.05
+  },
+  {
+    "symbol": "CEIGALL",
+    "instrument_key": "NSE_EQ|INE0AG901020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 723206.6
+  },
+  {
+    "symbol": "SAKSOFT",
+    "instrument_key": "NSE_EQ|INE667G01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 720696.75
+  },
+  {
+    "symbol": "TVSSCS",
+    "instrument_key": "NSE_EQ|INE395N01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 719084.05
+  },
+  {
+    "symbol": "SSWL",
+    "instrument_key": "NSE_EQ|INE802C01033",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 716147.65
+  },
+  {
+    "symbol": "APLAPOLLO",
+    "instrument_key": "NSE_EQ|INE702C01027",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 711662.4
+  },
+  {
+    "symbol": "HDFCAMC",
+    "instrument_key": "NSE_EQ|INE127D01025",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 708131.15
+  },
+  {
+    "symbol": "HEXT",
+    "instrument_key": "NSE_EQ|INE093A01041",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 707408.35
+  },
+  {
+    "symbol": "BECTORFOOD",
+    "instrument_key": "NSE_EQ|INE495P01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 702274.55
+  },
+  {
+    "symbol": "EPACKPEB",
+    "instrument_key": "NSE_EQ|INE0MLS01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 699659.25
+  },
+  {
+    "symbol": "RELTD",
+    "instrument_key": "NSE_EQ|INE206N01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 698180.4
+  },
+  {
+    "symbol": "IMAGICAA",
+    "instrument_key": "NSE_EQ|INE172N01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 694969.85
+  },
+  {
+    "symbol": "RSYSTEMS",
+    "instrument_key": "NSE_EQ|INE411H01032",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 683943.15
+  },
+  {
+    "symbol": "GENUSPOWER",
+    "instrument_key": "NSE_EQ|INE955D01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 681079.4
+  },
+  {
+    "symbol": "TANLA",
+    "instrument_key": "NSE_EQ|INE483C01032",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 679746.1
+  },
+  {
+    "symbol": "CARTRADE",
+    "instrument_key": "NSE_EQ|INE290S01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 679125.35
+  },
+  {
+    "symbol": "FUSION",
+    "instrument_key": "NSE_EQ|INE139R01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 674678.1
+  },
+  {
+    "symbol": "MOL",
+    "instrument_key": "NSE_EQ|INE0CT101020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 660904.0
+  },
+  {
+    "symbol": "HAPPSTMNDS",
+    "instrument_key": "NSE_EQ|INE419U01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 651253.55
+  },
+  {
+    "symbol": "SFL",
+    "instrument_key": "NSE_EQ|INE916U01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 650231.35
+  },
+  {
+    "symbol": "SIGNPOST",
+    "instrument_key": "NSE_EQ|INE0KGZ01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 649211.8
+  },
+  {
+    "symbol": "AADHARHFC",
+    "instrument_key": "NSE_EQ|INE883F01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 636261.65
+  },
+  {
+    "symbol": "UNITDSPR",
+    "instrument_key": "NSE_EQ|INE854D01024",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 632445.9
+  },
+  {
+    "symbol": "LAXMIDENTL",
+    "instrument_key": "NSE_EQ|INE0WO601020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 627507.8
+  },
+  {
+    "symbol": "RNBDENIMS",
+    "instrument_key": "NSE_EQ|INE012Q01039",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 625621.2
+  },
+  {
+    "symbol": "BLUESTARCO",
+    "instrument_key": "NSE_EQ|INE472A01039",
+    "sector": "CONSUMER DURABLES",
+    "adv_20d": 623717.1
+  },
+  {
+    "symbol": "JSLL",
+    "instrument_key": "NSE_EQ|INE0J5801029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 616088.6
+  },
+  {
+    "symbol": "INFOBEAN",
+    "instrument_key": "NSE_EQ|INE344S01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 608296.15
+  },
+  {
+    "symbol": "GLAND",
+    "instrument_key": "NSE_EQ|INE068V01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 601015.15
+  },
+  {
+    "symbol": "MAYURUNIQ",
+    "instrument_key": "NSE_EQ|INE040D01038",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 599655.95
+  },
+  {
+    "symbol": "GNA",
+    "instrument_key": "NSE_EQ|INE934S01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 596209.15
+  },
+  {
+    "symbol": "GODREJPROP",
+    "instrument_key": "NSE_EQ|INE484J01027",
+    "sector": "REALTY",
+    "adv_20d": 595827.15
+  },
+  {
+    "symbol": "AEROENTER",
+    "instrument_key": "NSE_EQ|INE065D01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 594033.95
+  },
+  {
+    "symbol": "PERSISTENT",
+    "instrument_key": "NSE_EQ|INE262H01021",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 591527.95
+  },
+  {
+    "symbol": "GULPOLY",
+    "instrument_key": "NSE_EQ|INE255D01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 587319.9
+  },
+  {
+    "symbol": "GODFRYPHLP",
+    "instrument_key": "NSE_EQ|INE260B01028",
+    "sector": "FMCG",
+    "adv_20d": 585797.95
+  },
+  {
+    "symbol": "PRESTIGE",
+    "instrument_key": "NSE_EQ|INE811K01011",
+    "sector": "REALTY",
+    "adv_20d": 580659.5
+  },
+  {
+    "symbol": "STARHEALTH",
+    "instrument_key": "NSE_EQ|INE575P01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 570223.75
+  },
+  {
+    "symbol": "OSWALPUMPS",
+    "instrument_key": "NSE_EQ|INE0BYP01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 569715.55
+  },
+  {
+    "symbol": "BALAMINES",
+    "instrument_key": "NSE_EQ|INE050E01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 548119.0
+  },
+  {
+    "symbol": "ELLEN",
+    "instrument_key": "NSE_EQ|INE236E01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 547748.75
+  },
+  {
+    "symbol": "TI",
+    "instrument_key": "NSE_EQ|INE133E01013",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 547202.25
+  },
+  {
+    "symbol": "AVANTIFEED",
+    "instrument_key": "NSE_EQ|INE871C01038",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 545405.0
+  },
+  {
+    "symbol": "SMSPHARMA",
+    "instrument_key": "NSE_EQ|INE812G01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 543325.45
+  },
+  {
+    "symbol": "TIINDIA",
+    "instrument_key": "NSE_EQ|INE974X01010",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 542004.6
+  },
+  {
+    "symbol": "KEI",
+    "instrument_key": "NSE_EQ|INE878B01027",
+    "sector": "CAP GOODS",
+    "adv_20d": 534362.55
+  },
+  {
+    "symbol": "INDIGO",
+    "instrument_key": "NSE_EQ|INE646L01027",
+    "sector": "SERVICES",
+    "adv_20d": 530777.2
+  },
+  {
+    "symbol": "ICICIAMC",
+    "instrument_key": "NSE_EQ|INE346A01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 525189.15
+  },
+  {
+    "symbol": "MPHASIS",
+    "instrument_key": "NSE_EQ|INE356A01018",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 523350.5
+  },
+  {
+    "symbol": "DMART",
+    "instrument_key": "NSE_EQ|INE192R01011",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 522898.65
+  },
+  {
+    "symbol": "BEPL",
+    "instrument_key": "NSE_EQ|INE922A01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 519995.3
+  },
+  {
+    "symbol": "DIVISLAB",
+    "instrument_key": "NSE_EQ|INE361B01024",
+    "sector": "PHARMA",
+    "adv_20d": 518796.9
+  },
+  {
+    "symbol": "PHOENIXLTD",
+    "instrument_key": "NSE_EQ|INE211B01039",
+    "sector": "REALTY",
+    "adv_20d": 511072.6
+  },
+  {
+    "symbol": "SIGMAADV",
+    "instrument_key": "NSE_EQ|INE933B01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 510847.95
+  },
+  {
+    "symbol": "TORNTPHARM",
+    "instrument_key": "NSE_EQ|INE685A01028",
+    "sector": "PHARMA",
+    "adv_20d": 509192.9
+  },
+  {
+    "symbol": "GLENMARK",
+    "instrument_key": "NSE_EQ|INE935A01035",
+    "sector": "PHARMA",
+    "adv_20d": 505422.0
+  },
+  {
+    "symbol": "SOLARA",
+    "instrument_key": "NSE_EQ|INE624Z01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 502585.0
+  },
+  {
+    "symbol": "UNIVCABLES",
+    "instrument_key": "NSE_EQ|INE279A01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 498238.35
+  },
+  {
+    "symbol": "LTM",
+    "instrument_key": "NSE_EQ|INE214T01019",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 497796.15
+  },
+  {
+    "symbol": "RGL",
+    "instrument_key": "NSE_EQ|INE722H01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 495215.95
+  },
+  {
+    "symbol": "FINOPB",
+    "instrument_key": "NSE_EQ|INE02NC01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 492609.3
+  },
+  {
+    "symbol": "NIITLTD",
+    "instrument_key": "NSE_EQ|INE161A01038",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 491455.15
+  },
+  {
+    "symbol": "CUMMINSIND",
+    "instrument_key": "NSE_EQ|INE298A01020",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 483511.05
+  },
+  {
+    "symbol": "UTLSOLAR",
+    "instrument_key": "NSE_EQ|INE12UR01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 483076.35
+  },
+  {
+    "symbol": "EICHERMOT",
+    "instrument_key": "NSE_EQ|INE066A01021",
+    "sector": "NIFTY 50",
+    "adv_20d": 480898.35
+  },
+  {
+    "symbol": "OMNI",
+    "instrument_key": "NSE_EQ|INE0UH301010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 479970.05
+  },
+  {
+    "symbol": "TIRUMALCHM",
+    "instrument_key": "NSE_EQ|INE338A01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 477891.65
+  },
+  {
+    "symbol": "NAVKARCORP",
+    "instrument_key": "NSE_EQ|INE278M01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 471827.95
+  },
+  {
+    "symbol": "SCHNEIDER",
+    "instrument_key": "NSE_EQ|INE839M01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 471212.35
+  },
+  {
+    "symbol": "OBEROIRLTY",
+    "instrument_key": "NSE_EQ|INE093I01010",
+    "sector": "REALTY",
+    "adv_20d": 469728.55
+  },
+  {
+    "symbol": "SILVERTUC",
+    "instrument_key": "NSE_EQ|INE625X01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 469371.4
+  },
+  {
+    "symbol": "RADICO",
+    "instrument_key": "NSE_EQ|INE944F01028",
+    "sector": "FMCG",
+    "adv_20d": 468928.95
+  },
+  {
+    "symbol": "IONEXCHANG",
+    "instrument_key": "NSE_EQ|INE570A01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 467847.35
+  },
+  {
+    "symbol": "ZENSARTECH",
+    "instrument_key": "NSE_EQ|INE520A01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 466077.45
+  },
+  {
+    "symbol": "RAMCOSYS",
+    "instrument_key": "NSE_EQ|INE246B01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 463397.6
+  },
+  {
+    "symbol": "MANKIND",
+    "instrument_key": "NSE_EQ|INE634S01028",
+    "sector": "PHARMA",
+    "adv_20d": 463374.4
+  },
+  {
+    "symbol": "MUNJALAU",
+    "instrument_key": "NSE_EQ|INE672B01032",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 458839.85
+  },
+  {
+    "symbol": "JNKINDIA",
+    "instrument_key": "NSE_EQ|INE0OAF01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 457330.85
+  },
+  {
+    "symbol": "ROTO",
+    "instrument_key": "NSE_EQ|INE535D01037",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 456905.65
+  },
+  {
+    "symbol": "SIEMENS",
+    "instrument_key": "NSE_EQ|INE003A01024",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 449183.65
+  },
+  {
+    "symbol": "NILASPACES",
+    "instrument_key": "NSE_EQ|INE00S901012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 442182.0
+  },
+  {
+    "symbol": "ZYDUSWELL",
+    "instrument_key": "NSE_EQ|INE768C01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 437005.3
+  },
+  {
+    "symbol": "ARE&M",
+    "instrument_key": "NSE_EQ|INE885A01032",
+    "sector": "AUTO",
+    "adv_20d": 434364.1
+  },
+  {
+    "symbol": "EUROPRATIK",
+    "instrument_key": "NSE_EQ|INE198501012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 431126.25
+  },
+  {
+    "symbol": "COLPAL",
+    "instrument_key": "NSE_EQ|INE259A01022",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 426710.8
+  },
+  {
+    "symbol": "INDRAMEDCO",
+    "instrument_key": "NSE_EQ|INE681B01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 426295.35
+  },
+  {
+    "symbol": "COROMANDEL",
+    "instrument_key": "NSE_EQ|INE169A01031",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 418999.7
+  },
+  {
+    "symbol": "GIPCL",
+    "instrument_key": "NSE_EQ|INE162A01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 416978.9
+  },
+  {
+    "symbol": "DEEPINDS",
+    "instrument_key": "NSE_EQ|INE0FHS01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 414184.95
+  },
+  {
+    "symbol": "SURYODAY",
+    "instrument_key": "NSE_EQ|INE428Q01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 413970.5
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "instrument_key": "NSE_EQ|INE437A01024",
+    "sector": "NIFTY 50",
+    "adv_20d": 407381.5
+  },
+  {
+    "symbol": "AIIL",
+    "instrument_key": "NSE_EQ|INE206F01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 406494.65
+  },
+  {
+    "symbol": "AMAGI",
+    "instrument_key": "NSE_EQ|INE121R01077",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 403243.2
+  },
+  {
+    "symbol": "SUMICHEM",
+    "instrument_key": "NSE_EQ|INE258G01013",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 397153.25
+  },
+  {
+    "symbol": "DIXON",
+    "instrument_key": "NSE_EQ|INE935N01020",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 394466.35
+  },
+  {
+    "symbol": "KERNEX",
+    "instrument_key": "NSE_EQ|INE202H01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 390711.7
+  },
+  {
+    "symbol": "VIJAYA",
+    "instrument_key": "NSE_EQ|INE043W01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 390286.45
+  },
+  {
+    "symbol": "ABSLAMC",
+    "instrument_key": "NSE_EQ|INE404A01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 389579.45
+  },
+  {
+    "symbol": "ALKYLAMINE",
+    "instrument_key": "NSE_EQ|INE150B01039",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 387912.5
+  },
+  {
+    "symbol": "NARMADA",
+    "instrument_key": "NSE_EQ|INE117Z01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 383913.25
+  },
+  {
+    "symbol": "SUNFLAG",
+    "instrument_key": "NSE_EQ|INE947A01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 380927.5
+  },
+  {
+    "symbol": "WELSPLSOL",
+    "instrument_key": "NSE_EQ|INE731F01037",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 379125.0
+  },
+  {
+    "symbol": "POWERICA",
+    "instrument_key": "NSE_EQ|INE921L01032",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 378939.2
+  },
+  {
+    "symbol": "FDC",
+    "instrument_key": "NSE_EQ|INE258B01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 373128.5
+  },
+  {
+    "symbol": "GANESHBE",
+    "instrument_key": "NSE_EQ|INE388A01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 371959.05
+  },
+  {
+    "symbol": "BERGEPAINT",
+    "instrument_key": "NSE_EQ|INE463A01038",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 371886.55
+  },
+  {
+    "symbol": "GVPIL",
+    "instrument_key": "NSE_EQ|INE878A01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 371271.45
+  },
+  {
+    "symbol": "HIKAL",
+    "instrument_key": "NSE_EQ|INE475B01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 371118.85
+  },
+  {
+    "symbol": "MARUTI",
+    "instrument_key": "NSE_EQ|INE585B01010",
+    "sector": "SENSEX",
+    "adv_20d": 369837.05
+  },
+  {
+    "symbol": "EBGNG",
+    "instrument_key": "NSE_EQ|INE18JU01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 368627.2
+  },
+  {
+    "symbol": "PANACEABIO",
+    "instrument_key": "NSE_EQ|INE922B01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 368133.6
+  },
+  {
+    "symbol": "AETHER",
+    "instrument_key": "NSE_EQ|INE0BWX01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 365996.05
+  },
+  {
+    "symbol": "HCL-INSYS",
+    "instrument_key": "NSE_EQ|INE236A01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 365922.55
+  },
+  {
+    "symbol": "VIMTALABS",
+    "instrument_key": "NSE_EQ|INE579C01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 365832.5
+  },
+  {
+    "symbol": "BRITANNIA",
+    "instrument_key": "NSE_EQ|INE216A01030",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 360912.9
+  },
+  {
+    "symbol": "KPRMILL",
+    "instrument_key": "NSE_EQ|INE930H01031",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 360838.45
+  },
+  {
+    "symbol": "VTL",
+    "instrument_key": "NSE_EQ|INE825A01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 353073.9
+  },
+  {
+    "symbol": "NUVAMA",
+    "instrument_key": "NSE_EQ|INE531F01023",
+    "sector": "FIN SERVICE",
+    "adv_20d": 352489.7
+  },
+  {
+    "symbol": "SOMANYCERA",
+    "instrument_key": "NSE_EQ|INE355A01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 349451.3
+  },
+  {
+    "symbol": "INDOFARM",
+    "instrument_key": "NSE_EQ|INE622H01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 348600.1
+  },
+  {
+    "symbol": "INDOAMIN",
+    "instrument_key": "NSE_EQ|INE760F01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 343506.0
+  },
+  {
+    "symbol": "MUFTI",
+    "instrument_key": "NSE_EQ|INE220Q01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 343490.1
+  },
+  {
+    "symbol": "DJML",
+    "instrument_key": "NSE_EQ|INE0B1K01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 341386.95
+  },
+  {
+    "symbol": "SAKAR",
+    "instrument_key": "NSE_EQ|INE732S01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 336470.95
+  },
+  {
+    "symbol": "GARUDA",
+    "instrument_key": "NSE_EQ|INE0JVO01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 331831.4
+  },
+  {
+    "symbol": "AMBER",
+    "instrument_key": "NSE_EQ|INE371P01015",
+    "sector": "CONSUMER DURABLES",
+    "adv_20d": 330011.45
+  },
+  {
+    "symbol": "SHAREINDIA",
+    "instrument_key": "NSE_EQ|INE932X01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 329830.1
+  },
+  {
+    "symbol": "HDBFS",
+    "instrument_key": "NSE_EQ|INE756I01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 329093.15
+  },
+  {
+    "symbol": "PASUPTAC",
+    "instrument_key": "NSE_EQ|INE818B01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 326631.15
+  },
+  {
+    "symbol": "SUNTECK",
+    "instrument_key": "NSE_EQ|INE805D01034",
+    "sector": "REALTY",
+    "adv_20d": 324235.75
+  },
+  {
+    "symbol": "HIRECT",
+    "instrument_key": "NSE_EQ|INE835D01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 323602.35
+  },
+  {
+    "symbol": "PATELRMART",
+    "instrument_key": "NSE_EQ|INE0R8B01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 318562.0
+  },
+  {
+    "symbol": "CREDITACC",
+    "instrument_key": "NSE_EQ|INE741K01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 315217.75
+  },
+  {
+    "symbol": "GRAUWEIL",
+    "instrument_key": "NSE_EQ|INE266D01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 309823.1
+  },
+  {
+    "symbol": "NACLIND",
+    "instrument_key": "NSE_EQ|INE295D01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 307627.5
+  },
+  {
+    "symbol": "SHAILY",
+    "instrument_key": "NSE_EQ|INE151G01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 307522.85
+  },
+  {
+    "symbol": "ADFFOODS",
+    "instrument_key": "NSE_EQ|INE982B01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 305675.9
+  },
+  {
+    "symbol": "PIIND",
+    "instrument_key": "NSE_EQ|INE603J01030",
+    "sector": "METAL",
+    "adv_20d": 299585.55
+  },
+  {
+    "symbol": "IRISDOREME",
+    "instrument_key": "NSE_EQ|INE01GN01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 297582.45
+  },
+  {
+    "symbol": "SPAL",
+    "instrument_key": "NSE_EQ|INE212I01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 291609.95
+  },
+  {
+    "symbol": "PANAMAPET",
+    "instrument_key": "NSE_EQ|INE305C01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 288874.05
+  },
+  {
+    "symbol": "ABB",
+    "instrument_key": "NSE_EQ|INE117A01022",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 287869.25
+  },
+  {
+    "symbol": "ABDL",
+    "instrument_key": "NSE_EQ|INE552Z01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 286780.85
+  },
+  {
+    "symbol": "ORIENTHOT",
+    "instrument_key": "NSE_EQ|INE750A01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 285070.4
+  },
+  {
+    "symbol": "PIRAMALFIN",
+    "instrument_key": "NSE_EQ|INE202B01038",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 283919.5
+  },
+  {
+    "symbol": "AKUMS",
+    "instrument_key": "NSE_EQ|INE09XN01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 283462.75
+  },
+  {
+    "symbol": "SRF",
+    "instrument_key": "NSE_EQ|INE647A01010",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 280436.0
+  },
+  {
+    "symbol": "AURIONPRO",
+    "instrument_key": "NSE_EQ|INE132H01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 279327.8
+  },
+  {
+    "symbol": "MAPMYINDIA",
+    "instrument_key": "NSE_EQ|INE0BV301023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 277117.05
+  },
+  {
+    "symbol": "GTL",
+    "instrument_key": "NSE_EQ|INE043A01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 276864.55
+  },
+  {
+    "symbol": "LALPATHLAB",
+    "instrument_key": "NSE_EQ|INE600L01024",
+    "sector": "HEALTHCARE",
+    "adv_20d": 275343.0
+  },
+  {
+    "symbol": "RPEL",
+    "instrument_key": "NSE_EQ|INE912T01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 272398.4
+  },
+  {
+    "symbol": "DIGITIDE",
+    "instrument_key": "NSE_EQ|INE0U4701011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 272284.15
+  },
+  {
+    "symbol": "CENTRUM",
+    "instrument_key": "NSE_EQ|INE660C01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 270369.0
+  },
+  {
+    "symbol": "CAPACITE",
+    "instrument_key": "NSE_EQ|INE264T01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 270139.25
+  },
+  {
+    "symbol": "TATAELXSI",
+    "instrument_key": "NSE_EQ|INE670A01012",
+    "sector": "IT",
+    "adv_20d": 263086.5
+  },
+  {
+    "symbol": "THANGAMAYL",
+    "instrument_key": "NSE_EQ|INE085J01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 263044.5
+  },
+  {
+    "symbol": "PNGSREVA",
+    "instrument_key": "NSE_EQ|INE1RDG01013",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 262364.7
+  },
+  {
+    "symbol": "SAIPARENT",
+    "instrument_key": "NSE_EQ|INE0H9F01037",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 260984.15
+  },
+  {
+    "symbol": "POLYCAB",
+    "instrument_key": "NSE_EQ|INE455K01017",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 257484.5
+  },
+  {
+    "symbol": "CELLO",
+    "instrument_key": "NSE_EQ|INE0LMW01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 254415.85
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "instrument_key": "NSE_EQ|INE917I01010",
+    "sector": "NIFTY 50",
+    "adv_20d": 253743.95
+  },
+  {
+    "symbol": "CCL",
+    "instrument_key": "NSE_EQ|INE421D01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 243325.15
+  },
+  {
+    "symbol": "NITINSPIN",
+    "instrument_key": "NSE_EQ|INE229H01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 242923.6
+  },
+  {
+    "symbol": "SOTL",
+    "instrument_key": "NSE_EQ|INE035D01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 242595.95
+  },
+  {
+    "symbol": "POLYMED",
+    "instrument_key": "NSE_EQ|INE205C01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 241424.65
+  },
+  {
+    "symbol": "BLUESTONE",
+    "instrument_key": "NSE_EQ|INE304W01038",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 240755.65
+  },
+  {
+    "symbol": "JTEKTINDIA",
+    "instrument_key": "NSE_EQ|INE643A01035",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 239727.05
+  },
+  {
+    "symbol": "GREENPANEL",
+    "instrument_key": "NSE_EQ|INE08ZM01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 239252.0
+  },
+  {
+    "symbol": "GREENPLY",
+    "instrument_key": "NSE_EQ|INE461C01038",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 238664.15
+  },
+  {
+    "symbol": "HDFCNIFIT",
+    "instrument_key": "NSE_EQ|INF179KC1IA8",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 238362.4
+  },
+  {
+    "symbol": "CYIENTDLM",
+    "instrument_key": "NSE_EQ|INE055S01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 237808.05
+  },
+  {
+    "symbol": "THELEELA",
+    "instrument_key": "NSE_EQ|INE0AQ201015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 236467.45
+  },
+  {
+    "symbol": "INOXINDIA",
+    "instrument_key": "NSE_EQ|INE616N01034",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 235846.75
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "instrument_key": "NSE_EQ|INE481G01011",
+    "sector": "SENSEX",
+    "adv_20d": 235507.6
+  },
+  {
+    "symbol": "SETL",
+    "instrument_key": "NSE_EQ|INE0M4D01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 231801.75
+  },
+  {
+    "symbol": "CAPLIPOINT",
+    "instrument_key": "NSE_EQ|INE475E01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 229608.2
+  },
+  {
+    "symbol": "TMB",
+    "instrument_key": "NSE_EQ|INE668A01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 227027.05
+  },
+  {
+    "symbol": "SMCGLOBAL",
+    "instrument_key": "NSE_EQ|INE103C01036",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 224485.25
+  },
+  {
+    "symbol": "ABREL",
+    "instrument_key": "NSE_EQ|INE055A01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 223335.85
+  },
+  {
+    "symbol": "STOVEKRAFT",
+    "instrument_key": "NSE_EQ|INE00IN01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 222783.45
+  },
+  {
+    "symbol": "AARTIPHARM",
+    "instrument_key": "NSE_EQ|INE0LRU01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 222157.0
+  },
+  {
+    "symbol": "ROUTE",
+    "instrument_key": "NSE_EQ|INE450U01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 219832.8
+  },
+  {
+    "symbol": "PRIMO",
+    "instrument_key": "NSE_EQ|INE607A01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 219347.8
+  },
+  {
+    "symbol": "CEWATER",
+    "instrument_key": "NSE_EQ|INE037Z01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 219249.4
+  },
+  {
+    "symbol": "MHLXMIRU",
+    "instrument_key": "NSE_EQ|INE112D01035",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 215923.25
+  },
+  {
+    "symbol": "OFSS",
+    "instrument_key": "NSE_EQ|INE881D01027",
+    "sector": "IT",
+    "adv_20d": 215237.25
+  },
+  {
+    "symbol": "HUHTAMAKI",
+    "instrument_key": "NSE_EQ|INE275B01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 213882.85
+  },
+  {
+    "symbol": "ONMOBILE",
+    "instrument_key": "NSE_EQ|INE809I01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 212397.8
+  },
+  {
+    "symbol": "ANTELOPUS",
+    "instrument_key": "NSE_EQ|INE818A01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 209350.0
+  },
+  {
+    "symbol": "ARIHANTCAP",
+    "instrument_key": "NSE_EQ|INE420B01036",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 208140.25
+  },
+  {
+    "symbol": "ASTEC",
+    "instrument_key": "NSE_EQ|INE563J01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 207103.5
+  },
+  {
+    "symbol": "STYL",
+    "instrument_key": "NSE_EQ|INE04VU01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 206674.5
+  },
+  {
+    "symbol": "SEDEMAC",
+    "instrument_key": "NSE_EQ|INE00XB01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 202490.05
+  },
+  {
+    "symbol": "ROSSTECH",
+    "instrument_key": "NSE_EQ|INE0OJW01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 202415.9
+  },
+  {
+    "symbol": "SUPREMEIND",
+    "instrument_key": "NSE_EQ|INE195A01028",
+    "sector": "NIFTY MID SELECT",
+    "adv_20d": 200901.0
+  },
+  {
+    "symbol": "SOLARWORLD",
+    "instrument_key": "NSE_EQ|INE0TY101024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 199487.65
+  },
+  {
+    "symbol": "DDEVPLSTIK",
+    "instrument_key": "NSE_EQ|INE0HR601026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 199379.0
+  },
+  {
+    "symbol": "CARYSIL",
+    "instrument_key": "NSE_EQ|INE482D01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 198511.5
+  },
+  {
+    "symbol": "APCOTEXIND",
+    "instrument_key": "NSE_EQ|INE116A01032",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 198272.7
+  },
+  {
+    "symbol": "TIL",
+    "instrument_key": "NSE_EQ|INE806C01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 198199.25
+  },
+  {
+    "symbol": "EKC",
+    "instrument_key": "NSE_EQ|INE184H01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 196153.95
+  },
+  {
+    "symbol": "CHOLAHLDNG",
+    "instrument_key": "NSE_EQ|INE149A01033",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 193712.5
+  },
+  {
+    "symbol": "MUKKA",
+    "instrument_key": "NSE_EQ|INE0CG401037",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 189729.65
+  },
+  {
+    "symbol": "HOMEFIRST",
+    "instrument_key": "NSE_EQ|INE481N01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 188407.6
+  },
+  {
+    "symbol": "RUBYMILLS",
+    "instrument_key": "NSE_EQ|INE301D01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 187135.65
+  },
+  {
+    "symbol": "KRISHNADEF",
+    "instrument_key": "NSE_EQ|INE0J5601015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 184107.45
+  },
+  {
+    "symbol": "DALBHARAT",
+    "instrument_key": "NSE_EQ|INE00R701025",
+    "sector": "CEMENT",
+    "adv_20d": 182638.5
+  },
+  {
+    "symbol": "ITADD",
+    "instrument_key": "NSE_EQ|INF740KA1SX1",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 180937.9
+  },
+  {
+    "symbol": "NAVNETEDUL",
+    "instrument_key": "NSE_EQ|INE060A01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 178689.2
+  },
+  {
+    "symbol": "OCCLLTD",
+    "instrument_key": "NSE_EQ|INE0PK601023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 177917.25
+  },
+  {
+    "symbol": "INDORAMA",
+    "instrument_key": "NSE_EQ|INE156A01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 177718.45
+  },
+  {
+    "symbol": "BHARATGEAR",
+    "instrument_key": "NSE_EQ|INE561C01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 172345.05
+  },
+  {
+    "symbol": "VINDHYATEL",
+    "instrument_key": "NSE_EQ|INE707A01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 171776.3
+  },
+  {
+    "symbol": "CONCORDBIO",
+    "instrument_key": "NSE_EQ|INE338H01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 169561.7
+  },
+  {
+    "symbol": "GUFICBIO",
+    "instrument_key": "NSE_EQ|INE742B01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 169092.4
+  },
+  {
+    "symbol": "ACCURACY",
+    "instrument_key": "NSE_EQ|INE648Z01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 167037.9
+  },
+  {
+    "symbol": "RUBICON",
+    "instrument_key": "NSE_EQ|INE506V01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 163913.25
+  },
+  {
+    "symbol": "ALLTIME",
+    "instrument_key": "NSE_EQ|INE0GV601021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 162765.95
+  },
+  {
+    "symbol": "VIPULLTD",
+    "instrument_key": "NSE_EQ|INE946H01037",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 158990.85
+  },
+  {
+    "symbol": "BAJAJHCARE",
+    "instrument_key": "NSE_EQ|INE411U01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 158583.6
+  },
+  {
+    "symbol": "EVEREADY",
+    "instrument_key": "NSE_EQ|INE128A01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 155993.8
+  },
+  {
+    "symbol": "TARACHAND",
+    "instrument_key": "NSE_EQ|INE555Z01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 155658.55
+  },
+  {
+    "symbol": "DATAMATICS",
+    "instrument_key": "NSE_EQ|INE365B01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 155109.7
+  },
+  {
+    "symbol": "HAPPYFORGE",
+    "instrument_key": "NSE_EQ|INE330T01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 154299.15
+  },
+  {
+    "symbol": "INDOSTAR",
+    "instrument_key": "NSE_EQ|INE896L01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 154106.65
+  },
+  {
+    "symbol": "DIFFNKG",
+    "instrument_key": "NSE_EQ|INE184O01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 153043.7
+  },
+  {
+    "symbol": "GOLDTECH",
+    "instrument_key": "NSE_EQ|INE805A01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 152525.95
+  },
+  {
+    "symbol": "UNIMECH",
+    "instrument_key": "NSE_EQ|INE0U3I01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 150195.95
+  },
+  {
+    "symbol": "GINNIFILA",
+    "instrument_key": "NSE_EQ|INE424C01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 146894.7
+  },
+  {
+    "symbol": "ADVANCE",
+    "instrument_key": "NSE_EQ|INE1B0W01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 145902.5
+  },
+  {
+    "symbol": "NELCAST",
+    "instrument_key": "NSE_EQ|INE189I01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 145230.65
+  },
+  {
+    "symbol": "E2E",
+    "instrument_key": "NSE_EQ|INE255Z01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 144882.8
+  },
+  {
+    "symbol": "SHREERAMA",
+    "instrument_key": "NSE_EQ|INE879A01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 143853.5
+  },
+  {
+    "symbol": "MAHLOG",
+    "instrument_key": "NSE_EQ|INE766P01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 142094.5
+  },
+  {
+    "symbol": "OPTIEMUS",
+    "instrument_key": "NSE_EQ|INE350C01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 141994.4
+  },
+  {
+    "symbol": "SOLARINDS",
+    "instrument_key": "NSE_EQ|INE343H01029",
+    "sector": "NIFTY NEXT 50",
+    "adv_20d": 141780.7
+  },
+  {
+    "symbol": "IMFA",
+    "instrument_key": "NSE_EQ|INE919H01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 141544.15
+  },
+  {
+    "symbol": "NAVINFLUOR",
+    "instrument_key": "NSE_EQ|INE048G01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 139137.5
+  },
+  {
+    "symbol": "JARO",
+    "instrument_key": "NSE_EQ|INE00YJ01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 139044.05
+  },
+  {
+    "symbol": "POWERINDIA",
+    "instrument_key": "NSE_EQ|INE07Y701011",
+    "sector": "CAP GOODS",
+    "adv_20d": 138951.0
+  },
+  {
+    "symbol": "TSFINV",
+    "instrument_key": "NSE_EQ|INE202Z01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 137650.2
+  },
+  {
+    "symbol": "BATAINDIA",
+    "instrument_key": "NSE_EQ|INE176A01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 136177.55
+  },
+  {
+    "symbol": "BHARATSE",
+    "instrument_key": "NSE_EQ|INE415D01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 135302.05
+  },
+  {
+    "symbol": "SASKEN",
+    "instrument_key": "NSE_EQ|INE231F01020",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 134752.6
+  },
+  {
+    "symbol": "RPPL",
+    "instrument_key": "NSE_EQ|INE760W01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 133728.15
+  },
+  {
+    "symbol": "JASH",
+    "instrument_key": "NSE_EQ|INE039O01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 133072.75
+  },
+  {
+    "symbol": "ALKEM",
+    "instrument_key": "NSE_EQ|INE540L01014",
+    "sector": "PHARMA",
+    "adv_20d": 132410.6
+  },
+  {
+    "symbol": "IKS",
+    "instrument_key": "NSE_EQ|INE115Q01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 130554.8
+  },
+  {
+    "symbol": "AJANTPHARM",
+    "instrument_key": "NSE_EQ|INE031B01049",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 130199.45
+  },
+  {
+    "symbol": "WINDMACHIN",
+    "instrument_key": "NSE_EQ|INE052A01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 128726.6
+  },
+  {
+    "symbol": "HLEGLAS",
+    "instrument_key": "NSE_EQ|INE461D01028",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 128044.55
+  },
+  {
+    "symbol": "WANBURY",
+    "instrument_key": "NSE_EQ|INE107F01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 127189.65
+  },
+  {
+    "symbol": "CLSEL",
+    "instrument_key": "NSE_EQ|INE419D01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 126619.7
+  },
+  {
+    "symbol": "IGCL",
+    "instrument_key": "NSE_EQ|INE05J901018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 125176.85
+  },
+  {
+    "symbol": "GOCLCORP",
+    "instrument_key": "NSE_EQ|INE077F01035",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 123881.4
+  },
+  {
+    "symbol": "APARINDS",
+    "instrument_key": "NSE_EQ|INE372A01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 123704.7
+  },
+  {
+    "symbol": "POWERMECH",
+    "instrument_key": "NSE_EQ|INE211R01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 121435.4
+  },
+  {
+    "symbol": "ASKAUTOLTD",
+    "instrument_key": "NSE_EQ|INE491J01022",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 121074.65
+  },
+  {
+    "symbol": "VISAKAIND",
+    "instrument_key": "NSE_EQ|INE392A01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 118114.25
+  },
+  {
+    "symbol": "TECH",
+    "instrument_key": "NSE_EQ|INF209KB11D8",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 118111.65
+  },
+  {
+    "symbol": "ACSTECH",
+    "instrument_key": "NSE_EQ|INE366C01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 114859.45
+  },
+  {
+    "symbol": "IZMO",
+    "instrument_key": "NSE_EQ|INE848A01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 112156.6
+  },
+  {
+    "symbol": "MANAKALUCO",
+    "instrument_key": "NSE_EQ|INE859Q01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 111768.15
+  },
+  {
+    "symbol": "PPL",
+    "instrument_key": "NSE_EQ|INE050001010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 111430.9
+  },
+  {
+    "symbol": "IITL",
+    "instrument_key": "NSE_EQ|INE886A01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 111117.6
+  },
+  {
+    "symbol": "PICCADIL",
+    "instrument_key": "NSE_EQ|INE546C01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 109688.4
+  },
+  {
+    "symbol": "OMAXE",
+    "instrument_key": "NSE_EQ|INE800H01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 107078.35
+  },
+  {
+    "symbol": "STERTOOLS",
+    "instrument_key": "NSE_EQ|INE334A01023",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 105936.3
+  },
+  {
+    "symbol": "KAVDEFENCE",
+    "instrument_key": "NSE_EQ|INE641C01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 104417.5
+  },
+  {
+    "symbol": "CHEMCON",
+    "instrument_key": "NSE_EQ|INE03YM01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 103604.75
+  },
+  {
+    "symbol": "KRONOX",
+    "instrument_key": "NSE_EQ|INE0ATZ01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 101721.2
+  },
+  {
+    "symbol": "POKARNA",
+    "instrument_key": "NSE_EQ|INE637C01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 100521.4
+  },
+  {
+    "symbol": "SIKA",
+    "instrument_key": "NSE_EQ|INE438E01032",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 99947.1
+  },
+  {
+    "symbol": "SEAMECLTD",
+    "instrument_key": "NSE_EQ|INE497B01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 97451.8
+  },
+  {
+    "symbol": "BOROLTD",
+    "instrument_key": "NSE_EQ|INE02PY01013",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 97444.35
+  },
+  {
+    "symbol": "NELCO",
+    "instrument_key": "NSE_EQ|INE045B01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 96736.35
+  },
+  {
+    "symbol": "ORIENTTECH",
+    "instrument_key": "NSE_EQ|INE0PPK01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 96700.65
+  },
+  {
+    "symbol": "VENUSPIPES",
+    "instrument_key": "NSE_EQ|INE0JA001018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 93974.9
+  },
+  {
+    "symbol": "TBOTEK",
+    "instrument_key": "NSE_EQ|INE673O01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 93348.1
+  },
+  {
+    "symbol": "MAMATA",
+    "instrument_key": "NSE_EQ|INE0TO701015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 92972.6
+  },
+  {
+    "symbol": "THEMISMED",
+    "instrument_key": "NSE_EQ|INE083B01024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 92964.9
+  },
+  {
+    "symbol": "EMKAY",
+    "instrument_key": "NSE_EQ|INE296H01011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 92773.4
+  },
+  {
+    "symbol": "JAGSNPHARM",
+    "instrument_key": "NSE_EQ|INE048B01035",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 89944.1
+  },
+  {
+    "symbol": "KSCL",
+    "instrument_key": "NSE_EQ|INE455I01029",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 89266.45
+  },
+  {
+    "symbol": "FORCEMOT",
+    "instrument_key": "NSE_EQ|INE451A01017",
+    "sector": "AUTO",
+    "adv_20d": 88841.65
+  },
+  {
+    "symbol": "TOLINS",
+    "instrument_key": "NSE_EQ|INE0RWQ01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 88492.8
+  },
+  {
+    "symbol": "VENUSREM",
+    "instrument_key": "NSE_EQ|INE411B01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 88317.35
+  },
+  {
+    "symbol": "UTTAMSUGAR",
+    "instrument_key": "NSE_EQ|INE786F01031",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 86200.1
+  },
+  {
+    "symbol": "ALIVUS",
+    "instrument_key": "NSE_EQ|INE03Q201024",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 86017.2
+  },
+  {
+    "symbol": "RITCO",
+    "instrument_key": "NSE_EQ|INE01EG01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 84155.3
+  },
+  {
+    "symbol": "KHADIM",
+    "instrument_key": "NSE_EQ|INE834I01025",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 82029.55
+  },
+  {
+    "symbol": "PIGL",
+    "instrument_key": "NSE_EQ|INE557Z01018",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 81924.05
+  },
+  {
+    "symbol": "TINNARUBR",
+    "instrument_key": "NSE_EQ|INE015C01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 81520.85
+  },
+  {
+    "symbol": "TAJGVK",
+    "instrument_key": "NSE_EQ|INE586B01026",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 80993.2
+  },
+  {
+    "symbol": "VALIANTORG",
+    "instrument_key": "NSE_EQ|INE565V01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 79934.05
+  },
+  {
+    "symbol": "COSMOFIRST",
+    "instrument_key": "NSE_EQ|INE757A01017",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 76908.7
+  },
+  {
+    "symbol": "DOMS",
+    "instrument_key": "NSE_EQ|INE321T01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 71873.4
+  },
+  {
+    "symbol": "KOTHARIPET",
+    "instrument_key": "NSE_EQ|INE720A01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 70859.3
+  },
+  {
+    "symbol": "INDIGOPNTS",
+    "instrument_key": "NSE_EQ|INE09VQ01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 68848.1
+  },
+  {
+    "symbol": "ADVAIT",
+    "instrument_key": "NSE_EQ|INE0ALI01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 68785.55
+  },
+  {
+    "symbol": "MBLINFRA",
+    "instrument_key": "NSE_EQ|INE912H01013",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 68622.95
+  },
+  {
+    "symbol": "ITDC",
+    "instrument_key": "NSE_EQ|INE353K01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 67631.75
+  },
+  {
+    "symbol": "KPL",
+    "instrument_key": "NSE_EQ|INE552U01010",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 63947.15
+  },
+  {
+    "symbol": "ELECTHERM",
+    "instrument_key": "NSE_EQ|INE822G01016",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 63251.25
+  },
+  {
+    "symbol": "IKIO",
+    "instrument_key": "NSE_EQ|INE0LOJ01019",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 61392.15
+  },
+  {
+    "symbol": "TATVA",
+    "instrument_key": "NSE_EQ|INE0GK401011",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 60523.4
+  },
+  {
+    "symbol": "SURANAT&P",
+    "instrument_key": "NSE_EQ|INE130B01031",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 60095.1
+  },
+  {
+    "symbol": "BHAGCHEM",
+    "instrument_key": "NSE_EQ|INE414D01027",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 56587.0
+  },
+  {
+    "symbol": "HERANBA",
+    "instrument_key": "NSE_EQ|INE694N01015",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 56555.1
+  },
+  {
+    "symbol": "MASTEK",
+    "instrument_key": "NSE_EQ|INE759A01021",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 55546.6
+  },
+  {
+    "symbol": "FIEMIND",
+    "instrument_key": "NSE_EQ|INE737H01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 54251.5
+  },
+  {
+    "symbol": "LYKALABS",
+    "instrument_key": "NSE_EQ|INE933A01014",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 53774.5
+  },
+  {
+    "symbol": "ELGIRUBCO",
+    "instrument_key": "NSE_EQ|INE819L01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 53474.05
+  },
+  {
+    "symbol": "AGARIND",
+    "instrument_key": "NSE_EQ|INE204E01012",
+    "sector": "CASH_ALPHA",
+    "adv_20d": 52182.9
+  },
+  {
+    "symbol": "BIRLACORPN",
+    "instrument_key": "NSE_EQ|INE340A01012",
+    "sector": "CEMENT",
+    "adv_20d": 52050.0
+  }
+]
