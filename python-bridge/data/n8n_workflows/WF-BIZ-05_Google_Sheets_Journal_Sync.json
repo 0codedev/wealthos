@@ -1,0 +1,51 @@
+{
+  "name": "[BIZ] Google Sheets Journal Sync",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 1
+            }
+          ]
+        }
+      },
+      "name": "Hourly Sync",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8765/api/autopilot/results",
+        "options": {}
+      },
+      "name": "Fetch Journal Rows",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        450,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Hourly Sync": {
+      "main": [
+        [
+          {
+            "node": "Fetch Journal Rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

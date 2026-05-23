@@ -1,0 +1,93 @@
+{
+  "name": "[BIZ] Inbox Zero Automator",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": false,
+        "filters": {
+          "q": "label:UNREAD"
+        }
+      },
+      "name": "Gmail Trigger",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google_sheets_oauth",
+          "name": "Google OAuth2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const subject = $json.subject || '';\nlet thread_id = 11;\nif (subject.toLowerCase().includes('trade') || subject.toLowerCase().includes('contract')) thread_id = 8;\nelse if (subject.toLowerCase().includes('alert') || subject.toLowerCase().includes('margin')) thread_id = 10;\nelse if (subject.toLowerCase().includes('news') || subject.toLowerCase().includes('report')) thread_id = 12;\nreturn [{ subject, from: $json.from, snippet: $json.snippet, thread_id }];"
+      },
+      "name": "Classify Email",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1004326362283",
+        "text": "\ud83d\udce7 <b>INCOMING EMAIL NOTIFICATION</b>\n\nFrom: <b>={{$json.from}}</b>\nSubject: <code>={{$json.subject}}</code>\nSnippet: <i>={{$json.snippet}}</i>",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "message_thread_id": "={{$json.thread_id}}"
+        }
+      },
+      "name": "Telegram Email Alert",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Classify Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Classify Email": {
+      "main": [
+        [
+          {
+            "node": "Telegram Email Alert",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "name": "[DEV] GitHub Deploy Notifier",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "github-push",
+        "options": {}
+      },
+      "name": "Webhook GitHub Push",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json.body || {};\nconst branch = body.ref ? body.ref.replace('refs/heads/', '') : 'main';\nconst commit = body.head_commit || {};\nconst author = commit.author ? commit.author.name : 'Developer';\nconst message = (commit.message || 'Updated codebase').substring(0, 100);\nconst sha = (commit.id || 'abc1234').substring(0, 7);\nreturn [{ branch, author, message, sha, repo: body.repository ? body.repository.name : 'Wealth Dashboard v2' }];"
+      },
+      "name": "Extract Commit Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1004326362283",
+        "text": "\ud83d\udd04 <b>CODE DEPLOYED TO REPO</b>\n\nRepo: <b>={{$json.repo}}</b>\nBranch: <code>={{$json.branch}}</code>\nAuthor: <code>={{$json.author}}</code>\nCommit SHA: <code>={{$json.sha}}</code>\nMessage: <i>={{$json.message}}</i>",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "message_thread_id": 11
+        }
+      },
+      "name": "Telegram Alert (Health #11)",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook GitHub Push": {
+      "main": [
+        [
+          {
+            "node": "Extract Commit Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Commit Data": {
+      "main": [
+        [
+          {
+            "node": "Telegram Alert (Health #11)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

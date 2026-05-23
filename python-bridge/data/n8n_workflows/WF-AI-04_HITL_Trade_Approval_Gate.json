@@ -1,0 +1,56 @@
+{
+  "name": "[AI] HITL Trade Approval Gate",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "hitl-trade-approval",
+        "options": {}
+      },
+      "name": "Webhook Signal Approval Request",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1004326362283",
+        "text": "\ud83d\udcca <b>HIGH-NOTIONAL TRADE APPROVAL REQUIRED</b>\n\nSymbol: <b>={{$json.body.symbol}}</b>\nAction: <code>={{$json.body.action}}</code>\nQty: <code>={{$json.body.qty}}</code> @ \u20b9<code>={{$json.body.price}}</code>\nNotional Value: \u20b9<b>={{($json.body.qty * $json.body.price).toLocaleString('en-IN')}}</b>\n\n<i>Reply /approve or /skip to proceed.</i>",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "message_thread_id": 8
+        }
+      },
+      "name": "Send HITL Request (Executions #8)",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_trade_bot",
+          "name": "Trade Trigger Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook Signal Approval Request": {
+      "main": [
+        [
+          {
+            "node": "Send HITL Request (Executions #8)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

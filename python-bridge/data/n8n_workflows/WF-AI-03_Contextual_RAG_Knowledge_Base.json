@@ -1,0 +1,45 @@
+{
+  "name": "[AI] Contextual RAG Knowledge Base",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "rag-index-document",
+        "options": {}
+      },
+      "name": "Webhook Index Document",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const docText = $json.body ? $json.body.content : '';\nconst title = $json.body ? $json.body.title : 'Document';\nconst chunks = [];\nfor (let i = 0; i < docText.length; i += 500) {\n  chunks.push({ title, chunk: docText.substring(i, i + 500) });\n}\nreturn chunks.length > 0 ? chunks : [{ title, chunk: 'Empty document' }];"
+      },
+      "name": "Chunk Document",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        450,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook Index Document": {
+      "main": [
+        [
+          {
+            "node": "Chunk Document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

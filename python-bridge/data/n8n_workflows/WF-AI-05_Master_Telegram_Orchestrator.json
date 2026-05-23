@@ -1,0 +1,97 @@
+{
+  "name": "[AI] Master Telegram Orchestrator",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ]
+      },
+      "name": "Telegram Command Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        250,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const text = ($json.message && $json.message.text) ? $json.message.text.toLowerCase() : '';\nlet route = 'help';\nif (text.includes('status') || text.includes('state')) route = 'status';\nelse if (text.includes('pnl') || text.includes('profit') || text.includes('loss')) route = 'pnl';\nelse if (text.includes('toggle') || text.includes('autopilot')) route = 'toggle';\nreturn [{ route, text, chat_id: $json.message.chat.id }];"
+      },
+      "name": "Classify Intent",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8765/api/autopilot/status",
+        "options": {}
+      },
+      "name": "Query Status Endpoint",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        650,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.chat_id}}",
+        "text": "\ud83e\udd16 <b>WealthOS Master Bot Command Help</b>\n\n\u2022 <code>status</code> \u2014 Check autopilot status\n\u2022 <code>pnl</code> \u2014 Get today's PnL report\n\u2022 <code>toggle</code> \u2014 Toggle autopilot state",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      },
+      "name": "Reply Help",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        650,
+        400
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Telegram Command Trigger": {
+      "main": [
+        [
+          {
+            "node": "Classify Intent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Classify Intent": {
+      "main": [
+        [
+          {
+            "node": "Query Status Endpoint",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

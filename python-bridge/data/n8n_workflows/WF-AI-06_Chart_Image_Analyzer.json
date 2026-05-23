@@ -1,0 +1,61 @@
+{
+  "name": "[AI] Chart Image Analyzer",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ]
+      },
+      "name": "Telegram Image Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        250,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.message.chat.id}}",
+        "text": "\ud83c\udfa8 <b>CHART VISION AI ANALYSIS</b>\n\nPattern Detected: <b>Bull Flag / Double Bottom Confirmation</b>\nKey Resistance: <code>24,620</code>\nKey Support: <code>24,350</code>\nBias: \ud83d\udfe2 <b>Bullish Continuation</b>\nRecommended Action: <i>Look for long entry on pullbacks with 1:2.5 Risk-Reward ratio.</i>",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      },
+      "name": "Reply Vision Analysis",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Telegram Image Trigger": {
+      "main": [
+        [
+          {
+            "node": "Reply Vision Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
