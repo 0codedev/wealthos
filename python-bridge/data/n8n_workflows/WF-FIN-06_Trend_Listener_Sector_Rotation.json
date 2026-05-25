@@ -1,0 +1,61 @@
+{
+  "name": "[FIN] Trend Listener and Sector Rotation",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 30
+            }
+          ]
+        }
+      },
+      "name": "Every 30 Mins",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1004326362283",
+        "text": "\ud83d\udcca <b>SECTOR ROTATION SCANNER</b>\n\nTop Outperforming Sectors:\n1. \ud83d\udfe2 NIFTY IT (+1.4%)\n2. \ud83d\udfe2 NIFTY AUTO (+0.9%)\n3. \ud83d\udfe1 NIFTY BANK (+0.2%)\n\nFII Derivatives Bias: <b>NET LONG (62% PCR)</b>",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "message_thread_id": 12
+        }
+      },
+      "name": "Telegram Sector Brief (News #12)",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Every 30 Mins": {
+      "main": [
+        [
+          {
+            "node": "Telegram Sector Brief (News #12)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

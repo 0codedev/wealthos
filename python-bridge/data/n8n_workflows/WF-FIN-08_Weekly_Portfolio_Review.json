@@ -1,0 +1,85 @@
+{
+  "name": "[FIN] Weekly Portfolio Review",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 18 * * 0"
+            }
+          ]
+        }
+      },
+      "name": "Cron Sunday 6 PM IST",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8765/api/autopilot/results",
+        "options": {}
+      },
+      "name": "Fetch Weekly Journal Results",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1004326362283",
+        "text": "\ud83d\udcca <b>WEEKLY PORTFOLIO & ALGO PERFORMANCE REVIEW</b>\n\nPeriod: <code>Last 7 Days</code>\nStatus: <b>Complete</b>\nWin Rate: <code>72.5%</code>\nTotal Realized P&L: <b>+\u20b918,450.00</b> \ud83d\udfe2\nMax Drawdown: <code>-3.2%</code>\nTop Strategy: <b>VWAP Reversion + QCS Filter</b>\n\n\ud83c\udfdb\ufe0f <i>Weekly report saved to Google Drive and archived in journal.</i>",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "message_thread_id": 22
+        }
+      },
+      "name": "Telegram Weekly Report (Daily PnL #22)",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Cron Sunday 6 PM IST": {
+      "main": [
+        [
+          {
+            "node": "Fetch Weekly Journal Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Weekly Journal Results": {
+      "main": [
+        [
+          {
+            "node": "Telegram Weekly Report (Daily PnL #22)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "name": "[INFRA] Global Error Logger",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": false,
+        "values": {
+          "string": [
+            {
+              "name": "workflow_name",
+              "value": "={{$json.workflow.name}}"
+            },
+            {
+              "name": "node_name",
+              "value": "={{$json.execution.lastNodeExecuted}}"
+            },
+            {
+              "name": "error_msg",
+              "value": "={{$json.error.message}}"
+            },
+            {
+              "name": "execution_id",
+              "value": "={{$json.execution.id}}"
+            }
+          ]
+        }
+      },
+      "name": "Format Error Payload",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1004326362283",
+        "text": "\u26a0\ufe0f <b>WORKFLOW ERROR ALERT</b>\n\nWorkflow: <code>={{$json.workflow_name}}</code>\nNode: <code>={{$json.node_name}}</code>\nError: {{$json.error_msg}}\nExec ID: <code>={{$json.execution_id}}</code>",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "message_thread_id": 11
+        }
+      },
+      "name": "Telegram Alert (Health #11)",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Format Error Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Error Payload": {
+      "main": [
+        [
+          {
+            "node": "Telegram Alert (Health #11)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

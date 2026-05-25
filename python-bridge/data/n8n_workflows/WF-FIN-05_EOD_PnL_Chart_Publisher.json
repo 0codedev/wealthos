@@ -1,0 +1,52 @@
+{
+  "name": "[FIN] EOD PnL Chart Publisher",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "00 16 * * 1-5"
+            }
+          ]
+        }
+      },
+      "name": "Cron 4:00 PM IST",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8765/api/autopilot/render-pnl",
+        "options": {}
+      },
+      "name": "Trigger Render PnL Chart",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        450,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Cron 3:35 PM IST": {
+      "main": [
+        [
+          {
+            "node": "Trigger Render PnL Chart",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
