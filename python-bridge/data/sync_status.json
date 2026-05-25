@@ -1,0 +1,2931 @@
+{
+    "last_sync": "2026-09-30T02:40:54.280100",
+    "mode": "delta",
+    "completed_symbols": {
+        "NIFTY": {
+            "last_synced_at": "2026-09-30T02:40:32.217058",
+            "status": "success"
+        },
+        "BANKNIFTY": {
+            "last_synced_at": "2026-06-29T14:18:29.932847",
+            "status": "success"
+        },
+        "FINNIFTY": {
+            "last_synced_at": "2026-06-25T19:46:50.725292",
+            "status": "success"
+        },
+        "MIDCPNIFTY": {
+            "last_synced_at": "2026-06-25T19:46:52.458053",
+            "status": "success"
+        },
+        "SENSEX": {
+            "last_synced_at": "2026-06-25T19:46:54.270893",
+            "status": "success"
+        },
+        "360ONE": {
+            "last_synced_at": "2026-06-25T19:46:55.960770",
+            "status": "success"
+        },
+        "ABB": {
+            "last_synced_at": "2026-06-29T14:39:02.395519",
+            "status": "success"
+        },
+        "ABCAPITAL": {
+            "last_synced_at": "2026-06-25T19:47:50.561065",
+            "status": "success"
+        },
+        "ADANIENSOL": {
+            "last_synced_at": "2026-06-25T19:47:54.519275",
+            "status": "success"
+        },
+        "ADANIENT": {
+            "last_synced_at": "2026-06-25T19:48:21.848748",
+            "status": "success"
+        },
+        "ADANIGREEN": {
+            "last_synced_at": "2026-06-25T19:48:49.193565",
+            "status": "success"
+        },
+        "ADANIPORTS": {
+            "last_synced_at": "2026-06-29T15:49:31.176466",
+            "status": "success"
+        },
+        "ADANIPOWER": {
+            "last_synced_at": "2026-06-25T19:49:18.293239",
+            "status": "success"
+        },
+        "ALKEM": {
+            "last_synced_at": "2026-06-25T19:49:43.297979",
+            "status": "success"
+        },
+        "AMBER": {
+            "last_synced_at": "2026-06-25T19:49:45.065026",
+            "status": "success"
+        },
+        "AMBUJACEM": {
+            "last_synced_at": "2026-06-29T14:43:10.827009",
+            "status": "success"
+        },
+        "ANGELONE": {
+            "last_synced_at": "2026-06-25T19:51:03.860408",
+            "status": "success"
+        },
+        "APLAPOLLO": {
+            "last_synced_at": "2026-06-25T19:51:52.722536",
+            "status": "success"
+        },
+        "APOLLOHOSP": {
+            "last_synced_at": "2026-06-29T15:12:28.443728",
+            "status": "success"
+        },
+        "ASHOKLEY": {
+            "last_synced_at": "2026-06-25T19:53:10.617072",
+            "status": "success"
+        },
+        "ASIANPAINT": {
+            "last_synced_at": "2026-06-29T14:49:25.364176",
+            "status": "success"
+        },
+        "ASTRAL": {
+            "last_synced_at": "2026-06-25T19:54:51.693968",
+            "status": "success"
+        },
+        "AUBANK": {
+            "last_synced_at": "2026-06-25T19:55:42.210519",
+            "status": "success"
+        },
+        "AUROPHARMA": {
+            "last_synced_at": "2026-06-25T19:56:32.734959",
+            "status": "success"
+        },
+        "AXISBANK": {
+            "last_synced_at": "2026-06-25T19:57:23.230452",
+            "status": "success"
+        },
+        "BAJAJ-AUTO": {
+            "last_synced_at": "2026-06-25T19:58:13.770155",
+            "status": "success"
+        },
+        "BAJAJFINSV": {
+            "last_synced_at": "2026-06-25T19:58:40.990489",
+            "status": "success"
+        },
+        "BAJAJHLDNG": {
+            "last_synced_at": "2026-06-25T19:58:42.791781",
+            "status": "success"
+        },
+        "BAJFINANCE": {
+            "last_synced_at": "2026-06-29T14:59:40.607414",
+            "status": "success"
+        },
+        "BANDHANBNK": {
+            "last_synced_at": "2026-06-25T20:00:00.520622",
+            "status": "success"
+        },
+        "BANKBARODA": {
+            "last_synced_at": "2026-06-25T20:00:48.820791",
+            "status": "success"
+        },
+        "BANKINDIA": {
+            "last_synced_at": "2026-06-25T20:01:39.329168",
+            "status": "success"
+        },
+        "BDL": {
+            "last_synced_at": "2026-06-25T20:01:41.112818",
+            "status": "success"
+        },
+        "BEL": {
+            "last_synced_at": "2026-06-29T14:55:38.441505",
+            "status": "success"
+        },
+        "BHARATFORG": {
+            "last_synced_at": "2026-06-25T20:03:18.767912",
+            "status": "success"
+        },
+        "BHARTIARTL": {
+            "last_synced_at": "2026-06-29T15:47:25.155426",
+            "status": "success"
+        },
+        "BHEL": {
+            "last_synced_at": "2026-06-25T20:04:53.132012",
+            "status": "success"
+        },
+        "BIOCON": {
+            "last_synced_at": "2026-06-25T20:05:43.624439",
+            "status": "success"
+        },
+        "BLUESTARCO": {
+            "last_synced_at": "2026-06-25T20:05:45.407645",
+            "status": "success"
+        },
+        "BOSCHLTD": {
+            "last_synced_at": "2026-06-25T20:06:31.455322",
+            "status": "success"
+        },
+        "BPCL": {
+            "last_synced_at": "2026-06-25T20:07:21.403980",
+            "status": "success"
+        },
+        "BRITANNIA": {
+            "last_synced_at": "2026-06-29T15:10:17.397072",
+            "status": "success"
+        },
+        "BSE": {
+            "last_synced_at": "2026-06-25T20:08:28.085261",
+            "status": "success"
+        },
+        "CAMS": {
+            "last_synced_at": "2026-06-25T20:08:44.222196",
+            "status": "success"
+        },
+        "CANBK": {
+            "last_synced_at": "2026-06-25T20:09:34.731228",
+            "status": "success"
+        },
+        "CDSL": {
+            "last_synced_at": "2026-06-25T20:10:02.604184",
+            "status": "success"
+        },
+        "CGPOWER": {
+            "last_synced_at": "2026-06-25T20:10:53.113567",
+            "status": "success"
+        },
+        "CHOLAFIN": {
+            "last_synced_at": "2026-06-25T20:11:20.430891",
+            "status": "success"
+        },
+        "CIPLA": {
+            "last_synced_at": "2026-06-29T15:37:42.263309",
+            "status": "success"
+        },
+        "COALINDIA": {
+            "last_synced_at": "2026-06-25T20:12:59.251995",
+            "status": "success"
+        },
+        "COCHINSHIP": {
+            "last_synced_at": "2026-06-29T14:57:41.100998",
+            "status": "success"
+        },
+        "COFORGE": {
+            "last_synced_at": "2026-06-25T20:13:14.951075",
+            "status": "success"
+        },
+        "COLPAL": {
+            "last_synced_at": "2026-06-25T20:14:03.233744",
+            "status": "success"
+        },
+        "CONCOR": {
+            "last_synced_at": "2026-06-25T20:14:19.388219",
+            "status": "success"
+        },
+        "CROMPTON": {
+            "last_synced_at": "2026-06-25T20:15:09.903219",
+            "status": "success"
+        },
+        "CUMMINSIND": {
+            "last_synced_at": "2026-06-25T20:16:00.404831",
+            "status": "success"
+        },
+        "DABUR": {
+            "last_synced_at": "2026-06-25T20:16:50.344059",
+            "status": "success"
+        },
+        "DALBHARAT": {
+            "last_synced_at": "2026-06-25T20:17:40.312458",
+            "status": "success"
+        },
+        "DELHIVERY": {
+            "last_synced_at": "2026-06-25T20:18:07.529179",
+            "status": "success"
+        },
+        "DIVISLAB": {
+            "last_synced_at": "2026-06-25T20:18:58.037719",
+            "status": "success"
+        },
+        "DIXON": {
+            "last_synced_at": "2026-06-25T20:19:25.278788",
+            "status": "success"
+        },
+        "DLF": {
+            "last_synced_at": "2026-06-29T15:41:35.547530",
+            "status": "success"
+        },
+        "DMART": {
+            "last_synced_at": "2026-06-25T20:21:04.977920",
+            "status": "success"
+        },
+        "DRREDDY": {
+            "last_synced_at": "2026-06-29T15:39:39.550868",
+            "status": "success"
+        },
+        "EICHERMOT": {
+            "last_synced_at": "2026-06-25T20:22:46.030728",
+            "status": "success"
+        },
+        "ETERNAL": {
+            "last_synced_at": "2026-06-25T20:23:11.047041",
+            "status": "success"
+        },
+        "EXIDEIND": {
+            "last_synced_at": "2026-06-25T20:23:58.227569",
+            "status": "success"
+        },
+        "FEDERALBNK": {
+            "last_synced_at": "2026-06-25T20:24:48.745600",
+            "status": "success"
+        },
+        "FORCEMOT": {
+            "last_synced_at": "2026-06-25T20:24:50.527109",
+            "status": "success"
+        },
+        "FORTIS": {
+            "last_synced_at": "2026-06-29T15:14:33.541791",
+            "status": "success"
+        },
+        "GAIL": {
+            "last_synced_at": "2026-06-25T20:25:19.466762",
+            "status": "success"
+        },
+        "GLENMARK": {
+            "last_synced_at": "2026-06-25T20:26:09.986088",
+            "status": "success"
+        },
+        "GMRAIRPORT": {
+            "last_synced_at": "2026-06-25T20:27:00.487954",
+            "status": "success"
+        },
+        "GODFRYPHLP": {
+            "last_synced_at": "2026-06-25T20:27:02.322554",
+            "status": "success"
+        },
+        "GODREJCP": {
+            "last_synced_at": "2026-06-25T20:27:52.830566",
+            "status": "success"
+        },
+        "GODREJPROP": {
+            "last_synced_at": "2026-06-29T15:43:25.044176",
+            "status": "success"
+        },
+        "GRASIM": {
+            "last_synced_at": "2026-06-29T14:45:13.959969",
+            "status": "success"
+        },
+        "HAL": {
+            "last_synced_at": "2026-06-29T14:53:33.979952",
+            "status": "success"
+        },
+        "HAVELLS": {
+            "last_synced_at": "2026-06-29T14:51:28.084283",
+            "status": "success"
+        },
+        "HCLTECH": {
+            "last_synced_at": "2026-06-29T15:22:15.386696",
+            "status": "success"
+        },
+        "HDFCAMC": {
+            "last_synced_at": "2026-06-25T20:31:44.374998",
+            "status": "success"
+        },
+        "HDFCBANK": {
+            "last_synced_at": "2026-06-29T14:27:54.814152",
+            "status": "success"
+        },
+        "HDFCLIFE": {
+            "last_synced_at": "2026-06-25T20:32:58.793514",
+            "status": "success"
+        },
+        "HEROMOTOCO": {
+            "last_synced_at": "2026-06-25T20:33:46.645184",
+            "status": "success"
+        },
+        "HINDALCO": {
+            "last_synced_at": "2026-06-29T15:26:12.539353",
+            "status": "success"
+        },
+        "HINDPETRO": {
+            "last_synced_at": "2026-06-25T20:35:27.670692",
+            "status": "success"
+        },
+        "HINDUNILVR": {
+            "last_synced_at": "2026-06-29T15:08:07.942252",
+            "status": "success"
+        },
+        "HINDZINC": {
+            "last_synced_at": "2026-06-25T20:36:19.968832",
+            "status": "success"
+        },
+        "HYUNDAI": {
+            "last_synced_at": "2026-06-25T20:36:21.712869",
+            "status": "success"
+        },
+        "ICICIBANK": {
+            "last_synced_at": "2026-06-29T14:30:06.098693",
+            "status": "success"
+        },
+        "ICICIGI": {
+            "last_synced_at": "2026-06-25T20:38:02.716107",
+            "status": "success"
+        },
+        "ICICIPRULI": {
+            "last_synced_at": "2026-06-25T20:38:53.232266",
+            "status": "success"
+        },
+        "IDEA": {
+            "last_synced_at": "2026-06-25T20:39:21.381971",
+            "status": "success"
+        },
+        "IDFCFIRSTB": {
+            "last_synced_at": "2026-06-25T20:40:11.941496",
+            "status": "success"
+        },
+        "IEX": {
+            "last_synced_at": "2026-06-25T20:41:00.273194",
+            "status": "success"
+        },
+        "INDHOTEL": {
+            "last_synced_at": "2026-06-25T20:41:50.790080",
+            "status": "success"
+        },
+        "INDIANB": {
+            "last_synced_at": "2026-06-25T20:42:35.204335",
+            "status": "success"
+        },
+        "INDIGO": {
+            "last_synced_at": "2026-06-29T15:51:38.874317",
+            "status": "success"
+        },
+        "INDUSINDBK": {
+            "last_synced_at": "2026-06-25T20:43:29.758093",
+            "status": "success"
+        },
+        "INDUSTOWER": {
+            "last_synced_at": "2026-06-25T20:44:13.071205",
+            "status": "success"
+        },
+        "INFY": {
+            "last_synced_at": "2026-06-29T15:20:17.997241",
+            "status": "success"
+        },
+        "INOXWIND": {
+            "last_synced_at": "2026-06-25T20:45:05.378096",
+            "status": "success"
+        },
+        "IOC": {
+            "last_synced_at": "2026-06-25T20:45:54.178663",
+            "status": "success"
+        },
+        "IREDA": {
+            "last_synced_at": "2026-06-25T20:46:19.183471",
+            "status": "success"
+        },
+        "IRFC": {
+            "last_synced_at": "2026-06-25T20:46:45.402366",
+            "status": "success"
+        },
+        "ITC": {
+            "last_synced_at": "2026-06-29T15:06:00.842389",
+            "status": "success"
+        },
+        "JINDALSTEL": {
+            "last_synced_at": "2026-06-29T15:28:08.804100",
+            "status": "success"
+        },
+        "JIOFIN": {
+            "last_synced_at": "2026-06-25T20:48:49.360146",
+            "status": "success"
+        },
+        "JSWENERGY": {
+            "last_synced_at": "2026-06-25T20:49:38.757362",
+            "status": "success"
+        },
+        "JSWSTEEL": {
+            "last_synced_at": "2026-06-25T20:50:29.263689",
+            "status": "success"
+        },
+        "JUBLFOOD": {
+            "last_synced_at": "2026-06-25T20:51:19.207917",
+            "status": "success"
+        },
+        "KALYANKJIL": {
+            "last_synced_at": "2026-06-25T20:51:49.681616",
+            "status": "success"
+        },
+        "KAYNES": {
+            "last_synced_at": "2026-06-25T20:51:51.979499",
+            "status": "success"
+        },
+        "KEI": {
+            "last_synced_at": "2026-06-25T20:52:16.068311",
+            "status": "success"
+        },
+        "KFINTECH": {
+            "last_synced_at": "2026-06-25T20:52:18.435489",
+            "status": "success"
+        },
+        "KOTAKBANK": {
+            "last_synced_at": "2026-06-25T20:52:51.615263",
+            "status": "success"
+        },
+        "KPITTECH": {
+            "last_synced_at": "2026-06-25T20:53:50.885805",
+            "status": "success"
+        },
+        "LAURUSLABS": {
+            "last_synced_at": "2026-06-25T20:54:45.009028",
+            "status": "success"
+        },
+        "LICHSGFIN": {
+            "last_synced_at": "2026-06-25T20:55:44.880321",
+            "status": "success"
+        },
+        "LICI": {
+            "last_synced_at": "2026-06-25T20:56:04.854098",
+            "status": "success"
+        },
+        "LODHA": {
+            "last_synced_at": "2026-06-25T20:57:03.269303",
+            "status": "success"
+        },
+        "LT": {
+            "last_synced_at": "2026-06-29T14:34:25.910666",
+            "status": "success"
+        },
+        "LTF": {
+            "last_synced_at": "2026-06-25T20:58:59.574742",
+            "status": "success"
+        },
+        "LTM": {
+            "last_synced_at": "2026-06-25T20:59:32.688586",
+            "status": "success"
+        },
+        "LUPIN": {
+            "last_synced_at": "2026-06-25T21:00:33.638484",
+            "status": "success"
+        },
+        "M&M": {
+            "last_synced_at": "2026-06-29T14:23:10.372185",
+            "status": "success"
+        },
+        "MANAPPURAM": {
+            "last_synced_at": "2026-06-25T21:01:59.670960",
+            "status": "success"
+        },
+        "MANKIND": {
+            "last_synced_at": "2026-06-25T21:02:02.147922",
+            "status": "success"
+        },
+        "MARICO": {
+            "last_synced_at": "2026-06-25T21:02:57.485248",
+            "status": "success"
+        },
+        "MARUTI": {
+            "last_synced_at": "2026-06-29T14:20:47.497938",
+            "status": "success"
+        },
+        "MAXHEALTH": {
+            "last_synced_at": "2026-06-29T15:16:38.175902",
+            "status": "success"
+        },
+        "MAZDOCK": {
+            "last_synced_at": "2026-06-25T21:04:53.816434",
+            "status": "success"
+        },
+        "MCX": {
+            "last_synced_at": "2026-06-25T21:05:11.480806",
+            "status": "success"
+        },
+        "MFSL": {
+            "last_synced_at": "2026-06-25T21:06:04.432390",
+            "status": "success"
+        },
+        "MOTHERSON": {
+            "last_synced_at": "2026-06-25T21:06:13.522563",
+            "status": "success"
+        },
+        "MOTILALOFS": {
+            "last_synced_at": "2026-06-25T21:06:15.679739",
+            "status": "success"
+        },
+        "MPHASIS": {
+            "last_synced_at": "2026-06-25T21:07:11.521290",
+            "status": "success"
+        },
+        "MUTHOOTFIN": {
+            "last_synced_at": "2026-06-25T21:08:09.826761",
+            "status": "success"
+        },
+        "NAM-INDIA": {
+            "last_synced_at": "2026-06-25T21:08:12.156891",
+            "status": "success"
+        },
+        "NATIONALUM": {
+            "last_synced_at": "2026-06-25T21:08:43.016451",
+            "status": "success"
+        },
+        "NAUKRI": {
+            "last_synced_at": "2026-06-25T21:09:35.480488",
+            "status": "success"
+        },
+        "NBCC": {
+            "last_synced_at": "2026-06-25T21:12:45.124827",
+            "status": "success"
+        },
+        "NESTLEIND": {
+            "last_synced_at": "2026-06-25T21:23:32.291883",
+            "status": "success"
+        },
+        "NHPC": {
+            "last_synced_at": "2026-06-25T21:27:59.430741",
+            "status": "success"
+        },
+        "NMDC": {
+            "last_synced_at": "2026-06-25T21:28:19.469928",
+            "status": "success"
+        },
+        "NTPC": {
+            "last_synced_at": "2026-06-29T15:33:51.261578",
+            "status": "success"
+        },
+        "NUVAMA": {
+            "last_synced_at": "2026-06-25T21:29:20.145258",
+            "status": "success"
+        },
+        "NYKAA": {
+            "last_synced_at": "2026-06-25T21:30:16.155224",
+            "status": "success"
+        },
+        "OBEROIRLTY": {
+            "last_synced_at": "2026-06-29T15:45:21.495372",
+            "status": "success"
+        },
+        "OFSS": {
+            "last_synced_at": "2026-06-25T21:31:22.375979",
+            "status": "success"
+        },
+        "OIL": {
+            "last_synced_at": "2026-06-25T21:32:22.360996",
+            "status": "success"
+        },
+        "ONGC": {
+            "last_synced_at": "2026-06-29T15:31:55.657841",
+            "status": "success"
+        },
+        "PAGEIND": {
+            "last_synced_at": "2026-06-25T21:34:19.694404",
+            "status": "success"
+        },
+        "PATANJALI": {
+            "last_synced_at": "2026-06-25T21:34:32.107339",
+            "status": "success"
+        },
+        "PAYTM": {
+            "last_synced_at": "2026-06-25T21:35:26.443648",
+            "status": "success"
+        },
+        "PERSISTENT": {
+            "last_synced_at": "2026-06-25T21:36:24.218833",
+            "status": "success"
+        },
+        "PETRONET": {
+            "last_synced_at": "2026-06-25T21:37:20.172862",
+            "status": "success"
+        },
+        "PFC": {
+            "last_synced_at": "2026-06-29T15:01:45.233815",
+            "status": "success"
+        },
+        "PGEL": {
+            "last_synced_at": "2026-06-25T21:38:15.775418",
+            "status": "success"
+        },
+        "PHOENIXLTD": {
+            "last_synced_at": "2026-06-25T21:38:37.109240",
+            "status": "success"
+        },
+        "PIDILITIND": {
+            "last_synced_at": "2026-06-25T21:39:09.641267",
+            "status": "success"
+        },
+        "PIIND": {
+            "last_synced_at": "2026-06-25T21:40:07.409252",
+            "status": "success"
+        },
+        "PNB": {
+            "last_synced_at": "2026-06-25T21:41:04.538544",
+            "status": "success"
+        },
+        "PNBHOUSING": {
+            "last_synced_at": "2026-06-25T21:41:07.071512",
+            "status": "success"
+        },
+        "POLICYBZR": {
+            "last_synced_at": "2026-06-25T21:41:55.198374",
+            "status": "success"
+        },
+        "POLYCAB": {
+            "last_synced_at": "2026-06-25T21:42:24.904215",
+            "status": "success"
+        },
+        "POWERGRID": {
+            "last_synced_at": "2026-06-25T21:43:20.480569",
+            "status": "success"
+        },
+        "POWERINDIA": {
+            "last_synced_at": "2026-06-25T21:43:22.710030",
+            "status": "success"
+        },
+        "PREMIERENE": {
+            "last_synced_at": "2026-06-25T21:43:24.711455",
+            "status": "success"
+        },
+        "PRESTIGE": {
+            "last_synced_at": "2026-06-25T21:43:45.400364",
+            "status": "success"
+        },
+        "RBLBANK": {
+            "last_synced_at": "2026-06-25T21:52:13.129586",
+            "status": "success"
+        },
+        "RECLTD": {
+            "last_synced_at": "2026-06-29T15:03:51.947735",
+            "status": "success"
+        },
+        "RELIANCE": {
+            "last_synced_at": "2026-06-29T15:29:58.421353",
+            "status": "success"
+        },
+        "RVNL": {
+            "last_synced_at": "2026-06-25T21:54:10.194395",
+            "status": "success"
+        },
+        "SAIL": {
+            "last_synced_at": "2026-06-25T21:55:04.050693",
+            "status": "success"
+        },
+        "SAMMAANCAP": {
+            "last_synced_at": "2026-06-25T21:55:06.234297",
+            "status": "success"
+        },
+        "SBICARD": {
+            "last_synced_at": "2026-06-25T21:55:36.772003",
+            "status": "success"
+        },
+        "SBILIFE": {
+            "last_synced_at": "2026-06-25T21:56:36.959249",
+            "status": "success"
+        },
+        "SBIN": {
+            "last_synced_at": "2026-06-29T14:32:11.124548",
+            "status": "success"
+        },
+        "SHREECEM": {
+            "last_synced_at": "2026-06-25T21:58:37.042759",
+            "status": "success"
+        },
+        "SHRIRAMFIN": {
+            "last_synced_at": "2026-06-25T21:58:57.437594",
+            "status": "success"
+        },
+        "SIEMENS": {
+            "last_synced_at": "2026-06-29T14:36:49.659395",
+            "status": "success"
+        },
+        "SOLARINDS": {
+            "last_synced_at": "2026-06-25T22:00:34.012571",
+            "status": "success"
+        },
+        "SONACOMS": {
+            "last_synced_at": "2026-06-25T22:01:12.712294",
+            "status": "success"
+        },
+        "SRF": {
+            "last_synced_at": "2026-06-25T22:01:44.850662",
+            "status": "success"
+        },
+        "SUNPHARMA": {
+            "last_synced_at": "2026-06-29T15:35:46.737775",
+            "status": "success"
+        },
+        "SUPREMEIND": {
+            "last_synced_at": "2026-06-25T22:03:32.202786",
+            "status": "success"
+        },
+        "SUZLON": {
+            "last_synced_at": "2026-06-25T22:03:34.506072",
+            "status": "success"
+        },
+        "SWIGGY": {
+            "last_synced_at": "2026-06-25T22:03:36.564570",
+            "status": "success"
+        },
+        "TATACONSUM": {
+            "last_synced_at": "2026-06-25T22:04:34.144690",
+            "status": "success"
+        },
+        "TATAELXSI": {
+            "last_synced_at": "2026-06-25T22:05:32.826041",
+            "status": "success"
+        },
+        "TATAPOWER": {
+            "last_synced_at": "2026-06-25T22:06:04.080267",
+            "status": "success"
+        },
+        "TATASTEEL": {
+            "last_synced_at": "2026-06-29T15:24:14.372651",
+            "status": "success"
+        },
+        "TCS": {
+            "last_synced_at": "2026-06-29T15:18:28.310111",
+            "status": "success"
+        },
+        "TECHM": {
+            "last_synced_at": "2026-06-25T22:08:58.506762",
+            "status": "success"
+        },
+        "TIINDIA": {
+            "last_synced_at": "2026-06-25T22:09:30.426664",
+            "status": "success"
+        },
+        "TITAN": {
+            "last_synced_at": "2026-06-29T14:47:19.342930",
+            "status": "success"
+        },
+        "TMPV": {
+            "last_synced_at": "2026-06-25T22:11:27.930933",
+            "status": "success"
+        },
+        "TORNTPHARM": {
+            "last_synced_at": "2026-06-25T22:12:25.388805",
+            "status": "success"
+        },
+        "TRENT": {
+            "last_synced_at": "2026-06-25T22:12:56.214468",
+            "status": "success"
+        },
+        "TVSMOTOR": {
+            "last_synced_at": "2026-06-29T14:25:35.445913",
+            "status": "success"
+        },
+        "ULTRACEMCO": {
+            "last_synced_at": "2026-06-29T14:41:07.814234",
+            "status": "success"
+        },
+        "UNIONBANK": {
+            "last_synced_at": "2026-06-25T22:23:20.967467",
+            "status": "success"
+        },
+        "UNITDSPR": {
+            "last_synced_at": "2026-06-25T22:24:18.640275",
+            "status": "success"
+        },
+        "UNOMINDA": {
+            "last_synced_at": "2026-06-25T22:24:21.089040",
+            "status": "success"
+        },
+        "UPL": {
+            "last_synced_at": "2026-06-25T22:24:51.161424",
+            "status": "success"
+        },
+        "VBL": {
+            "last_synced_at": "2026-06-25T22:25:48.940617",
+            "status": "success"
+        },
+        "VEDL": {
+            "last_synced_at": "2026-06-25T22:26:39.037963",
+            "status": "success"
+        },
+        "VMM": {
+            "last_synced_at": "2026-06-25T22:26:41.271630",
+            "status": "success"
+        },
+        "VOLTAS": {
+            "last_synced_at": "2026-06-25T22:27:38.824907",
+            "status": "success"
+        },
+        "WAAREEENER": {
+            "last_synced_at": "2026-06-25T22:27:41.052062",
+            "status": "success"
+        },
+        "WIPRO": {
+            "last_synced_at": "2026-06-25T22:28:11.253729",
+            "status": "success"
+        },
+        "YESBANK": {
+            "last_synced_at": "2026-06-25T22:28:45.067788",
+            "status": "success"
+        },
+        "ZYDUSLIFE": {
+            "last_synced_at": "2026-06-25T22:29:38.456078",
+            "status": "success"
+        },
+        "GVT&D": {
+            "last_synced_at": "2026-09-30T02:43:07.092977",
+            "status": "success"
+        },
+        "NIFTYFPI": {
+            "last_synced_at": "2026-09-30T02:44:34.281344",
+            "status": "success"
+        },
+        "RADICO": {
+            "last_synced_at": "2026-09-30T02:46:49.034856",
+            "status": "success"
+        }
+    },
+    "errors": [
+        {
+            "symbol": "NIFTY",
+            "timestamp": "2026-06-01T14:32:42.694962",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BANKNIFTY",
+            "timestamp": "2026-06-01T14:32:43.561612",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "FINNIFTY",
+            "timestamp": "2026-06-01T14:32:44.430133",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SENSEX",
+            "timestamp": "2026-06-01T14:32:45.910499",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "360ONE",
+            "timestamp": "2026-06-01T14:32:46.839163",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ABB",
+            "timestamp": "2026-06-01T14:32:47.865871",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ABCAPITAL",
+            "timestamp": "2026-06-01T14:32:49.033327",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ADANIENSOL",
+            "timestamp": "2026-06-01T14:32:49.947760",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ADANIENT",
+            "timestamp": "2026-06-01T14:32:50.850365",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ADANIGREEN",
+            "timestamp": "2026-06-01T14:32:51.783432",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ADANIPORTS",
+            "timestamp": "2026-06-01T14:32:52.693686",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ALKEM",
+            "timestamp": "2026-06-01T14:32:54.199321",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "AMBER",
+            "timestamp": "2026-06-01T14:32:55.166825",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "AMBUJACEM",
+            "timestamp": "2026-06-01T14:32:56.249425",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ANGELONE",
+            "timestamp": "2026-06-01T14:32:57.996523",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "APLAPOLLO",
+            "timestamp": "2026-06-01T14:32:59.549565",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "APOLLOHOSP",
+            "timestamp": "2026-06-01T14:33:01.108726",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ASHOKLEY",
+            "timestamp": "2026-06-01T14:33:02.849574",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ASIANPAINT",
+            "timestamp": "2026-06-01T14:33:04.500288",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ASTRAL",
+            "timestamp": "2026-06-01T14:33:06.467626",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "AUBANK",
+            "timestamp": "2026-06-01T14:33:07.966316",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "AUROPHARMA",
+            "timestamp": "2026-06-01T14:33:09.518530",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "AXISBANK",
+            "timestamp": "2026-06-01T14:33:11.231376",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BAJAJ-AUTO",
+            "timestamp": "2026-06-01T14:33:12.922148",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BAJAJFINSV",
+            "timestamp": "2026-06-01T14:33:14.702634",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BAJFINANCE",
+            "timestamp": "2026-06-01T14:33:17.473867",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BANDHANBNK",
+            "timestamp": "2026-06-01T14:33:18.982010",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BANKBARODA",
+            "timestamp": "2026-06-01T14:33:20.479743",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BANKINDIA",
+            "timestamp": "2026-06-01T14:33:22.303925",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BDL",
+            "timestamp": "2026-06-01T14:33:23.983524",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BEL",
+            "timestamp": "2026-06-01T14:33:25.516423",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BHARATFORG",
+            "timestamp": "2026-06-01T14:33:26.998629",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BHARTIARTL",
+            "timestamp": "2026-06-01T14:33:28.498612",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BHEL",
+            "timestamp": "2026-06-01T14:33:30.215223",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BIOCON",
+            "timestamp": "2026-06-01T14:33:31.999505",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BLUESTARCO",
+            "timestamp": "2026-06-01T14:33:33.522342",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BOSCHLTD",
+            "timestamp": "2026-06-01T14:33:35.039461",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BPCL",
+            "timestamp": "2026-06-01T14:33:36.514341",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BRITANNIA",
+            "timestamp": "2026-06-01T14:33:38.049376",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "BSE",
+            "timestamp": "2026-06-01T14:33:39.919382",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "CAMS",
+            "timestamp": "2026-06-01T14:33:41.535105",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "CANBK",
+            "timestamp": "2026-06-01T14:33:43.088761",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "CDSL",
+            "timestamp": "2026-06-01T14:33:44.631380",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "CGPOWER",
+            "timestamp": "2026-06-01T14:33:46.158685",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "CHOLAFIN",
+            "timestamp": "2026-06-01T14:33:48.059894",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "CIPLA",
+            "timestamp": "2026-06-01T14:33:49.706513",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "COALINDIA",
+            "timestamp": "2026-06-01T14:33:51.238674",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "COFORGE",
+            "timestamp": "2026-06-01T14:33:53.916616",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "COLPAL",
+            "timestamp": "2026-06-01T14:33:55.634074",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "CONCOR",
+            "timestamp": "2026-06-01T14:33:57.464023",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "CROMPTON",
+            "timestamp": "2026-06-01T14:33:59.004725",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "CUMMINSIND",
+            "timestamp": "2026-06-01T14:34:00.543833",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "DABUR",
+            "timestamp": "2026-06-01T14:34:02.079329",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "DALBHARAT",
+            "timestamp": "2026-06-01T14:34:03.590209",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "DELHIVERY",
+            "timestamp": "2026-06-01T14:34:05.594555",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "DIVISLAB",
+            "timestamp": "2026-06-01T14:34:07.107072",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "DIXON",
+            "timestamp": "2026-06-01T14:34:08.673610",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "DLF",
+            "timestamp": "2026-06-01T14:34:10.253634",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "DMART",
+            "timestamp": "2026-06-01T14:34:11.909670",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "DRREDDY",
+            "timestamp": "2026-06-01T14:34:13.670384",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "EICHERMOT",
+            "timestamp": "2026-06-01T14:34:15.427469",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ETERNAL",
+            "timestamp": "2026-06-01T14:34:16.955439",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "EXIDEIND",
+            "timestamp": "2026-06-01T14:34:18.607568",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "FEDERALBNK",
+            "timestamp": "2026-06-01T14:34:20.150232",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "FORTIS",
+            "timestamp": "2026-06-01T14:34:22.934399",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "GAIL",
+            "timestamp": "2026-06-01T14:34:24.738297",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "GLENMARK",
+            "timestamp": "2026-06-01T14:34:26.285657",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "GMRAIRPORT",
+            "timestamp": "2026-06-01T14:34:27.833923",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "GODREJCP",
+            "timestamp": "2026-06-01T14:34:30.536066",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "GODREJPROP",
+            "timestamp": "2026-06-01T14:34:32.008013",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "GRASIM",
+            "timestamp": "2026-06-01T14:34:33.915537",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HAL",
+            "timestamp": "2026-06-01T14:34:35.533203",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HAVELLS",
+            "timestamp": "2026-06-01T14:34:37.076614",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HCLTECH",
+            "timestamp": "2026-06-01T14:34:38.591240",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HDFCAMC",
+            "timestamp": "2026-06-01T14:34:40.103191",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HDFCBANK",
+            "timestamp": "2026-06-01T14:34:41.616957",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HDFCLIFE",
+            "timestamp": "2026-06-01T14:34:43.356320",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HEROMOTOCO",
+            "timestamp": "2026-06-01T14:34:44.956780",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HINDALCO",
+            "timestamp": "2026-06-01T14:34:46.402543",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HINDPETRO",
+            "timestamp": "2026-06-01T14:34:47.944843",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HINDUNILVR",
+            "timestamp": "2026-06-01T14:34:49.533427",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "HINDZINC",
+            "timestamp": "2026-06-01T14:34:51.069072",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ICICIBANK",
+            "timestamp": "2026-06-01T14:34:54.190598",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ICICIGI",
+            "timestamp": "2026-06-01T14:34:55.758853",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ICICIPRULI",
+            "timestamp": "2026-06-01T14:34:57.202013",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "IDEA",
+            "timestamp": "2026-06-01T14:34:58.704108",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "IDFCFIRSTB",
+            "timestamp": "2026-06-01T14:35:00.217729",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "IEX",
+            "timestamp": "2026-06-01T14:35:01.788580",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "INDHOTEL",
+            "timestamp": "2026-06-01T14:35:03.769863",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "INDIANB",
+            "timestamp": "2026-06-01T14:35:05.324041",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "INDIGO",
+            "timestamp": "2026-06-01T14:35:06.981805",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "INDUSINDBK",
+            "timestamp": "2026-06-01T14:35:08.487624",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "INDUSTOWER",
+            "timestamp": "2026-06-01T14:35:10.011263",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "INFY",
+            "timestamp": "2026-06-01T14:35:11.647306",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "INOXWIND",
+            "timestamp": "2026-06-01T14:35:13.711975",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "IOC",
+            "timestamp": "2026-06-01T14:35:15.299113",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "IREDA",
+            "timestamp": "2026-06-01T14:35:16.802489",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "IRFC",
+            "timestamp": "2026-06-01T14:35:18.288455",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ITC",
+            "timestamp": "2026-06-01T14:35:19.824029",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "JINDALSTEL",
+            "timestamp": "2026-06-01T14:35:21.480682",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "JIOFIN",
+            "timestamp": "2026-06-01T14:35:23.343334",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "JSWENERGY",
+            "timestamp": "2026-06-01T14:35:24.893493",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "JSWSTEEL",
+            "timestamp": "2026-06-01T14:35:26.498878",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "JUBLFOOD",
+            "timestamp": "2026-06-01T14:35:28.013605",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "KALYANKJIL",
+            "timestamp": "2026-06-01T14:35:29.555035",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "KAYNES",
+            "timestamp": "2026-06-01T14:35:31.105753",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "KEI",
+            "timestamp": "2026-06-01T14:35:33.176626",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "KFINTECH",
+            "timestamp": "2026-06-01T14:35:34.747285",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "KOTAKBANK",
+            "timestamp": "2026-06-01T14:35:36.317380",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "KPITTECH",
+            "timestamp": "2026-06-01T14:35:37.914656",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "LAURUSLABS",
+            "timestamp": "2026-06-01T14:35:39.458644",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "LICHSGFIN",
+            "timestamp": "2026-06-01T14:35:41.418059",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "LICI",
+            "timestamp": "2026-06-01T14:35:43.353527",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "LODHA",
+            "timestamp": "2026-06-01T14:35:44.856209",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "LT",
+            "timestamp": "2026-06-01T14:35:46.370350",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "LTF",
+            "timestamp": "2026-06-01T14:35:47.888548",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "LTM",
+            "timestamp": "2026-06-01T14:35:49.413369",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "LUPIN",
+            "timestamp": "2026-06-01T14:35:51.283158",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "M&M",
+            "timestamp": "2026-06-01T14:35:52.962781",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "MANAPPURAM",
+            "timestamp": "2026-06-01T14:35:54.481781",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "MANKIND",
+            "timestamp": "2026-06-01T14:35:56.009690",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "MARICO",
+            "timestamp": "2026-06-01T14:35:57.518945",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "MARUTI",
+            "timestamp": "2026-06-01T14:35:59.291635",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "MAXHEALTH",
+            "timestamp": "2026-06-01T14:36:01.103506",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "MAZDOCK",
+            "timestamp": "2026-06-01T14:36:02.972929",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "MCX",
+            "timestamp": "2026-06-01T14:36:04.970129",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "MFSL",
+            "timestamp": "2026-06-01T14:36:06.533157",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "MPHASIS",
+            "timestamp": "2026-06-01T14:36:11.204594",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "MUTHOOTFIN",
+            "timestamp": "2026-06-01T14:36:13.107369",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "NATIONALUM",
+            "timestamp": "2026-06-01T14:36:16.357186",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "NAUKRI",
+            "timestamp": "2026-06-01T14:36:18.352834",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "NBCC",
+            "timestamp": "2026-06-01T14:36:20.349946",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "NESTLEIND",
+            "timestamp": "2026-06-01T14:36:22.529078",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "NHPC",
+            "timestamp": "2026-06-01T14:36:24.168547",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "NMDC",
+            "timestamp": "2026-06-01T14:36:25.694598",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "NTPC",
+            "timestamp": "2026-06-01T14:36:27.236498",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "NUVAMA",
+            "timestamp": "2026-06-01T14:36:29.069735",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "NYKAA",
+            "timestamp": "2026-06-01T14:36:30.907381",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "OBEROIRLTY",
+            "timestamp": "2026-06-01T14:36:32.663686",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "OFSS",
+            "timestamp": "2026-06-01T14:36:34.169068",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "OIL",
+            "timestamp": "2026-06-01T14:36:35.707510",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ONGC",
+            "timestamp": "2026-06-01T14:36:37.247993",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PAGEIND",
+            "timestamp": "2026-06-01T14:36:39.212554",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PATANJALI",
+            "timestamp": "2026-06-01T14:36:40.825721",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PAYTM",
+            "timestamp": "2026-06-01T14:36:42.736543",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PERSISTENT",
+            "timestamp": "2026-06-01T14:36:44.298727",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PETRONET",
+            "timestamp": "2026-06-01T14:36:45.969710",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PFC",
+            "timestamp": "2026-06-01T14:36:47.956636",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PGEL",
+            "timestamp": "2026-06-01T14:36:49.672262",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PHOENIXLTD",
+            "timestamp": "2026-06-01T14:36:51.243924",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PIDILITIND",
+            "timestamp": "2026-06-01T14:36:53.079540",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PIIND",
+            "timestamp": "2026-06-01T14:36:55.357001",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PNB",
+            "timestamp": "2026-06-01T14:36:57.161555",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PNBHOUSING",
+            "timestamp": "2026-06-01T14:36:59.398039",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "POLICYBZR",
+            "timestamp": "2026-06-01T14:37:01.250303",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "POLYCAB",
+            "timestamp": "2026-06-01T14:37:02.833197",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "POWERGRID",
+            "timestamp": "2026-06-01T14:37:04.379200",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "PRESTIGE",
+            "timestamp": "2026-06-01T14:37:08.676613",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "RBLBANK",
+            "timestamp": "2026-06-01T14:37:10.171852",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "RECLTD",
+            "timestamp": "2026-06-01T14:37:11.663011",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "RELIANCE",
+            "timestamp": "2026-06-01T14:37:13.219348",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "RVNL",
+            "timestamp": "2026-06-01T14:37:14.865357",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SAIL",
+            "timestamp": "2026-06-01T14:37:16.613862",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SBICARD",
+            "timestamp": "2026-06-01T14:37:19.802218",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SBILIFE",
+            "timestamp": "2026-06-01T14:37:21.322727",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SBIN",
+            "timestamp": "2026-06-01T14:37:22.932451",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SHREECEM",
+            "timestamp": "2026-06-01T14:37:24.590969",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SHRIRAMFIN",
+            "timestamp": "2026-06-01T14:37:26.464363",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SIEMENS",
+            "timestamp": "2026-06-01T14:37:28.011077",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SOLARINDS",
+            "timestamp": "2026-06-01T14:37:29.658385",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SONACOMS",
+            "timestamp": "2026-06-01T14:37:31.275082",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SRF",
+            "timestamp": "2026-06-01T14:37:32.786191",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SUNPHARMA",
+            "timestamp": "2026-06-01T14:37:34.708969",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SUPREMEIND",
+            "timestamp": "2026-06-01T14:37:36.322583",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "SUZLON",
+            "timestamp": "2026-06-01T14:37:37.870696",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TATACONSUM",
+            "timestamp": "2026-06-01T14:37:40.667300",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TATAELXSI",
+            "timestamp": "2026-06-01T14:37:42.273734",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TATAPOWER",
+            "timestamp": "2026-06-01T14:37:44.147812",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TATASTEEL",
+            "timestamp": "2026-06-01T14:37:45.732028",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TCS",
+            "timestamp": "2026-06-01T14:37:47.342639",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TECHM",
+            "timestamp": "2026-06-01T14:37:48.897301",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TIINDIA",
+            "timestamp": "2026-06-01T14:37:50.465652",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TITAN",
+            "timestamp": "2026-06-01T14:37:52.342027",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TMPV",
+            "timestamp": "2026-06-01T14:37:53.824696",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TORNTPHARM",
+            "timestamp": "2026-06-01T14:37:55.383747",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TRENT",
+            "timestamp": "2026-06-01T14:37:56.901072",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "TVSMOTOR",
+            "timestamp": "2026-06-01T14:37:58.426532",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ULTRACEMCO",
+            "timestamp": "2026-06-01T14:38:00.282886",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "UNIONBANK",
+            "timestamp": "2026-06-01T14:38:01.860662",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "UNITDSPR",
+            "timestamp": "2026-06-01T14:38:03.368507",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "UNOMINDA",
+            "timestamp": "2026-06-01T14:38:04.897482",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "UPL",
+            "timestamp": "2026-06-01T14:38:06.370474",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "VBL",
+            "timestamp": "2026-06-01T14:38:08.211258",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "VEDL",
+            "timestamp": "2026-06-01T14:38:09.790232",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "VOLTAS",
+            "timestamp": "2026-06-01T14:38:12.609209",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "WIPRO",
+            "timestamp": "2026-06-01T14:38:15.336195",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "YESBANK",
+            "timestamp": "2026-06-01T14:38:17.370212",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "ZYDUSLIFE",
+            "timestamp": "2026-06-01T14:38:18.835734",
+            "error": "'option_type'"
+        },
+        {
+            "symbol": "NIFTY",
+            "timestamp": "2026-06-01T17:04:18.680243",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BANKNIFTY",
+            "timestamp": "2026-06-01T17:04:18.696376",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "FINNIFTY",
+            "timestamp": "2026-06-01T17:04:18.712245",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MIDCPNIFTY",
+            "timestamp": "2026-06-01T17:04:18.728750",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SENSEX",
+            "timestamp": "2026-06-01T17:04:18.745118",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "360ONE",
+            "timestamp": "2026-06-01T17:04:18.761880",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ABB",
+            "timestamp": "2026-06-01T17:04:18.780669",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ABCAPITAL",
+            "timestamp": "2026-06-01T17:04:18.799087",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ADANIENSOL",
+            "timestamp": "2026-06-01T17:04:18.820124",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ADANIENT",
+            "timestamp": "2026-06-01T17:04:18.837943",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ADANIGREEN",
+            "timestamp": "2026-06-01T17:04:18.855495",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ADANIPORTS",
+            "timestamp": "2026-06-01T17:04:18.873674",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ADANIPOWER",
+            "timestamp": "2026-06-01T17:04:18.891694",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ALKEM",
+            "timestamp": "2026-06-01T17:04:18.909808",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "AMBER",
+            "timestamp": "2026-06-01T17:04:18.927429",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "AMBUJACEM",
+            "timestamp": "2026-06-01T17:04:18.945869",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ANGELONE",
+            "timestamp": "2026-06-01T17:04:18.963963",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "APLAPOLLO",
+            "timestamp": "2026-06-01T17:04:18.982275",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "APOLLOHOSP",
+            "timestamp": "2026-06-01T17:04:19.001436",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ASHOKLEY",
+            "timestamp": "2026-06-01T17:04:19.019884",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ASIANPAINT",
+            "timestamp": "2026-06-01T17:04:19.037138",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ASTRAL",
+            "timestamp": "2026-06-01T17:04:19.055726",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "AUBANK",
+            "timestamp": "2026-06-01T17:04:19.071822",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "AUROPHARMA",
+            "timestamp": "2026-06-01T17:04:19.090008",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "AXISBANK",
+            "timestamp": "2026-06-01T17:04:19.108946",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BAJAJ-AUTO",
+            "timestamp": "2026-06-01T17:04:19.127048",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BAJAJFINSV",
+            "timestamp": "2026-06-01T17:04:19.146967",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BAJAJHLDNG",
+            "timestamp": "2026-06-01T17:04:19.166923",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BAJFINANCE",
+            "timestamp": "2026-06-01T17:04:19.186815",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BANDHANBNK",
+            "timestamp": "2026-06-01T17:04:19.204759",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BANKBARODA",
+            "timestamp": "2026-06-01T17:04:19.221898",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BANKINDIA",
+            "timestamp": "2026-06-01T17:04:19.240888",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BDL",
+            "timestamp": "2026-06-01T17:04:19.258176",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BEL",
+            "timestamp": "2026-06-01T17:04:19.275908",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BHARATFORG",
+            "timestamp": "2026-06-01T17:04:19.294781",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BHARTIARTL",
+            "timestamp": "2026-06-01T17:04:19.311557",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BHEL",
+            "timestamp": "2026-06-01T17:04:19.329088",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BIOCON",
+            "timestamp": "2026-06-01T17:04:19.346182",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BLUESTARCO",
+            "timestamp": "2026-06-01T17:04:19.363387",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BOSCHLTD",
+            "timestamp": "2026-06-01T17:04:19.381350",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BPCL",
+            "timestamp": "2026-06-01T17:04:19.398510",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BRITANNIA",
+            "timestamp": "2026-06-01T17:04:19.415796",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "BSE",
+            "timestamp": "2026-06-01T17:04:19.432708",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "CAMS",
+            "timestamp": "2026-06-01T17:04:19.448145",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "CANBK",
+            "timestamp": "2026-06-01T17:04:19.464892",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "CDSL",
+            "timestamp": "2026-06-01T17:04:19.482112",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "CGPOWER",
+            "timestamp": "2026-06-01T17:04:19.499849",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "CHOLAFIN",
+            "timestamp": "2026-06-01T17:04:19.517766",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "CIPLA",
+            "timestamp": "2026-06-01T17:04:19.534360",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "COALINDIA",
+            "timestamp": "2026-06-01T17:04:19.553034",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "COCHINSHIP",
+            "timestamp": "2026-06-01T17:04:19.570013",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "COFORGE",
+            "timestamp": "2026-06-01T17:04:19.588548",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "COLPAL",
+            "timestamp": "2026-06-01T17:04:19.607105",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "CONCOR",
+            "timestamp": "2026-06-01T17:04:19.624452",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "CROMPTON",
+            "timestamp": "2026-06-01T17:04:19.643352",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "CUMMINSIND",
+            "timestamp": "2026-06-01T17:04:19.661081",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "DABUR",
+            "timestamp": "2026-06-01T17:04:19.679353",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "DALBHARAT",
+            "timestamp": "2026-06-01T17:04:19.696213",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "DELHIVERY",
+            "timestamp": "2026-06-01T17:04:19.713272",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "DIVISLAB",
+            "timestamp": "2026-06-01T17:04:19.732135",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "DIXON",
+            "timestamp": "2026-06-01T17:04:19.749388",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "DLF",
+            "timestamp": "2026-06-01T17:04:19.798069",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "DMART",
+            "timestamp": "2026-06-01T17:04:19.814825",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "DRREDDY",
+            "timestamp": "2026-06-01T17:04:19.832335",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "EICHERMOT",
+            "timestamp": "2026-06-01T17:04:19.849832",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ETERNAL",
+            "timestamp": "2026-06-01T17:04:19.866800",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "EXIDEIND",
+            "timestamp": "2026-06-01T17:04:19.885083",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "FEDERALBNK",
+            "timestamp": "2026-06-01T17:04:19.902863",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "FORCEMOT",
+            "timestamp": "2026-06-01T17:04:19.919762",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "FORTIS",
+            "timestamp": "2026-06-01T17:04:19.937994",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "GAIL",
+            "timestamp": "2026-06-01T17:04:19.955917",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "GLENMARK",
+            "timestamp": "2026-06-01T17:04:19.974121",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "GMRAIRPORT",
+            "timestamp": "2026-06-01T17:04:19.993196",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "GODFRYPHLP",
+            "timestamp": "2026-06-01T17:04:20.012105",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "GODREJCP",
+            "timestamp": "2026-06-01T17:04:20.031338",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "GODREJPROP",
+            "timestamp": "2026-06-01T17:04:20.049846",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "GRASIM",
+            "timestamp": "2026-06-01T17:04:20.068820",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HAL",
+            "timestamp": "2026-06-01T17:04:20.087154",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HAVELLS",
+            "timestamp": "2026-06-01T17:04:20.104768",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HCLTECH",
+            "timestamp": "2026-06-01T17:04:20.124277",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HDFCAMC",
+            "timestamp": "2026-06-01T17:04:20.143920",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HDFCBANK",
+            "timestamp": "2026-06-01T17:04:20.162752",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HDFCLIFE",
+            "timestamp": "2026-06-01T17:04:20.181762",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HEROMOTOCO",
+            "timestamp": "2026-06-01T17:04:20.200542",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HINDALCO",
+            "timestamp": "2026-06-01T17:04:20.219571",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HINDPETRO",
+            "timestamp": "2026-06-01T17:04:20.238981",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HINDUNILVR",
+            "timestamp": "2026-06-01T17:04:20.257880",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HINDZINC",
+            "timestamp": "2026-06-01T17:04:20.277627",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "HYUNDAI",
+            "timestamp": "2026-06-01T17:04:20.293873",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ICICIBANK",
+            "timestamp": "2026-06-01T17:04:20.313054",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ICICIGI",
+            "timestamp": "2026-06-01T17:04:20.330988",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ICICIPRULI",
+            "timestamp": "2026-06-01T17:04:20.348570",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "IDEA",
+            "timestamp": "2026-06-01T17:04:20.374198",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "IDFCFIRSTB",
+            "timestamp": "2026-06-01T17:04:20.398339",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "IEX",
+            "timestamp": "2026-06-01T17:04:20.417375",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "INDHOTEL",
+            "timestamp": "2026-06-01T17:04:20.436265",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "INDIANB",
+            "timestamp": "2026-06-01T17:04:20.454280",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "INDIGO",
+            "timestamp": "2026-06-01T17:04:20.472303",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "INDUSINDBK",
+            "timestamp": "2026-06-01T17:04:20.490655",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "INDUSTOWER",
+            "timestamp": "2026-06-01T17:04:20.509964",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "INFY",
+            "timestamp": "2026-06-01T17:04:20.528836",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "INOXWIND",
+            "timestamp": "2026-06-01T17:04:20.546604",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "IOC",
+            "timestamp": "2026-06-01T17:04:20.565256",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "IREDA",
+            "timestamp": "2026-06-01T17:04:20.582338",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "IRFC",
+            "timestamp": "2026-06-01T17:04:20.602764",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ITC",
+            "timestamp": "2026-06-01T17:04:20.622893",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "JINDALSTEL",
+            "timestamp": "2026-06-01T17:04:20.642352",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "JIOFIN",
+            "timestamp": "2026-06-01T17:04:20.657762",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "JSWENERGY",
+            "timestamp": "2026-06-01T17:04:20.678159",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "JSWSTEEL",
+            "timestamp": "2026-06-01T17:04:20.696658",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "JUBLFOOD",
+            "timestamp": "2026-06-01T17:04:20.714948",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "KALYANKJIL",
+            "timestamp": "2026-06-01T17:04:20.730798",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "KAYNES",
+            "timestamp": "2026-06-01T17:04:20.746860",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "KEI",
+            "timestamp": "2026-06-01T17:04:20.764581",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "KFINTECH",
+            "timestamp": "2026-06-01T17:04:20.779990",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "KOTAKBANK",
+            "timestamp": "2026-06-01T17:04:20.799645",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "KPITTECH",
+            "timestamp": "2026-06-01T17:04:20.817090",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "LAURUSLABS",
+            "timestamp": "2026-06-01T17:04:20.835180",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "LICHSGFIN",
+            "timestamp": "2026-06-01T17:04:20.853434",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "LICI",
+            "timestamp": "2026-06-01T17:04:20.870214",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "LODHA",
+            "timestamp": "2026-06-01T17:04:20.886467",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "LT",
+            "timestamp": "2026-06-01T17:04:20.904417",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "LTF",
+            "timestamp": "2026-06-01T17:04:20.922768",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "LTM",
+            "timestamp": "2026-06-01T17:04:20.940846",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "LUPIN",
+            "timestamp": "2026-06-01T17:04:20.960607",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "M&M",
+            "timestamp": "2026-06-01T17:04:20.978687",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MANAPPURAM",
+            "timestamp": "2026-06-01T17:04:20.996455",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MANKIND",
+            "timestamp": "2026-06-01T17:04:21.015868",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MARICO",
+            "timestamp": "2026-06-01T17:04:21.033842",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MARUTI",
+            "timestamp": "2026-06-01T17:04:21.051935",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MAXHEALTH",
+            "timestamp": "2026-06-01T17:04:21.069167",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MAZDOCK",
+            "timestamp": "2026-06-01T17:04:21.085592",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MCX",
+            "timestamp": "2026-06-01T17:04:21.103749",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MFSL",
+            "timestamp": "2026-06-01T17:04:21.121533",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MOTILALOFS",
+            "timestamp": "2026-06-01T17:04:22.897822",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MPHASIS",
+            "timestamp": "2026-06-01T17:04:22.974712",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "MUTHOOTFIN",
+            "timestamp": "2026-06-01T17:04:23.073412",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "NAM-INDIA",
+            "timestamp": "2026-06-01T17:04:23.141585",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "NATIONALUM",
+            "timestamp": "2026-06-01T17:04:23.223955",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "NAUKRI",
+            "timestamp": "2026-06-01T17:04:23.271145",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "NBCC",
+            "timestamp": "2026-06-01T17:04:23.328515",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "NESTLEIND",
+            "timestamp": "2026-06-01T17:04:23.350252",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "NHPC",
+            "timestamp": "2026-06-01T17:04:23.368477",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "NMDC",
+            "timestamp": "2026-06-01T17:04:23.387186",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "NTPC",
+            "timestamp": "2026-06-01T17:04:23.405835",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "NUVAMA",
+            "timestamp": "2026-06-01T17:04:23.421982",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "NYKAA",
+            "timestamp": "2026-06-01T17:04:23.438688",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "OBEROIRLTY",
+            "timestamp": "2026-06-01T17:04:23.457441",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "OFSS",
+            "timestamp": "2026-06-01T17:04:23.476624",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "OIL",
+            "timestamp": "2026-06-01T17:04:23.495099",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ONGC",
+            "timestamp": "2026-06-01T17:04:23.513829",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PAGEIND",
+            "timestamp": "2026-06-01T17:04:23.532786",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PATANJALI",
+            "timestamp": "2026-06-01T17:04:23.549711",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PAYTM",
+            "timestamp": "2026-06-01T17:04:23.566100",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PERSISTENT",
+            "timestamp": "2026-06-01T17:04:23.585323",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PETRONET",
+            "timestamp": "2026-06-01T17:04:23.603762",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PFC",
+            "timestamp": "2026-06-01T17:04:23.621557",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PGEL",
+            "timestamp": "2026-06-01T17:04:23.640542",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PHOENIXLTD",
+            "timestamp": "2026-06-01T17:04:23.660477",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PIDILITIND",
+            "timestamp": "2026-06-01T17:04:23.679548",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PIIND",
+            "timestamp": "2026-06-01T17:04:23.699028",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PNB",
+            "timestamp": "2026-06-01T17:04:23.718113",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PNBHOUSING",
+            "timestamp": "2026-06-01T17:04:23.737389",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "POLICYBZR",
+            "timestamp": "2026-06-01T17:04:23.753645",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "POLYCAB",
+            "timestamp": "2026-06-01T17:04:23.770824",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "POWERGRID",
+            "timestamp": "2026-06-01T17:04:23.789427",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "POWERINDIA",
+            "timestamp": "2026-06-01T17:04:23.806290",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PREMIERENE",
+            "timestamp": "2026-06-01T17:04:23.821731",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "PRESTIGE",
+            "timestamp": "2026-06-01T17:04:23.840385",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "RBLBANK",
+            "timestamp": "2026-06-01T17:04:23.859228",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "RECLTD",
+            "timestamp": "2026-06-01T17:04:23.878082",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "RELIANCE",
+            "timestamp": "2026-06-01T17:04:23.897110",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "RVNL",
+            "timestamp": "2026-06-01T17:04:23.916681",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SAIL",
+            "timestamp": "2026-06-01T17:04:23.937994",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SAMMAANCAP",
+            "timestamp": "2026-06-01T17:04:23.957361",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SBICARD",
+            "timestamp": "2026-06-01T17:04:23.974692",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SBILIFE",
+            "timestamp": "2026-06-01T17:04:23.992863",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SBIN",
+            "timestamp": "2026-06-01T17:04:24.011840",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SHREECEM",
+            "timestamp": "2026-06-01T17:04:24.030261",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SHRIRAMFIN",
+            "timestamp": "2026-06-01T17:04:24.048955",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SIEMENS",
+            "timestamp": "2026-06-01T17:04:24.067898",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SOLARINDS",
+            "timestamp": "2026-06-01T17:04:24.086421",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SONACOMS",
+            "timestamp": "2026-06-01T17:04:24.103500",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SRF",
+            "timestamp": "2026-06-01T17:04:24.122085",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SUNPHARMA",
+            "timestamp": "2026-06-01T17:04:24.141161",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SUPREMEIND",
+            "timestamp": "2026-06-01T17:04:24.159937",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SUZLON",
+            "timestamp": "2026-06-01T17:04:24.179434",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "SWIGGY",
+            "timestamp": "2026-06-01T17:04:24.195509",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TATACONSUM",
+            "timestamp": "2026-06-01T17:04:24.213910",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TATAELXSI",
+            "timestamp": "2026-06-01T17:04:24.233332",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TATAPOWER",
+            "timestamp": "2026-06-01T17:04:24.252295",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TATASTEEL",
+            "timestamp": "2026-06-01T17:04:24.271244",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TCS",
+            "timestamp": "2026-06-01T17:04:24.291528",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TECHM",
+            "timestamp": "2026-06-01T17:04:24.311127",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TIINDIA",
+            "timestamp": "2026-06-01T17:04:24.331588",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TITAN",
+            "timestamp": "2026-06-01T17:04:24.351497",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TMPV",
+            "timestamp": "2026-06-01T17:04:24.370765",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TORNTPHARM",
+            "timestamp": "2026-06-01T17:04:24.390176",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TRENT",
+            "timestamp": "2026-06-01T17:04:24.411770",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "TVSMOTOR",
+            "timestamp": "2026-06-01T17:04:24.432071",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ULTRACEMCO",
+            "timestamp": "2026-06-01T17:04:24.452939",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "UNIONBANK",
+            "timestamp": "2026-06-01T17:04:24.475156",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "UNITDSPR",
+            "timestamp": "2026-06-01T17:04:24.495364",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "UNOMINDA",
+            "timestamp": "2026-06-01T17:04:24.514985",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "UPL",
+            "timestamp": "2026-06-01T17:04:24.534243",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "VBL",
+            "timestamp": "2026-06-01T17:04:24.553975",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "VEDL",
+            "timestamp": "2026-06-01T17:04:24.573033",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "VMM",
+            "timestamp": "2026-06-01T17:04:24.589345",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "VOLTAS",
+            "timestamp": "2026-06-01T17:04:24.608339",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "WAAREEENER",
+            "timestamp": "2026-06-01T17:04:24.624412",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "WIPRO",
+            "timestamp": "2026-06-01T17:04:24.643986",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "YESBANK",
+            "timestamp": "2026-06-01T17:04:24.662952",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        },
+        {
+            "symbol": "ZYDUSLIFE",
+            "timestamp": "2026-06-01T17:04:24.682226",
+            "error": "Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.\nA suitable version of pyarrow or fastparquet is required for parquet support.\nTrying to import the above resulted in these errors:\n - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.\n - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package."
+        }
+    ]
+}
