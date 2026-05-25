@@ -1,0 +1,45 @@
+{
+  "name": "[INFRA] Prompt Accuracy Validator",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "validate-ai-output",
+        "options": {}
+      },
+      "name": "Webhook Validate Output",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const output = $json.body ? $json.body.ai_output : {};\\nlet parsed = output;\\ntry { if (typeof output === 'string') parsed = JSON.parse(output); } catch(e){}\\nconst validSymbols = ['NIFTY', 'BANKNIFTY', 'SENSEX', 'RELIANCE', 'HDFC', 'INFY', 'TCS'];\\nconst symbolValid = !parsed.symbol || validSymbols.includes(parsed.symbol.toUpperCase());\\nconst actionValid = ['BUY', 'SELL', 'HOLD'].includes((parsed.action || '').toUpperCase());\\nconst valid = symbolValid && actionValid;\\nreturn [{ approved: valid, parsed }];"
+      },
+      "name": "Validate Schema",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        450,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook Validate Output": {
+      "main": [
+        [
+          {
+            "node": "Validate Schema",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

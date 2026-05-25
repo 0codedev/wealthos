@@ -1,0 +1,85 @@
+{
+  "name": "[FIN] Price Alert and Breakout Monitor",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 1
+            }
+          ]
+        }
+      },
+      "name": "Every 1 Minute",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8765/api/autopilot/status",
+        "options": {}
+      },
+      "name": "Get Autopilot Status",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1004326362283",
+        "text": "\ud83c\udfaf <b>PRICE BREAKOUT MONITOR</b>\n\nScan Time: <code>={{new Date().toLocaleTimeString('en-IN')}} IST</code>\nAutopilot State: <code>={{$json.enabled ? 'ACTIVE' : 'IDLE'}}</code>\nWatchlist: NIFTY 50, BANKNIFTY\nStatus: \ud83d\udfe2 <i>Monitoring breakout conditions...</i>",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "message_thread_id": 10
+        }
+      },
+      "name": "Telegram Alert (Price Alerts #10)",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_alerts_bot",
+          "name": "Wealthos Alerts Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Every 1 Minute": {
+      "main": [
+        [
+          {
+            "node": "Get Autopilot Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Autopilot Status": {
+      "main": [
+        [
+          {
+            "node": "Telegram Alert (Price Alerts #10)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

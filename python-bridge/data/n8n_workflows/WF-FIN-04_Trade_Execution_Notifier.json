@@ -1,0 +1,84 @@
+{
+  "name": "[FIN] Trade Execution Notifier",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "trade-executed",
+        "options": {}
+      },
+      "name": "Webhook Trade Executed",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8765/api/autopilot/capture-pre-trade",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"symbol\": \"={{$json.body.symbol}}\",\n  \"action\": \"={{$json.body.action}}\",\n  \"qty\": {{$json.body.qty || 1}},\n  \"entry_price\": {{$json.body.price || 0.0}},\n  \"strategy\": \"={{$json.body.strategy || 'AUTOPILOT'}}\"\n}",
+        "options": {}
+      },
+      "name": "Write to Journal DB",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1004326362283",
+        "text": "\u26a1 <b>TRADE EXECUTED & JOURNALED</b>\n\nSymbol: <b>={{$json.body.symbol}}</b>\nAction: <code>={{$json.body.action}}</code>\nQty: <code>={{$json.body.qty}}</code> @ \u20b9<code>={{$json.body.price}}</code>\nOrder ID: <code>={{$json.body.order_id}}</code>\nStrategy: <code>={{$json.body.strategy || 'AUTOPILOT'}}</code>",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "message_thread_id": 8
+        }
+      },
+      "name": "Telegram Trade Alert (Executions #8)",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_trade_bot",
+          "name": "Trade Trigger Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook Trade Executed": {
+      "main": [
+        [
+          {
+            "node": "Write to Journal DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write to Journal DB": {
+      "main": [
+        [
+          {
+            "node": "Telegram Trade Alert (Executions #8)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "[DEV] Dynamic AI Model Router",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "route-ai-prompt",
+        "options": {}
+      },
+      "name": "Webhook AI Request",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const prompt = $json.body ? $json.body.prompt : '';\nconst complexity = ($json.body && $json.body.complexity) || (prompt.length > 500 ? 'high' : 'low');\nconst selected_model = complexity === 'high' ? 'gpt-4.1-mini' : 'gemini-2.0-flash';\nreturn [{ prompt, complexity, selected_model }];"
+      },
+      "name": "Route Model by Complexity",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        450,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook AI Request": {
+      "main": [
+        [
+          {
+            "node": "Route Model by Complexity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

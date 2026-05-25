@@ -1,0 +1,80 @@
+{
+  "name": "[FIN] Technical Analyst AI Agent",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "analyze-stock",
+        "options": {}
+      },
+      "name": "Webhook Analyze Stock",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8765/api/autopilot/results",
+        "options": {}
+      },
+      "name": "Fetch Stock Data",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1004326362283",
+        "text": "\ud83d\udd0d <b>TECHNICAL ANALYST REPORT</b>\n\nSymbol: <b>={{$json.symbol || 'NIFTY'}}</b>\nMarket Structure: <code>UPTREND (Bullish)</code>\nKey Support: <code>24,200</code> | Key Resistance: <code>24,650</code>\nSignal Strength: <code>8.5 / 10</code> \ud83d\udfe2\nRecommendation: <b>Buy dips near VWAP with trailing SL</b>",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "message_thread_id": 12
+        }
+      },
+      "name": "Telegram TA Brief (News #12)",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook Analyze Stock": {
+      "main": [
+        [
+          {
+            "node": "Fetch Stock Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Stock Data": {
+      "main": [
+        [
+          {
+            "node": "Telegram TA Brief (News #12)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "[FIN] Pre-Open Market Briefing",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "30 8 * * 1-5"
+            }
+          ]
+        }
+      },
+      "name": "Cron 8:30 AM IST",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8765/api/autopilot/preopen",
+        "options": {}
+      },
+      "name": "Fetch Pre-Open Data",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "-1004326362283",
+        "text": "\ud83d\udcca <b>DAILY PRE-OPEN BRIEFING</b>\n\nDate: <code>={{$json.date}}</code>\nTime: <code>={{$json.time_ist}} IST</code>\nAutopilot State: <b>={{$json.autopilot_enabled ? 'ENABLED \ud83d\udfe2' : 'DISABLED \ud83d\udd34'}}</b>\nHistorical Win Rate: <code>={{$json.historical_win_rate}}</code>\nTotal Journaled Trades: <code>={{$json.total_journaled_trades}}</code>\nSession: <code>={{$json.market_session}}</code>\n\n\ud83c\udfaf <i>Prepare for market open at 09:15 AM IST.</i>",
+        "additionalFields": {
+          "parse_mode": "HTML",
+          "message_thread_id": 12
+        }
+      },
+      "name": "Telegram Briefing (News #12)",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_n8n_bot",
+          "name": "Telegram n8n Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Cron 8:30 AM IST": {
+      "main": [
+        [
+          {
+            "node": "Fetch Pre-Open Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Pre-Open Data": {
+      "main": [
+        [
+          {
+            "node": "Telegram Briefing (News #12)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
