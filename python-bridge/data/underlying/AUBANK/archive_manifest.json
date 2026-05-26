@@ -1,0 +1,15 @@
+{
+    "symbol": "AUBANK",
+    "date_range": {
+        "start": "2017-07-10",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9504,
+    "total_records": 2278,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:06:51.568408"
+    }
+}
