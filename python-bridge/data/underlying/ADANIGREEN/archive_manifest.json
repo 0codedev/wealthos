@@ -1,0 +1,15 @@
+{
+    "symbol": "ADANIGREEN",
+    "date_range": {
+        "start": "2018-06-18",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9503,
+    "total_records": 2045,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:05:40.821504"
+    }
+}
