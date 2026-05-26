@@ -1,0 +1,15 @@
+{
+    "symbol": "AMBER",
+    "date_range": {
+        "start": "2018-01-30",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9502,
+    "total_records": 2139,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:01:39.022439"
+    }
+}

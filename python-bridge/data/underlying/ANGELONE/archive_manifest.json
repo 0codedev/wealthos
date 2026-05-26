@@ -1,0 +1,15 @@
+{
+    "symbol": "ANGELONE",
+    "date_range": {
+        "start": "2016-06-06",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.5675,
+    "total_records": 1522,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:07:13.125560"
+    }
+}
