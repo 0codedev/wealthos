@@ -1,0 +1,15 @@
+{
+    "symbol": "DIXON",
+    "date_range": {
+        "start": "2017-09-18",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9501,
+    "total_records": 2230,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:00:37.912069"
+    }
+}
