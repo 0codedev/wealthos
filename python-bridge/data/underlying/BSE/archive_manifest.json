@@ -1,0 +1,15 @@
+{
+    "symbol": "BSE",
+    "date_range": {
+        "start": "2017-02-03",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9498,
+    "total_records": 2383,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:00:24.156657"
+    }
+}

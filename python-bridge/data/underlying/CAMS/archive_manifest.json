@@ -1,0 +1,15 @@
+{
+    "symbol": "CAMS",
+    "date_range": {
+        "start": "2020-10-05",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.953,
+    "total_records": 1479,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:02:48.593853"
+    }
+}
