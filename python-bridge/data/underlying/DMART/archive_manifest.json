@@ -1,0 +1,15 @@
+{
+    "symbol": "DMART",
+    "date_range": {
+        "start": "2017-03-21",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9503,
+    "total_records": 2353,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:03:18.835753"
+    }
+}
