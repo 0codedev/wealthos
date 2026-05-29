@@ -1,0 +1,15 @@
+{
+    "symbol": "HAL",
+    "date_range": {
+        "start": "2018-03-28",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9502,
+    "total_records": 2100,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:02:20.254689"
+    }
+}
