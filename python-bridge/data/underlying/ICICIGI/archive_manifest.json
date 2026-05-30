@@ -1,0 +1,15 @@
+{
+    "symbol": "ICICIGI",
+    "date_range": {
+        "start": "2017-09-27",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.95,
+    "total_records": 2223,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:01:20.094663"
+    }
+}
