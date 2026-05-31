@@ -1,0 +1,15 @@
+{
+    "symbol": "KFINTECH",
+    "date_range": {
+        "start": "2018-05-28",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.4269,
+    "total_records": 925,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:05:22.229244"
+    }
+}

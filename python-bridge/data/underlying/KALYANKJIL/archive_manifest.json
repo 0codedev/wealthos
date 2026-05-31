@@ -1,0 +1,15 @@
+{
+    "symbol": "KALYANKJIL",
+    "date_range": {
+        "start": "2021-03-26",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9503,
+    "total_records": 1359,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:03:21.169816"
+    }
+}

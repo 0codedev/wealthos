@@ -1,0 +1,15 @@
+{
+    "symbol": "KAYNES",
+    "date_range": {
+        "start": "2022-11-22",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9529,
+    "total_records": 950,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:04:39.635590"
+    }
+}
