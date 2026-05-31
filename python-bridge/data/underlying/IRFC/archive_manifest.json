@@ -1,0 +1,15 @@
+{
+    "symbol": "IRFC",
+    "date_range": {
+        "start": "2021-01-29",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.951,
+    "total_records": 1398,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:01:46.142464"
+    }
+}
