@@ -1,0 +1,15 @@
+{
+    "symbol": "MAXHEALTH",
+    "date_range": {
+        "start": "2020-08-21",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9521,
+    "total_records": 1509,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:03:02.107306"
+    }
+}

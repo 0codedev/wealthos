@@ -1,0 +1,15 @@
+{
+    "symbol": "MAZDOCK",
+    "date_range": {
+        "start": "2017-12-04",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.6466,
+    "total_records": 1482,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:05:38.713774"
+    }
+}
