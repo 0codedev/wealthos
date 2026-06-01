@@ -1,0 +1,15 @@
+{
+    "symbol": "MANKIND",
+    "date_range": {
+        "start": "2023-05-09",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9544,
+    "total_records": 837,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:02:41.321496"
+    }
+}

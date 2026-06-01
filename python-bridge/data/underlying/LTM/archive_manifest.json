@@ -1,0 +1,15 @@
+{
+    "symbol": "LTM",
+    "date_range": {
+        "start": "2016-07-21",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9494,
+    "total_records": 2516,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:01:34.815324"
+    }
+}
