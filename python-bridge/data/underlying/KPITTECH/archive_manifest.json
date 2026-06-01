@@ -1,0 +1,15 @@
+{
+    "symbol": "KPITTECH",
+    "date_range": {
+        "start": "2019-04-22",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9519,
+    "total_records": 1839,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:06:19.261426"
+    }
+}

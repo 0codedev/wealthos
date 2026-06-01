@@ -1,0 +1,15 @@
+{
+    "symbol": "LAURUSLABS",
+    "date_range": {
+        "start": "2016-12-19",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9504,
+    "total_records": 2416,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:04:58.610253"
+    }
+}
