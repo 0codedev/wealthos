@@ -1,0 +1,15 @@
+{
+    "symbol": "NAM-INDIA",
+    "date_range": {
+        "start": "2017-11-06",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9507,
+    "total_records": 2198,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:02:54.879670"
+    }
+}
