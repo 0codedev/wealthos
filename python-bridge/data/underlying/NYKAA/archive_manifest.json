@@ -1,0 +1,15 @@
+{
+    "symbol": "NYKAA",
+    "date_range": {
+        "start": "2021-11-10",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9526,
+    "total_records": 1206,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:08:10.716122"
+    }
+}

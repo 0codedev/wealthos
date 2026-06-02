@@ -1,0 +1,15 @@
+{
+    "symbol": "NUVAMA",
+    "date_range": {
+        "start": "2023-09-26",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9524,
+    "total_records": 740,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:07:03.913856"
+    }
+}
