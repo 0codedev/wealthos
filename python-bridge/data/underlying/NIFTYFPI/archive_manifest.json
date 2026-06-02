@@ -1,0 +1,15 @@
+{
+    "symbol": "NIFTYFPI",
+    "date_range": {
+        "start": "2025-11-10",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.964,
+    "total_records": 214,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:05:18.008981"
+    }
+}
