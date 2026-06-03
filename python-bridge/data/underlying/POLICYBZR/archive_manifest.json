@@ -1,0 +1,15 @@
+{
+    "symbol": "POLICYBZR",
+    "date_range": {
+        "start": "2021-11-15",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9532,
+    "total_records": 1203,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:07:05.999053"
+    }
+}
