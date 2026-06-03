@@ -1,0 +1,15 @@
+{
+    "symbol": "PAYTM",
+    "date_range": {
+        "start": "2021-11-18",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9524,
+    "total_records": 1200,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:04:56.500086"
+    }
+}
