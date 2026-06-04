@@ -1,0 +1,15 @@
+{
+    "symbol": "RVNL",
+    "date_range": {
+        "start": "2019-04-11",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9505,
+    "total_records": 1844,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:01:30.614353"
+    }
+}

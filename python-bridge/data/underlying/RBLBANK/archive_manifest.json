@@ -1,0 +1,15 @@
+{
+    "symbol": "RBLBANK",
+    "date_range": {
+        "start": "2016-08-31",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9496,
+    "total_records": 2488,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:00:49.307162"
+    }
+}
