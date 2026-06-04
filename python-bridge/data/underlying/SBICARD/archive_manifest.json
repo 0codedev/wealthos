@@ -1,0 +1,15 @@
+{
+    "symbol": "SBICARD",
+    "date_range": {
+        "start": "2020-03-16",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9529,
+    "total_records": 1617,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:06:40.984334"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "symbol": "SBILIFE",
+    "date_range": {
+        "start": "2017-10-03",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9503,
+    "total_records": 2220,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:05:24.348668"
+    }
+}

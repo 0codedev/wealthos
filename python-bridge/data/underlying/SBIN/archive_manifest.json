@@ -1,0 +1,15 @@
+{
+    "symbol": "SBIN",
+    "date_range": {
+        "start": "2016-07-01",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9493,
+    "total_records": 2529,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:06:24.485780"
+    }
+}
