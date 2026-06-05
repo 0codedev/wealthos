@@ -1,0 +1,15 @@
+{
+    "symbol": "TIINDIA",
+    "date_range": {
+        "start": "2017-11-02",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9503,
+    "total_records": 2200,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:03:12.327379"
+    }
+}
