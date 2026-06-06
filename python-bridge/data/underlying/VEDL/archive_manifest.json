@@ -1,0 +1,15 @@
+{
+    "symbol": "VEDL",
+    "date_range": {
+        "start": "2026-06-08",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 1.0,
+    "total_records": 73,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:06:43.079871"
+    }
+}

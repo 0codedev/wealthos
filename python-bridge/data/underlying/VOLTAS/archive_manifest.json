@@ -1,0 +1,15 @@
+{
+    "symbol": "VOLTAS",
+    "date_range": {
+        "start": "2026-04-16",
+        "end": "2026-09-18"
+    },
+    "completeness_score": 0.9818,
+    "total_records": 108,
+    "lineage": {
+        "source": "Upstox Historical API",
+        "compression": "Snappy",
+        "format": "Parquet",
+        "last_archived_at": "2026-09-21T16:01:15.708152"
+    }
+}
