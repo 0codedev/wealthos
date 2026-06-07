@@ -1,0 +1,7 @@
+{
+  "active_trainer": "lightgbm",
+  "onnx_path": "_smoke\\lightgbm.onnx",
+  "metrics_path": "_smoke\\lightgbm.json",
+  "auc": 1.0,
+  "promoted_at": "2026-09-25T11:44:35+00:00"
+}
