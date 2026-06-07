@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "trainer": "lightgbm",
+      "auc": 1.0,
+      "onnx_path": "ml_models\\_smoke\\lightgbm.onnx",
+      "metrics_path": "ml_models\\_smoke\\lightgbm.json",
+      "onnx_size_bytes": 62463,
+      "n_folds": 20,
+      "folds_passed": 20
+    },
+    {
+      "trainer": "catboost",
+      "auc": 1.0,
+      "onnx_path": "ml_models\\_smoke\\catboost.onnx",
+      "metrics_path": "ml_models\\_smoke\\catboost.json",
+      "onnx_size_bytes": 279809,
+      "n_folds": 20,
+      "folds_passed": 20
+    }
+  ],
+  "generated_at": "2026-09-25T11:44:35+00:00"
+}
