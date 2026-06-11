@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "calibrated_at": "2026-09-21T15:30:47.862021",
+  "is_synthetic_bluff": false,
+  "sample_size": 5888,
+  "r_factor": {
+    "model_type": "multivariate_ols_time_decay",
+    "intercept_w0": 0.5522,
+    "weight_rvol": 0.5615,
+    "weight_norm_price": 0.6627,
+    "time_decay_gamma": 0.382,
+    "lookback_days": 20,
+    "actual_pearson_r": 0.8748,
+    "actual_spearman_rho": 0.6104,
+    "actual_mae": 0.434,
+    "r_squared": 0.7653
+  },
+  "breakout_beacon": {
+    "volume_surge_multiplier": 2.0,
+    "candle_body_ratio": 0.5,
+    "min_candle_pct_change": 0.4,
+    "lookback_candles": 20,
+    "time_decay_half_life_mins": 30
+  },
+  "contraction_breakout": {
+    "squeeze_ratio": 0.7,
+    "fast_lookback": 5,
+    "slow_lookback": 10
+  },
+  "options_apex": {
+    "sentiment_baseline": 50.0,
+    "max_pain_variance_pct": 0.05
+  },
+  "dynamic_regime_weights": {
+    "updated_at": "2026-10-12T14:09:08Z",
+    "dominant_regime": "RANGE_BOUND",
+    "gain_kappa": 0.884,
+    "weights": {
+      "cleantrend": 0.1873,
+      "rvol": 0.1865,
+      "mms": 0.3627,
+      "r_factor": 0.2635
+    },
+    "posteriors": {
+      "BULL_EXPANSION": 0.2431,
+      "BEAR_FLUSH": 0.0067,
+      "RANGE_BOUND": 0.5173,
+      "CHOP_HIGH_VOL": 0.233
+    }
+  }
+}
