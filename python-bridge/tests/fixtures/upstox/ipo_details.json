@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "data": {
+    "id": "ipo-1",
+    "name": "Acme Corp IPO",
+    "status": "upcoming",
+    "issue_size": "500 Cr",
+    "price_band_min": 250.0,
+    "price_band_max": 270.0,
+    "open_date": "2026-06-10",
+    "close_date": "2026-06-12",
+    "allotment_date": "2026-06-15",
+    "listing_date": "2026-06-18",
+    "lot_size": 55,
+    "subscription_status": {
+      "retail": 1.2,
+      "qib": 0.5,
+      "nii": 0.8,
+      "total": 0.75
+    },
+    "gmp": 25.0
+  }
+}

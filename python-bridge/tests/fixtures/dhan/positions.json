@@ -1,0 +1,34 @@
+[
+  {
+    "dhanClientId": "100001",
+    "tradingSymbol": "SBIN",
+    "securityId": "3045",
+    "exchangeSegment": "NSE_EQ",
+    "positionType": "LONG",
+    "productType": "INTRADAY",
+    "buyQty": 200,
+    "buyAvg": 580.20,
+    "sellQty": 200,
+    "sellAvg": 583.50,
+    "netQty": 0,
+    "realizedProfit": 660.00,
+    "unrealizedProfit": 0.0,
+    "authMode": "interactive"
+  },
+  {
+    "dhanClientId": "100001",
+    "tradingSymbol": "NIFTY26JUN22000CE",
+    "securityId": "45213",
+    "exchangeSegment": "NSE_FO",
+    "positionType": "LONG",
+    "productType": "MARGIN",
+    "buyQty": 50,
+    "buyAvg": 120.50,
+    "sellQty": 0,
+    "sellAvg": 0.0,
+    "netQty": 50,
+    "realizedProfit": 0.0,
+    "unrealizedProfit": 250.00,
+    "authMode": "interactive"
+  }
+]

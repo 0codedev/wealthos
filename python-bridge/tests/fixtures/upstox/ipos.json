@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "ipo-1",
+      "name": "Acme Corp IPO",
+      "status": "upcoming",
+      "issue_size": "500 Cr",
+      "price_band_min": 250.0,
+      "price_band_max": 270.0,
+      "open_date": "2026-06-10",
+      "close_date": "2026-06-12"
+    },
+    {
+      "id": "ipo-2",
+      "name": "Beta Labs IPO",
+      "status": "open",
+      "issue_size": "1200 Cr",
+      "price_band_min": 450.0,
+      "price_band_max": 480.0,
+      "open_date": "2026-06-01",
+      "close_date": "2026-06-04"
+    }
+  ]
+}

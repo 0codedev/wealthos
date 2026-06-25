@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "news-101",
+      "title": "Reliance Retail Expands Operations into E-Commerce Fashion Segments",
+      "description": "Reliance Retail is rolling out a new app to focus on boutique fashion retail across tier-2 cities.",
+      "source": "Financial Express",
+      "published_at": "2026-06-02T12:00:00Z",
+      "sentiment": "POSITIVE",
+      "instrument_keys": ["NSE_EQ|INE002A01018"]
+    },
+    {
+      "id": "news-102",
+      "title": "TCS Secures Large IT Contract from UK-Based Retailer",
+      "description": "Tata Consultancy Services has been selected to digitalize the logistics system of a leading UK retail chain.",
+      "source": "LiveMint",
+      "published_at": "2026-06-02T13:30:00Z",
+      "sentiment": "POSITIVE",
+      "instrument_keys": ["NSE_EQ|INE467B01029"]
+    }
+  ]
+}

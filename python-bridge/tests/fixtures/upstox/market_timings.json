@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "exchange": "NSE",
+      "session_type": "regular",
+      "start_time": "09:15:00",
+      "end_time": "15:30:00"
+    },
+    {
+      "exchange": "NSE",
+      "session_type": "pre-market",
+      "start_time": "09:00:00",
+      "end_time": "09:08:00"
+    }
+  ]
+}

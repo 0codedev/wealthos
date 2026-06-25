@@ -1,0 +1,30 @@
+[
+  {
+    "tradeId": "88210602001",
+    "orderId": "99210602001",
+    "dhanClientId": "100001",
+    "tradingSymbol": "RELIANCE",
+    "securityId": "2885",
+    "exchangeSegment": "NSE_EQ",
+    "transactionType": "BUY",
+    "productType": "CNC",
+    "quantity": 10,
+    "price": 2450.00,
+    "tradeTime": "2026-06-02T10:15:35",
+    "authMode": "interactive"
+  },
+  {
+    "tradeId": "88210602002",
+    "orderId": "99210602002",
+    "dhanClientId": "100001",
+    "tradingSymbol": "TCS",
+    "securityId": "11536",
+    "exchangeSegment": "NSE_EQ",
+    "transactionType": "SELL",
+    "productType": "INTRADAY",
+    "quantity": 5,
+    "price": 3410.20,
+    "tradeTime": "2026-06-02T11:20:11",
+    "authMode": "interactive"
+  }
+]
