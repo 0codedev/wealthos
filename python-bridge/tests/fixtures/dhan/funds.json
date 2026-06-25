@@ -1,0 +1,11 @@
+{
+  "dhanClientId": "100001",
+  "availableBalance": 250000.00,
+  "sodLimit": 200000.00,
+  "collateralAmount": 50000.00,
+  "receiveableAmount": 0.00,
+  "utilizedAmount": 15000.00,
+  "blockedAmount": 0.00,
+  "withdrawableBalance": 235000.00,
+  "authMode": "interactive"
+}

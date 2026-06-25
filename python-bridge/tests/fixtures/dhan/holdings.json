@@ -1,0 +1,30 @@
+[
+  {
+    "dhanClientId": "100001",
+    "isin": "INE002A01018",
+    "tradingSymbol": "RELIANCE",
+    "exchangeSegment": "NSE_EQ",
+    "quantity": 100,
+    "t1Quantity": 0,
+    "avgCostPrice": 2450.50,
+    "currentPrice": 2465.00,
+    "collateralQty": 0,
+    "collateralType": "NONE",
+    "haircut": 0.0,
+    "authMode": "interactive"
+  },
+  {
+    "dhanClientId": "100001",
+    "isin": "INE040A01034",
+    "tradingSymbol": "HDFCBANK",
+    "exchangeSegment": "NSE_EQ",
+    "quantity": 50,
+    "t1Quantity": 10,
+    "avgCostPrice": 1520.00,
+    "currentPrice": 1515.20,
+    "collateralQty": 0,
+    "collateralType": "NONE",
+    "haircut": 0.0,
+    "authMode": "interactive"
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "orderId": "99210602001",
+    "dhanClientId": "100001",
+    "correlationId": "corr-001",
+    "tradingSymbol": "RELIANCE",
+    "securityId": "2885",
+    "exchangeSegment": "NSE_EQ",
+    "transactionType": "BUY",
+    "productType": "CNC",
+    "orderType": "LIMIT",
+    "quantity": 10,
+    "disclosedQuantity": 0,
+    "price": 2450.00,
+    "triggerPrice": 0.0,
+    "orderStatus": "TRADED",
+    "createTime": "2026-06-02T10:15:30",
+    "updateTime": "2026-06-02T10:15:35",
+    "authMode": "interactive"
+  },
+  {
+    "orderId": "99210602002",
+    "dhanClientId": "100001",
+    "correlationId": "corr-002",
+    "tradingSymbol": "TCS",
+    "securityId": "11536",
+    "exchangeSegment": "NSE_EQ",
+    "transactionType": "SELL",
+    "productType": "INTRADAY",
+    "orderType": "MARKET",
+    "quantity": 5,
+    "disclosedQuantity": 0,
+    "price": 3410.20,
+    "triggerPrice": 0.0,
+    "orderStatus": "TRADED",
+    "createTime": "2026-06-02T11:20:10",
+    "updateTime": "2026-06-02T11:20:11",
+    "authMode": "interactive"
+  }
+]

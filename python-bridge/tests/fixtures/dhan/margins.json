@@ -1,0 +1,12 @@
+{
+  "dhanClientId": "100001",
+  "marginAvailable": 235000.00,
+  "marginUtilized": 15000.00,
+  "marginUtilizedDetails": {
+    "optionPremium": 6025.00,
+    "spanMargin": 8975.00,
+    "exposureMargin": 0.00,
+    "deliveryMargin": 0.00
+  },
+  "authMode": "interactive"
+}
