@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "instrument_key": "NSE_FO|45678",
+      "symbol": "NIFTY26JUN2623000CE",
+      "last_price": 120.5,
+      "volume": 55000,
+      "oi": 1500000
+    },
+    {
+      "instrument_key": "NSE_FO|45679",
+      "symbol": "NIFTY26JUN2623000PE",
+      "last_price": 95.2,
+      "volume": 42000,
+      "oi": 1200000
+    }
+  ]
+}

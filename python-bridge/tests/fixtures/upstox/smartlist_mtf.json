@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "instrument_key": "NSE_EQ|INE002A01018",
+      "symbol": "RELIANCE",
+      "allowed_leverage": 4.0,
+      "margin_required_pct": 25.0
+    },
+    {
+      "instrument_key": "NSE_EQ|INE467B01029",
+      "symbol": "TCS",
+      "allowed_leverage": 4.0,
+      "margin_required_pct": 25.0
+    }
+  ]
+}

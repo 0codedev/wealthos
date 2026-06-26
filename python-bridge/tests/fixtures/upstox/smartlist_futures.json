@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "instrument_key": "NSE_FO|55678",
+      "symbol": "RELIANCE26JUNFUT",
+      "last_price": 2850.5,
+      "volume": 25000,
+      "oi": 800000
+    },
+    {
+      "instrument_key": "NSE_FO|55679",
+      "symbol": "TCS26JUNFUT",
+      "last_price": 3920.0,
+      "volume": 12000,
+      "oi": 400000
+    }
+  ]
+}

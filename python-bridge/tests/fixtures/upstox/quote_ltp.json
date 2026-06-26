@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "data": {
+    "NSE_EQ|INE002A01018": {
+      "last_price": 2850.5,
+      "instrument_key": "NSE_EQ|INE002A01018"
+    },
+    "NSE_EQ|INE467B01029": {
+      "last_price": 3920.0,
+      "instrument_key": "NSE_EQ|INE467B01029"
+    }
+  }
+}

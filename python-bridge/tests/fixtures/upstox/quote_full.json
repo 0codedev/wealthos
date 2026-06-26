@@ -1,0 +1,49 @@
+{
+  "status": "success",
+  "data": {
+    "NSE_EQ|INE002A01018": {
+      "last_price": 2850.5,
+      "volume": 1284520,
+      "average_price": 2845.2,
+      "oi": 0.0,
+      "ohlc": {
+        "open": 2835.0,
+        "high": 2862.0,
+        "low": 2822.0,
+        "close": 2830.0
+      },
+      "depth": {
+        "buy": [
+          {"price": 2850.0, "quantity": 875, "orders": 4},
+          {"price": 2849.5, "quantity": 1400, "orders": 5}
+        ],
+        "sell": [
+          {"price": 2850.5, "quantity": 1200, "orders": 6},
+          {"price": 2851.0, "quantity": 900, "orders": 3}
+        ]
+      }
+    },
+    "NSE_EQ|INE467B01029": {
+      "last_price": 3920.0,
+      "volume": 642300,
+      "average_price": 3922.5,
+      "oi": 0.0,
+      "ohlc": {
+        "open": 3900.0,
+        "high": 3945.0,
+        "low": 3890.0,
+        "close": 3912.0
+      },
+      "depth": {
+        "buy": [
+          {"price": 3919.5, "quantity": 300, "orders": 2},
+          {"price": 3918.0, "quantity": 500, "orders": 4}
+        ],
+        "sell": [
+          {"price": 3920.0, "quantity": 400, "orders": 3},
+          {"price": 3921.5, "quantity": 600, "orders": 5}
+        ]
+      }
+    }
+  }
+}
