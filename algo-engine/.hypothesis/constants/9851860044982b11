@@ -1,0 +1,4 @@
+# file: C:\Users\gadda\Desktop\Projects\1. Wealth Dashboard v2\algo-engine\strategies\ema_trend_pullback.py
+# hypothesis_version: 6.155.7
+
+[0.0, 0.02, 0.5, 1.0, 2.0, 100000.0, '%H:%M:%S', '09:15:00', '15:00:00', '15:15:00', '15:20:00', 'BUY', 'SELL', '[%s] %s', 'candle', 'capital', 'close', 'down', 'ema_fast_period', 'ema_med_period', 'ema_slow_period', 'flat', 'high', 'instrument', 'last_price', 'low', 'ltp', 'market_open', 'max_trades_per_day', 'no_new_entry', 'open', 'price', 'pullback_band', 'quantity', 'session_close', 'slow_ema', 'square_off', 'stop_method', 'swing', 'swing_lookback', 'target_rr', 'time', 'up', 'warmup_period']

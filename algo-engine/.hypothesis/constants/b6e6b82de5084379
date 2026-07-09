@@ -1,0 +1,4 @@
+# file: C:\Users\gadda\Desktop\Projects\1. Wealth Dashboard v2\algo-engine\strategies\orb_enhanced.py
+# hypothesis_version: 6.155.7
+
+[0.0, 0.02, 0.2, 0.6, 1.0, 1.5, 2.0, 100000.0, 2000, '%H:%M:%S', '09:15:00', '15:00:00', '15:15:00', '15:20:00', 'BUY', 'ORB_Enhanced_v1', 'SELL', '[%s] %s', 'candle', 'capital', 'close', 'high', 'instrument', 'last_price', 'low', 'ltp', 'market_open', 'max_trades_per_day', 'no_new_entry', 'price', 'quantity', 'require_retest', 'session_close', 'square_off', 'stop_multiplier', 'target_multiplier', 'time', 'volume', 'volume_lookback', 'volume_multiple', 'warmup_period']
