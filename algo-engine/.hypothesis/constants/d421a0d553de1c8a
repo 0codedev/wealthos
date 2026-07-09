@@ -1,0 +1,4 @@
+# file: C:\Users\gadda\Desktop\Projects\1. Wealth Dashboard v2\algo-engine\strategies\volatility_squeeze.py
+# hypothesis_version: 6.155.7
+
+[0.0, 0.02, 0.6, 1.0, 1.5, 2.0, 100000.0, '%H:%M:%S', '09:15:00', '15:00:00', '15:15:00', '15:20:00', 'BUY', 'SELL', '[%s] %s', 'bb_std', 'breakout_band', 'candle', 'capital', 'close', 'confidence', 'high', 'instrument', 'kc_multiplier', 'last_price', 'lookback', 'low', 'ltp', 'market_open', 'max_trades_per_day', 'no_new_entry', 'open', 'price', 'quantity', 'session_close', 'square_off', 'target_rr', 'time', 'warmup_period']
