@@ -1,0 +1,12 @@
+{
+  "tests/test_structural_smoke.py::test_strategy_defines_basestrategy_subclass[vwap_mean_reversion.py]": true,
+  "tests/test_structural_smoke.py::test_strategy_defines_basestrategy_subclass[ema_trend_pullback.py]": true,
+  "tests/test_structural_smoke.py::test_strategy_defines_basestrategy_subclass[orb_enhanced.py]": true,
+  "tests/test_structural_smoke.py::test_strategy_defines_basestrategy_subclass[zscore_reversion.py]": true,
+  "tests/test_structural_smoke.py::test_strategy_defines_basestrategy_subclass[volatility_squeeze.py]": true,
+  "tests/test_structural_smoke.py::test_module_docstring_completeness[vwap_mean_reversion.py]": true,
+  "tests/test_structural_smoke.py::test_module_docstring_completeness[ema_trend_pullback.py]": true,
+  "tests/test_structural_smoke.py::test_module_docstring_completeness[orb_enhanced.py]": true,
+  "tests/test_structural_smoke.py::test_module_docstring_completeness[zscore_reversion.py]": true,
+  "tests/test_structural_smoke.py::test_module_docstring_completeness[volatility_squeeze.py]": true
+}
