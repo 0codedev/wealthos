@@ -1,0 +1,2 @@
+date,entry_time,exit_time,direction,entry_price,exit_price,stop_loss,target,quantity,gross_pnl,transaction_costs,pnl,exit_reason,cumulative_pnl
+2026-05-26,2026-05-26 12:00:00,2026-05-26 13:00:00,BUY,4429.0,4416.7,4416.7,4471.385714285714,162,-1992.6000000000295,592.539538414,-2585.1395384140296,STOP_LOSS,-2585.1395384140296
