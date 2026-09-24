@@ -1,0 +1,2 @@
+date,entry_time,exit_time,direction,entry_price,exit_price,stop_loss,target,quantity,gross_pnl,transaction_costs,pnl,exit_reason,cumulative_pnl
+2026-02-17,2026-02-17 14:30:00,2026-02-17 15:15:00,BUY,12955.0,12984.0,12939.0,13050.785714285714,125,3625.0,1282.00333625,2342.99666375,EOD_SQUAREOFF,2342.99666375
