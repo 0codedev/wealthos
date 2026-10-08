@@ -1,0 +1,48 @@
+{
+  "pairs": [
+    {
+      "symbol_a": "TCS",
+      "symbol_b": "INFY",
+      "security_id_a": "11536",
+      "security_id_b": "3506",
+      "z_entry": 2.0,
+      "z_exit": 0.0,
+      "z_stop": 3.5,
+      "capital_allocation": 0.25,
+      "lookback": 20
+    },
+    {
+      "symbol_a": "HDFCBANK",
+      "symbol_b": "ICICIBANK",
+      "security_id_a": "1333",
+      "security_id_b": "4963",
+      "z_entry": 2.0,
+      "z_exit": 0.0,
+      "z_stop": 3.5,
+      "capital_allocation": 0.25,
+      "lookback": 20
+    },
+    {
+      "symbol_a": "AXISBANK",
+      "symbol_b": "KOTAKBANK",
+      "security_id_a": "5900",
+      "security_id_b": "1922",
+      "z_entry": 2.0,
+      "z_exit": 0.0,
+      "z_stop": 3.5,
+      "capital_allocation": 0.25,
+      "lookback": 20
+    },
+    {
+      "symbol_a": "BPCL",
+      "symbol_b": "HPCL",
+      "security_id_a": "526",
+      "security_id_b": "1406",
+      "z_entry": 2.0,
+      "z_exit": 0.0,
+      "z_stop": 3.5,
+      "capital_allocation": 0.25,
+      "lookback": 20
+    }
+  ]
+}
