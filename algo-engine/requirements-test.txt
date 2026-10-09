@@ -1,0 +1,6 @@
+# Test-only dependencies for the Intraday Strategy Suite.
+# The suite under test depends only on the Python standard library, numpy, and
+# pandas (see requirements.txt). These two packages are used exclusively by the
+# test harness in algo-engine/tests/.
+pytest>=8.0
+hypothesis>=6.100
