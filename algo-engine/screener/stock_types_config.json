@@ -1,0 +1,123 @@
+{
+  "_doc": "Single source of truth for ALL stock-type detector thresholds. Read by BOTH algo-engine/screener/stock_types.py (backtest + daemon) and services/alpha/StockTypeClassifier.ts (live UI). Every threshold maps to a sentence in docs/algo/strategy_brief.md. Tune only via the backtest report in docs/algo/stock_type_backtest_report.md.",
+
+  "decision_windows": {
+    "cash_scan_minutes": [45, 120],
+    "cash_scan_times_ist": ["09:35", "10:00", "10:30"],
+    "fno_scan_start_minute": 75,
+    "fno_scan_end_minute": 285,
+    "fno_scan_interval_minutes": 30,
+    "fno_entry_cutoff_minute": 105,
+    "fno_exit_minute": 330
+  },
+
+  "type1_accumulator": {
+    "_doc": "Silent Accumulator (PCJEWELLER). EVIDENCE 2026-09: no directional edge. Full spec measured excess -0.115% (t=-2.76); 'near day low' is the harmful component. Demoted to WATCH-ONLY: still labelled in the UI for learning, but never auto-surfaced as a trade candidate.",
+    "direction": "LONG",
+    "priority": 0,
+    "action": "WATCH_ONLY_NO_EDGE",
+    "min_low_vs_open": 0.998,
+    "max_day_range_pos": 0.45,
+    "min_chg_from_open_pct": 0.3,
+    "max_chg_from_open_pct": 3.0,
+    "max_fc_range_pct": 1.2,
+    "min_vol_pace_45": 0.6,
+    "max_vol_pace_45": 1.8,
+    "max_vol_stab_45": 1.2,
+    "max_body_open30_to_atr": 0.4
+  },
+
+  "type2_exhaustion_trap": {
+    "_doc": "Exhaustion Trap (ADFFOODS). EVIDENCE 2026-09: the VOLUME leg is REAL and robust - first-15m volume >= 8x normal gives excess -0.166% (t=-2.93, 40.6% positive, negative in all 4 years). The GAP leg was WRONG: a 3% gap is mildly BULLISH (+0.110%, t=+2.26); only gaps > 5% behave as traps (-0.174%). Volume is now the sole (OR) trigger; gap threshold raised to 5%.",
+    "direction": "SHORT",
+    "priority": 0,
+    "action": "BLOCK_LONG_SCALP_SHORT",
+    "min_gap_pct": 5.0,
+    "min_fc15_vol_ratio": 8.0
+  },
+
+  "type3_pullback_continue": {
+    "_doc": "Pullback-and-Continue (RITES). EVIDENCE 2026-09: coin flip. All variants measured |excess| < 0.006% with |t| < 1.1 (n=18k-35k). Demoted to WATCH-ONLY.",
+    "direction": "LONG",
+    "priority": 0,
+    "action": "WATCH_ONLY_NO_EDGE",
+    "min_push_from_open_pct": 1.0,
+    "min_low6_vs_open_pct": 0.0,
+    "max_pb_vol_ratio": 0.7,
+    "min_dist_vwap_pct": 0.0,
+    "max_day_range_pos": 0.7,
+    "min_minutes_since_open": 30
+  },
+
+"type4_front_loaded": {
+    "_doc": "Front-Loaded Exhaustion: 80%+ of expected daily range in first 20 min. EVIDENCE 2026-09: em_coverage alone showed no edge (+0.022%, decile spread 0.029 - weakest feature scanned). Retained as a block only in combination with the validated volume spike; no longer blocks on em_coverage alone.",
+    "direction": "NONE",
+    "priority": 0,
+    "action": "BLOCK_ALL",
+    "max_minutes_since_open": 24,
+    "min_em_coverage": 0.8,
+    "require_volume_spike": true
+  },
+
+  "type5_gap_freeze": {
+    "_doc": "Gap-Up-Then-Freeze (BHARATSE). EVIDENCE 2026-09: only 4 samples in the backtest - far too few to judge. Kept as WATCH-ONLY so samples accumulate.",
+    "direction": "LONG",
+    "priority": 0,
+    "action": "WATCH_ONLY_INSUFFICIENT_SAMPLE",
+    "min_gap_pct": 1.0,
+    "max_gap_pct": 4.0,
+    "min_freeze_streak": 6
+  },
+
+  "fno1_hod_exhaustion_short": {
+    "_doc": "F&O: sitting at/near day high after a big move. EVIDENCE 2026-09: no short edge (excess +0.039%, t=+0.98). Demoted to WATCH-ONLY.",
+    "direction": "SHORT",
+    "priority": 0,
+    "action": "WATCH_ONLY_NO_EDGE",
+    "min_day_range_pos": 0.92,
+    "min_chg_from_open_pct": 2.0,
+    "max_candle_body_fade": 0.5,
+    "max_vol_pace_45": 0.7
+  },
+
+  "fno2_vwap_snapback_short": {
+    "_doc": "F&O: far above VWAP near day high. EVIDENCE 2026-09: no edge (-0.031%, t=-0.92); a short pays cost on top. Demoted to WATCH-ONLY.",
+    "direction": "SHORT",
+    "priority": 0,
+    "action": "WATCH_ONLY_NO_EDGE",
+    "min_vwap_z": 2.0,
+    "min_day_range_pos": 0.85,
+    "max_candle_body_fade": 0.6
+  },
+
+  "fno3_gap_exhaustion_short": {
+    "_doc": "F&O: big gap up, surge done. EVIDENCE 2026-09: gap 3-5% measured mildly BULLISH; only >5% showed trap behaviour on the cash side. No confirmed short edge - WATCH-ONLY.",
+    "direction": "SHORT",
+    "priority": 0,
+    "action": "WATCH_ONLY_NO_EDGE",
+    "min_gap_pct": 5.0,
+    "min_day_range_pos": 0.85
+  },
+
+  "fno4_accumulation_long": {
+    "_doc": "F&O accumulation LONG (cash Type 1 applied to F&O universe). EVIDENCE 2026-09: inherits Type 1's lack of edge. WATCH-ONLY.",
+    "direction": "LONG",
+    "priority": 0,
+    "action": "WATCH_ONLY_NO_EDGE",
+    "_inherit": "type1_accumulator"
+  },
+
+  "risk": {
+    "stop_atr_mult_default": 1.5,
+    "target_atr_mult_default": 2.0,
+    "fno_short_stop_atr_mult": 1.0,
+    "fno_short_target_atr_mult": 1.5,
+    "_doc_trade_sim": "Stop/target distances as fractions of PRIOR-DAY daily ATR (d_atr14). Conservative: if a bar touches both, it counts as a stop.",
+    "cash_stop_datr_frac": 0.5,
+    "cash_target_datr_frac": 1.0,
+    "fno_stop_datr_frac": 0.4,
+    "fno_target_datr_frac": 0.75,
+    "max_open_positions": 3,
+    "max_risk_pct_per_trade": 2.0
+  }
+}
