@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WealthOS · Agent Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-base:        #0d0f14;
+      --bg-sidebar:     #111318;
+      --bg-panel:       #15181f;
+      --bg-bubble-ai:   #1a1e28;
+      --bg-bubble-user: #1b2a4a;
+      --bg-input:       #1c2030;
+      --accent:         #4f8ef7;
+      --accent-2:       #7c5cfc;
+      --accent-green:   #22c55e;
+      --accent-red:     #ef4444;
+      --accent-yellow:  #f59e0b;
+      --border:         rgba(255,255,255,0.06);
+      --text-primary:   #e8ecf4;
+      --text-secondary: #7b8394;
+      --text-muted:     #4a5162;
+      --glow-accent:    rgba(79,142,247,0.18);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%; font-family: 'Inter', sans-serif;
+      background: var(--bg-base); color: var(--text-primary);
+      overflow: hidden; -webkit-font-smoothing: antialiased;
+    }
+    .app {
+      display: grid; grid-template-columns: 280px 1fr;
+      height: 100vh;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background: var(--bg-sidebar); border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    .sidebar-header {
+      padding: 18px 16px 14px; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; font-size: 16px; flex-shrink: 0;
+      box-shadow: 0 0 18px var(--glow-accent);
+    }
+    .logo-text { font-size: 14px; font-weight: 700; letter-spacing: .3px; }
+    .logo-sub  { font-size: 10px; color: var(--text-secondary); margin-top: 1px; }
+
+    .search-wrap { padding: 10px 12px; border-bottom: 1px solid var(--border); position: relative; }
+    .search-icon { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 12px; pointer-events: none; }
+    .search-input {
+      width: 100%; background: var(--bg-panel); border: 1px solid var(--border);
+      border-radius: 8px; padding: 7px 12px 7px 32px; font-size: 12px;
+      color: var(--text-primary); font-family: inherit; outline: none; transition: border-color .2s;
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-input:focus { border-color: var(--accent); }
+
+    .session-list { flex: 1; overflow-y: auto; padding: 6px 0; }
+    .session-list::-webkit-scrollbar { width: 4px; }
+    .session-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    .session-group-label {
+      padding: 10px 16px 4px; font-size: 10px; font-weight: 600;
+      letter-spacing: .8px; color: var(--text-muted); text-transform: uppercase;
+    }
+    .session-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 14px; cursor: pointer; border-radius: 10px;
+      margin: 1px 6px; transition: background .15s; position: relative;
+    }
+    .session-item:hover { background: rgba(255,255,255,0.04); }
+    .session-item.active { background: rgba(79,142,247,0.12); }
+    .session-item.active::before {
+      content: ''; position: absolute; left: 0; top: 20%; height: 60%; width: 3px;
+      background: var(--accent); border-radius: 0 3px 3px 0;
+    }
+    .session-avatar {
+      width: 34px; height: 34px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; flex-shrink: 0; position: relative;
+    }
+    .session-avatar.telegram  { background: linear-gradient(135deg,#2da5e0,#1a6fa3); }
+    .session-avatar.pc        { background: linear-gradient(135deg,#7c5cfc,#4f8ef7); }
+    .session-avatar.scheduler { background: linear-gradient(135deg,#f59e0b,#e06c00); }
+
+    .online-dot {
+      position: absolute; bottom: 1px; right: 1px;
+      width: 8px; height: 8px; background: var(--accent-green);
+      border-radius: 50%; border: 2px solid var(--bg-sidebar);
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,.4); }
+      50%      { box-shadow: 0 0 0 5px rgba(34,197,94,0); }
+    }
+    .session-info { flex: 1; min-width: 0; }
+    .session-name { font-size: 12px; font-weight: 600; }
+    .session-preview {
+      font-size: 11px; color: var(--text-secondary);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px;
+    }
+    .session-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+    .session-time { font-size: 10px; color: var(--text-muted); }
+    .session-badge {
+      background: var(--accent); color: #fff; font-size: 9px; font-weight: 700;
+      border-radius: 9px; padding: 1px 6px; min-width: 18px; text-align: center;
+    }
+    .sidebar-footer {
+      border-top: 1px solid var(--border); padding: 10px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .user-avatar {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: linear-gradient(135deg,var(--accent),var(--accent-2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; flex-shrink: 0;
+    }
+    .user-info { flex: 1; min-width: 0; }
+    .user-name   { font-size: 12px; font-weight: 600; }
+    .user-status { font-size: 10px; color: var(--accent-green); margin-top: 1px; }
+    .settings-btn {
+      background: none; border: none; cursor: pointer;
+      color: var(--text-muted); font-size: 16px; transition: color .2s;
+    }
+    .settings-btn:hover { color: var(--text-primary); }
+
+    /* MAIN */
+    .main { display: flex; flex-direction: column; overflow: hidden; background: var(--bg-base); }
+
+    .mobile-strip {
+      background: linear-gradient(90deg,rgba(79,142,247,.08),rgba(124,92,252,.08));
+      border-bottom: 1px solid rgba(79,142,247,.12);
+      padding: 7px 20px; font-size: 11px; color: var(--text-secondary);
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    }
+    .mobile-strip .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--accent-green); animation: pulse-dot 2s infinite;
+      flex-shrink: 0;
+    }
+
+    .topbar {
+      display: flex; align-items: center; padding: 12px 20px;
+      border-bottom: 1px solid var(--border); background: var(--bg-panel);
+      gap: 12px; flex-shrink: 0;
+    }
+    .topbar-avatar {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg,#2da5e0,#1a6fa3);
+      border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; font-size: 16px;
+    }
+    .topbar-info { flex: 1; }
+    .topbar-name { font-size: 14px; font-weight: 600; }
+    .topbar-sub  { font-size: 11px; color: var(--accent-green); margin-top: 1px; }
+    .topbar-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+    .topbar-btn {
+      background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+      border-radius: 8px; padding: 6px 10px; font-size: 11px; font-weight: 500;
+      color: var(--text-secondary); cursor: pointer;
+      display: flex; align-items: center; gap: 5px; transition: all .2s;
+      font-family: inherit;
+    }
+    .topbar-btn:hover { background: rgba(79,142,247,.1); color: var(--accent); border-color: rgba(79,142,247,.3); }
+    .topbar-btn.danger:hover { background: rgba(239,68,68,.1); color: var(--accent-red); border-color: rgba(239,68,68,.3); }
+
+    /* MESSAGES */
+    .messages-area {
+      flex: 1; overflow-y: auto; padding: 20px;
+      display: flex; flex-direction: column; gap: 4px; scroll-behavior: smooth;
+    }
+    .messages-area::-webkit-scrollbar { width: 4px; }
+    .messages-area::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    .date-divider {
+      display: flex; align-items: center; gap: 12px; margin: 14px 0 10px;
+    }
+    .date-divider span { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+    .date-divider::before, .date-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .msg-row {
+      display: flex; align-items: flex-end; gap: 8px; max-width: 100%;
+      animation: msg-in .22s ease-out both;
+    }
+    @keyframes msg-in {
+      from { opacity: 0; transform: translateY(8px) scale(.98); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .msg-row.user  { flex-direction: row-reverse; }
+    .msg-row.agent { flex-direction: row; }
+
+    .msg-avatar {
+      width: 28px; height: 28px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; flex-shrink: 0; margin-bottom: 2px;
+    }
+    .msg-avatar.user   { background: linear-gradient(135deg,var(--accent),var(--accent-2)); }
+    .msg-avatar.agent  { background: linear-gradient(135deg,#1a6fa3,#2da5e0); }
+    .msg-avatar.system { background: linear-gradient(135deg,#7c5cfc,#4f8ef7); }
+
+    .bubble-wrap { display: flex; flex-direction: column; max-width: 72%; gap: 3px; }
+    .msg-row.user  .bubble-wrap { align-items: flex-end; }
+    .msg-row.agent .bubble-wrap { align-items: flex-start; }
+
+    .bubble {
+      padding: 10px 14px; border-radius: 14px;
+      font-size: 13px; line-height: 1.55; position: relative; word-break: break-word;
+    }
+    .bubble.user  {
+      background: var(--bg-bubble-user); border: 1px solid rgba(79,142,247,0.18);
+      border-bottom-right-radius: 4px;
+    }
+    .bubble.agent {
+      background: var(--bg-bubble-ai); border: 1px solid var(--border);
+      border-bottom-left-radius: 4px;
+    }
+    .bubble.system-note {
+      background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.2);
+      border-radius: 10px; font-size: 12px; color: var(--text-secondary);
+    }
+    .bubble-time   { font-size: 10px; color: var(--text-muted); padding: 0 2px; }
+    .bubble-sender { font-size: 10px; font-weight: 600; color: var(--accent); padding: 0 2px; }
+
+    .code-block {
+      background: #0d0f14; border: 1px solid var(--border);
+      border-radius: 8px; overflow: hidden; margin: 8px 0;
+    }
+    .code-block-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 6px 12px; background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border);
+    }
+    .code-lang { font-size: 10px; font-weight: 600; color: var(--accent); letter-spacing: .5px; }
+    .code-copy-btn {
+      font-size: 10px; background: none; border: none;
+      color: var(--text-muted); cursor: pointer; transition: color .2s; font-family: inherit;
+    }
+    .code-copy-btn:hover { color: var(--accent); }
+    .code-content {
+      padding: 10px 12px; font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; line-height: 1.6; color: var(--text-primary);
+      overflow-x: auto; white-space: pre;
+    }
+
+    .diff-block {
+      background: #0d0f14; border: 1px solid var(--border);
+      border-radius: 8px; overflow: hidden; margin: 8px 0;
+    }
+    .diff-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 6px 12px; background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border);
+    }
+    .diff-file  { font-size: 11px; font-weight: 500; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; }
+    .diff-badge { font-size: 9px; font-weight: 700; border-radius: 4px; padding: 2px 6px; }
+    .diff-badge.changed { background: rgba(245,158,11,.15); color: var(--accent-yellow); }
+    .diff-badge.created { background: rgba(34,197,94,.15); color: var(--accent-green); }
+    .diff-lines { font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.7; padding: 6px 0; }
+    .diff-line  { padding: 0 12px; }
+    .diff-line.add { background: rgba(34,197,94,.08); color: #4ade80; }
+    .diff-line.del { background: rgba(239,68,68,.08); color: #f87171; }
+    .diff-line.ctx { color: var(--text-muted); }
+
+    .action-card {
+      background: var(--bg-bubble-ai); border: 1px solid var(--border);
+      border-radius: 12px; padding: 12px 14px; margin-top: 4px; max-width: 72%;
+    }
+    .action-card-title { font-size: 12px; font-weight: 600; margin-bottom: 6px; color: var(--text-secondary); }
+    .action-card-desc  { font-size: 12px; color: var(--text-primary); margin-bottom: 10px; line-height: 1.5; }
+    .action-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+    .action-btn {
+      padding: 7px 14px; border-radius: 8px; font-size: 12px; font-weight: 600;
+      cursor: pointer; border: 1px solid transparent; font-family: inherit;
+      transition: all .2s; display: flex; align-items: center; gap: 5px;
+    }
+    .action-btn.approve { background: rgba(34,197,94,.1); border-color: rgba(34,197,94,.3); color: var(--accent-green); }
+    .action-btn.approve:hover { background: rgba(34,197,94,.2); transform: translateY(-1px); }
+    .action-btn.reject  { background: rgba(239,68,68,.1); border-color: rgba(239,68,68,.3); color: var(--accent-red); }
+    .action-btn.reject:hover  { background: rgba(239,68,68,.2); transform: translateY(-1px); }
+    .action-btn.view    { background: rgba(79,142,247,.08); border-color: rgba(79,142,247,.2); color: var(--accent); }
+    .action-btn.view:hover    { background: rgba(79,142,247,.15); transform: translateY(-1px); }
+
+    .status-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 3px 8px; border-radius: 20px; font-size: 10px; font-weight: 600; letter-spacing: .3px;
+    }
+    .status-chip.running { background: rgba(79,142,247,.12); color: var(--accent); border: 1px solid rgba(79,142,247,.2); }
+    .status-chip.success { background: rgba(34,197,94,.1); color: var(--accent-green); border: 1px solid rgba(34,197,94,.2); }
+    .status-chip.error   { background: rgba(239,68,68,.1); color: var(--accent-red); border: 1px solid rgba(239,68,68,.2); }
+    .chip-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+    .chip-dot.pulse { animation: pulse-chip 1.2s infinite; }
+    @keyframes pulse-chip { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+    .typing-indicator {
+      display: flex; align-items: center; gap: 10px;
+      padding: 4px 0; opacity: 0; transition: opacity .3s;
+    }
+    .typing-indicator.visible { opacity: 1; }
+    .typing-dots { display: flex; gap: 4px; }
+    .typing-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); animation: typing-bounce .8s infinite;
+    }
+    .typing-dot:nth-child(2) { animation-delay: .15s; }
+    .typing-dot:nth-child(3) { animation-delay: .30s; }
+    @keyframes typing-bounce {
+      0%,60%,100% { transform: translateY(0); opacity: .4; }
+      30%          { transform: translateY(-5px); opacity: 1; }
+    }
+    .typing-text { font-size: 11px; color: var(--text-muted); }
+
+    /* INPUT BAR */
+    .input-bar {
+      border-top: 1px solid var(--border); background: var(--bg-panel);
+      padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; flex-shrink: 0;
+    }
+    .context-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+    .ctx-pill {
+      background: rgba(124,92,252,0.1); border: 1px solid rgba(124,92,252,0.2);
+      border-radius: 6px; padding: 3px 8px; font-size: 10px; font-weight: 500;
+      color: #a78bfa; display: flex; align-items: center; gap: 4px;
+    }
+    .ctx-pill-close { cursor: pointer; opacity: .6; transition: opacity .15s; }
+    .ctx-pill-close:hover { opacity: 1; }
+    .input-row { display: flex; align-items: flex-end; gap: 8px; }
+    .input-extras { display: flex; gap: 4px; flex-shrink: 0; }
+    .input-extra-btn {
+      width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04); color: var(--text-muted);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      font-size: 14px; transition: all .2s;
+    }
+    .input-extra-btn:hover { background: rgba(79,142,247,.1); color: var(--accent); border-color: rgba(79,142,247,.3); }
+    .input-field-wrap {
+      flex: 1; background: var(--bg-input); border: 1px solid var(--border);
+      border-radius: 12px; display: flex; align-items: flex-end;
+      padding: 8px 12px; gap: 8px; transition: border-color .2s;
+    }
+    .input-field-wrap:focus-within { border-color: rgba(79,142,247,.4); box-shadow: 0 0 0 3px rgba(79,142,247,.07); }
+    #msg-input {
+      flex: 1; background: none; border: none; outline: none;
+      color: var(--text-primary); font-family: 'Inter', sans-serif;
+      font-size: 13px; resize: none; max-height: 120px; line-height: 1.5;
+    }
+    #msg-input::placeholder { color: var(--text-muted); }
+    .send-btn {
+      width: 34px; height: 34px; border-radius: 9px;
+      background: linear-gradient(135deg,var(--accent),var(--accent-2));
+      border: none; cursor: pointer; display: flex; align-items: center;
+      justify-content: center; color: #fff; font-size: 15px; flex-shrink: 0;
+      transition: all .2s; box-shadow: 0 4px 14px rgba(79,142,247,.3);
+    }
+    .send-btn:hover { transform: scale(1.08); box-shadow: 0 6px 20px rgba(79,142,247,.45); }
+    .send-btn:active { transform: scale(.96); }
+    .input-hint { font-size: 10px; color: var(--text-muted); padding: 0 2px; }
+
+    /* TOAST */
+    #toast-container {
+      position: fixed; bottom: 80px; right: 20px;
+      display: flex; flex-direction: column; gap: 8px; z-index: 9999;
+    }
+    .toast {
+      background: var(--bg-panel); border: 1px solid var(--border);
+      border-radius: 12px; padding: 10px 16px;
+      display: flex; align-items: center; gap: 10px;
+      font-size: 12px; animation: toast-in .3s ease-out;
+      box-shadow: 0 8px 32px rgba(0,0,0,.4); min-width: 240px;
+    }
+    .toast.success { border-left: 3px solid var(--accent-green); }
+    .toast.error   { border-left: 3px solid var(--accent-red); }
+    .toast.info    { border-left: 3px solid var(--accent); }
+    @keyframes toast-in { from { opacity:0; transform: translateX(20px); } to { opacity:1; transform:translateX(0); } }
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.6);
+      backdrop-filter: blur(6px); display: flex; align-items: center;
+      justify-content: center; z-index: 8888; opacity: 0;
+      pointer-events: none; transition: opacity .2s;
+    }
+    .modal-overlay.show { opacity: 1; pointer-events: all; }
+    .modal {
+      background: var(--bg-panel); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px; min-width: 320px; max-width: 420px;
+      box-shadow: 0 24px 64px rgba(0,0,0,.5);
+    }
+    .modal-icon  { font-size: 28px; margin-bottom: 12px; }
+    .modal-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .modal-desc  { font-size: 12px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
+    .modal-btns  { display: flex; justify-content: flex-end; gap: 8px; }
+
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    @media (max-width: 700px) {
+      .app { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-icon">&#9889;</div>
+      <div>
+        <div class="logo-text">WealthOS Bridge</div>
+        <div class="logo-sub">PC &#8596; Mobile Agent Layer</div>
+      </div>
+    </div>
+    <div class="search-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input class="search-input" type="text" id="search-input" placeholder="Search conversations&#8230;" />
+    </div>
+    <div class="session-list" id="session-list">
+      <div class="session-group-label">Active</div>
+      <div class="session-item active" data-id="telegram" onclick="switchSession('telegram')">
+        <div class="session-avatar telegram">&#128241;<div class="online-dot"></div></div>
+        <div class="session-info">
+          <div class="session-name">Phone &#183; Telegram</div>
+          <div class="session-preview" id="preview-telegram">Connected via WireGuard VPN</div>
+        </div>
+        <div class="session-meta">
+          <div class="session-time" id="time-telegram">now</div>
+        </div>
+      </div>
+      <div class="session-item" data-id="pc" onclick="switchSession('pc')">
+        <div class="session-avatar pc">&#128187;<div class="online-dot"></div></div>
+        <div class="session-info">
+          <div class="session-name">PC &#183; Antigravity IDE</div>
+          <div class="session-preview">Local bridge running</div>
+        </div>
+        <div class="session-meta"><div class="session-time">now</div></div>
+      </div>
+      <div class="session-group-label" style="margin-top:8px">Scheduled</div>
+      <div class="session-item" data-id="scheduler" onclick="switchSession('scheduler')">
+        <div class="session-avatar scheduler">&#9200;</div>
+        <div class="session-info">
+          <div class="session-name">Algo Scheduler</div>
+          <div class="session-preview">Next run: 09:15 AM</div>
+        </div>
+        <div class="session-meta"><div class="session-time">idle</div></div>
+      </div>
+      <div class="session-group-label" style="margin-top:8px">Recent</div>
+      <div class="session-item">
+        <div class="session-avatar pc" style="background:linear-gradient(135deg,#22c55e,#16a34a)">&#128202;</div>
+        <div class="session-info">
+          <div class="session-name">Market Briefing</div>
+          <div class="session-preview">NIFTY gap analysis done</div>
+        </div>
+        <div class="session-meta"><div class="session-time">4h</div></div>
+      </div>
+      <div class="session-item">
+        <div class="session-avatar pc" style="background:linear-gradient(135deg,#f59e0b,#92400e)">&#128274;</div>
+        <div class="session-info">
+          <div class="session-name">VPN Debug Session</div>
+          <div class="session-preview">WireGuard UDP 443 fixed</div>
+        </div>
+        <div class="session-meta"><div class="session-time">1d</div></div>
+      </div>
+    </div>
+    <div class="sidebar-footer">
+      <div class="user-avatar">G</div>
+      <div class="user-info">
+        <div class="user-name">@gadda</div>
+        <div class="user-status">&#9679; Bridge Active</div>
+      </div>
+      <button class="settings-btn" title="Settings" onclick="showToast('Settings coming soon','info')">&#9881;&#65039;</button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="mobile-strip">
+      <div class="dot"></div>
+      &#128241; Phone connected &middot; WireGuard VPN &middot; 68.233.111.34:443 &middot; 40-50 Mbps &nbsp;|&nbsp;
+      &#128187; PC Bridge running &middot;
+      <code style="font-family:'JetBrains Mono',monospace;font-size:10px;margin-left:4px">c:\Users\gadda\Desktop\Projects\1. Wealth Dashboard v2</code>
+    </div>
+
+    <div class="topbar">
+      <div class="topbar-avatar">&#128241;</div>
+      <div class="topbar-info">
+        <div class="topbar-name" id="topbar-name">Phone &middot; Telegram Session</div>
+        <div class="topbar-sub" id="topbar-sub">&#9679; Online &middot; Synced to PC &middot; WireGuard VPN Active</div>
+      </div>
+      <div class="topbar-actions">
+        <button class="topbar-btn" onclick="clearMessages()">&#128465; Clear</button>
+        <button class="topbar-btn" onclick="exportChat()">&#128229; Export</button>
+        <button class="topbar-btn danger" onclick="showConfirmModal()">&#8856; Kill Bridge</button>
+      </div>
+    </div>
+
+    <div class="messages-area" id="messages-area">
+      <div class="date-divider"><span>TODAY &middot; 2026-07-26</span></div>
+
+      <!-- System boot message -->
+      <div class="msg-row agent">
+        <div class="msg-avatar system">&#129302;</div>
+        <div class="bubble-wrap">
+          <div class="bubble-sender">WealthOS Bridge</div>
+          <div class="bubble system-note">
+            &#128279; <strong>Bridge Initialized.</strong> Your phone (Telegram) is mirrored to this IDE window.
+            Every message from Telegram appears here in real time. Every AI response here is forwarded to your phone
+            with Accept / Reject buttons.<br/><br/>
+            <span class="status-chip success"><span class="chip-dot"></span> Bridge Online</span>
+            <span class="status-chip running" style="margin-left:6px"><span class="chip-dot pulse"></span> Listening on port 4242</span>
+          </div>
+          <div class="bubble-time">04:15 PM</div>
+        </div>
+      </div>
+
+      <!-- User msg from phone -->
+      <div class="msg-row user" style="margin-top:10px">
+        <div class="msg-avatar user">G</div>
+        <div class="bubble-wrap">
+          <div class="bubble-sender" style="text-align:right;color:#7c5cfc">You &middot; from &#128241; Phone</div>
+          <div class="bubble user">Add a loading skeleton to the AllotmentModel in IPOWarRoom.tsx</div>
+          <div class="bubble-time" style="text-align:right">04:16 PM</div>
+        </div>
+      </div>
+
+      <!-- Agent response with diff -->
+      <div class="msg-row agent">
+        <div class="msg-avatar agent">&#129302;</div>
+        <div class="bubble-wrap">
+          <div class="bubble-sender">Antigravity Agent &middot; PC</div>
+          <div class="bubble agent">
+            Reading <code style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#4f8ef7">src/components/tabs/IPOWarRoom.tsx</code> &#8230;<br/>
+            Found <strong>AllotmentModel</strong> on line 142. Adding skeleton loader:
+            <div class="diff-block">
+              <div class="diff-header">
+                <span class="diff-file">src/components/tabs/IPOWarRoom.tsx</span>
+                <span class="diff-badge changed">MODIFIED</span>
+              </div>
+              <div class="diff-lines">
+                <div class="diff-line ctx"> import React from 'react';</div>
+                <div class="diff-line add">+ import { Skeleton } from '../common/Skeleton';</div>
+                <div class="diff-line ctx"> ...</div>
+                <div class="diff-line del">- {loading &amp;&amp; &lt;div&gt;Loading...&lt;/div&gt;}</div>
+                <div class="diff-line add">+ {loading &amp;&amp; &lt;Skeleton rows={6} height={40} /&gt;}</div>
+              </div>
+            </div>
+            <span class="status-chip success"><span class="chip-dot"></span> 0 TypeScript errors</span>
+          </div>
+          <div class="bubble-time">04:16 PM</div>
+        </div>
+      </div>
+
+      <!-- Action card -->
+      <div class="msg-row agent">
+        <div style="width:28px;flex-shrink:0"></div>
+        <div class="action-card" id="action-card-1">
+          <div class="action-card-title">&#128276; Pending Approval &middot; forwarded to your &#128241; Phone via Telegram</div>
+          <div class="action-card-desc">1 file changed &middot; <code style="font-family:'JetBrains Mono',monospace">IPOWarRoom.tsx</code> &middot; +2 lines / -1 line</div>
+          <div class="action-btns">
+            <button class="action-btn approve" onclick="approveEdit('action-card-1')">&#9989; Approve &amp; Save</button>
+            <button class="action-btn reject"  onclick="rejectEdit('action-card-1')">&#10060; Reject</button>
+            <button class="action-btn view"    onclick="showToast('Opening diff view in IDE&#8230;','info')">&#128196; Full Diff</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="date-divider" style="margin-top:14px"><span>04:30 PM</span></div>
+
+      <!-- Terminal output -->
+      <div class="msg-row agent">
+        <div class="msg-avatar system">&#128187;</div>
+        <div class="bubble-wrap">
+          <div class="bubble-sender">PC Terminal Output</div>
+          <div class="bubble agent">
+            Scheduled algo task completed:
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-lang">BASH OUTPUT</span>
+                <button class="code-copy-btn" onclick="copyCode(this)">&#128203; Copy</button>
+              </div>
+              <div class="code-content">$ python run_backtest.py --symbol NIFTY --date 2026-07-26
+[INFO] Loading candle data...
+[INFO] Applying gap strategy filter...
+[INFO] Total trades: 12 | Win rate: 66.7%
+[INFO] Net P&amp;L: +&#8377;4,842
+[&#10003;] Report saved to reports/NIFTY_2026-07-26.html</div>
+            </div>
+            <span class="status-chip success"><span class="chip-dot"></span> Completed in 3.2s</span>
+          </div>
+          <div class="bubble-time">04:30 PM</div>
+        </div>
+      </div>
+
+      <!-- Typing indicator (always last) -->
+      <div class="typing-indicator" id="typing-indicator">
+        <div class="msg-avatar agent" style="width:28px;height:28px;font-size:12px">&#129302;</div>
+        <div class="typing-dots">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+        </div>
+        <div class="typing-text">Antigravity Agent is thinking&#8230;</div>
+      </div>
+    </div>
+
+    <!-- Input Bar -->
+    <div class="input-bar">
+      <div class="context-pills" id="context-pills">
+        <div class="ctx-pill">
+          &#128193; IPOWarRoom.tsx
+          <span class="ctx-pill-close" onclick="removePill(this)">&#215;</span>
+        </div>
+        <div class="ctx-pill">
+          &#127807; main branch
+          <span class="ctx-pill-close" onclick="removePill(this)">&#215;</span>
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="input-extras">
+          <button class="input-extra-btn" title="Attach file" onclick="showToast('File attach coming in v2','info')">&#128206;</button>
+          <button class="input-extra-btn" title="/run command" onclick="insertSnippet('/run ')">&#9654;&#65039;</button>
+          <button class="input-extra-btn" title="/diff"        onclick="insertSnippet('/diff ')">&#128256;</button>
+          <button class="input-extra-btn" title="/logs"        onclick="insertSnippet('/logs ')">&#128203;</button>
+        </div>
+        <div class="input-field-wrap">
+          <textarea id="msg-input" rows="1"
+            placeholder="Type a prompt&#8230; Enter to send, Shift+Enter for newline"
+            oninput="autoResize(this)"
+            onkeydown="handleKey(event)"></textarea>
+        </div>
+        <button class="send-btn" onclick="sendMessage()" title="Send">&#10148;</button>
+      </div>
+      <div class="input-hint">
+        &#9000; <strong>Enter</strong> send &middot; <strong>Shift+Enter</strong> newline &middot;
+        slash: <strong>/run /diff /logs /git</strong>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div id="toast-container"></div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-icon">&#9888;&#65039;</div>
+    <div class="modal-title">Kill the Bridge?</div>
+    <div class="modal-desc">
+      This will disconnect the PC &#8596; Phone sync. Your phone will stop receiving
+      real-time updates and Accept/Reject prompts. You can restart anytime.
+    </div>
+    <div class="modal-btns">
+      <button class="action-btn view" onclick="closeModal()">Cancel</button>
+      <button class="action-btn reject" onclick="killBridge()">&#8856; Confirm Kill</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function nowTime() {
+    const d = new Date();
+    let h = d.getHours(), m = d.getMinutes();
+    const ampm = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    return `${h}:${String(m).padStart(2,'0')} ${ampm}`;
+  }
+
+  function autoResize(el) {
+    el.style.height = 'auto';
+    el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+  }
+
+  function handleKey(e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+  }
+
+  function insertSnippet(t) {
+    const el = document.getElementById('msg-input');
+    el.value += t; el.focus();
+  }
+
+  function sendMessage() {
+    const el = document.getElementById('msg-input');
+    const text = el.value.trim();
+    if (!text) return;
+    appendUserMsg(text);
+    el.value = ''; el.style.height = 'auto';
+    document.getElementById('preview-telegram').textContent = text.slice(0,30) + (text.length > 30 ? '...' : '');
+    document.getElementById('time-telegram').textContent = 'now';
+    showTyping();
+    setTimeout(() => { hideTyping(); routeCommand(text); }, 1100 + Math.random() * 700);
+  }
+
+  function routeCommand(text) {
+    const t = text.toLowerCase();
+    if (t.startsWith('/run'))  { handleRun(text.replace(/^\/run\s*/i, '') || 'python backtest.py'); }
+    else if (t.startsWith('/diff')) { handleDiff(); }
+    else if (t.startsWith('/logs')) { handleLogs(); }
+    else if (t.startsWith('/git'))  { handleGit(); }
+    else { handleAIEdit(text); }
+    scrollBottom();
+  }
+
+  function handleRun(cmd) {
+    appendAgentHTML(
+      `&#9654;&#65039; Running: <code style="font-family:'JetBrains Mono',monospace;color:#4f8ef7">${escHtml(cmd)}</code>&#8230;<br/>` +
+      termBlock(`$ ${cmd}\n[OK] Process completed with exit code 0`) +
+      `<span class="status-chip success"><span class="chip-dot"></span> Done</span>`
+    );
+  }
+
+  function handleDiff() {
+    appendAgentHTML(
+      '&#128256; Latest git diff on your PC:<br/>' +
+      diffBlock('src/dashboard/Dashboard.tsx',
+        '+ const [loaded, setLoaded] = useState(false);',
+        '- // TODO: add state')
+    );
+  }
+
+  function handleLogs() {
+    appendAgentHTML(
+      '&#128203; Last 5 bridge log lines:<br/>' +
+      termBlock('[16:30] INFO  Bridge started\n[16:31] INFO  Mobile connected via WireGuard\n[16:35] INFO  Prompt received from phone\n[16:35] INFO  Edit applied to IPOWarRoom.tsx\n[16:36] INFO  Approval received from Telegram')
+    );
+  }
+
+  function handleGit() {
+    appendAgentHTML(termBlock('On branch main\nYour branch is up to date with origin/main.\n\nnothing to commit, working tree clean'));
+  }
+
+  function handleAIEdit(prompt) {
+    const cardId = 'card-' + Date.now();
+    const short = escHtml(prompt.slice(0, 60)) + (prompt.length > 60 ? '&#8230;' : '');
+
+    appendAgentHTML(
+      `Processing: <em>"${short}"</em><br/>` +
+      diffBlock('src/components/...', '+ // Generated by WealthOS Agent', '- // placeholder') +
+      `<span class="status-chip success"><span class="chip-dot"></span> 0 errors</span>`
+    );
+
+    const area = document.getElementById('messages-area');
+    const row = document.createElement('div');
+    row.className = 'msg-row agent';
+    row.innerHTML = `
+      <div style="width:28px;flex-shrink:0"></div>
+      <div class="action-card" id="${cardId}">
+        <div class="action-card-title">&#128276; Pending Approval &middot; forwarded to &#128241; Telegram</div>
+        <div class="action-card-desc">Review edits &mdash; approve or reject from phone or here.</div>
+        <div class="action-btns">
+          <button class="action-btn approve" onclick="approveEdit('${cardId}')">&#9989; Approve &amp; Save</button>
+          <button class="action-btn reject"  onclick="rejectEdit('${cardId}')">&#10060; Reject</button>
+          <button class="action-btn view"    onclick="showToast('Opening diff in IDE&#8230;','info')">&#128196; Full Diff</button>
+        </div>
+      </div>`;
+    area.insertBefore(row, document.getElementById('typing-indicator'));
+    showToast('&#128241; Accept/Reject pushed to your Telegram!', 'info');
+  }
+
+  function appendUserMsg(text) {
+    const area = document.getElementById('messages-area');
+    const row = document.createElement('div');
+    row.className = 'msg-row user';
+    row.innerHTML = `
+      <div class="msg-avatar user">G</div>
+      <div class="bubble-wrap">
+        <div class="bubble-sender" style="text-align:right;color:#7c5cfc">You &middot; &#128241; Phone</div>
+        <div class="bubble user">${escHtml(text).replace(/\n/g,'<br/>')}</div>
+        <div class="bubble-time" style="text-align:right">${nowTime()}</div>
+      </div>`;
+    area.insertBefore(row, document.getElementById('typing-indicator'));
+    scrollBottom();
+  }
+
+  function appendAgentHTML(html) {
+    const area = document.getElementById('messages-area');
+    const row = document.createElement('div');
+    row.className = 'msg-row agent';
+    row.innerHTML = `
+      <div class="msg-avatar agent">&#129302;</div>
+      <div class="bubble-wrap">
+        <div class="bubble-sender">Antigravity Agent &middot; PC</div>
+        <div class="bubble agent">${html}</div>
+        <div class="bubble-time">${nowTime()}</div>
+      </div>`;
+    area.insertBefore(row, document.getElementById('typing-indicator'));
+  }
+
+  function approveEdit(id) {
+    const card = document.getElementById(id);
+    if (!card) return;
+    card.style.borderColor = 'rgba(34,197,94,.4)';
+    card.innerHTML = `
+      <div class="action-card-title">&#9989; Edit Approved &amp; Saved to PC</div>
+      <div class="action-card-desc" style="color:var(--accent-green)">File saved on your PC. Git commit queued. Phone notified via Telegram.</div>`;
+    showToast('&#9989; Edit applied to local file on PC!', 'success');
+    appendAgentHTML(`<span class="status-chip success"><span class="chip-dot"></span> File saved &middot; Commit queued</span><br/>Phone notified via Telegram.`);
+    scrollBottom();
+  }
+
+  function rejectEdit(id) {
+    const card = document.getElementById(id);
+    if (!card) return;
+    card.style.borderColor = 'rgba(239,68,68,.4)';
+    card.innerHTML = `
+      <div class="action-card-title">&#10060; Edit Rejected</div>
+      <div class="action-card-desc" style="color:var(--accent-red)">No files changed. Diff discarded. Phone notified.</div>`;
+    showToast('&#10060; Edit rejected. Files unchanged.', 'error');
+    scrollBottom();
+  }
+
+  function showTyping() { document.getElementById('typing-indicator').classList.add('visible'); scrollBottom(); }
+  function hideTyping()  { document.getElementById('typing-indicator').classList.remove('visible'); }
+
+  function scrollBottom() {
+    const area = document.getElementById('messages-area');
+    setTimeout(() => area.scrollTop = area.scrollHeight, 60);
+  }
+
+  function showToast(msg, type='info') {
+    const c = document.getElementById('toast-container');
+    const t = document.createElement('div');
+    t.className = `toast ${type}`;
+    const icons = { success:'&#9989;', error:'&#10060;', info:'&#8505;&#65039;' };
+    t.innerHTML = `<span>${icons[type]||''}</span><span>${msg}</span>`;
+    c.appendChild(t);
+    setTimeout(() => t.remove(), 3500);
+  }
+
+  function showConfirmModal() { document.getElementById('modal-overlay').classList.add('show'); }
+  function closeModal()       { document.getElementById('modal-overlay').classList.remove('show'); }
+  function killBridge() {
+    closeModal();
+    showToast('&#8856; Bridge stopped.', 'error');
+    document.querySelector('.mobile-strip .dot').style.background = 'var(--accent-red)';
+    document.getElementById('topbar-sub').textContent = 'Bridge Offline';
+    document.getElementById('topbar-sub').style.color = 'var(--accent-red)';
+  }
+
+  function clearMessages() {
+    const area = document.getElementById('messages-area');
+    const t = document.getElementById('typing-indicator');
+    while (area.firstChild) area.removeChild(area.firstChild);
+    area.appendChild(t);
+    showToast('Chat cleared', 'info');
+  }
+
+  function exportChat() {
+    const lines = [...document.querySelectorAll('.bubble')].map(b => b.innerText);
+    const blob = new Blob([lines.join('\n\n---\n\n')], { type: 'text/plain' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `wealthos-chat-${new Date().toISOString().slice(0,10)}.txt`;
+    a.click();
+    showToast('&#128229; Chat exported', 'success');
+  }
+
+  function switchSession(id) {
+    document.querySelectorAll('.session-item').forEach(el => el.classList.remove('active'));
+    document.querySelector(`[data-id="${id}"]`)?.classList.add('active');
+    const names = { telegram:'Phone &middot; Telegram Session', pc:'PC &middot; Antigravity IDE', scheduler:'Algo Scheduler' };
+    const subs  = { telegram:'&#9679; Online &middot; WireGuard VPN Active', pc:'&#9679; Local Bridge Running', scheduler:'&#9679; Next run: 09:15 AM' };
+    document.getElementById('topbar-name').innerHTML = names[id] || id;
+    document.getElementById('topbar-sub').innerHTML  = subs[id]  || '';
+    document.getElementById('topbar-sub').style.color = 'var(--accent-green)';
+  }
+
+  function removePill(el) { el.parentElement.remove(); }
+
+  function copyCode(btn) {
+    const code = btn.closest('.code-block').querySelector('.code-content').innerText;
+    navigator.clipboard.writeText(code).then(() => showToast('&#128203; Copied!','success'));
+  }
+
+  function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function termBlock(content) {
+    return `<div class="code-block">
+      <div class="code-block-header">
+        <span class="code-lang">TERMINAL</span>
+        <button class="code-copy-btn" onclick="copyCode(this)">&#128203; Copy</button>
+      </div>
+      <div class="code-content">${escHtml(content)}</div>
+    </div>`;
+  }
+
+  function diffBlock(file, addLine, delLine) {
+    return `<div class="diff-block">
+      <div class="diff-header">
+        <span class="diff-file">${escHtml(file)}</span>
+        <span class="diff-badge changed">MODIFIED</span>
+      </div>
+      <div class="diff-lines">
+        <div class="diff-line ctx"> ...context...</div>
+        <div class="diff-line del">${escHtml(delLine)}</div>
+        <div class="diff-line add">${escHtml(addLine)}</div>
+        <div class="diff-line ctx"> ...context...</div>
+      </div>
+    </div>`;
+  }
+
+  document.getElementById('search-input').addEventListener('input', function() {
+    const q = this.value.toLowerCase();
+    document.querySelectorAll('.session-item').forEach(el => {
+      el.style.display = el.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+
+  scrollBottom();
+</script>
+</body>
+</html>
