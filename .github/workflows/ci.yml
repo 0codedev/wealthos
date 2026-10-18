@@ -1,0 +1,93 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  code-quality-and-syntax:
+    name: Code Quality & Architecture Guard
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Verify Core Source Syntax
+        run: node scripts/design-system-lint.mjs
+
+  python-backend-verification:
+    name: Python Bridge Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python Bridge dependencies
+        run: |
+          cd python-bridge
+          pip install -r requirements.txt
+
+      - name: Verify Python Syntax & Modules
+        run: |
+          python -m compileall -q -x "[\\/](\.venv|venv|__pycache__)" python-bridge
+
+  secret-leak-detection:
+    name: Security Leak Guard
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Audit Repository for Secrets
+        run: |
+          python -c "
+          import re, sys, os
+          patterns = [
+              r'AIza[0-9A-Za-z-_]{35}',
+              r'gh[opsu]_[0-9A-Za-z]{36,}',
+              r'[0-9]{9,10}:[a-zA-Z0-9_-]{35}',
+              r'gsk_[a-zA-Z0-9]{48}',
+              r'eyJ[a-zA-Z0-9_-]+\.eyJ[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+'
+          ]
+          leaks = []
+          for root, dirs, files in os.walk('.'):
+              if '.git' in root or 'node_modules' in root:
+                  continue
+              for f in files:
+                  if f.endswith(('.env', '.key', '.pem')):
+                      leaks.append(f'Forbidden file tracked: {os.path.join(root, f)}')
+                      continue
+                  if f.endswith(('.ts', '.tsx', '.py', '.json', '.md', '.yml', '.yaml')):
+                      p = os.path.join(root, f)
+                      try:
+                          with open(p, 'r', encoding='utf-8', errors='ignore') as fp:
+                              c = fp.read()
+                              for pat in patterns:
+                                  if re.search(pat, c):
+                                      leaks.append(f'Secret pattern {pat} in {p}')
+                      except Exception:
+                          pass
+          if leaks:
+              print('\n'.join(leaks))
+              sys.exit(1)
+          print('No leaked secrets detected.')
+          "
